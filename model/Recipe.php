@@ -2,6 +2,7 @@
 
 require_once("Instruction.php");
 require_once("Ingredient.php");
+require_once("Comment.php");
 
 class Recipe{
   private int $id;
@@ -59,6 +60,37 @@ class Recipe{
       $query = $db->query($sql);
       $result = $query->fetch(PDO::FETCH_ASSOC);
       $query->closeCursor();
+      /*get returned values*/
+      $units = explode("|||", $result["units"]);
+      $ingredients = explode("|||", $result["ingredients"]);
+      $ingredients_images = explode("|||", $result["ingredients_images"]);
+      $ingredients_quantities = explode("|||", $result["quantities"]);
+      $categories = explode("|||", $result["category"]);
+      $comments = explode("|||", $result["comment"]);
+      $comment_created_dates = explode("|||", $result["created_date"]);
+      $comment_stars = explode("|||", $result["stars"]);
+      $comment_usernames = explode("|||", $result["username"]);
+      $instructions = explode("|||", $result["instructions"]);
+      $instructions_img = explode("|||", $result["instructions_img"]);
+      $instructions_number = explode("|||", $result["instructions_number"]);
+
+      /*put the returned values in objects*/
+      /*ingredients*/
+      $recipe_ingredients = [];
+      for ($i=0;$i<sizeof($ingredients_quantities);$i++){
+        array_push($recipe_ingredients, new Ingredient(0, $ingredients_quantities[$i], $units[$i], $ingredients[$i], $ingredients_images[$i]));
+      }
+      /*comments*/
+      $recipe_comments = [];
+      for ($i=0;$i<sizeof($comments);$i++){
+        array_push($recipe_comments, new Comment(0, $comments[$i], $comment_created_dates[$i], $comment_stars[$i], $comment_usernames[$i]));
+      }
+      /*instructions*/
+      $recipe_instructions = [];
+      for ($i=0;$i<sizeof($instructions);$i++){
+        array_push($recipe_comments, new Instruction(0, $instructions[$i], $instructions_img[$i], $instructions_number[$i]));
+      }
+
       return $result["nb"];
     }catch (Exception $e){
       return $e->getMessage();
