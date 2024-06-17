@@ -18496,3 +18496,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 -----------------------------------------------*/
 
 /*# sourceMappingURL=theme.css.map */
+
+.fontBanner{
+  font-family: 'Dancing Script', cursive;
+  color: #230903;
+  font-size: 72px;
+  font-weight: 900;
+}
+.fontBanner2{
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+}
+#home{
+  background-color: #d8a353;
+  background-image: linear-gradient(160deg, #d8a353 0%, #72562c 100%);
+
+}
