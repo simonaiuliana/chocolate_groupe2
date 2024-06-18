@@ -3,6 +3,7 @@
 require_once("Instruction.php");
 require_once("Ingredient.php");
 require_once("Comment.php");
+require_once("Category.php");
 
 class Recipe{
   private int $id;
@@ -13,10 +14,14 @@ class Recipe{
   private ?string $img_url;
   // array of type Instruction
   private array $instructions;
-  // array of type string
+  // array of type Ingredient
   private array $ingredients;
+  // array of type Category
+  private array $categories;
+  // array of type Comments
+  private array $comments;
 
-  public function __construct(int $id, string $name, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url, array $instructions, array $ingredients) {
+  public function __construct(int $id, string $name, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url, array $instructions, array $ingredients, array $categories, array $comments) {
     $this->setId($id);
     $this->setName($name);
     $this->setNbPeople($nb_people);
@@ -25,6 +30,8 @@ class Recipe{
     if ($img_url)$this->setImgUrl($img_url);
     $this->setInstructions($instructions);
     $this->setIngredients($ingredients);
+    $this->setCategories($categories);
+    $this->setComments($comments);
   }
 
   public static function getRecipeById(PDO $db, int $id):self{
@@ -125,16 +132,16 @@ class Recipe{
       }
       /*comments*/
       $recipe_comments = [];
-      for ($i=0;$i<sizeof($comments);$i++){
+      for ($i=0;$i<sizeof($recipe_comments);$i++){
         array_push($recipe_comments, new Comment($comments_ids[$i], $comments_texts[$i], $comments_created_dates[$i], $comments_stars[$i], $comments_usernames[$i]));
       }
       /*instructions*/
       $recipe_instructions = [];
-      for ($i=0;$i<sizeof($instructions);$i++){
+      for ($i=0;$i<sizeof($recipe_instructions);$i++){
         array_push($recipe_comments, new Instruction($instructions_ids[$i], $instructions_texts[$i], $instructions_imgs[$i]));
       }
 
-      return new Recipe($recipe_id, $recipe_name, $recipe_preparation_time, $recipe_cooking_time, $recipe_img_url, $recipe_instructions, $recipe_ingredients, $recipe_categories, $recipe_comments);
+      return new Recipe($recipe_id, $recipe_name, $recipe_nb_people, $recipe_preparation_time, $recipe_cooking_time, $recipe_img_url, $recipe_instructions, $recipe_ingredients, $recipe_categories, $recipe_comments);
       return $result["nb"];
     }catch (Exception $e){
       return $e->getMessage();
@@ -174,9 +181,17 @@ class Recipe{
   public function getInstructions():array{
     return $this->instructions;
   }
-  // return an array of string
+  // return an array of Ingredient
   public function getIngredients():array{
     return $this->ingredients;
+  }
+  // return an array of Category
+  public function getCategories():array{
+    return $this->categories;
+  }
+  // return an array of Comment
+  public function getComments():array{
+    return $this->comments;
   }
 
   //setters
@@ -216,16 +231,40 @@ class Recipe{
     $this->instructions = $instructions;
     return $this;
   }
-  //instruction is an array of string
+  //ingredients is an array of Ingredient
   public function setIngredients(array $ingredients):self{
     //check $ingredients validity
     foreach ($ingredients as $ingredient){
-      if (!is_string($ingredient)){
-        throw new Exception("ingredients must be an array of string only");
+      if (!$ingredient instanceof Ingredient){
+        throw new Exception("ingredients must be an array of Ingredient only");
       }
     }
 
     $this->ingredients = $ingredients;
+    return $this;
+  }
+  //instruction is an array of Category
+  public function setCategories(array $categories):self{
+    //check $categories validity
+    foreach ($categories as $category){
+      if (!$category instanceof Category){
+        throw new Exception("categories must be an array of Category only");
+      }
+    }
+
+    $this->categories = $categories;
+    return $this;
+  }
+  //comments is an array of Comment
+  public function setComments(array $comments):self{
+    //check $comments validity
+    foreach ($comments as $comment){
+      if (!$comment instanceof Comment){
+        throw new Exception("comments must be an array of Comment only");
+      }
+    }
+
+    $this->comments = $comments;
     return $this;
   }
 }
