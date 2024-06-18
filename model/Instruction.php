@@ -2,13 +2,11 @@
 class Instruction{
   private int $id;
   private string $text;
-  private int $number;
   private ?string $img_url;
 
-  public function __construct(int $id, string $text, ?string $img_url, int $number) {
+  public function __construct(int $id, string $text, ?string $img_url) {
     $this->setId($id);
     $this->setText($text);
-    $this->setNumber($number);
     if ($img_url)$this->setImgUrl($img_url);
   }
 
@@ -22,9 +20,6 @@ class Instruction{
   public function getImgUrl():?string{
     return $this->img_url;
   }
-  public function getNumber():int{
-    return $this->number;
-  }
 
   // setters
   public function setId(int $id):self{
@@ -37,10 +32,6 @@ class Instruction{
   }
   public function setImgUrl(string $img_url):self{
     $this->img_url = $img_url;
-    return $this;
-  }
-  public function setNumber(int $number):self{
-    $this->number = $number;
     return $this;
   }
 }
