@@ -181,7 +181,27 @@ class Recipe{
     return self::getRecipeByName($db, $name);
   }
 
-  public function update():self{
+  public function update(PDO $db):self{
+    try {
+      $sql = "
+        UPDATE `localisations`
+        SET
+          `name`=?,
+          `nb_people`=?,
+          `preparation_time`=?,
+          `cooking_time`=?,
+          `img_url`=?
+        WHERE
+          `id`=?
+      ";
+      $prepare = $db->prepare($sql);
+      $prepare->execute([$this->name, $this->nb_people, $this->preparation_time, $this->cooking_time, $this->img_url, $this->id]);
+      $prepare->closeCursor();
+      return true;
+    }catch (Exception $e){
+      return $e->getMessage();
+    }
+
     return $this;
   }
   public function delete():void{
@@ -229,7 +249,7 @@ class Recipe{
     return $this;
   }
   public function setName(string $name):self{
-    $this->name = $name;
+    $this->name = trim(htmlspecialchars(strip_tags($name)),ENT_QUOTES);
     return $this;
   }
   public function setNbPeople(int $nb_people):self{
@@ -245,7 +265,7 @@ class Recipe{
     return $this;
   }
   public function setImgUrl(string $img_url):self{
-    $this->img_url = $img_url;
+    $this->img_url = trim(htmlspecialchars(strip_tags($img_url)),ENT_QUOTES);
     return $this;
   }
   //instruction is an array of Instruction
