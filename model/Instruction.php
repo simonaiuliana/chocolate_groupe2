@@ -5,9 +5,30 @@ class Instruction{
   private ?string $img_url;
 
   public function __construct(int $id, string $text, ?string $img_url) {
-    $this->setId($id);
+    $this->id = $id;
     $this->setText($text);
     if ($img_url)$this->setImgUrl($img_url);
+  }
+
+  public function update(PDO $db):self|string{
+    try {
+      $sql = "
+        UPDATE `instructions`
+        SET
+          `text_content`=?,
+          `image_url`=?
+        WHERE
+          `id`=?
+      ";
+      $prepare = $db->prepare($sql);
+      $prepare->execute([$this->text, $this->img_url, $this->id]);
+      $prepare->closeCursor();
+      return true;
+    }catch (Exception $e){
+      return $e->getMessage();
+    }
+
+    return $this;
   }
 
   // getters
@@ -22,10 +43,6 @@ class Instruction{
   }
 
   // setters
-  public function setId(int $id):self{
-    $this->id = $id;
-    return $this;
-  }
   public function setText(string $text):self{
     $this->text = $text;
     return $this;
