@@ -6,7 +6,6 @@ $(function(){
     let menuIsOpening = false;
     let linksIsOpening = false;
     let phoneMode = window.innerWidth < 600;
-    let linksIsVisible = !phoneMode;
     checkPhoneMode();
     addEventListener('scroll', function(e){
         if(!scrollNav && window.scrollY > 100 * 3){
@@ -19,7 +18,6 @@ $(function(){
     });
     addEventListener('resize', function(){
         phoneMode = window.innerWidth < 600;
-        linksIsVisible = !phoneMode;
         checkPhoneMode();
     });
     function checkPhoneMode(){
