@@ -34,7 +34,7 @@ class Recipe{
     $this->setComments($comments);
   }
 
-  public static function getRecipeById(PDO $db, int $id):self{
+  public static function getRecipeById(PDO $db, int $id):self|string{
     try {
       $sql = "
         SELECT * FROM `recipe` r
@@ -147,7 +147,19 @@ class Recipe{
       return $e->getMessage();
     }
   }
-  public static function getRecipeByName(string $name):self{
+  public static function getRecipeByName(PDO $db, string $name):self|string{
+    try {
+      $sql = "SELECT `id` FROM `recipe` WHERE `name`=?";
+      $prepare = $db->prepare($sql);
+      $prepare->execute([$name]);
+      $result = $prepare->fetch();
+      $prepare->closeCursor();
+
+      if (is_string($result))return $result;
+      return self::getRecipeById($db, $result["id"]);
+    }catch (Exception $e){
+      return $e->getMessage();
+    }
   }
   public static function insert(string $name, ?string $img_url, array $instructions, array $ingredients):self{
   }
