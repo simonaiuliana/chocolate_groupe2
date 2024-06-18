@@ -184,7 +184,7 @@ class Recipe{
   public function update(PDO $db):self{
     try {
       $sql = "
-        UPDATE `localisations`
+        UPDATE `recipe`
         SET
           `name`=?,
           `nb_people`=?,
@@ -204,7 +204,18 @@ class Recipe{
 
     return $this;
   }
-  public function delete():void{
+  public function delete(PDO $db):?string{
+    try {
+      $sql = "DELETE FROM `recipe` WHERE id=?;";
+      $prepare = $db->prepare($sql);
+      $prepare->execute([$this->id]);
+      $prepare->closeCursor();
+      return true;
+    }catch (Exception $e){
+      return $e->getMessage();
+    }
+
+    return null;
   }
 
   // getters
