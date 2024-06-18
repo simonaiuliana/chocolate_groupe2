@@ -161,7 +161,24 @@ class Recipe{
       return $e->getMessage();
     }
   }
-  public static function insert(string $name, ?string $img_url, array $instructions, array $ingredients):self{
+  public static function create(PDO $db, string $name, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url):self|string{
+    $name = trim(htmlspecialchars(strip_tags($name)),ENT_QUOTES);
+    if ($img_url)$img_url = trim(htmlspecialchars(strip_tags($img_url)),ENT_QUOTES);
+
+    try {
+      $sql = "
+        INSRT INTO `recipe`(`name`, `nb_people`, `preparation_time`, `cooking_time`, `img_url`)
+        VALUES(?,?,?,?,?);
+      ";
+      $prepare = $db->prepare($sql);
+      $prepare->execute([$name, $nb_people, $preparation_time, $cooking_time, $img_url]);
+      $prepare->closeCursor();
+      return true;
+    }catch (Exception $e){
+      return $e->getMessage();
+    }
+
+    return self::getRecipeByName($db, $name);
   }
 
   public function update():self{
