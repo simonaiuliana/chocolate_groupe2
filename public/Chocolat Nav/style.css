@@ -17,6 +17,7 @@ nav{
 
 nav.nav-fixed{
     position: fixed;
+    z-index: 3;
     opacity: 0.5;
     top: -80px;
     left: 0;
@@ -84,7 +85,7 @@ nav li{
     flex-wrap: wrap;
     position: relative;
     z-index: 3;
-    background-color: rgb(90, 35, 20);
+    background: linear-gradient(90deg, rgba(90,35,20,1) 0%, rgba(95,30,5,1) 100%);
     display: flex;
     align-items: center;
     height: 100%;
@@ -129,7 +130,7 @@ nav li{
     position: absolute;
     right: 0;
     z-index: 1;
-    top: -680px;
+    top: -600px;
     overflow: hidden;
 }
 
