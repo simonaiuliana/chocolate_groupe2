@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 nav{
     font-family: 'BiteChocolate', sans-serif;
     height: 100px;
@@ -142,8 +143,10 @@ nav li{
 
 #previews{
     width: 50%;
+    background-image: url('');
     background-size: cover;
     background-position: center;
+    transition: background-image .50s;
 }
 
 #nav-choco-open-menu{
@@ -169,7 +172,7 @@ nav li{
         display: none;
     }
 }
-@media screen and (width < 600px) {
+@media screen and (width < 900px) {
     #container-burger{
         display: flex;
         flex-basis: 30%;

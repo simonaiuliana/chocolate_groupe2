@@ -5,7 +5,7 @@ $(function(){
     let menuNavVisible = false;
     let menuIsOpening = false;
     let linksIsOpening = false;
-    let phoneMode = window.innerWidth < 600;
+    let phoneMode = window.innerWidth < 900;
     checkPhoneMode();
     addEventListener('scroll', function(e){
         if(!scrollNav && window.scrollY > 100 * 3){
@@ -17,7 +17,7 @@ $(function(){
         }
     });
     addEventListener('resize', function(){
-        phoneMode = window.innerWidth < 600;
+        phoneMode = window.innerWidth < 900;
         checkPhoneMode();
     });
     function checkPhoneMode(){
@@ -41,6 +41,7 @@ $(function(){
         if(menuIsOpening) return;
         menuIsOpening = true;
         menuNavVisible = !menuNavVisible;
+        if(!menuNavVisible) $('#previews').css('background-image', `url('')`)
         if(phoneMode && menuNavVisible){
             $('#nav-choco-open-menu').show();
         }
@@ -58,12 +59,12 @@ $(function(){
         if(linksIsOpening) return;
         linksIsOpening = true;
         if(menuNavVisible){
-            showNavMenu();
-            setTimeout(() => {
-                $('#links').slideToggle(function(){
-                    linksIsOpening = false;
-                });
-            }, 2000);
+            menuNavVisible = false;
+            $('#nav-choco-open-menu').css('top', phoneMode ? '-40px' : '-150px').hide();
+            $('#nav-recipes').hide();
+            $('#links').slideToggle(function(){
+                linksIsOpening = false;
+            });
         }else $('#links').slideToggle(function(){
             linksIsOpening = false;
         });
@@ -73,6 +74,47 @@ $(function(){
     $('#nav-choco').animate({
         'top': '75px'
     }, 10000);
+
+    $('#nav-recipes').children().each(function(i){
+        let url;
+        switch(i){
+            case 0:
+                url = '../assets/image\ seb/Mousse\ au\ chocolat/13630550-Mousse-au-chocolat.jpg';
+                break;
+            case 1:
+                url = '../assets/image\ seb/Cake\ tout\ chocolat/14633_3-2_1560-1040.jpg';
+                break;
+            case 2:
+                url = '../assets/image\ seb/fondant\ au\ chocolat/1575898110_fondant-au-chocolat.jpg';
+                break;
+            case 3:
+                url = '../assets/image\ seb/Tarte\ au\ chocolat/chocolate-cake-wood.jpg';
+                break;
+            case 4:
+                url = '../assets/image\ seb/cookies\ chocolat/13370901-Cookies-with-chocolate-chips-and-almonds-on-baking-sheet.jpg';
+                break;
+            case 5:
+                url = '../assets/image\ seb/Glace\ au\ chocolat/cock.jpeg';
+                break;
+            case 6:
+                url = '../assets/image\ seb/Bûche\ de\ Noël\ chocolat/14175853-Bûche-de-Noël-made-from-chocolate-sponge-cake-with-quark-filling.jpg';
+                break;
+            case 7:
+                url = '../assets/image\ seb/Moelleux\ chocolat/histoire_moelleux_au_chocolat.webp';
+                break;
+            case 8:
+                url = '../assets/image\ seb/Truffes\ au\ chocolat/front-view-composition-delicious-chocolate-goodies.jpg';
+                break;
+            case 9:
+                url = '../assets/image\ seb/macarons\ au\ chocolat/0a80c4a2-8ce0-4491-a5e8-e903fdb1fafd_eyqtYhH.jpg';
+                break;
+        }
+        $(this).on('mouseover', ()=>{
+            if(!menuNavVisible) return;
+            $('#previews').css('background-image', `url('${url}')`)
+        });
+    })
+
 });
 
 // Now only God knows.
