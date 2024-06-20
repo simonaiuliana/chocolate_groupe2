@@ -238,19 +238,27 @@ class Recipe{
   public function getImgUrl():?string{
     return $this->img_url;
   }
-  // return an array of Instruction
+  /**
+   * @return array $instructions -> array of Instruction
+   */
   public function getInstructions():array{
     return $this->instructions;
   }
-  // return an array of Ingredient
+  /**
+   * @return array $ingredients -> array of Ingredient
+   */
   public function getIngredients():array{
     return $this->ingredients;
   }
-  // return an array of Category
+  /**
+   * @return array $categories -> array of Category
+   */
   public function getCategories():array{
     return $this->categories;
   }
-  // return an array of Comment
+  /**
+   * @return array $comments -> array of Comment
+   */
   public function getComments():array{
     return $this->comments;
   }
@@ -282,7 +290,7 @@ class Recipe{
   }
   /**
    * @return int the average from 1 to 10 instead of 1 to 5: if returns 3(/10) -> 1.5(/5)
-   * */
+   */
   public function getStarAverage():int{
     if (sizeof($this->comments)===0)return 0;
     $total = 0;
@@ -292,7 +300,9 @@ class Recipe{
     $avg = ceil(($total * 2) / sizeof($this->comments));
     return $avg;
   }
-  //instruction is an array of Instruction
+  /**
+   * @param array $instructions must be an array of Instruction
+   */
   public function setInstructions(array $instructions):self{
     //check $instructions validity
     foreach ($instructions as $instruction){
@@ -304,7 +314,9 @@ class Recipe{
     $this->instructions = $instructions;
     return $this;
   }
-  //ingredients is an array of Ingredient
+  /**
+   * @param array $ingredients must be an array of Ingredient
+   */
   public function setIngredients(array $ingredients):self{
     //check $ingredients validity
     foreach ($ingredients as $ingredient){
@@ -316,7 +328,9 @@ class Recipe{
     $this->ingredients = $ingredients;
     return $this;
   }
-  //instruction is an array of Category
+  /**
+   * @param array $categories must be an array of Category
+   */
   public function setCategories(array $categories):self{
     //check $categories validity
     foreach ($categories as $category){
@@ -328,7 +342,9 @@ class Recipe{
     $this->categories = $categories;
     return $this;
   }
-  /**comments is an array of Comment */
+  /**
+   * @param array $comments must be an array of Comment
+   */
   public function setComments(array $comments):self{
     //check $comments validity
     foreach ($comments as $comment){
