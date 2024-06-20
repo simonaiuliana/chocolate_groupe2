@@ -8,6 +8,20 @@ class Category{
     $this->setName($name);
   }
 
+  public function delete(PDO $db):?string{
+    try {
+      $sql = "DELETE FROM `category` WHERE id=?;";
+      $prepare = $db->prepare($sql);
+      $prepare->execute([$this->id]);
+      $prepare->closeCursor();
+      return true;
+    }catch (Exception $e){
+      return $e->getMessage();
+    }
+
+    return null;
+  }
+
   // getters
   public function getId():int{
     return $this->id;
