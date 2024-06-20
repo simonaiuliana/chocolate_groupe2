@@ -8,10 +8,10 @@ $(function(){
     let phoneMode = window.innerWidth < 900;
     checkPhoneMode();
     addEventListener('scroll', function(e){
-        if(!scrollNav && window.scrollY > 100 * 3){
+        if(!scrollNav && window.scrollY > $('.header-text').height() + 100){
             scrollNav = true;
             $nav.addClass('nav-fixed');
-        }else if(scrollNav && window.scrollY <= 100 * 3){
+        }else if(scrollNav && window.scrollY <= $('.header-text').height() + 100){
             scrollNav = false;
             $nav.removeClass('nav-fixed');
         }
