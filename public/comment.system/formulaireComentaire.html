@@ -59,11 +59,6 @@
     .comment .comment-rating i {
         margin-right: 2px;
     }
-    .average-rating {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-        color:rgb(88, 34, 21) ;
-    }
     @media (max-width: 768px) {
         .contact-form .row {
             display: flex;
@@ -116,7 +111,6 @@
                     <button type="submit">Envoyez votre commentaire</button>
                 </form>
                 <div class="comments-section">
-                    <div class="average-rating" id="average-rating">  Note moyenne: 0</div>
                     <div class="comments-list" id="comments-list">
                         <!-- Commentaires affichés ici -->
                     </div>
@@ -136,10 +130,8 @@
             $('.star-rating .fa-star').each(function() {
                 if ($(this).data('rating') <= rating) {
                     $(this).addClass('checked');
-                   
                 } else {
                     $(this).removeClass('checked');
-                   
                 }
             });
         });
@@ -152,18 +144,17 @@
             var email = $('#email').val();
             var subject = $('#subject').val();
             var comment = $('#comment').val();
-            var rating = $('#rating').val();
-   
+            var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
+            
             var date = new Date().toLocaleDateString();
     
             var commentHtml = '<div class="comment">' +
-                                '<div><strong>' + name + '</strong> <span class="comment-date">' + date + '</span></div>' +
+                                '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
                                 '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                                '<div>' + comment + '</div>' +
+                                '<div>' + escapeHtml(comment) + '</div>' +
                               '</div>';
     
-           $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
-              updateAverageRating();
+            $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
     
             // Réinitialiser le formulaire
             $('#comment-form')[0].reset();
@@ -176,28 +167,30 @@
             var starsHtml = '';
             for (var i = 1; i <= rating; i++) {
                 if (i <= rating) {
-                    starsHtml += '<i class="fa fa-star checked" data-rating="' + i + '"></i>';
+                    starsHtml += '<i class="fa fa-star checked"></i>';
                 } else {
-                    starsHtml += '<i class="fa fa-star" data-rating="' + i + '"></i>';
+                    starsHtml += '<i class="fa fa-star"></i>';
                 }
             }
             return starsHtml;
         }
     
-        // Fonction pour mettre à jour la note moyenne
-        function updateAverageRating() {
-            var totalRating = 0;
-            var totalComments = $('.comment').length;
-            $('.comment .comment-rating').each(function() {
-                totalRating += $(this).find('.checked').length;
-            });
-            var averageRating = (totalRating / totalComments).toFixed(1);
-            $('#average-rating').text('Note moyenne: ' + averageRating);
+        // Fonction pour échapper les caractères HTML dans les commentaires
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;',
+                '/': '&#x2F;',
+                '`': '&#x60;',
+                '=': '&#x3D;'
+            };
+            return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
         }
     });
-    </script>
-    
-
+</script>
 
 </body>
 </html>
