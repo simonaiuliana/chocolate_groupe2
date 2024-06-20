@@ -280,7 +280,9 @@ class Recipe{
     $this->img_url = trim(htmlspecialchars(strip_tags($img_url)),ENT_QUOTES);
     return $this;
   }
-  //return the average from 1 to 10 instead of 1 to 5: if returns 3(/10) -> 1.5(/5)
+  /**
+   * @return int the average from 1 to 10 instead of 1 to 5: if returns 3(/10) -> 1.5(/5)
+   * */
   public function getStarAverage():int{
     if (sizeof($this->comments)===0)return 0;
     $total = 0;
@@ -326,7 +328,7 @@ class Recipe{
     $this->categories = $categories;
     return $this;
   }
-  //comments is an array of Comment
+  /**comments is an array of Comment */
   public function setComments(array $comments):self{
     //check $comments validity
     foreach ($comments as $comment){
