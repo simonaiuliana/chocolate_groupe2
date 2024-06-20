@@ -51,15 +51,15 @@ class Comment{
     return $this;
   }
   public function setCreatedDate(string $created_date):self{
-    $this->$created_date = $created_date;
+    $this->created_date = $created_date;
     return $this;
   }
   public function setStars(int $stars):self{
-    $this->$stars = $stars;
+    $this->stars = $stars;
     return $this;
   }
   public function setUsername(string $username):self{
-    $this->$username = $username;
+    $this->username = $username;
     return $this;
   }
 }

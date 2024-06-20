@@ -2,16 +2,16 @@
 class Ingredient{
   private int $id;
   private int $quantity;
-  private string $unity;
+  private ?string $unity;
   private string $name;
   private ?string $img_url;
 
-  public function __construct(int $id, int $quantity, string $unity, string $name, ?string $img_url) {
+  public function __construct(int $id, int $quantity, ?string $unity, string $name, ?string $img_url) {
     $this->id = $id;
     $this->setQuantity($quantity);
-    $this->setUnity($unity);
+    if ($unity)$this->setUnity($unity);
     $this->setName($name);
-    $this->setImgUrl($img_url);
+    if ($img_url)$this->setImgUrl($img_url);
   }
 
   public function delete(PDO $db):?string{
@@ -51,15 +51,15 @@ class Ingredient{
     return $this;
   }
   public function setUnity(string $unity):self{
-    $this->$unity = $unity;
+    $this->unity = $unity;
     return $this;
   }
   public function setName(string $name):self{
-    $this->$name = $name;
+    $this->name = $name;
     return $this;
   }
   public function setImgUrl(string $img_url):self{
-    $this->$img_url = $img_url;
+    $this->img_url = $img_url;
     return $this;
   }
 }

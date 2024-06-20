@@ -42,7 +42,7 @@ class Recipe{
           -- ingredients
           SELECT
             GROUP_CONCAT(ing.id SEPARATOR '|||') AS ingredients_ids,
-            GROUP_CONCAT(inu.unit SEPARATOR '|||') AS ingredients_units,
+            GROUP_CONCAT((CASE WHEN inu.unit THEN inu.unit ELSE 'NULL' END) SEPARATOR '|||') AS ingredients_units,
             GROUP_CONCAT(ing.ingredient SEPARATOR '|||') AS ingredients,
             GROUP_CONCAT(ing.image_url SEPARATOR '|||') AS ingredients_images,
             GROUP_CONCAT(inr.quantity SEPARATOR '|||') AS ingredients_quantities,
@@ -85,8 +85,8 @@ class Recipe{
           FROM `instruction` ins
           GROUP BY ins.recipe_id
           ORDER BY ins.instruction_number
-        ) ins ON ins.recipe_id=r.id;
-        WHERE id=$id
+        ) ins ON ins.recipe_id=r.id
+        WHERE id=$id;
       ";
       $query = $db->query($sql);
       $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -100,24 +100,24 @@ class Recipe{
       $recipe_preparation_time = $result["preparation_time"];
       $recipe_cooking_time = $result["cooking_time"];
       /* ingredients */
-      $ingredients_ids = explode("|||", $result["ingredients_ids"]);
-      $ingredients_units = explode("|||", $result["ingredients_units"]);
-      $ingredients_names = explode("|||", $result["ingredients"]);
-      $ingredients_images = explode("|||", $result["ingredients_images"]);
-      $ingredients_quantities = explode("|||", $result["ingredients_quantities"]);
+      $ingredients_ids = $result["ingredients_ids"] ? explode("|||", $result["ingredients_ids"]) : [];
+      $ingredients_units = $result["ingredients_units"] ? explode("|||", $result["ingredients_units"]) : [];
+      $ingredients_names = $result["ingredients"] ? explode("|||", $result["ingredients"]) : [];
+      $ingredients_images = $result["ingredients_images"] ? explode("|||", $result["ingredients_images"]) : [];
+      $ingredients_quantities = $result["ingredients_quantities"] ? explode("|||", $result["ingredients_quantities"]) : [];
       /* categories */
-      $categories_ids = explode("|||", $result["categories_ids"]);
-      $categories_names = explode("|||", $result["categories"]);
+      $categories_ids = $result["categories_ids"] ? explode("|||", $result["categories_ids"]) : [];
+      $categories_names = $result["categories"] ? explode("|||", $result["categories"]) : [];
       /* comments */
-      $comments_ids = explode("|||", $result["comments_ids"]);
-      $comments_texts = explode("|||", $result["comments"]);
-      $comments_created_dates = explode("|||", $result["comments_created_dates"]);
-      $comments_stars = explode("|||", $result["comments_stars"]);
-      $comments_usernames = explode("|||", $result["comments_username"]);
+      $comments_ids = $result["comments_ids"] ? explode("|||", $result["comments_ids"]) : [];
+      $comments_texts = $result["comments"] ? explode("|||", $result["comments"]) : [];
+      $comments_created_dates = $result["comments_created_dates"] ? explode("|||", $result["comments_created_dates"]) : [];
+      $comments_stars = $result["comments_stars"] ? explode("|||", $result["comments_stars"]) : [];
+      $comments_usernames = $result["comments_username"] ? explode("|||", $result["comments_username"]) : [];
       /* instructions */
-      $instructions_ids = explode("|||", $result["instructions_ids"]);
-      $instructions_texts = explode("|||", $result["instructions"]);
-      $instructions_imgs = explode("|||", $result["instructions_image_url"]);
+      $instructions_ids = $result["instructions_ids"] ? explode("|||", $result["instructions_ids"]) : [];
+      $instructions_texts = $result["instructions"] ? explode("|||", $result["instructions"]) : [];
+      $instructions_imgs = $result["instructions_image_url"] ? explode("|||", $result["instructions_image_url"]) : [];
 
       /*put the returned values in objects*/
       /*ingredients*/
@@ -127,18 +127,18 @@ class Recipe{
       }
       /*categories*/
       $recipe_categories = [];
-      for ($i=0;$i<sizeof($recipe_categories);$i++){
+      for ($i=0;$i<sizeof($categories_ids);$i++){
         array_push($recipe_categories, new Category($categories_ids[$i], $categories_names[$i]));
       }
       /*comments*/
       $recipe_comments = [];
-      for ($i=0;$i<sizeof($recipe_comments);$i++){
+      for ($i=0;$i<sizeof($comments_ids);$i++){
         array_push($recipe_comments, new Comment($comments_ids[$i], $comments_texts[$i], $comments_created_dates[$i], $comments_stars[$i], $comments_usernames[$i]));
       }
       /*instructions*/
       $recipe_instructions = [];
-      for ($i=0;$i<sizeof($recipe_instructions);$i++){
-        array_push($recipe_comments, new Instruction($instructions_ids[$i], $instructions_texts[$i], $instructions_imgs[$i]));
+      for ($i=0;$i<sizeof($instructions_ids);$i++){
+        array_push($recipe_instructions, new Instruction($instructions_ids[$i], $instructions_texts[$i], $instructions_imgs[$i]));
       }
 
       return new Recipe($recipe_id, $recipe_name, $recipe_nb_people, $recipe_preparation_time, $recipe_cooking_time, $recipe_img_url, $recipe_instructions, $recipe_ingredients, $recipe_categories, $recipe_comments);

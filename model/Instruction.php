@@ -13,7 +13,7 @@ class Instruction{
   public function update(PDO $db):self|string{
     try {
       $sql = "
-        UPDATE `instructions`
+        UPDATE `instruction`
         SET
           `text_content`=?,
           `image_url`=?
