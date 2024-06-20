@@ -279,6 +279,15 @@ class Recipe{
     $this->img_url = trim(htmlspecialchars(strip_tags($img_url)),ENT_QUOTES);
     return $this;
   }
+  //return the average from 1 to 10 instead of 1 to 5: if returns 3(/10) -> 1.5(/5)
+  public function getStarAverage():int{
+    $total = 0;
+    foreach($this->comments as $comment){
+      $total += $comment->getStars();
+    }
+    $avg = ceil(($total * 2) / sizeof($this->comments));
+    return $avg;
+  }
   //instruction is an array of Instruction
   public function setInstructions(array $instructions):self{
     //check $instructions validity
