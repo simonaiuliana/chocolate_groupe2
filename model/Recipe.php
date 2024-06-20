@@ -93,6 +93,7 @@ class Recipe{
       $query->closeCursor();
       /*get returned values*/
       /* recipe */
+      if (!$result["id"])return "recette non trouvée";
       $recipe_id = $result["id"];
       $recipe_name = $result["name"];
       $recipe_nb_people = $result["nb_people"];
@@ -281,6 +282,7 @@ class Recipe{
   }
   //return the average from 1 to 10 instead of 1 to 5: if returns 3(/10) -> 1.5(/5)
   public function getStarAverage():int{
+    if (sizeof($this->comments)===0)return 0;
     $total = 0;
     foreach($this->comments as $comment){
       $total += $comment->getStars();
@@ -293,7 +295,7 @@ class Recipe{
     //check $instructions validity
     foreach ($instructions as $instruction){
       if (!$instruction instanceof Instruction){
-        throw new Exception("instructions must be an array of Instruction only");
+        throw new Exception("les instructions peuvent uniquement être un array d'Instruction");
       }
     }
 
@@ -305,7 +307,7 @@ class Recipe{
     //check $ingredients validity
     foreach ($ingredients as $ingredient){
       if (!$ingredient instanceof Ingredient){
-        throw new Exception("ingredients must be an array of Ingredient only");
+        throw new Exception("les ingrédients peuvent uniquement être un array d'Ingredient");
       }
     }
 
@@ -317,7 +319,7 @@ class Recipe{
     //check $categories validity
     foreach ($categories as $category){
       if (!$category instanceof Category){
-        throw new Exception("categories must be an array of Category only");
+        throw new Exception("les catégories peuvent uniquement être un array de Category");
       }
     }
 
@@ -329,7 +331,7 @@ class Recipe{
     //check $comments validity
     foreach ($comments as $comment){
       if (!$comment instanceof Comment){
-        throw new Exception("comments must be an array of Comment only");
+        throw new Exception("les commentaires peuvent uniquement être un array de Comment");
       }
     }
 
