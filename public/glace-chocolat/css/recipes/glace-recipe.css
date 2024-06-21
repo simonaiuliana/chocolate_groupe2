@@ -8,13 +8,22 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fdfbef;
+    line-height: normal;
+}
+
+nav ul{
+    margin-bottom: 0;
+}
+
+ul{
+    padding-left: 0;
 }
 
 *::selection{
     background-color: rgba(90, 35, 20, 0.5);
 }
 
-h1{
+.glace-banner > p{
     font-family: 'BiteChocolate', sans-serif;
     color: #fdfbef;
     text-align: center;
@@ -30,6 +39,7 @@ h1{
     z-index: 3;
 }
 
+h1,
 h2{
     color: rgb(90, 35, 20);
     margin: 1rem 0;
@@ -60,6 +70,11 @@ h3{
         background-position: 0 25%;
     }
 }
+@media screen and (width < 650px) {
+    .glace-banner{
+        background-position: 25% 0%;
+    }
+}
 
 .container-header-logo{
     position: relative;
@@ -75,10 +90,24 @@ h3{
     filter: drop-shadow(10px 10px 4px rgba(81, 41, 32, 0.35));
 }
 
-.general-infos,
+#description,
+.general-infos{
+    width: clamp(500px, 100%, 1200px);
+    margin: auto;
+}
+
 .steps{
     width: clamp(500px, 100%, 1200px);
     margin: auto;
+}
+
+#description{
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+#description p{
+    font-size: 1.25rem
 }
 
 .informations li{
@@ -94,15 +123,34 @@ h3{
     margin: 10px 0;
 }
 
-.informations{
-    display: flex;
-    justify-content: space-around;
+.informations .fa-star{
+    color: rgb(244, 215, 41);
 }
 
-@media screen and (width < 700px) {
+.informations div:nth-child(1) a{
+    color: rgb(90, 35, 20);
+}
+
+.informations div:nth-child(1) p{
+    margin-top: 20px;
+}
+
+.informations{
+    display: flex;
+    padding: 0 50px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+@media screen and (width < 850px) {
+    #description,
     .general-infos,
     .steps{
         width: 90%;
+    }
+
+    .general-infos h2{
+        padding: 0 50px;
     }
 
     .informations{
@@ -112,6 +160,49 @@ h3{
     .informations div{
         margin-left: 25%;
     }
+
+    .steps,
+    .informations,
+    #description{
+        padding: 0;
+    }
+
+}
+
+.steps{
+    padding: 0 50px;
+    display: flex;
+}
+
+.container-img-steps{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    height: 550px;
+    top: 120px;
+    margin-left: 40px;
+}
+
+@media screen and (width < 900px) {
+    .steps{
+        flex-direction: column;
+    }
+    .container-img-steps{
+        margin-left: 0px;
+        order: -1;
+        top: 0;
+        height: 320px;
+    }
+}
+
+.img-steps{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../img/recipes/glace/cream-anglaise-chocolat.webp);
 }
 
 .steps a{

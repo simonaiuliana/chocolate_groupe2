@@ -72,6 +72,7 @@ $(function(){
         });
     }
     $('#nav-recipes-link').click(showNavMenu);
+    $('#nav-recipes').on('mouseleave', ()=>$('#previews').hide());
     $('#container-burger img').click(showLinks);
     $('#nav-choco').animate({
         'top': '75px'
@@ -112,7 +113,8 @@ $(function(){
                 break;
         }
         $(this).on('mouseover', ()=>{
-            if(!menuNavVisible) return;
+            if(!menuNavVisible || phoneMode) return;
+            $('#previews').show()
             $('#previews').css('background-image', `url('${url}')`)
         });
     })
