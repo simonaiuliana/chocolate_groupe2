@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commentaires et Notation</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    .contact-section {
+        padding: 50px 0;
+        background-color: #efe2d7;
+    }
+    .contact-form {
+        background: #f1d6b4;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-form input, .contact-form textarea, .contact-form button {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .contact-form button {
+        background-color:rgb(88, 34, 21);
+        color: #dfc298;
+        cursor: pointer;
+        border: none;
+    }
+    .star-rating {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .star-rating .fa-star {
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+    .star-rating .fa-star.checked {
+        color: #ffc107;
+    }
+    .comments-section {
+        margin-top: 30px;
+    }
+    .comment {
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+    .comment .comment-date {
+        font-size: 0.9em;
+        color: #777;
+    }
+    .comment .comment-rating {
+        color: rgb(88, 34, 21);
+    }
+    .comment .comment-rating i {
+        margin-right: 2px;
+    }
+    @media (max-width: 768px) {
+        .contact-form .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .contact-form .col-lg-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 15px;
+        }
+        .contact-form .col-lg-12 {
+            flex: 0 0 95%;
+            max-width: 95%;
+            padding: 0 15px;
+        }
+        h3{
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="#" class="contact-form" id="comment-form">
+                    <h3>Laissez un commentaire</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" id="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="email" id="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="text" id="subject" placeholder="Sujet">
+                            <textarea id="comment" placeholder="Commentaire" required></textarea>
+                            <div class="star-rating">
+                                <i class="fa fa-star" data-rating="1"></i>
+                                <i class="fa fa-star" data-rating="2"></i>
+                                <i class="fa fa-star" data-rating="3"></i>
+                                <i class="fa fa-star" data-rating="4"></i>
+                                <i class="fa fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" value="0">
+                        </div>
+                    </div>
+                    <button type="submit">Envoyez votre commentaire</button>
+                </form>
+                <div class="comments-section">
+                    <div class="comments-list" id="comments-list">
+                        <!-- Commentaires affichés ici -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Fonctionnalité de notation par étoiles
+        $('.star-rating .fa-star').on('click', function() {
+            var rating = $(this).data('rating');
+            $('#rating').val(rating);
+            $('.star-rating .fa-star').each(function() {
+                if ($(this).data('rating') <= rating) {
+                    $(this).addClass('checked');
+                } else {
+                    $(this).removeClass('checked');
+                }
+            });
+        });
+    
+        // Soumission du formulaire
+        $('#comment-form').on('submit', function(e) {
+            e.preventDefault();
+            
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var subject = $('#subject').val();
+            var comment = $('#comment').val();
+            var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
+            
+            var date = new Date().toLocaleDateString();
+    
+            var commentHtml = '<div class="comment">' +
+                                '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
+                                '<div class="comment-rating">' + getStars(rating) + '</div>' +
+                                '<div>' + escapeHtml(comment) + '</div>' +
+                              '</div>';
+    
+            $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
+    
+            // Réinitialiser le formulaire
+            $('#comment-form')[0].reset();
+            $('#rating').val(0);
+            $('.star-rating .fa-star').removeClass('checked');
+        });
+    
+        // Fonction pour générer les étoiles
+        function getStars(rating) {
+            var starsHtml = '';
+            for (var i = 1; i <= rating; i++) {
+                if (i <= rating) {
+                    starsHtml += '<i class="fa fa-star checked"></i>';
+                } else {
+                    starsHtml += '<i class="fa fa-star"></i>';
+                }
+            }
+            return starsHtml;
+        }
+    
+        // Fonction pour échapper les caractères HTML dans les commentaires
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;',
+                '/': '&#x2F;',
+                '`': '&#x60;',
+                '=': '&#x3D;'
+            };
+            return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
+        }
+    });
+</script>
+
+</body>
+</html>
