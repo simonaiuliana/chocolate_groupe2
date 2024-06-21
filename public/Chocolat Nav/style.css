@@ -159,13 +159,7 @@ nav li{
     width: 380px;
 }
 
-#test{
-    margin-left: auto;
-    width: 600px;
-    height: 600px;
-    background-image: url(chocolate-7848086_1280.webp);
-    background-position: center;
-}
+
 
 @media screen and (width < 1000px) {
     #nav-choco{
@@ -240,4 +234,10 @@ nav li{
         width: 100%;
     }
     
+}
+.colorCard{
+    background-color: rgb(90, 35, 20);
+}
+.card-body{
+    height: 415px;
 }
