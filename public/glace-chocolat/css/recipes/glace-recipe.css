@@ -14,7 +14,7 @@ body{
     background-color: rgba(90, 35, 20, 0.5);
 }
 
-h1{
+.glace-banner > p{
     font-family: 'BiteChocolate', sans-serif;
     color: #fdfbef;
     text-align: center;
@@ -30,6 +30,7 @@ h1{
     z-index: 3;
 }
 
+h1,
 h2{
     color: rgb(90, 35, 20);
     margin: 1rem 0;
@@ -60,6 +61,11 @@ h3{
         background-position: 0 25%;
     }
 }
+@media screen and (width < 650px) {
+    .glace-banner{
+        background-position: 25% 0%;
+    }
+}
 
 .container-header-logo{
     position: relative;
@@ -75,10 +81,20 @@ h3{
     filter: drop-shadow(10px 10px 4px rgba(81, 41, 32, 0.35));
 }
 
+#description,
 .general-infos,
 .steps{
     width: clamp(500px, 100%, 1200px);
     margin: auto;
+}
+
+#description{
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+#description p{
+    font-size: 1.25rem
 }
 
 .informations li{
@@ -94,9 +110,23 @@ h3{
     margin: 10px 0;
 }
 
+.informations .fa-star{
+    color: rgb(244, 215, 41);
+}
+
+.informations div:nth-child(1) a{
+    color: rgb(90, 35, 20);
+}
+
+.informations div:nth-child(1) p{
+    margin-top: 20px;
+}
+
 .informations{
     display: flex;
-    justify-content: space-around;
+    padding: 0 50px;
+    margin-bottom: 50px;
+    justify-content: space-between;
 }
 
 @media screen and (width < 700px) {
