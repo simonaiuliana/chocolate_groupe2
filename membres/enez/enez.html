@@ -1,47 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="assets/img/favicons/manifest.json" />
-    <meta
-            name="msapplication-TileImage"
-            content="assets/img/favicons/mstile-150x150.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="assets/css/theme.css" rel="stylesheet" />
-    <!--    chocolate link-->
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
+    <title>🍫 Délicieuse recette de cake au chocolat 🍫</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./ChocolatNav/style.css">
-    <!--    <link rel="stylesheet" href="drip.css">-->
-    <link rel="icon" href="./ChocolatNav/th-r.jpeg" type="image/x-icon">
-    <title>Nav Bar Chocolat</title>
-
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/recipes/glace-recipe.css">
 </head>
+
 <body>
-<!--Votre code ici-->
+    <div id="place-holder-nav" style="display: none;">
+    </div>
+    <nav>
+        <div id="nav-links">
+            <a href="#" id="logo"><img src="img/nav-img/th-r.jpeg" alt="" width="50"></a>
+            <div id="container-burger">
+                <img src="img/nav-img/chocolat.png" alt="">
+            </div>
+            <div id="links">
+                <a href="#">Accueil</a>
+                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div id="nav-recipes-container">
+            <ul id="nav-recipes" style="display: none;">
+                <a href="#"><li>Mousse au chocolat</li></a>
+                <a href="#"><li>Cake au chocolat</li></a>
+                <a href="#"><li>Fondant au chocolat</li></a>
+                <a href="#"><li>Tarte au chocolat</li></a>
+                <a href="#"><li>Cookies au chocolat</li></a>
+                <a href="#"><li>Glace au chocolat</li></a>
+                <a href="#"><li>Bûche de Noël au chocolat</li></a>
+                <a href="#"><li>Moelleux au chocolat</li></a>
+                <a href="#"><li>Truffes au chocolat</li></a>
+                <a href="#"><li>Macarons au chocolat</li></a>
+            </ul>
+            <div id="previews">
+            </div>
+        </div>
+        <div id="nav-choco-open-menu">
+            <img src="img/nav-img/openmenu.png" alt="">
+        </div>
+    </nav>
+    <div id="nav-choco">
+        <img src="img/nav-img/banner_top.png" alt="">
+    </div>
+   
+    <header class="header-text cake-banner">
+        <h1>Cake au Chocolat</h1>
+    </header>
 
-<!--fin de votre code-->
-
-<!-- ===============================================-->
-<!--    JavaScripts-->
-<!-- ===============================================-->
-<script src="vendors/@popperjs/popper.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/is/is.min.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-<script src="vendors/fontawesome/all.min.js"></script>
-<script src="assets/js/theme.js"></script>
-
-<link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap"
-        rel="stylesheet"
-/>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="./ChocolatNav/main.js"></script>
+    <main>
+        <header class="general-infos">
+            <h2>Avant de commencer, voici ce dont vous devez savoir :</h2>
+            <div class="informations">
+                <div>
+                    <h3>Informations utiles :</h3>
+                    <p>&nbsp;<i class="fa-solid fa-person"></i> Servis pour: 4 personnes</p>
+                    <p><i class="fa-solid fa-clock"></i> Préparation: 1 heure</p>
+                    <p><i class="fa-solid fa-clock"></i> Repos: 12 heures</p>
+                </div>
+                <div>
+                    <h3>Ingrédients :</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-receipt"></i> 75 g de sucre</li>
+                        <li><i class="fa-solid fa-receipt"></i> 4 jaunes d’oeufs </li>
+                        <li><i class="fa-solid fa-receipt"></i> 40 cl de lait entier</li>
+                        <li><i class="fa-solid fa-receipt"></i> 120 g de chocolat noir</li>
+                        <li><i class="fa-solid fa-receipt"></i> 1 gousse de vanille (facultative)</li>
+                        <li><i class="fa-solid fa-receipt"></i> 15 cl crème liquide entière bien froide</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="steps">
+            <h2>Tout d'abord préparons la crème anglaise : <br>( <i class="fa-solid fa-clock"></i> 45 min )</h2>
+            <div class="step">
+                <p class="number"><span>1</span></p>
+                <p class="step-desc">Dans un <a href="https://www.maspatule.com/92-cul-de-poule-bol" target="_blank">cul de poule</a>, fouettez le sucre et les jaunes d’oeufs. Le mélange doit blanchir et doubler de volume.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>2</span></p>
+                <p class="step-desc">Faites bouillir le lait dans une <a href="https://www.maspatule.com/33-casserole" target="_blank">casserole</a>. <strong>Notre astuce de cooker</strong> : Faites infuser des grains de vanilles pendant 30 minutes dans le lait pour donner plus de profondeur en bouche à votre glace. </p>
+            </div>
+            <div class="step">
+                <p class="number"><span>3</span></p>
+                <p class="step-desc">Versez le lait bouillant sur le mélange sucre + oeuf tout en mélangeant bien afin que les oeufs ne cuisent pas.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>4</span></p>
+                <p class="step-desc">Une fois le mélange bien homogène, reversez le tout dans la casserole et laissez cuire à feu doux quelques minutes.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>5</span></p>
+                <p class="step-desc">La crème doit épaissir légèrement et napper votre cuillère en bois. <strong>Notre astuce de cooker</strong> : Si vous faites un trait sur le dos de la cuillère et qu’il reste net, votre crème anglaise est prête !</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>6</span></p>
+                <p class="step-desc">Versez la crème en 3 fois sur le chocolat fondu afin de bien l’incorporer</p>
+            </div>
+            <div class="step last-step">
+                <p class="number"><span>7</span></p>
+                <p class="step-desc">Couvrez la préparation au contact avec un film alimentaire et placez-la au frais pendant 12 heures <i class="fa-solid fa-clock"></i>.</p>
+            </div>
+            <h2>Maintenant passons a la préparation de la glace vanille : <br>( <i class="fa-solid fa-clock"></i> 15 min )</h2>
+            <div class="step">
+                <p class="number"><span>1</span></p>
+                <p class="step-desc">Montez la crème liquide entière en chantilly puis incorporez-la délicatement avec une maryse à la crème anglaise.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>2</span></p>
+                <p class="step-desc">Replacez la préparation au réfrigérateur quelques heures avant de mettre à turbiner en sorbetière pendant 40 à 45 minutes <i class="fa-solid fa-clock"></i>.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>3</span></p>
+                <p class="step-desc">Réservez la glace au congélateur avant de servir.</p>
+            </div>
+        </div>
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
 </body>
+
 </html>
