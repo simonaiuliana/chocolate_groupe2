@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
     <title>🍫 Délicieuse recette de glace au chocolat 🍫</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/recipes/glace-recipe.css">
@@ -53,13 +54,23 @@
     </div>
    
     <header class="header-text glace-banner">
-        <h1>Glace au Chocolat</h1>
+        <p>Glace au Chocolat</p>
     </header>
+
+    <div id="description">
+        <h1>Glace au Chocolat à la Crème Anglaise et Vanille</h1>
+        <p>Découvrez le plaisir d’une glace au chocolat riche et onctueuse, où la douceur de la crème anglaise se mêle à l’intensité du chocolat noir. Chaque bouchée est une célébration des saveurs, un équilibre parfait entre la fraîcheur de la glace vanille et la profondeur du chocolat.</p>
+    </div>
 
     <main>
         <header class="general-infos">
             <h2>Avant de commencer, voici ce dont vous devez savoir :</h2>
             <div class="informations">
+                <div>
+                    <h3>Évaluation :</h3>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <p><i class="fa-solid fa-message"></i> <a href="#comments">4 commentaires</a></p>
+                </div>
                 <div>
                     <h3>Informations utiles :</h3>
                     <p>&nbsp;<i class="fa-solid fa-person"></i> Servis pour: 4 personnes</p>
@@ -80,47 +91,56 @@
             </div>
         </header>
         <div class="steps">
-            <h2>Tout d'abord préparons la crème anglaise : <br>( <i class="fa-solid fa-clock"></i> 45 min )</h2>
-            <div class="step">
-                <p class="number"><span>1</span></p>
-                <p class="step-desc">Dans un <a href="https://www.maspatule.com/92-cul-de-poule-bol" target="_blank">cul de poule</a>, fouettez le sucre et les jaunes d’oeufs. Le mélange doit blanchir et doubler de volume.</p>
+            <div>
+                <h2>Tout d'abord préparons la crème anglaise : <br>( <i class="fa-solid fa-clock"></i> 45 min )</h2>
+                <div class="step">
+                    <p class="number"><span>1</span></p>
+                    <p class="step-desc">Dans un <a href="https://www.maspatule.com/92-cul-de-poule-bol" target="_blank">cul de poule</a>, fouettez le sucre et les jaunes d’oeufs. Le mélange doit blanchir et doubler de volume.</p>
+                </div>
+                <div class="step">
+                    <p class="number"><span>2</span></p>
+                    <p class="step-desc">Faites bouillir le lait dans une <a href="https://www.maspatule.com/33-casserole" target="_blank">casserole</a>. <strong>Notre astuce de cooker</strong> : Faites infuser des grains de vanilles pendant 30 minutes dans le lait pour donner plus de profondeur en bouche à votre glace. </p>
+                </div>
+                <div class="step">
+                    <p class="number"><span>3</span></p>
+                    <p class="step-desc">Versez le lait bouillant sur le mélange sucre + oeuf tout en mélangeant bien afin que les oeufs ne cuisent pas.</p>
+                </div>
+                <div class="step">
+                    <p class="number"><span>4</span></p>
+                    <p class="step-desc">Une fois le mélange bien homogène, reversez le tout dans la casserole et laissez cuire à feu doux quelques minutes.</p>
+                </div>
+                <div class="step">
+                    <p class="number"><span>5</span></p>
+                    <p class="step-desc">La crème doit épaissir légèrement et napper votre cuillère en bois. <strong>Notre astuce de cooker</strong> : Si vous faites un trait sur le dos de la cuillère et qu’il reste net, votre crème anglaise est prête !</p>
+                </div>
+                <div class="step">
+                    <p class="number"><span>6</span></p>
+                    <p class="step-desc">Versez la crème en 3 fois sur le chocolat fondu afin de bien l’incorporer</p>
+                </div>
+                <div class="step last-step">
+                    <p class="number"><span>7</span></p>
+                    <p class="step-desc">Couvrez la préparation au contact avec un film alimentaire et placez-la au frais pendant 12 heures <i class="fa-solid fa-clock"></i>.</p>
+                </div>
             </div>
-            <div class="step">
-                <p class="number"><span>2</span></p>
-                <p class="step-desc">Faites bouillir le lait dans une <a href="https://www.maspatule.com/33-casserole" target="_blank">casserole</a>. <strong>Notre astuce de cooker</strong> : Faites infuser des grains de vanilles pendant 30 minutes dans le lait pour donner plus de profondeur en bouche à votre glace. </p>
+            <div class="container-img-steps">
+                <div class="img-steps"></div>
             </div>
-            <div class="step">
-                <p class="number"><span>3</span></p>
-                <p class="step-desc">Versez le lait bouillant sur le mélange sucre + oeuf tout en mélangeant bien afin que les oeufs ne cuisent pas.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>4</span></p>
-                <p class="step-desc">Une fois le mélange bien homogène, reversez le tout dans la casserole et laissez cuire à feu doux quelques minutes.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>5</span></p>
-                <p class="step-desc">La crème doit épaissir légèrement et napper votre cuillère en bois. <strong>Notre astuce de cooker</strong> : Si vous faites un trait sur le dos de la cuillère et qu’il reste net, votre crème anglaise est prête !</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>6</span></p>
-                <p class="step-desc">Versez la crème en 3 fois sur le chocolat fondu afin de bien l’incorporer</p>
-            </div>
-            <div class="step last-step">
-                <p class="number"><span>7</span></p>
-                <p class="step-desc">Couvrez la préparation au contact avec un film alimentaire et placez-la au frais pendant 12 heures <i class="fa-solid fa-clock"></i>.</p>
-            </div>
-            <h2>Maintenant passons a la préparation de la glace vanille : <br>( <i class="fa-solid fa-clock"></i> 15 min )</h2>
-            <div class="step">
-                <p class="number"><span>1</span></p>
-                <p class="step-desc">Montez la crème liquide entière en chantilly puis incorporez-la délicatement avec une maryse à la crème anglaise.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>2</span></p>
-                <p class="step-desc">Replacez la préparation au réfrigérateur quelques heures avant de mettre à turbiner en sorbetière pendant 40 à 45 minutes <i class="fa-solid fa-clock"></i>.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>3</span></p>
-                <p class="step-desc">Réservez la glace au congélateur avant de servir.</p>
+        </div>
+        <div class="steps">
+            <div>
+                <h2>Maintenant passons a la préparation de la glace vanille : <br>( <i class="fa-solid fa-clock"></i> 15 min )</h2>
+                <div class="step">
+                    <p class="number"><span>1</span></p>
+                    <p class="step-desc">Montez la crème liquide entière en chantilly puis incorporez-la délicatement avec une maryse à la crème anglaise.</p>
+                </div>
+                <div class="step">
+                    <p class="number"><span>2</span></p>
+                    <p class="step-desc">Replacez la préparation au réfrigérateur quelques heures avant de mettre à turbiner en sorbetière pendant 40 à 45 minutes <i class="fa-solid fa-clock"></i>.</p>
+                </div>
+                <div class="step">
+                    <p class="number"><span>3</span></p>
+                    <p class="step-desc">Réservez la glace au congélateur avant de servir.</p>
+                </div>
             </div>
         </div>
     </main>
