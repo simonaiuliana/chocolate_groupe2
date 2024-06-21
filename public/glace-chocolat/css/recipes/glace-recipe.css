@@ -52,28 +52,11 @@ h3{
     margin: 1rem 0;
 }
 
-@media screen and (width < 780px) {
-    h1{
-        min-width: 400px;
-        font-size: 2rem;
-    }
-}
-
 .glace-banner{
     position: relative;
     height: 650px;
     background-image: url('../../img/recipes/glace/cock.jpeg');
     background-size: cover;
-}
-@media screen and (width > 1400px) {
-    .glace-banner{
-        background-position: 0 25%;
-    }
-}
-@media screen and (width < 650px) {
-    .glace-banner{
-        background-position: 25% 0%;
-    }
 }
 
 .container-header-logo{
@@ -142,33 +125,6 @@ h3{
     justify-content: space-between;
 }
 
-@media screen and (width < 850px) {
-    #description,
-    .general-infos,
-    .steps{
-        width: 90%;
-    }
-
-    .general-infos h2{
-        padding: 0 50px;
-    }
-
-    .informations{
-        flex-direction: column;
-    }
-
-    .informations div{
-        margin-left: 25%;
-    }
-
-    .steps,
-    .informations,
-    #description{
-        padding: 0;
-    }
-
-}
-
 .steps{
     padding: 0 50px;
     display: flex;
@@ -183,18 +139,6 @@ h3{
     height: 550px;
     top: 120px;
     margin-left: 40px;
-}
-
-@media screen and (width < 900px) {
-    .steps{
-        flex-direction: column;
-    }
-    .container-img-steps{
-        margin-left: 0px;
-        order: -1;
-        top: 0;
-        height: 320px;
-    }
 }
 
 .img-steps{
@@ -250,4 +194,65 @@ h3{
 
 .last-step{
     margin-bottom: 30px;
+}
+
+@media screen and (width < 850px) {
+    #description,
+    .steps{
+        width: 90%;
+    }
+
+    .general-infos{
+        margin: 0;
+        width: 100%;
+    }
+
+    .general-infos h2{
+        padding: 0 50px;
+    }
+
+    .informations{
+        flex-direction: column;
+    }
+
+    .informations div{
+        margin-left: 35px;
+    }
+
+    .steps,
+    .informations,
+    #description{
+        padding: 0;
+    }
+
+}
+
+@media screen and (width < 900px) {
+    .steps{
+        flex-direction: column;
+    }
+    .container-img-steps{
+        margin-left: 0px;
+        order: -1;
+        top: 0;
+        height: 320px;
+    }
+}
+
+
+@media screen and (width > 1400px) {
+    .glace-banner{
+        background-position: 0 25%;
+    }
+}
+@media screen and (width < 650px) {
+    .glace-banner{
+        background-position: 25% 0%;
+    }
+}
+@media screen and (width < 780px) {
+    .glace-banner > p{
+        min-width: 400px;
+        font-size: 2rem;
+    }
 }
