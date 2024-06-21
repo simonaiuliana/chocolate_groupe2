@@ -10,6 +10,14 @@ body{
     background-color: #fdfbef;
 }
 
+nav{
+    line-height: normal;
+}
+ 
+nav ul{
+    margin-bottom: 0;
+}
+
 *::selection{
     background-color: rgba(90, 35, 20, 0.5);
 }
@@ -56,7 +64,7 @@ h3{
 .glace-banner{
     position: relative;
     height: 650px;
-    background-image: url('../../img/recipes/Mousse/mous1.jpeg');
+    background-image: url('../../img/recipes/Mousse/mous4.jpeg');
     background-size: cover;
 }
 @media screen and (width > 1400px) {
@@ -101,6 +109,10 @@ h3{
 .informations{
     display: flex;
     justify-content: space-around;
+}
+
+#backvid{
+    background-color: rgb(90, 35, 20);
 }
 
 @media screen and (width < 700px) {
