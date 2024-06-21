@@ -8,6 +8,15 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fdfbef;
+    line-height: normal;
+}
+
+nav ul{
+    margin-bottom: 0;
+}
+
+ul{
+    padding-left: 0;
 }
 
 *::selection{
@@ -82,7 +91,11 @@ h3{
 }
 
 #description,
-.general-infos,
+.general-infos{
+    width: clamp(500px, 100%, 1200px);
+    margin: auto;
+}
+
 .steps{
     width: clamp(500px, 100%, 1200px);
     margin: auto;
@@ -129,10 +142,15 @@ h3{
     justify-content: space-between;
 }
 
-@media screen and (width < 700px) {
+@media screen and (width < 850px) {
+    #description,
     .general-infos,
     .steps{
         width: 90%;
+    }
+
+    .general-infos h2{
+        padding: 0 50px;
     }
 
     .informations{
@@ -142,6 +160,49 @@ h3{
     .informations div{
         margin-left: 25%;
     }
+
+    .steps,
+    .informations,
+    #description{
+        padding: 0;
+    }
+
+}
+
+.steps{
+    padding: 0 50px;
+    display: flex;
+}
+
+.container-img-steps{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    height: 550px;
+    top: 120px;
+    margin-left: 40px;
+}
+
+@media screen and (width < 900px) {
+    .steps{
+        flex-direction: column;
+    }
+    .container-img-steps{
+        margin-left: 0px;
+        order: -1;
+        top: 0;
+        height: 320px;
+    }
+}
+
+.img-steps{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../img/recipes/glace/cream-anglaise-chocolat.webp);
 }
 
 .steps a{
