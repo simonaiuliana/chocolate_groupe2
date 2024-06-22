@@ -19,3 +19,30 @@
     padding: 1rem;
     z-index: 3;
 }
+.cardTitreMain{
+    color: #955E42;
+}
+.cardTitre{
+    background-color: #fcd7ad82;
+}
+.textTitre{
+    color: #553739;
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: bolder;
+    font-size: 55px;
+}
+.titreIngredients{
+    font-family: 'Nunito', sans-serif;
+    color: #F6C28B;
+}
+.cardPreparation{
+    background-color: #fcd7ad82;
+}
+.listPrepa{
+    list-style: none;
+}
+.textColor{
+    color: #FCD7AD;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: bold;
+}
