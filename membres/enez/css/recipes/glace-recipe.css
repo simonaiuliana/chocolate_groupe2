@@ -10,6 +10,14 @@ body{
     background-color: #fdfbef;
 }
 
+nav{
+    line-height: normal;
+}
+ 
+nav ul{
+    margin-bottom: 0;
+}
+
 *::selection{
     background-color: rgba(90, 35, 20, 0.5);
 }
@@ -52,7 +60,11 @@ h3{
 .cake-banner{
     position: relative;
     height: 650px;
+<<<<<<< HEAD:public/chocomousse/css/recipes/mousse.css
+    background-image: url('../../img/recipes/Mousse/mous4.jpeg');
+=======
     background-image: url('../../img/recipes/Cake/cake.jpg');
+>>>>>>> 76bcc5785dbab31db3521b677cecf7335ad43eb5:membres/enez/css/recipes/glace-recipe.css
     background-size: cover;
 }
 @media screen and (width > 1400px) {
@@ -97,6 +109,10 @@ h3{
 .informations{
     display: flex;
     justify-content: space-around;
+}
+
+#backvid{
+    background-color: rgb(90, 35, 20);
 }
 
 @media screen and (width < 700px) {
@@ -160,3 +176,4 @@ h3{
 .last-step{
     margin-bottom: 30px;
 }
+
