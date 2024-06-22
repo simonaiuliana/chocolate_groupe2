@@ -5,10 +5,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    opacity: 95%;
 }
 .textBanner{
     font-family: 'Dancing Script', sans-serif;
-    color: #fdfbef;
+    color: #230903;
+    background: #fcd7ad89;
+    text-shadow: 3px 2px 3px #230903;
     font-size: 60px;
     text-align: center;
     position: absolute;
@@ -41,8 +44,21 @@
 .listPrepa{
     list-style: none;
 }
+
 .textColor{
     color: #FCD7AD;
     font-family: 'Hind Madurai', sans-serif;
     font-weight: bold;
+}
+.colorCard{
+    background-color: rgb(90, 35, 20);
+}
+.card-body{
+    height: fit-content;
+}
+.imgFondantRecette{
+    max-width: 90%;
+    opacity: 80%;
+    border-radius: 50px 10px;
+    box-shadow: 10px 10px 15px 7px #230903;
 }
