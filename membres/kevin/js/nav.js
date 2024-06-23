@@ -89,7 +89,7 @@ $(function(){
 
     $('#nav-recipes').children().each(function(i){
         let url;
-        const basePath = "../assets/image\ seb/";
+        const basePath = "../../public/assets/image\ seb/";
         switch(i){
             case 0:
                 url = basePath+'Mousse\ au\ chocolat/13630550-Mousse-au-chocolat.jpg';
