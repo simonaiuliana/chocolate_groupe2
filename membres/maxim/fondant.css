@@ -1,3 +1,4 @@
+
 .bannerImg{
     position: relative;
     height: 700px;
@@ -24,19 +25,25 @@
 }
 .cardTitreMain{
     color: #955E42;
+    font-size: 2rem;
+    font-family: 'Hind Madurai', sans-serif;
 }
-.cardTitre{
-    background-color: #fcd7ad82;
-}
+
 .textTitre{
     color: #553739;
     font-family: 'Dancing Script', sans-serif;
     font-weight: bolder;
     font-size: 55px;
 }
+
+.cardTitre{
+    background-color: #fcd7ad82;
+}
+
 .titreIngredients{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Dancing Script', sans-serif;
     color: #F6C28B;
+    font-size: 30px;
 }
 .cardPreparation{
     background-color: #fcd7ad82;
@@ -44,7 +51,18 @@
 .listPrepa{
     list-style: none;
 }
-
+.titreColorPrepa{
+    color: #955E42;
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+}
+.textColorPrepa{
+    color: #955E42;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    
+}
 .textColor{
     color: #FCD7AD;
     font-family: 'Hind Madurai', sans-serif;
@@ -61,4 +79,13 @@
     opacity: 80%;
     border-radius: 50px 10px;
     box-shadow: 10px 10px 15px 7px #230903;
+    
+}
+.review-count{
+    font-family: 'Nunito', sans-serif;
+    color: #F6C28B;
+    font-size: 16px;
+}
+.rating-color{
+   color: rgba(255, 255, 0, 0.669);
 }
