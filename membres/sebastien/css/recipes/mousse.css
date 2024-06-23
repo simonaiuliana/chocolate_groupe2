@@ -37,11 +37,15 @@ h1{
     padding: 1rem;
     z-index: 3;
 }
+.display-5{
+    font-family: 'BiteChocolate', sans-serif;
+}
 
 h2{
     color: rgb(90, 35, 20);
     margin: 1rem 0;
     text-align: center;
+    font-family: 'Playfair Display', serif;
 }
 
 h3{
@@ -50,28 +54,34 @@ h3{
     margin: 1rem 0;
 }
 
-@media screen and (width < 780px) {
-    h1{
-        min-width: 400px;
-        font-size: 2rem;
-    }
+#img1 {
+    position: absolute;
+    right: 250px; 
+}
+#img2 {
+    position: absolute;
+    left: 250px; 
+}
+#img3 {
+    position: absolute;
+    left: 0px; 
+    bottom: -10px;
+}
+#img4 {
+    position: absolute;
+    left: 0px; 
+    bottom: -460px;
 }
 
-.cake-banner{
+
+
+.glace-banner{
     position: relative;
     height: 650px;
-<<<<<<< HEAD:public/chocomousse/css/recipes/mousse.css
     background-image: url('../../img/recipes/Mousse/mous4.jpeg');
-=======
-    background-image: url('../../img/recipes/Cake/cake.jpg');
->>>>>>> 76bcc5785dbab31db3521b677cecf7335ad43eb5:membres/enez/css/recipes/glace-recipe.css
     background-size: cover;
 }
-@media screen and (width > 1400px) {
-    .cake-banner{
-        background-position: 0 25%;
-    }
-}
+
 
 .container-header-logo{
     position: relative;
@@ -111,24 +121,6 @@ h3{
     justify-content: space-around;
 }
 
-#backvid{
-    background-color: rgb(90, 35, 20);
-}
-
-@media screen and (width < 700px) {
-    .general-infos,
-    .steps{
-        width: 90%;
-    }
-
-    .informations{
-        flex-direction: column;
-    }
-
-    .informations div{
-        margin-left: 25%;
-    }
-}
 
 .steps a{
     color: rgb(90, 35, 20);
@@ -163,6 +155,10 @@ h3{
     box-shadow: 2px 2px 5px rgba(90, 35, 20, 0.5);
 }
 
+.step .number:hover{
+    background: red;
+}
+
 .step .number span{
     position: absolute;
     top: 50%;
@@ -176,4 +172,45 @@ h3{
 .last-step{
     margin-bottom: 30px;
 }
+
+#backvid{
+   background: url(../../img/recipes/Mousse/lol.jpg);
+}
+
+
+@media screen and (width < 780px) {
+    h1{
+        min-width: 400px;
+        font-size: 2rem;
+    }
+    #backvid img{
+        display: none;
+    }
+    #page img{
+        display: none;
+    }
+}
+
+@media screen and (width < 700px) {
+    .general-infos,
+    .steps{
+        width: 90%;
+    }
+
+    .informations{
+        flex-direction: column;
+    }
+
+    .informations div{
+        margin-left: 25%;
+    }
+}
+
+@media screen and (width > 1400px) {
+    .glace-banner{
+        background-position: 0 25%;
+    }
+}
+
+
 
