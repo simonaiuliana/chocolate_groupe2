@@ -8,6 +8,7 @@
     background-position: center;
     opacity: 95%;
 }
+
 .textBanner{
     font-family: 'Dancing Script', sans-serif;
     color: #230903;
@@ -23,6 +24,13 @@
     padding: 1rem;
     z-index: 3;
 }
+@media screen and (width < 768px) {
+    .textBanner{
+        min-width: 120px;
+        font-size: 3rem;
+        left: 3%;
+    }
+}
 .cardTitreMain{
     color: #955E42;
     font-size: 2rem;
@@ -34,6 +42,7 @@
     font-family: 'Dancing Script', sans-serif;
     font-weight: bolder;
     font-size: 55px;
+    text-shadow: 3px 2px 3px #230903;
 }
 
 .cardTitre{
@@ -44,6 +53,7 @@
     font-family: 'Dancing Script', sans-serif;
     color: #F6C28B;
     font-size: 30px;
+    text-shadow: 3px 2px 3px #FCD7AD;
 }
 .cardPreparation{
     background-color: #fcd7ad82;
@@ -56,12 +66,12 @@
     font-family: 'Dancing Script', sans-serif;
     font-weight: 600;
     font-size: 45px;
+    text-shadow: 3px 2px 3px #230903;
 }
 .textColorPrepa{
     color: #955E42;
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
-    
 }
 .textColor{
     color: #FCD7AD;
@@ -78,8 +88,13 @@
     max-width: 90%;
     opacity: 80%;
     border-radius: 50px 10px;
-    box-shadow: 10px 10px 15px 7px #230903;
-    
+    box-shadow: 10px 10px 15px 7px #230903; 
+}
+@media screen and (width < 768px) {
+    .imgFondantRecette{
+      max-width: 100%;
+        left: 3%;
+    }
 }
 .review-count{
     font-family: 'Nunito', sans-serif;
