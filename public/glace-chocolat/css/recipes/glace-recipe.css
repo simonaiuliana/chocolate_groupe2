@@ -10,6 +10,11 @@ body{
     background-color: #fdfbef;
     line-height: normal;
     overflow-x: hidden;
+    font-size: 1.25rem;
+}
+
+nav{
+    font-size: 1rem;
 }
 
 nav ul{
@@ -33,7 +38,7 @@ ul{
     top: 50%;
     left: 50%;
     translate: -50% calc(-50% - 1.750rem);
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     background-color: rgba(0,0,0,0.25);
     border-radius: 15px;
     padding: 1rem;
@@ -92,7 +97,7 @@ h3{
 }
 
 #description p{
-    font-size: 1.25rem
+    font-size: 1.50rem
 }
 
 .informations li{
@@ -206,9 +211,83 @@ h3{
     translate: -50% -50%;
     color: #fdfbef;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
+/** Comment */
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #efe2d7;
+}
+.contact-form {
+    background: #f1d6b4;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form button {
+    background-color:rgb(88, 34, 21);
+    color: #dfc298;
+    cursor: pointer;
+    border: none;
+}
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.star-rating .fa-star {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.star-rating .fa-star.checked {
+    color: #ffc107;
+}
+.comments-section {
+    margin-top: 30px;
+}
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.comment .comment-date {
+    font-size: 0.9em;
+    color: #777;
+}
+.comment .comment-rating {
+    color: rgb(88, 34, 21);
+}
+.comment .comment-rating i {
+    margin-right: 2px;
+}
+@media (max-width: 768px) {
+    .contact-form .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact-form .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px;
+    }
+    .contact-form .col-lg-12 {
+        flex: 0 0 95%;
+        max-width: 95%;
+        padding: 0 15px;
+    }
+    h3{
+        text-align: center;
+    }
+}
 
 
 @media screen and (width < 850px) {
