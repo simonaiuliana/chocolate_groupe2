@@ -9,6 +9,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fdfbef;
     line-height: normal;
+    overflow-x: hidden;
 }
 
 nav ul{
@@ -55,7 +56,7 @@ h3{
 .glace-banner{
     position: relative;
     height: 650px;
-    background-image: url('../../img/recipes/glace/cock.jpeg');
+    background-image: url('../../img/recipes/glace/glace-chocolat.jpeg');
     background-size: cover;
 }
 
@@ -74,13 +75,14 @@ h3{
 }
 
 #description,
-.general-infos{
+.general-infos,
+.owl-carousel{
     width: clamp(500px, 100%, 1200px);
     margin: auto;
 }
 
 .steps{
-    width: clamp(500px, 100%, 1200px);
+    width: clamp(500px, 100%, 1225px);
     margin: auto;
 }
 
@@ -128,6 +130,7 @@ h3{
 .steps{
     padding: 0 50px;
     display: flex;
+    margin-bottom: 30px;
 }
 
 .container-img-steps{
@@ -141,12 +144,26 @@ h3{
     margin-left: 40px;
 }
 
+.container-img-steps:has(.img-steps.chantilly){
+    top: 70px;
+}
+
+
 .img-steps{
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url(../../img/recipes/glace/cream-anglaise-chocolat.webp);
+    background-image: var(--_url-img-step);
+}
+
+.img-steps.chantilly{
+    height: 70%;
+    --_url-img-step: url('../../img/recipes/glace/chantilly.webp');
+}
+
+.img-steps.cream{
+    --_url-img-step: url('../../img/recipes/glace/cream-anglaise-chocolat.webp');
 }
 
 .steps a{
@@ -192,9 +209,7 @@ h3{
     font-size: 1.5rem;
 }
 
-.last-step{
-    margin-bottom: 30px;
-}
+
 
 @media screen and (width < 850px) {
     #description,
@@ -231,7 +246,11 @@ h3{
     .steps{
         flex-direction: column;
     }
-    .container-img-steps{
+    .img-steps.chantilly{
+        height: 100%;
+    }
+    .container-img-steps,
+    .container-img-steps:has(.img-steps.chantilly){
         margin-left: 0px;
         order: -1;
         top: 0;
