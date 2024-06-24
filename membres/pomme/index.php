@@ -128,11 +128,55 @@
                 <p style="margin-left: 2em;padding: 0 0 1em 0;">1.<span style="margin-left: 1em;"></span>Servez les pommes chaudes, nappées de leur sauce au chocolat.</p>
             </div>
         </div>
+        <section class="contact-section spad mt-5" id="comments" style="padding: 0;width: 80%; margin: auto;margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form action="#" class="contact-form" id="comment-form">
+                            <h3>Laissez un commentaire</h3>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" id="name" placeholder="Votre nom" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" id="email" placeholder="Votre email" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="text" id="subject" placeholder="Sujet">
+                                    <textarea id="comment" placeholder="Commentaire" required></textarea>
+                                    <div class="star-rating">
+                                        <i class="fa fa-star" data-rating="1"></i>
+                                        <i class="fa fa-star" data-rating="2"></i>
+                                        <i class="fa fa-star" data-rating="3"></i>
+                                        <i class="fa fa-star" data-rating="4"></i>
+                                        <i class="fa fa-star" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="rating" value="0">
+                                </div>
+                            </div>
+                            <button type="submit">Envoyez votre commentaire</button>
+                        </form>
+                        <div class="comments-section">
+                            <div class="comments-list" id="comments-list">
+                                <!-- Commentaires affichés ici -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/nav.js"></script>
+    <script src="js/recipes/glace-recipe.js"></script>
     <script>
+        //query selectors of the elements to reveal with animation
+        const reveal_query = [
+            ".sub-recipe",
+            ".information",
+            "#comments",
+        ]
         const options = {
             reset: true,
             delay: 100,
@@ -140,8 +184,7 @@
             origin: "bottom",
             distance: "50px"
         }
-        ScrollReveal().reveal('.sub-recipe', options);
-        ScrollReveal().reveal('.information', options);
+        ScrollReveal().reveal(reveal_query.join(", "), options);
     </script>
 </body>
 
