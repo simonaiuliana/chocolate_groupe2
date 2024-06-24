@@ -20,7 +20,7 @@ $(document).ready(function() {
         var email = $('#email').val();
         var subject = $('#subject').val();
         var comment = $('#comment').val();
-        var rating = parseInt($('#rating').val()); // Assurez-vous que le rating est un nombre entier
+        var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
         
         var date = new Date().toLocaleDateString();
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
     // Fonction pour générer les étoiles
     function getStars(rating) {
         var starsHtml = '';
-        for (var i = 1; i <= 5; i++) {
+        for (var i = 1; i <= rating; i++) {
             if (i <= rating) {
                 starsHtml += '<i class="fa fa-star checked"></i>';
             } else {
