@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'BiteChocolate';
+    src: url('../fonts/BiteChocolate-2RGl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#place-holder-nav{
+    height: 100px;
+}
+
+nav{
+    font-family: 'BiteChocolate', sans-serif;
+    height: 100px;
+}
+
+nav.nav-fixed{
+    position: fixed;
+    z-index: 4;
+    opacity: 0.5;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    animation: showNavFixed .5s forwards;
+}
+
+@keyframes showNavFixed {
+    0%{
+        opacity: 0.5;
+    }
+
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+nav a{
+    text-decoration: none;
+    color: #fdfbef;
+    transition: color .25s;
+}
+
+nav a:hover{
+    color: black;
+}
+
+#links a:nth-child(1){
+    margin-right: 40px;
+}
+
+nav li{
+    list-style: none;
+}   
+
+#nav-recipes{
+    padding-left: 20px;
+    padding-bottom: 1px;
+    background-color: rgb(90, 35, 20);
+    min-width: 380px;
+}
+
+#nav-recipes a:hover{
+    color: #fdfbef;
+}
+
+#nav-recipes li:nth-child(1){
+    margin-top: 0;
+}
+
+#nav-recipes li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: padding .5s;
+ }
+
+#nav-recipes li:hover{
+    background-color: rgb(78, 27, 13);
+    padding-left: 25px;
+ }
+
+#nav-links{
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 4;
+    background: linear-gradient(90deg, rgba(90,35,20,1) 0%, rgba(95,30,5,1) 100%);
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#links{
+    display: flex;
+    flex-grow: 1;
+    padding-right: 50px;
+}
+
+#links a:last-child{
+    margin-left: auto;
+}
+
+#logo{
+    width: 100px;
+    text-align: center;
+    max-height: 50px;
+}
+
+#container-burger{
+    display: none;
+    align-items: center;
+    justify-content: end;
+    padding-right: 25px;
+    flex-grow: 1;
+}
+
+#container-burger img{
+    width: 50px;
+    transition: background-color .5s;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#container-burger img:hover{
+    background-color: rgba(0,0,0,0.25);
+}
+
+#nav-choco{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: -600px;
+    overflow: hidden;
+}
+
+#nav-recipes-container{
+    position: relative;
+    z-index: 4;
+    display: flex;
+}
+
+#previews{
+    width: 40%;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    transition: background-image .50s;
+}
+
+#nav-choco-open-menu{
+    position: relative;
+    z-index: 2;
+    top: -150px;
+}
+
+#nav-choco-open-menu img{
+    width: 380px;
+}
+
+
+/* ///////////// IMAGE NAVBAR CHOCOLAT FONDANT /////////////*/
+
+
+#test{
+    margin-left: auto;
+    width: 600px;
+    height: 600px;
+    background-image: url();
+    background-position: center;
+}
+@media screen and (width < 1400px) {
+    #previews{
+        width: 100%;
+    }
+}
+@media screen and (width < 1000px) {
+
+    #nav-choco{
+        display: none;
+    }
+
+    #container-burger{
+        display: flex;
+        flex-basis: 30%;
+    }
+
+    nav.nav-fixed #links{
+        top: 80px;
+    }
+
+    #links{
+        display: flex;
+        padding: 20px;
+        padding-top: 0;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        flex-direction: column; 
+        background-color: rgb(90, 35, 20);
+    }
+
+    #links a:nth-child(1){
+        order: 0;
+        margin-right: 0px;
+    }
+
+    #links a:nth-child(2){
+        order: 2;
+    }
+
+    #links a:nth-child(3){
+        order: 1;
+    }
+
+    #links a:last-child{
+        margin-left: 0;
+    }
+
+    #links a{
+        transition: padding .25s;
+    }
+
+    #links a:hover{
+        background-color: rgb(78, 27, 13);
+        padding-left: 25px;
+        color: #fdfbef;
+    }
+
+    #previews{
+        display: none;
+    }
+
+    #nav-recipes{
+        width: 100%;
+    }
+
+    #nav-recipes-container{
+        top: 155px;
+    }
+
+    #nav-choco-open-menu{
+        top: -40px;
+    }
+
+    #nav-choco-open-menu img{
+        width: 100%;
+    }
+    
+}
