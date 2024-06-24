@@ -60,11 +60,7 @@ h3{
 .cake-banner{
     position: relative;
     height: 650px;
-<<<<<<< HEAD:public/chocomousse/css/recipes/mousse.css
-    background-image: url('../../img/recipes/Mousse/mous4.jpeg');
-=======
     background-image: url('../../img/recipes/Cake/cake.jpg');
->>>>>>> 76bcc5785dbab31db3521b677cecf7335ad43eb5:membres/enez/css/recipes/glace-recipe.css
     background-size: cover;
 }
 @media screen and (width > 1400px) {
