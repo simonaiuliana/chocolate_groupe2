@@ -57,6 +57,14 @@ h1{
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
 }
+#resultat{
+    color: #391b05;
+background-color: #ead5be; 
+border-radius: 8px 55px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+padding-left: 50px;
+columns: 2; 
+}
 article p {
 color: #291002; 
 line-height: 1.2; 
@@ -90,6 +98,7 @@ background-color:rgb(90, 43, 9);
 border: none;
 border-radius: 15px;
 box-shadow: 0 9px #999;
+margin-bottom: 20px;
 }
 
 
@@ -268,10 +277,19 @@ justify-content: space-between;
 .plaque-photo .card {
 width: 30%; 
 }
+
 }
 /*formulaire*/
 #show-comment-form{
-    color: #dcd1ca;
+
+display: inline-block;
+padding: 15px 25px;
+font-size: 20px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;   
+color: #dcd1ca;
 background-color:rgb(90, 43, 9);
 border: none;
 border-radius: 15px;
@@ -528,7 +546,7 @@ h3{
 <body>
     <nav>
         <div id="nav-links">
-            <a href="#" id="logo"><img src="th-r.jpeg" alt="" width="50"></a>
+            <a href="#" id="logo"><img src="logo.png" alt="" width="50"></a>
             <div id="container-burger">
                 <img src="chocolat.png" alt="">
             </div>
@@ -627,19 +645,25 @@ h3{
     <!-- start section pour calcul des ingredients -->
     <div class="container center-page">
         <div class="row mt-5 mb-5">
+            <section class="photo col-lg-6 mt-5">
+                <img src="../../public/assets/nouvelles img/ingredients3.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
+            </section>
             <section class="calculateur col-lg-6 col-md-6 col-sm-8">
                 <h2 class="mb-3 text-center">Calculer les Ingrédients</h2>
-                <form>
+                <form onsubmit="return calculateIngredients()">
+                <!--<form method="post" action="">-->
                     <div class="form-group">
                         <label for="nr-personnes">Nombre de Personnes:</label>
                         <input type="number" class="form-control" id="nr-personnes" placeholder="Entrez le nombre">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Calculer</button>
+                    <button type="submit" class="btn ">Calculer</button>
+                    <div id="resultat">
+                            <!-- Aici vor fi afișate ingredientele calculate -->
+                    </div>
                 </form>
             </section>
-            <section class="photo col-lg-6">
-                <img src="../../public/assets/nouvelles img/ingredients3.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
-            </section>
+            
+            
         </div>
     </div>
     <!-- end section pour calcul des ingredients -->
@@ -689,7 +713,7 @@ h3{
         <h2 class="mb-4 text-center">Recettes similaires</h2>
         <div class="card mb-3">
             <a href="link-catrea-pagina-retetei1">
-                <img src="../../public/assets/nouvelles img/mousse.jpg" class="card-img-top img-fluid" alt="...">
+                <img src="../../public/assets/nouvelles img/mousse.jpg" class="card-img-top img-fluid" alt="./sebastien/mous.html">
             </a>
         </div>
         <div class="card mb-3">
@@ -965,6 +989,52 @@ h3{
        
     });
 });
+//calculateur
+// Funcția pentru a calcula ingredientele în funcție de numărul de persoane introdus
+function calculateIngredients() {
+    // Obținem numărul de persoane introdus
+    var nrPersonnes = document.getElementById('nr-personnes').value;
+
+    // Definim lista de ingrediente și cantitățile asociate (exemplu)
+    var ingredients = [
+        { ingredient: "oeufs", cantite: 1 },
+        { ingredient: "sucre", cantite: 33 },
+        { ingredient: "beurre", cantite: 20 },
+        { ingredient: "farine", cantite: 13 },
+        { ingredient: "huile", cantite: 14 },
+        { ingredient: "cacao", cantite: 9 },
+        { ingredient: "chocolat noir", cantite: 25 },
+        { ingredient: "crème pour la chantilly", cantite: 20 },
+        { ingredient: "ampoule d'essence de rhum", cantite: 1 },
+        { ingredient: "eau", cantite: 35 },
+        { ingredient: "chocolat noir", cantite: 35 },
+        { ingredient: "crème pour la chantilly", cantite: 20 }
+        // Adăugați alte ingrediente și cantități aici, după nevoie
+    ];
+
+    // Calculăm cantitățile pentru fiecare ingredient în funcție de numărul de persoane
+    var output = "<ul>";
+    ingredients.forEach(function(item) {
+        var cantiteCalculee = item.cantite * nrPersonnes;
+        output += "<li>" + cantiteCalculee + " " + item.ingredient + "</li>";
+    });
+    output += "</ul>";
+
+    // Afișăm rezultatul în div-ul cu id-ul "resultat"
+    document.getElementById('resultat').innerHTML = output;
+
+    // Apelăm funcția pentru a afișa rezultatul
+    afiseazaRezultat();
+
+    // Returnăm false pentru a opri submit-ul formularului
+    return false;
+}
+
+// Funcția pentru a afișa rezultatul
+function afiseazaRezultat() {
+    var resultatDiv = document.getElementById('resultat');
+    resultatDiv.style.display = 'block';
+}
 </script>
 </body>
 
