@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/recipes/glace-recipe.css">
+    <link rel="stylesheet" href="css/footer/style.css">
+    <link rel="stylesheet" href="css/footer/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/footer/font-awesome.min.css" type="text/css">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
@@ -128,8 +132,8 @@
                 <p style="margin-left: 2em;padding: 0 0 1em 0;">1.<span style="margin-left: 1em;"></span>Servez les pommes chaudes, nappées de leur sauce au chocolat.</p>
             </div>
         </div>
-        <section class="contact-section spad mt-5" id="comments" style="padding: 0;width: 80%; margin: auto;margin-top: 100px;">
-            <div class="container">
+        <section class="spad mt-5" id="comments" style="padding: 0;width: 80%; margin: auto;margin-top: 100px;">
+            <div>
                 <div class="row">
                     <div class="col-lg-12">
                         <form action="#" class="contact-form" id="comment-form">
@@ -166,9 +170,74 @@
             </div>
         </section>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer class="footer set-bg mt-5" data-setbg="img/imgfooter/footer-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__newslatter">
+                       <h6>Recette ...</h6>
+                       <ul class="servi">
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette1</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette2</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette3</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette4</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette5</a></li>
+                       </ul>
+                    </div>
+                 </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/imgfooter/logo 2.png" style="width: 150px;" alt=""></a>
+                        </div>
+                        <p> +32 123 890 <br>
+                            chocomousse@gmail.com <br>
+                            Rue de chocolat 15
+                            1060 Saint Gilles Belgique.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__newslatter">
+                        <h6>Newsletter</h6>
+                        <p>Vous voulez nos derniere recette? </p>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit"><i class="fa fa-send-o"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="copyright__text text-white">
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">sebastien</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="copyright__widget">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Home</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/nav.js"></script>
+    <script src="js/jsfooter/main.js"></script>
     <script src="js/recipes/glace-recipe.js"></script>
     <script>
         //query selectors of the elements to reveal with animation
@@ -176,6 +245,7 @@
             ".sub-recipe",
             ".information",
             "#comments",
+            "footer > .container",
         ]
         const options = {
             reset: true,
@@ -185,6 +255,9 @@
             distance: "50px"
         }
         ScrollReveal().reveal(reveal_query.join(", "), options);
+        options.origin = "right";
+        options.distance = "200px";
+        ScrollReveal().reveal(".copyright", options);
     </script>
 </body>
 
