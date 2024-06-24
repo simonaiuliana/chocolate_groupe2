@@ -130,7 +130,7 @@ nav li{
 #nav-choco{
     position: absolute;
     right: 0;
-    z-index: 1;
+    z-index: 3;
     top: -600px;
     overflow: hidden;
 }
