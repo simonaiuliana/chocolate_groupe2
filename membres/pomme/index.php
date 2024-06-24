@@ -19,7 +19,7 @@
     </div>
     <nav>
         <div id="nav-links">
-            <a href="#" id="logo"><img src="img/nav-img/th-r.jpeg" alt="" width="50"></a>
+            <a href="#" id="logo"><img src="img/logo.png" alt="" width="50"></a>
             <div id="container-burger">
                 <img src="img/nav-img/chocolat.png" alt="">
             </div>
