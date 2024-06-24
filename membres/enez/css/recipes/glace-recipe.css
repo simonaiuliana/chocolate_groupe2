@@ -10,6 +10,14 @@ body{
     background-color: #fdfbef;
 }
 
+nav{
+    line-height: normal;
+}
+ 
+nav ul{
+    margin-bottom: 0;
+}
+
 *::selection{
     background-color: rgba(90, 35, 20, 0.5);
 }
@@ -99,6 +107,10 @@ h3{
     justify-content: space-around;
 }
 
+#backvid{
+    background-color: rgb(90, 35, 20);
+}
+
 @media screen and (width < 700px) {
     .general-infos,
     .steps{
@@ -160,3 +172,4 @@ h3{
 .last-step{
     margin-bottom: 30px;
 }
+
