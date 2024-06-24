@@ -23,8 +23,9 @@ $(document).ready(function() {
         }
     });
     AOS.init({
+        offset: 100,
         duration: 2000,
-        once: true
+        once: true,
     });
     // Fonctionnalité de notation par étoiles
     $('.star-rating .fa-star').on('click', function() {
