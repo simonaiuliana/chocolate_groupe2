@@ -81,34 +81,34 @@ $(function(){
         let url;
         switch(i){
             case 0:
-                url = '../assets/image\ seb/Mousse\ au\ chocolat/13630550-Mousse-au-chocolat.jpg';
+                url = '/../../public/assets/image\ seb/Mousse\ au\ chocolat/13630550-Mousse-au-chocolat.jpg';
                 break;
             case 1:
-                url = '../assets/image\ seb/Cake\ tout\ chocolat/14633_3-2_1560-1040.jpg';
+                url = '/../../public/assets/image\ seb/Cake\ tout\ chocolat/14633_3-2_1560-1040.jpg';
                 break;
             case 2:
-                url = '../assets/image\ seb/fondant\ au\ chocolat/1575898110_fondant-au-chocolat.jpg';
+                url = '/../../public/assets/image\ seb/fondant\ au\ chocolat/1575898110_fondant-au-chocolat.jpg';
                 break;
             case 3:
-                url = '../assets/image\ seb/Tarte\ au\ chocolat/chocolate-cake-wood.jpg';
+                url = '/../../public/assets/image\ seb/Tarte\ au\ chocolat/chocolate-cake-wood.jpg';
                 break;
             case 4:
-                url = '../assets/image\ seb/cookies\ chocolat/13370901-Cookies-with-chocolate-chips-and-almonds-on-baking-sheet.jpg';
+                url = '/../../public/assets/image\ seb/cookies\ chocolat/13370901-Cookies-with-chocolate-chips-and-almonds-on-baking-sheet.jpg';
                 break;
             case 5:
-                url = '../assets/image\ seb/Glace\ au\ chocolat/cock.jpeg';
+                url = '/../../public/assets/image\ seb/Glace\ au\ chocolat/cock.jpeg';
                 break;
             case 6:
-                url = '../assets/image\ seb/Bûche\ de\ Noël\ chocolat/14175853-Bûche-de-Noël-made-from-chocolate-sponge-cake-with-quark-filling.jpg';
+                url = '/../../public/assets/image\ seb/Bûche\ de\ Noël\ chocolat/14175853-Bûche-de-Noël-made-from-chocolate-sponge-cake-with-quark-filling.jpg';
                 break;
             case 7:
-                url = '../assets/image\ seb/Moelleux\ chocolat/histoire_moelleux_au_chocolat.webp';
+                url = '/../../public/assets/image\ seb/Moelleux\ chocolat/histoire_moelleux_au_chocolat.webp';
                 break;
             case 8:
-                url = '../assets/image\ seb/Truffes\ au\ chocolat/front-view-composition-delicious-chocolate-goodies.jpg';
+                url = '/../../public/assets/image\ seb/Truffes\ au\ chocolat/front-view-composition-delicious-chocolate-goodies.jpg';
                 break;
             case 9:
-                url = '../assets/image\ seb/macarons\ au\ chocolat/0a80c4a2-8ce0-4491-a5e8-e903fdb1fafd_eyqtYhH.jpg';
+                url = '/../../public/assets/image\ seb/macarons\ au\ chocolat/0a80c4a2-8ce0-4491-a5e8-e903fdb1fafd_eyqtYhH.jpg';
                 break;
         }
         $(this).on('mouseover', ()=>{
