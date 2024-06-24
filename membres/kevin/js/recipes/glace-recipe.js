@@ -1,28 +1,31 @@
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplaySpeed: 1000,
-    responsive:{
-        0:{
-            items:1,
-            stagePadding: 0, // Supprime le padding pour les petits écrans
-            margin: 0, // Supprime la marge pour les petits écrans
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
-
 /** Comment */
 
 $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 1000,
+        responsive:{
+            0:{
+                items:1,
+                stagePadding: 0, // Supprime le padding pour les petits écrans
+                margin: 0, // Supprime la marge pour les petits écrans
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+    AOS.init({
+        duration: 2000,
+        once: true
+    });
     // Fonctionnalité de notation par étoiles
     $('.star-rating .fa-star').on('click', function() {
         var rating = $(this).data('rating');
