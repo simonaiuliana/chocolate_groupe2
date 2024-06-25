@@ -196,3 +196,14 @@ header {
   background-position: center;
   height: 100vh;
 }
+.titreForm{
+  font-family: "Dancing Script", sans-serif;
+  font-size: 45px;
+  text-shadow: 3px 2px 3px #230903;
+}
+.submitButton{
+  background-color: #553739;
+  border: 2px solid #230903; 
+  font-family: "Nunito", sans-serif;
+  font-size: 26px;
+}
