@@ -23,7 +23,7 @@ $(".ps-photoset").hover(function(){
     bReady = true;
   }, 600);  
 });
-
+});
 
 // 3 images //
 $(".ps-photo").hover(function(){
