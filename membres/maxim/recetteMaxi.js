@@ -12,6 +12,27 @@ $(document).ready(function(){
     $(".imgFondantRecette").hide().show(6000)
 });
 
+// carousel
+$(document).ready(function() {
+  function checkScreenSize() {
+      var windowWidth = $(window).width();
+      if (windowWidth <= 767) {
+          $('#carousel').addClass('hidden');
+      } else {
+          $('#carousel').removeClass('hidden');
+      }
+  }
+
+  // Verificar el tamaño de pantalla al cargar la página
+  checkScreenSize();
+
+  // Verificar el tamaño de pantalla cuando se cambia el tamaño de la ventana
+  $(window).resize(function() {
+      checkScreenSize();
+  });
+});
+
+
 var bReady;
 
 $(document).ready(function(){
@@ -35,10 +56,13 @@ $(".ps-photo").hover(function(){
     // condole.log("stacking temporarily disabled")
   }
 });
+// end carousel
+
+//hidden form
 
 $(document).ready(function () {
   $("#contactForm").hide();
   $(".showForm").click(function () {
-      $("#contactForm").show(3000);
+      $("#contactForm").show(2000);
   });
 });

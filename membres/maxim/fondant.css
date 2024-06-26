@@ -127,6 +127,12 @@ header {
   color: rgba(255, 255, 0, 0.669);
 }
 
+.hidden{
+  display: none;
+}
+
+/* carousel*/
+
 .ps-container {
     display: flex;
     align-items: center;
@@ -188,6 +194,7 @@ header {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+/*background svg carousel */
 .photoContainer{
   background-image: url("img/blob-scene-haikei.svg");
   background-repeat: no-repeat;
@@ -195,6 +202,19 @@ header {
   background-position: center;
   height: 100vh;
 }
+@media screen and (width < 768px) {
+  .photoContainer{
+    margin-top: 50px;
+    height: 40vh;
+    background-image: url("img/blob-scene-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+}
+/*end background svg carousel */
+
 .titreForm{
   font-family: "Dancing Script", sans-serif;
   color: #230903;
@@ -206,6 +226,7 @@ header {
   border: 2px solid #230903; 
   font-family: "Nunito", sans-serif;
   font-size: 26px;
+  border-radius: 50px;
 }
 .showForm{
   background-color: #fcd7ad;
@@ -213,5 +234,21 @@ header {
   font-family: "Nunito", sans-serif;
   font-size: 26px;
   color: #230903;
+  border-radius: 50px;
   margin-bottom: 50px;
+}
+.form-control{
+  border-radius: 50px;
+  border: 2px solid #230903;
+
+  color: #230903;
+}
+.etoiles {
+  font-family: "Nunito", sans-serif;
+  color: #230903;
+  font-size: 16px;
+}
+
+.rating-color {
+  color: gold;
 }
