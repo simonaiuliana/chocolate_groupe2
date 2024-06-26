@@ -25,9 +25,10 @@ $(document).ready(function() {
         var date = new Date().toLocaleDateString();
 
         var commentHtml = '<div class="comment">' +
-                            '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
+                            '<div class="d-flex justify-content-between"><div><strong>Nom : </strong>' + escapeHtml(name) + '</strong></div> <span class="comment-date">' + date + '</span></div>' +
+                            '<div><strong>sujet : </strong>'+ escapeHtml(subject) + '</div>' +
+                            '<div><strong> Message : </strong>' + escapeHtml(comment) + '</div>' +
                             '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                            '<div>' + escapeHtml(comment) + '</div>' +
                           '</div>';
 
         $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
