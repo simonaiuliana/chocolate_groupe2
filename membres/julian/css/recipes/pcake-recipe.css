@@ -49,7 +49,7 @@ h1,
 h2{
     color: rgb(90, 35, 20);
     margin: 1rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 h3{
@@ -61,7 +61,7 @@ h3{
 .glace-banner{
     position: relative;
     height: 650px;
-    background-image: url('../../img/recipes/glace/glace-chocolat.jpeg');
+    background-image: url('../../img/recipes/pcake/murzynekgal1.webp');
     background-size: cover;
 }
 
@@ -132,6 +132,10 @@ h3{
     font-size: 1.1rem;
 }
 
+.list-group-item.strikethrough {
+    text-decoration: line-through;
+}
+
 .card-title {
     font-size: 1.75rem;
     color: #333;
@@ -139,94 +143,203 @@ h3{
 }
 
 .steps-list {
-    list-style-type: none;
+    list-style: none; 
     padding: 0;
+    margin: 0 0 30px 0; 
+    counter-reset: step-counter; 
+    cursor: pointer;
 }
 
 .steps-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 5px;
+    position: relative; 
+    background-color: #f5f5dc; 
+    margin-bottom: 15px; 
+    padding: 20px; 
+    padding-left: 60px; 
+    border-left: 8px solid #8b4513; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    font-size: 1.2rem; 
+    transition: transform 0.5s ease; /* Ensure smooth movement */
 }
 
-.steps-list li:last-child {
-    border-bottom: none;
+.steps-list li:hover {
+    background-color: #eee; 
 }
 
-/** Comment */
+.steps-list li::before {
+    content: counter(step-counter); 
+    counter-increment: step-counter; 
+    color: #fff; 
+    background-color: #8b4513; 
+    border-radius: 50%; 
+    padding: 8px 12px; 
+    position: absolute; 
+    left: 10px; 
+    top: 20px; 
+    font-weight: bold; 
+}
 
-.contact-section {
-    padding: 50px 0;
-    background-color: #efe2d7;
+.steps-list li.completed {
+    transform: translateX(30px); /* Move to the right */
 }
-.contact-form {
-    background: #f1d6b4;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+.steps-list li::after {
+    content: '✔';
+    color: green;
+    font-size: 0.6em; /* Adjust based on the size of the box, ensuring it matches the box size */
+    position: absolute;
+    left: 0; /* Position at the left edge of the box */
+    top: 50%;
+    transform: translate(-100%, -50%) scale(4); /* Adjust scale as needed, and move it to the left of the box */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.contact-form input, .contact-form textarea, .contact-form button {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+.steps-list li.completed::after {
+    opacity: 1; /* Make the checkmark visible when completed */
+    transform: translate(-35px, -50%) scale(4); /* Adjust the translate value to create space between the box and checkmark */
 }
-.contact-form button {
-    background-color:rgb(88, 34, 21);
-    color: #dfc298;
-    cursor: pointer;
+
+.steps-list li.completed {
+    border-left: 8px solid green; 
+}
+  
+.steps-list li.completed::before {
+    background-color: green; 
+}
+
+.steps-list li strong {
+    color: #8b4513; 
+    font-weight: bold; 
+}
+
+.completed {
+    background-color: #ccc; 
+    position: relative;
+}
+  
+.completed::after {
+    content: '✔'; 
+    color: green; 
+    font-size: 80px; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    pointer-events: none; 
+}
+
+  .owl-carousel .item img {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+}
+
+#comment-form {
+    background-color: #f1d6b4; 
+    color: #5D4037; 
+    border: 3px solid #8D6E63; 
+    padding: 20px; 
+    border-radius: 5px; 
+}
+
+#comment-form .form-control {
+    border-color: #8D6E63;
+    border-width: 2px;
+    margin-top: 5px; 
+}
+
+#form-container {
+    display: none;
+}
+
+#close-form-btn {
+    color: #a28376; /* Matching the hover color of the show button */
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
     border: none;
-}
-.star-rating {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-.star-rating .fa-star {
-    font-size: 24px;
-    color: white;
     cursor: pointer;
 }
+
+#comment-form .btn-primary {
+    background-color: #795548; 
+    border-color: #5D4037; 
+}
+
+.star-rating .fa-star {
+    margin-top: 10px;
+    color: whitesmoke; 
+    cursor: pointer; 
+    animation: pulse 2s infinite; /* Apply the pulse animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.1); /* Increase size by 10% */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
+
+/* Hover effect to trigger the animation */
+.star-rating .fa:hover {
+    animation: pulse 0.6s infinite; /* Apply the pulse animation */
+}
+
 .star-rating .fa-star.checked {
-    color: #ffc107;
+    color: #FFD700; 
 }
+
 .comments-section {
-    margin-top: 30px;
+    background-color: #f9f9f9; /* Light background for the comments section */
+    padding: 20px; /* Padding around the comments */
+    border-radius: 5px; /* Rounded corners for the comments section */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space above the comments section */
 }
+
 .comment {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    background-color: #ffffff; /* White background for each comment */
+    padding: 15px; /* Padding inside each comment */
+    margin-bottom: 20px; /* Space between comments */
+    border-radius: 5px; /* Rounded corners for each comment */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow for each comment */
 }
-.comment .comment-date {
-    font-size: 0.9em;
-    color: #777;
+
+.comment .star-rating .fa {
+    color: #FFD700; /* Golden color for stars */
+    margin-right: 5px; /* Space between stars */
 }
-.comment .comment-rating {
-    color: rgb(88, 34, 21);
+
+.comment-rating {
+    color: #FFD700;
 }
-.comment .comment-rating i {
-    margin-right: 2px;
+
+.comment .comment-header {
+    border-bottom: 1px solid #eee; /* Light line under the comment header */
+    padding-bottom: 10px; /* Space between the header and the comment content */
+    margin-bottom: 10px; /* Space between the header and the comment content */
+    font-weight: bold; /* Make the comment header bold */
 }
-@media (max-width: 768px) {
-    .contact-form .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .contact-form .col-lg-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 0 15px;
-    }
-    .contact-form .col-lg-12 {
-        flex: 0 0 95%;
-        max-width: 95%;
-        padding: 0 15px;
-    }
-    h3{
-        text-align: center;
-    }
+
+.comment .comment-body {
+    text-align: justify; /* Justify the comment text for better readability */
 }
+
+.comment .comment-footer {
+    text-align: right; /* Align the comment footer to the right */
+    font-style: italic; /* Italicize the footer for a distinct look */
+}
+
+
 
 
 @media screen and (width < 850px) {

@@ -20,6 +20,41 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    var checkboxes = document.querySelectorAll('.list-group-item input[type="checkbox"]');
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                checkbox.parentElement.classList.add('strikethrough');
+            } else {
+                checkbox.parentElement.classList.remove('strikethrough');
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const steps = document.querySelectorAll('.steps-list li');
+
+    steps.forEach(step => {
+        step.addEventListener('click', function() {
+            this.classList.toggle('completed');
+        });
+    });
+});
+
+$(document).ready(function() {
+    $('#show-form-btn').click(function() {
+        $('#form-container').show(); // Show the form
+        $(this).hide(); // Hide the show form button
+    });
+
+    $('#close-form-btn').click(function() {
+        $('#form-container').hide(); // Hide the form
+        $('#show-form-btn').show(); // Show the show form button
+    });
+});
+
 /** Comment */
 
 $(document).ready(function() {
@@ -49,10 +84,10 @@ $(document).ready(function() {
         var date = new Date().toLocaleDateString();
 
         var commentHtml = '<div class="comment">' +
-                            '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
-                            '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                            '<div>' + escapeHtml(comment) + '</div>' +
-                          '</div>';
+        '<div><strong>[' + escapeHtml(name) + ']</strong> ' + escapeHtml(subject) + ' - <span class="comment-date">' + date + '</span></div>' +
+        '<div class="comment-rating">' + getStars(rating) + '</div>' +
+        '<div>' + escapeHtml(comment) + '</div>' +
+    '</div>';
 
         $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
 
