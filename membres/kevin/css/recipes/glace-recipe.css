@@ -372,7 +372,7 @@ h3{
 }
 
 
-@media screen and (width < 100px) {
+@media screen and (width < 1600px) {
     #ice-cream1,
     #ice-cream2,
     #corner{
