@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -105,45 +106,45 @@
                         <div class="card-body">
                             <!-- Rating Section -->
                             <div class="rating">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star checked" data-aos="zoom-in-right" data-aos-duration="200" data-aos-delay="200"></span>
+                                <span class="fa fa-star checked" data-aos="zoom-in-right" data-aos-duration="200" data-aos-delay="400"></span>
+                                <span class="fa fa-star checked" data-aos="zoom-in-right" data-aos-duration="200" data-aos-delay="600"></span>
+                                <span class="fa fa-star checked" data-aos="zoom-in-right" data-aos-duration="200" data-aos-delay="800"></span>
+                                <span class="far fa-star" data-aos="zoom-in-right" data-aos-duration="200" data-aos-delay="1000"></span> <!-- This is the empty star -->
                             </div>
     
                             <p><i class="fas fa-clock"></i> <strong>Time to make:</strong> 1 hour</p>
                             <p><i class="fas fa-users"></i> <strong>Serves:</strong> 4 people</p>
     
                             <!-- Special Equipment Section -->
-                            <h2><i class="fas fa-blender" style="font-size: 30px;"></i> Special Equipment</h2>
+                            <h2 data-aos="fade-up" data-aos-duration="300"><i class="fas fa-blender" style="font-size: 30px;"></i> Special Equipment</h2>
                             <ul class="list-group">
-                                <li class="list-group-item"><i class="fas fa-check"></i> Equipment 1</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i> Equipment 2</li>
-                                <!-- Add more equipment as needed -->
+                                <li class="list-group-item" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100"><i class="fas fa-check"></i> Equipment 1</li>
+                                <li class="list-group-item" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200"><i class="fas fa-check"></i> Equipment 2</li>
+                                <!-- Add more equipment as needed with AOS -->
                             </ul>
     
                             <!-- Ingredients Section -->
-                            <h2><i class="fa-duotone fa-pie" style="font-size: 30px;"></i> Ingredients</h2>
-                            <ul class="list-group">
+                            <h2 data-aos="fade-up" data-aos-duration="300"><i class="fa-duotone fa-pie" style="font-size: 30px;"></i> Ingredients</h2>
+                            <ul class="list-group" data-aos="zoom-in-right">
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">200 g</span> de sucre</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">200 g</span> de beurre</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">4 cuillères à soupe</span> de cacao en poudre</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">5 cuillères à soupe</span> d'eau</li>
-                                <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">4</span> oeufs</li>
+                                <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">4</span> œufs</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">200 g</span> de farine</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">2 cuillères à café</span> de levure chimique</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">1 cuillère à café</span> d'extrait de vanille</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">100 g</span> de chocolat noir (facultatif pour le glaçage)</li>
-                                <!-- Add more ingredients as needed -->
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
     
                 
                 <!-- Right Section -->
-                <div class="offset-md-1 col-md-5 recipe-steps" style="margin-top: -40px;">
+                <div class="offset-md-1 col-md-5 recipe-steps" style="margin-top: -40px;" data-aos="zoom-in-left">
                     <h2><i class="fas fa-clipboard-list"></i> Étapes à suivre</h2>
                     <ol class="steps-list" role="list">
                         <li>Dans une casserole, faire fondre 200 g de beurre à feu doux. Ajouter 200 g de sucre, 4 cuillères à soupe de cacao en poudre et 5 cuillères à soupe d'eau. Mélanger jusqu'à obtenir une consistance lisse. Porter à ébullition douce, puis retirer du feu et laisser refroidir.</li>
@@ -298,6 +299,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/nav.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
     <script src="js/recipes/pcake.js"></script>
     <script src="js/footer.js"></script>

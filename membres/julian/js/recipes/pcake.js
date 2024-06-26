@@ -18,7 +18,11 @@ $('.owl-carousel').owlCarousel({
             items:3
         }
     }
-})
+});
+AOS.init({
+    duration: 1000,
+    once: true
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     var checkboxes = document.querySelectorAll('.list-group-item input[type="checkbox"]');
@@ -54,6 +58,8 @@ $(document).ready(function() {
         $('#show-form-btn').show(); // Show the show form button
     });
 });
+
+
 
 /** Comment */
 
