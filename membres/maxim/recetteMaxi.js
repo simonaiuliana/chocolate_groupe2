@@ -12,10 +12,10 @@ $(document).ready(function(){
     $(".imgFondantRecette").hide().show(6000)
 });
 
-var bReady;
 
+var bReady;
 $(document).ready(function(){
-  
+ 
 // This pauses the re-stacking until the expand animation is finished
 $(".ps-photoset").hover(function(){
   bReady = false;
@@ -23,13 +23,8 @@ $(".ps-photoset").hover(function(){
     bReady = true;
   }, 600);  
 });
-<<<<<<< HEAD
 });
-=======
-})
-
->>>>>>> efaff1048fca90412285ff0d26e198487deab0d8
-
+/*
 // 3 images //
 $(".ps-photo").hover(function(){
   if (bReady == true){
@@ -38,7 +33,7 @@ $(".ps-photo").hover(function(){
   } else {
     // condole.log("stacking temporarily disabled")
   }
-});
+});*/
 
 $(document).ready(function () {
   $("#contactForm").hide();
@@ -46,3 +41,4 @@ $(document).ready(function () {
       $("#contactForm").show(3000);
   });
 });
+

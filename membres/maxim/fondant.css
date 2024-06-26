@@ -127,6 +127,8 @@ header {
   color: rgba(255, 255, 0, 0.669);
 }
 
+
+
 .ps-container {
     display: flex;
     align-items: center;
@@ -185,7 +187,6 @@ header {
   
 .formBg{
     background-color: #fcd7ad82;
-    margin-top: 30px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
