@@ -7,6 +7,7 @@ $(function(){
     let linksIsOpening = false;
     let phoneMode = window.innerWidth < 1000;
     checkPhoneMode();
+    hideMenuNav();
     fixNav(true);
     addEventListener('scroll', fixNav);
     addEventListener('resize', function(){
@@ -26,6 +27,7 @@ $(function(){
         }
     }
     function hideMenuNav(){
+        console.log('ok');
         menuNavVisible = false;
         $('#nav-choco-open-menu').stop().css('top', phoneMode ? '-40px' : '-150px').hide();
         $('#nav-recipes').hide();
@@ -60,11 +62,10 @@ $(function(){
         if(phoneMode && menuNavVisible){
             $('#nav-choco-open-menu').show();
         }
-        if(!menuNavVisible && phoneMode) setTimeout(() => {
-            $('#nav-choco-open-menu').hide();
-        }, 1500);
         $('#nav-recipes').slideToggle(2000, function(){
             menuIsOpening = false;
+            if(!menuNavVisible)
+                $('#nav-choco-open-menu').hide();
         });
         $('#nav-choco-open-menu').animate({
             'top': !menuNavVisible ? (phoneMode ? '-40px' : '-150px') : (phoneMode ? '153.64px' : '0px')
