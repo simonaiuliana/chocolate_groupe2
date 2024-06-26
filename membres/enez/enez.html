@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
     <title>🍫 Délicieuse recette de cake au chocolat 🍫</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/recipes/glace-recipe.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
-    <div id="place-holder-nav" style="display: none;">
-    </div>
     <nav>
         <div id="nav-links">
-            <a href="#" id="logo"><img src="img/nav-img/th-r.jpeg" alt="" width="50"></a>
-            <div id="container-burger">
+            <a href="#" id="logo" class="logo"><img src="img/nav-img/th-r.jpeg" alt="" width="50"></a>
+            <a href="#" id="container-burger">
                 <img src="img/nav-img/chocolat.png" alt="">
-            </div>
+            </a>
             <div id="links">
                 <a href="#">Accueil</a>
                 <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
@@ -41,8 +37,6 @@
                 <a href="#"><li>Truffes au chocolat</li></a>
                 <a href="#"><li>Macarons au chocolat</li></a>
             </ul>
-            <div id="previews">
-            </div>
         </div>
         <div id="nav-choco-open-menu">
             <img src="img/nav-img/openmenu.png" alt="">
@@ -53,79 +47,95 @@
     </div>
    
     <header class="header-text cake-banner">
-        <h1>Cake au Chocolat</h1>
+        <h1>Čupavci</h1>
     </header>
 
-    <main>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+    <main class="main-content">
         <header class="general-infos">
-            <h2>Avant de commencer, voici ce dont vous devez savoir :</h2>
+            <h2>Début de la recette :</h2>
             <div class="informations">
                 <div>
                     <h3>Informations utiles :</h3>
-                    <p>&nbsp;<i class="fa-solid fa-person"></i> Servis pour: 4 personnes</p>
-                    <p><i class="fa-solid fa-clock"></i> Préparation: 1 heure</p>
-                    <p><i class="fa-solid fa-clock"></i> Repos: 12 heures</p>
+                    <p>&nbsp;<i class="fa-solid fa-person"></i> Servis pour: 8 personnes</p>
+                    <p><i class="fa-solid fa-clock"></i> Préparation: 1 heure 10mn</p>
+                    <p><i class="fa-solid fa-clock"></i> Cuisson: 40 minutes</p>
+                    <p><i class="fa-solid fa-clock"></i> Repos: 1h5 heures</p>
                 </div>
                 <div>
                     <h3>Ingrédients :</h3>
                     <ul>
-                        <li><i class="fa-solid fa-receipt"></i> 75 g de sucre</li>
-                        <li><i class="fa-solid fa-receipt"></i> 4 jaunes d’oeufs </li>
-                        <li><i class="fa-solid fa-receipt"></i> 40 cl de lait entier</li>
-                        <li><i class="fa-solid fa-receipt"></i> 120 g de chocolat noir</li>
-                        <li><i class="fa-solid fa-receipt"></i> 1 gousse de vanille (facultative)</li>
-                        <li><i class="fa-solid fa-receipt"></i> 15 cl crème liquide entière bien froide</li>
+                        <li><i class="fa-solid fa-receipt"></i> 100 de sucre</li>
+                        <li><i class="fa-solid fa-receipt"></i> 3 oeufs </li>
+                        <li><i class="fa-solid fa-receipt"></i> 120 ml de lait entier</li>
+                        <li><i class="fa-solid fa-receipt"></i> 125 g de farine</li>
+                        <li><i class="fa-solid fa-receipt"></i> 100 g de beurre doux</li>
+                        <li><i class="fa-solid fa-receipt"></i> 0,5 c. à café de bicarbonate de soude</li>
                     </ul>
                 </div>
             </div>
         </header>
         <div class="steps">
-            <h2>Tout d'abord préparons la crème anglaise : <br>( <i class="fa-solid fa-clock"></i> 45 min )</h2>
-            <div class="step">
+            <div class="step" data-aos="zoom-in-up">
                 <p class="number"><span>1</span></p>
-                <p class="step-desc">Dans un <a href="https://www.maspatule.com/92-cul-de-poule-bol" target="_blank">cul de poule</a>, fouettez le sucre et les jaunes d’oeufs. Le mélange doit blanchir et doubler de volume.</p>
+                <p class="step-desc">Préchauffez le four à 180°C (Th.6).</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="zoom-in-up">
                 <p class="number"><span>2</span></p>
-                <p class="step-desc">Faites bouillir le lait dans une <a href="https://www.maspatule.com/33-casserole" target="_blank">casserole</a>. <strong>Notre astuce de cooker</strong> : Faites infuser des grains de vanilles pendant 30 minutes dans le lait pour donner plus de profondeur en bouche à votre glace. </p>
+                <p class="step-desc">Dans un bol, versez les œufs et le sucre, mélangez. Ajoutez le lait.</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="zoom-in-up">
                 <p class="number"><span>3</span></p>
-                <p class="step-desc">Versez le lait bouillant sur le mélange sucre + oeuf tout en mélangeant bien afin que les oeufs ne cuisent pas.</p>
+                <p class="step-desc">Incorporez la farine et le bicarbonate de soude, ajoutez le beurre fondu et mélangez à nouveau.</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="zoom-in-up">
                 <p class="number"><span>4</span></p>
-                <p class="step-desc">Une fois le mélange bien homogène, reversez le tout dans la casserole et laissez cuire à feu doux quelques minutes.</p>
+                <p class="step-desc">Beurrez un grand moule carré. Versez-y la préparation et laissez cuire pendant 40 min.</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="zoom-in-up">
                 <p class="number"><span>5</span></p>
-                <p class="step-desc">La crème doit épaissir légèrement et napper votre cuillère en bois. <strong>Notre astuce de cooker</strong> : Si vous faites un trait sur le dos de la cuillère et qu’il reste net, votre crème anglaise est prête !</p>
+                <p class="step-desc">Une fois cuit, laissez le gâteau refroidir à température ambiante puis placez-le au congélateur pendant 40 min.</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="zoom-in-up">
                 <p class="number"><span>6</span></p>
-                <p class="step-desc">Versez la crème en 3 fois sur le chocolat fondu afin de bien l’incorporer</p>
+                <p class="step-desc">Dans une casserole à feu doux, versez la poudre de cacao et le sucre glace. Ajoutez petit à petit le lait, puis le beurre. Vous devez obtenir un mélange lisse pour le glaçage.</p>
             </div>
-            <div class="step last-step">
+            <div class="step" data-aos="fade-up">
                 <p class="number"><span>7</span></p>
-                <p class="step-desc">Couvrez la préparation au contact avec un film alimentaire et placez-la au frais pendant 12 heures <i class="fa-solid fa-clock"></i>.</p>
+                <p class="step-desc">Sortez le gâteau du congélateur et coupez-le en carrés de 5 cm environ.</p>
             </div>
-            <h2>Maintenant passons a la préparation de la glace vanille : <br>( <i class="fa-solid fa-clock"></i> 15 min )</h2>
-            <div class="step">
-                <p class="number"><span>1</span></p>
-                <p class="step-desc">Montez la crème liquide entière en chantilly puis incorporez-la délicatement avec une maryse à la crème anglaise.</p>
+            <div class="step" data-aos="zoom-in-up">
+                <p class="number"><span>6</span></p>
+                <p class="step-desc">Retirez chaque carré à l’aide d’une fourchette et enrobez-les du glaçage au chocolat à l’aide d’une cuillère à café.</p>
             </div>
-            <div class="step">
-                <p class="number"><span>2</span></p>
-                <p class="step-desc">Replacez la préparation au réfrigérateur quelques heures avant de mettre à turbiner en sorbetière pendant 40 à 45 minutes <i class="fa-solid fa-clock"></i>.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>3</span></p>
-                <p class="step-desc">Réservez la glace au congélateur avant de servir.</p>
+            <div class="step" data-aos="zoom-in-up">
+                <p class="number"><span>7</span></p>
+                <p class="step-desc">Recouvrez ensuite chaque carré de lamington avec la noix de coco. Posez-les sur une grille et laissez refroidir 45 min.</p>
             </div>
         </div>
+        <div class="tips">
+            <h2>Conseils :</h2>
+            <ul>
+                <li>Vous pouvez remplacer le lait par du lait de coco pour un goût plus exotique.</li>
+                <li>Vous pouvez également ajouter des pépites de chocolat à la pâte pour un effet plus gourmand.</li>
+                <li>Vous pouvez remplacer la noix de coco par des amandes effilées pour un effet plus croquant.</li>
+            </ul>
+        </div>
+        <div class="author">
+            <h2>Recette proposée par Enez</h2>
+            <p>Passionné de cuisine depuis toujours, Enez vous propose des recettes gourmandes et originales. Retrouvez-le sur son blog <a href="#">"Les délices d'Enez"</a> pour découvrir ses recettes et ses astuces.</p>
+        </div>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function() {
+            AOS.init();
+        });
+    </script>
     <script src="js/nav.js"></script>
 </body>
 
