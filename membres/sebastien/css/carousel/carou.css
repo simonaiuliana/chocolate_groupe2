@@ -84,13 +84,13 @@
 
 .swiper-slide--one {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url(../../img/recipes/Mousse/cake.jpg)
-      no-repeat 50% 50% / cover;
+  url("../../img/recipes/Mousse/glace.jpg")
+    no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--two {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../../img/recipes/Mousse/glace.jpg")
+    url(../../img/recipes/Mousse/tranche-brownie-au-chocolat-glace-noix-vanille_114579-903\ -\ Copie.jpg)
       no-repeat 50% 50% / cover;
 }
 
@@ -102,13 +102,33 @@
 
 .swiper-slide--four {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../../img/recipes/Mousse/truffles-6636081_1280.jpg")
+    url("../../img/recipes/Mousse/ciasto-murzynek.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--five {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
     url("../../img/recipes/Mousse/moelleux-au-chocolat-version-decadente.jpeg")
+      no-repeat 50% 50% / cover;
+}
+.swiper-slide--six {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../../img/recipes/Mousse/amandina.jpg")
+      no-repeat 50% 50% / cover;
+}
+.swiper-slide--seven {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../../img/recipes/Mousse/cupavci.jpg")
+      no-repeat 50% 50% / cover;
+}
+.swiper-slide--eight {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../../img/recipes/Mousse/chocopomme.jpg")
+      no-repeat 50% 50% / cover;
+}
+.swiper-slide--nine {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../../img/recipes/Mousse/tranche-brownie-au-chocolat-glace-noix-vanille_114579-903 - Copie.jpg")
       no-repeat 50% 50% / cover;
 }
 

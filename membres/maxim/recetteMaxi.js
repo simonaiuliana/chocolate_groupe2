@@ -13,30 +13,10 @@ $(document).ready(function(){
 });
 
 // carousel
-$(document).ready(function() {
-  function checkScreenSize() {
-      var windowWidth = $(window).width();
-      if (windowWidth <= 767) {
-          $('#carousel').addClass('hidden');
-      } else {
-          $('#carousel').removeClass('hidden');
-      }
-  }
-
-  // Verificar el tamaño de pantalla al cargar la página
-  checkScreenSize();
-
-  // Verificar el tamaño de pantalla cuando se cambia el tamaño de la ventana
-  $(window).resize(function() {
-      checkScreenSize();
-  });
-});
-
 
 var bReady;
-
 $(document).ready(function(){
-  
+ 
 // This pauses the re-stacking until the expand animation is finished
 $(".ps-photoset").hover(function(){
   bReady = false;
@@ -44,8 +24,7 @@ $(".ps-photoset").hover(function(){
     bReady = true;
   }, 600);  
 });
-})
-
+});
 
 // 3 images //
 $(".ps-photo").hover(function(){
@@ -66,3 +45,4 @@ $(document).ready(function () {
       $("#contactForm").show(2000);
   });
 });
+

@@ -127,11 +127,7 @@ header {
   color: rgba(255, 255, 0, 0.669);
 }
 
-.hidden{
-  display: none;
-}
 
-/* carousel*/
 
 .ps-container {
     display: flex;
