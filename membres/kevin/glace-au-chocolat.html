@@ -65,7 +65,16 @@
         <p>Découvrez le plaisir d’une glace au chocolat riche et onctueuse, où la douceur de la crème anglaise se mêle à l’intensité du chocolat noir. Chaque bouchée est une célébration des saveurs, un équilibre parfait entre la fraîcheur de la glace vanille et la profondeur du chocolat.</p>
     </div>
 
-    <main>
+    <main class="position-relative">
+        <div id="ice-cream1">
+            <img src="img/recipes/glace/ice-cream.png" width="250" alt="">
+        </div>
+        <div id="ice-cream2">
+            <img src="img/recipes/glace/ice-cream.png" width="250" alt="">
+        </div>
+        <div id="corner">
+            <img src="img/recipes/glace/corner.png" alt="">
+        </div>
         <header class="general-infos">
             <h2>Avant de commencer, voici ce dont vous devez savoir :</h2>
             <div class="informations">
@@ -159,25 +168,32 @@
         <section class="contact-section spad mt-5" id="comments">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-12 col-lg-8 offset-lg-2">
                         <form action="#" class="contact-form" id="comment-form">
-                            <h3>Laissez un commentaire</h3>
+                            <h3>Laissez-nous un commentaire <span>😊</span></h3>
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-12 col-md-6">
                                     <input type="text" id="name" placeholder="Votre nom" required>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-12 col-md-6">
                                     <input type="email" id="email" placeholder="Votre email" required>
                                 </div>
-                                <div class="col-lg-12">
+                                <div class="col-12">
                                     <input type="text" id="subject" placeholder="Sujet">
                                     <textarea id="comment" placeholder="Commentaire" required></textarea>
-                                    <div class="star-rating">
-                                        <i class="fa fa-star" data-rating="1"></i>
-                                        <i class="fa fa-star" data-rating="2"></i>
-                                        <i class="fa fa-star" data-rating="3"></i>
-                                        <i class="fa fa-star" data-rating="4"></i>
-                                        <i class="fa fa-star" data-rating="5"></i>
+                                    <div class="star-rating position-relative">
+                                        <div class="star-rating position-absolute">
+                                            <i class="fa-regular fa-star" data-rating="1"></i>
+                                            <i class="fa-regular fa-star" data-rating="2"></i>
+                                            <i class="fa-regular fa-star" data-rating="3"></i>
+                                            <i class="fa-regular fa-star" data-rating="4"></i>
+                                            <i class="fa-regular fa-star" data-rating="5"></i>
+                                        </div>
+                                        <i class="fa-regular fa-star" data-rating="1"></i>
+                                        <i class="fa-regular fa-star" data-rating="2"></i>
+                                        <i class="fa-regular fa-star" data-rating="3"></i>
+                                        <i class="fa-regular fa-star" data-rating="4"></i>
+                                        <i class="fa-regular fa-star" data-rating="5"></i>
                                     </div>
                                     <input type="hidden" id="rating" value="0">
                                 </div>

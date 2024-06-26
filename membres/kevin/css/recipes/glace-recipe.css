@@ -13,7 +13,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fdfbef;
+    background-color: rgb(var(--white-color));
     line-height: normal;
     overflow-x: hidden;
     font-size: 1.25rem;
@@ -32,7 +32,7 @@ ul{
 }
 
 *::selection{
-    background-color: rgba(90, 35, 20, 0.5);
+    background-color: rgba(var(--main-color), 0.5);
 }
 
 .glace-banner > p{
@@ -53,14 +53,14 @@ ul{
 
 h1,
 h2{
-    color: rgb(90, 35, 20);
+    color: rgb(var(--main-color));
     margin: 1rem 0;
     text-align: center;
 }
 
 h3{
     text-decoration: underline;
-    color: rgb(90, 35, 20);
+    color: rgb(var(--main-color));
     margin: 1rem 0;
 }
 
@@ -85,6 +85,27 @@ h3{
     filter: drop-shadow(10px 10px 4px rgba(81, 41, 32, 0.35));
 }
 
+#ice-cream1,
+#ice-cream2,
+#corner{
+    position: absolute;
+    transition: all 1s;
+}
+
+#ice-cream1{
+    z-index: 2;
+}
+
+#ice-cream2{
+    z-index: 1;
+    top: 1000px;
+}
+
+#corner{
+    top: 1500px;
+}
+
+
 #description,
 .general-infos,
 .owl-carousel{
@@ -105,7 +126,8 @@ h3{
 #description p{
     font-family: 'Playfair Display', sans-serif;
     text-align: center;
-    font-size: 1.60rem
+    font-size: 1.60rem;
+    font-weight: bold;
 }
 
 .informations li{
@@ -114,7 +136,7 @@ h3{
 }
 
 .informations i{
-    color: rgb(90, 35, 20);
+    color: rgb(var(--main-color));
 }
 
 .informations p{
@@ -126,7 +148,7 @@ h3{
 }
 
 .informations div:nth-child(1) a{
-    color: rgb(90, 35, 20);
+    color: rgb(var(--main-color));
 }
 
 .informations div:nth-child(1) p{
@@ -180,16 +202,16 @@ h3{
 }
 
 .steps a{
-    color: rgb(90, 35, 20);
+    color: rgb(var(--main-color));
     opacity: 0.5;
 }
 
 .step-desc strong{
-    color: rgb(90, 35, 20);
+    color: rgb(var(--main-color));
 }
 
 .step i{
-    color: rgb(90, 35, 20);
+    color: rgb(var(--main-color));
 }
 
 .step{
@@ -205,11 +227,11 @@ h3{
 
 .step .number{
     min-width: 50px;
-    background-color: rgb(90, 35, 20);
+    background-color: rgb(var(--main-color));
     border-radius: 100%;
     height: 50px;
     position: relative;
-    box-shadow: 2px 2px 5px rgba(90, 35, 20, 0.5);
+    box-shadow: 2px 2px 5px rgba(var(--main-color), 0.5);
 }
 
 .step .number span{
@@ -226,13 +248,16 @@ h3{
 
 .contact-section {
     padding: 50px 0;
-    background-color: #efe2d7;
+    background-color: rgba(var(--main-color), 0.25);
 }
 .contact-form {
-    background: #f1d6b4;
+    background: rgb(var(--white-color));;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form h3{
+    text-decoration: none;
 }
 .contact-form input, .contact-form textarea, .contact-form button {
     width: 100%;
@@ -240,10 +265,11 @@ h3{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: rgb(var(--main-color));
 }
 .contact-form button {
-    background-color:rgb(88, 34, 21);
-    color: #dfc298;
+    background-color:rgb(var(--main-color));
+    color: rgb(var(--white-color));
     cursor: pointer;
     border: none;
 }
@@ -254,10 +280,10 @@ h3{
 }
 .star-rating .fa-star {
     font-size: 24px;
-    color: white;
+    color: rgb(var(--main-color), 0.75);
     cursor: pointer;
 }
-.star-rating .fa-star.checked {
+.star-rating.position-relative > .fa-star.checked {
     color: #ffc107;
 }
 .comments-section {
@@ -272,7 +298,7 @@ h3{
     color: #777;
 }
 .comment .comment-rating {
-    color: rgb(88, 34, 21);
+    color: rgb(var(--main-color));
 }
 .comment .comment-rating i {
     margin-right: 2px;
@@ -346,6 +372,13 @@ h3{
 }
 
 
+@media screen and (width < 100px) {
+    #ice-cream1,
+    #ice-cream2,
+    #corner{
+        display: none;
+    }
+}
 @media screen and (width > 1400px) {
     .glace-banner{
         background-position: 0 25%;
