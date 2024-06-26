@@ -13,9 +13,7 @@ var swiper = new Swiper(".swiper", {
   keyboard: {
     enabled: true
   },
-  mousewheel: {
-    thresholdDelta: 70
-  },
+  
   spaceBetween: 60,
   loop: true,
   pagination: {
