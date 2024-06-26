@@ -23,7 +23,12 @@ $(".ps-photoset").hover(function(){
     bReady = true;
   }, 600);  
 });
+<<<<<<< HEAD
 });
+=======
+})
+
+>>>>>>> efaff1048fca90412285ff0d26e198487deab0d8
 
 // 3 images //
 $(".ps-photo").hover(function(){
@@ -33,4 +38,11 @@ $(".ps-photo").hover(function(){
   } else {
     // condole.log("stacking temporarily disabled")
   }
+});
+
+$(document).ready(function () {
+  $("#contactForm").hide();
+  $(".showForm").click(function () {
+      $("#contactForm").show(3000);
+  });
 });
