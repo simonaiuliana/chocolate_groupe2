@@ -41,6 +41,7 @@ h1{
     font-family: 'BiteChocolate', sans-serif;
 }
 
+
 h2{
     color: rgb(90, 35, 20);
     margin: 1rem 0;
@@ -56,21 +57,26 @@ h3{
 
 #img1 {
     position: absolute;
-    right: 250px; 
+    right: 100px; 
 }
 #img2 {
     position: absolute;
-    left: 250px; 
+    left: 100px; 
 }
 #img3 {
     position: absolute;
     left: 0px; 
     bottom: -10px;
 }
+#img5 {
+    position: absolute;
+    left: 0px; 
+    bottom: -450px;
+}
 #img4 {
     position: absolute;
     left: 0px; 
-    bottom: -896px;
+    bottom: -898px;
 }
 
 
@@ -178,7 +184,7 @@ h3{
 }
 
 
-@media screen and (width < 780px) {
+@media screen and (width < 1800px) {
     h1{
         min-width: 400px;
         font-size: 2rem;

@@ -18,20 +18,19 @@ $(function(){
             scrollNav = true;
             $('#place-holder-nav').show();
             $nav.addClass('nav-fixed');
-            hideMenuNav(firstTime === true);
+            if(firstTime !== true) hideMenuNav();
         }else if(scrollNav && window.scrollY <= $('.header-text').height() + 100){
             scrollNav = false;
             $('#place-holder-nav').hide();
             $nav.removeClass('nav-fixed');
         }
     }
-    function hideMenuNav(firstTime){
+    function hideMenuNav(){
         menuNavVisible = false;
-        if(!firstTime)
-            $('#nav-choco-open-menu').stop().css('top', phoneMode ? '-45px' : '-150px').hide();
+        $('#nav-choco-open-menu').stop().css('top', phoneMode ? '-40px' : '-150px').hide();
         $('#nav-recipes').hide();
         if(phoneMode)
-            $('#links').slideToggle(function(){
+            $('#links').slideUp(function(){
                 linksIsOpening = false;
             });
     }
@@ -68,7 +67,7 @@ $(function(){
             menuIsOpening = false;
         });
         $('#nav-choco-open-menu').animate({
-            'top': !menuNavVisible ? (phoneMode ? '-45px' : '-150px') : (phoneMode ? '153.64px' : '0px')
+            'top': !menuNavVisible ? (phoneMode ? '-40px' : '-150px') : (phoneMode ? '153.64px' : '0px')
         }, 2000);
     }
     function showLinks(){
