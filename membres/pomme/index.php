@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/recipes/glace-recipe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/footer/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
@@ -86,50 +87,50 @@
         <div class="sub-recipe" style="background-color: rgb(166 62 4);border-radius: 30px;color: #e4e4e4;margin: 30px auto;width: 80%;">
             <h2 style="background-color: rgb(90, 35, 20);width: 100%;margin-top: 0;padding: 16px 0 16px 0;border-radius: 30px 30px 0 0;color: #e4e4e4;text-decoration: none;text-align: center;">Préparation des pommes : <br>( <i class="fa-solid fa-clock"></i> 5 min )</h2>
             <div class="step" style="margin: 10px 0 10px 0">
-                <p style="margin-left: 2em;">1.<span style="margin-left: 1em;"></span>Préchauffez votre four à 180°C (thermostat 6).</p>
+                <p style="margin-left: 2em;">1.     Préchauffez votre four à 180°C (thermostat 6).</p>
             </div>
             <div class="step">
-                <p style="margin-left: 2em;">2.<span style="margin-left: 1em;"></span>Lavez les pommes et séchez-les avec du papier absorbant.</p>
+                <p style="margin-left: 2em;">2.     Lavez les pommes et séchez-les avec du papier absorbant.</p>
             </div>
             <div class="step">
-                <p style="margin-left: 2em;padding-bottom: 1em;">3.<span style="margin-left: 1em;"></span>Retirez le trognon des pommes à l’aide d’un vide-pomme.</p>
+                <p style="margin-left: 2em;padding-bottom: 1em;">3.     Retirez le trognon des pommes à l’aide d’un vide-pomme.</p>
             </div>
         </div>
         <div class="sub-recipe" style="background-color: rgb(166 62 4);border-radius: 30px;color: #e4e4e4;margin: 30px auto;width: 80%;">
             <h2 style="background-color: rgb(90, 35, 20);width: 100%;margin-top: 0;padding: 16px 0 16px 0;border-radius: 30px 30px 0 0;color: #e4e4e4;text-decoration: none;text-align: center;">Préparation du chocolat : <br>( <i class="fa-solid fa-clock"></i> 5 min )</h2>
             <div class="step" style="margin: 10px 0 10px 0">
-                <p style="margin-left: 2em;">1.<span style="margin-left: 1em;"></span>Cassez le chocolat en petits morceaux.</p>
+                <p style="margin-left: 2em;">1.     Cassez le chocolat en petits morceaux.</p>
             </div>
             <div class="step">
-                <p style="margin-left: 2em;padding: 0 0 1em 0;">2.<span style="margin-left: 1em;"></span>Dans une casserole, faites fondre le chocolat avec un peu d’eau sur feu doux, en remuant régulièrement jusqu’à obtenir une sauce lisse.</p>
+                <p style="margin-left: 2em;padding: 0 0 1em 0;">2.     Dans une casserole, faites fondre le chocolat avec un peu d’eau sur feu doux, en remuant régulièrement jusqu’à obtenir une sauce lisse.</p>
             </div>
         </div>
         <div class="sub-recipe" style="background-color: rgb(166 62 4);border-radius: 30px;color: #e4e4e4;margin: 30px auto;width: 80%;">
             <h2 style="background-color: rgb(90, 35, 20);width: 100%;margin-top: 0;padding: 16px 0 16px 0;border-radius: 30px 30px 0 0;color: #e4e4e4;text-decoration: none;text-align: center;">Cuisson des pommes : <br>( <i class="fa-solid fa-clock"></i> 15 min )</h2>
             <div class="step" style="margin: 10px 0 10px 0">
-                <p style="margin-left: 2em;">1.<span style="margin-left: 1em;"></span>Placez les pommes dans un plat allant au four.</p>
+                <p style="margin-left: 2em;">1.     Placez les pommes dans un plat allant au four.</p>
             </div>
             <div class="step">
-                <p style="margin-left: 2em;">2.<span style="margin-left: 1em;"></span>Remplissez chaque pomme évidée avec une cuillère à café de sucre roux et une noisette de beurre végétal.</p>
+                <p style="margin-left: 2em;">2.     Remplissez chaque pomme évidée avec une cuillère à café de sucre roux et une noisette de beurre végétal.</p>
             </div>
             <div class="step">
-                <p style="margin-left: 2em;padding: 0 0 1em 0;">3.<span style="margin-left: 1em;"></span>Versez la sauce au chocolat fondue sur les pommes.</p>
+                <p style="margin-left: 2em;padding: 0 0 1em 0;">3.     Versez la sauce au chocolat fondue sur les pommes.</p>
             </div>
         </div>
         <div class="sub-recipe" style="background-color: rgb(166 62 4);border-radius: 30px;color: #e4e4e4;margin: 30px auto;width: 80%;">
             <h2 style="background-color: rgb(90, 35, 20);width: 100%;margin-top: 0;padding: 16px 0 16px 0;border-radius: 30px 30px 0 0;color: #e4e4e4;text-decoration: none;text-align: center;">Cuisson au four : <br>( <i class="fa-solid fa-clock"></i> 15 min )</h2>
             <div class="step" style="margin: 10px 0 10px 0">
-                <p style="margin-left: 2em;">1.<span style="margin-left: 1em;"></span>Enfournez les pommes et laissez cuire pendant environ 15 minutes.</p>
+                <p style="margin-left: 2em;">1.     Enfournez les pommes et laissez cuire pendant environ 15 minutes.</p>
             </div>
             <div class="step">
-                <p style="margin-left: 2em;padding: 0 0 1em 0;">2.<span style="margin-left: 1em;"></span>Les pommes doivent être tendres mais pas trop molles.</p>
+                <p style="margin-left: 2em;padding: 0 0 1em 0;">2.     Les pommes doivent être tendres mais pas trop molles.</p>
             </div>
         </div>
 
         <div class="sub-recipe" style="background-color: rgb(166 62 4);border-radius: 30px;color: #e4e4e4;margin: 30px auto;width: 80%;">
             <h2 style="background-color: rgb(90, 35, 20);width: 100%;margin-top: 0;padding: 16px 0 16px 0;border-radius: 30px 30px 0 0;color: #e4e4e4;text-decoration: none;text-align: center;">Service : <br>( <i class="fa-solid fa-clock"></i> 15 min )</h2>
             <div class="step" style="margin: 10px 0 10px 0">
-                <p style="margin-left: 2em;padding: 0 0 1em 0;">1.<span style="margin-left: 1em;"></span>Servez les pommes chaudes, nappées de leur sauce au chocolat.</p>
+                <p style="margin-left: 2em;padding: 0 0 1em 0;">1.     Servez les pommes chaudes, nappées de leur sauce au chocolat.</p>
             </div>
         </div>
         <section class="spad mt-5" id="comments" style="padding: 0;width: 80%; margin: auto;margin-top: 100px;">
@@ -239,6 +240,7 @@
     <script src="js/nav.js"></script>
     <script src="js/jsfooter/main.js"></script>
     <script src="js/recipes/glace-recipe.js"></script>
+    <script src="./js/main.js"></script>
     <script>
         //query selectors of the elements to reveal with animation
         const reveal_query = [
