@@ -24,7 +24,7 @@ $(".ps-photoset").hover(function(){
   }, 600);  
 });
 });
-/*
+
 // 3 images //
 $(".ps-photo").hover(function(){
   if (bReady == true){
@@ -33,7 +33,7 @@ $(".ps-photo").hover(function(){
   } else {
     // condole.log("stacking temporarily disabled")
   }
-});*/
+});
 
 $(document).ready(function () {
   $("#contactForm").hide();
