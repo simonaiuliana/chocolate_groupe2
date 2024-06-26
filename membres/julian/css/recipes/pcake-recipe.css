@@ -105,6 +105,54 @@ h3{
     font-size: 1.1rem;
 }
 
+.recipe-card {
+    background: #f9f5f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recipe-card .card-body {
+    padding: 20px;
+}
+
+.rating {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rating .fa-star {
+    color: #ffc107;
+}
+
+.list-group-item {
+    background-color: #f9f5f0;
+    border: 0;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.steps-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.steps-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.steps-list li:last-child {
+    border-bottom: none;
+}
+
 /** Comment */
 
 .contact-section {
