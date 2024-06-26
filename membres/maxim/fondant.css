@@ -84,7 +84,7 @@ header {
   list-style: none;
 }
 .titreColorPrepa {
-  color: #955e42;
+  color: #230903;
   font-family: "Dancing Script", sans-serif;
   font-weight: 600;
   font-size: 45px;
@@ -185,7 +185,6 @@ header {
   
 .formBg{
     background-color: #fcd7ad82;
-    margin-top: 30px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -198,6 +197,7 @@ header {
 }
 .titreForm{
   font-family: "Dancing Script", sans-serif;
+  color: #230903;
   font-size: 45px;
   text-shadow: 3px 2px 3px #230903;
 }
@@ -212,6 +212,6 @@ header {
   border: 2px solid #230903; 
   font-family: "Nunito", sans-serif;
   font-size: 26px;
-  color: #553739;
+  color: #230903;
   margin-bottom: 50px;
 }
