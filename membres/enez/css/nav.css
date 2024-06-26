@@ -163,11 +163,15 @@ nav li{
     width: 380px;
 }
 
+
+/* ///////////// IMAGE NAVBAR CHOCOLAT FONDANT /////////////*/
+
+
 #test{
     margin-left: auto;
     width: 600px;
     height: 600px;
-    background-image: url(chocolate-7848086_1280.webp);
+    background-image: url();
     background-position: center;
 }
 @media screen and (width < 1400px) {
