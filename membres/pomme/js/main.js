@@ -1,6 +1,13 @@
 $(document).ready(function() {
-    let interval_ids = [];
+    let intervals = {}
     $(".step").click(function (){
+        console.log($(this));
+        if (intervals[$(this)[0].outerText]){
+            for (const interval_id of intervals[$(this)[0].outerText]){
+                clearInterval(interval_id);
+            }
+        }
+        let interval_ids = [];
         if (!$(this).hasClass("clicked")){
             $(this).addClass("clicked");
             let index = 0;
@@ -13,12 +20,9 @@ $(document).ready(function() {
                 index++;
             }, 2000 / p.text().length);
             interval_ids.push(interval_id);
+            intervals[$(this)[0].outerText] = interval_ids.map((el)=>el);
         }else{
-            for (const interval_id of interval_ids){
-                clearInterval(interval_id);
-            }
             StrikeThrough(-1, $(this).children().eq(0));
-            interval_ids = [];
             $(this).removeClass("clicked");
         }
     });
