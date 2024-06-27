@@ -16,14 +16,23 @@ CREATE TABLE `recipe` (
   PRIMARY KEY (id)
 );
 
+CREATE TABLE `sub_recipe` (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  recipe_id INT UNSIGNED NOT NULL,
+  title VARCHAR(40) NOT NULL,
+  image_url VARCHAR(255),
+  duration SMALLINT UNSIGNED NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 CREATE TABLE `instruction` (
   id INT UNSIGNED AUTO_INCREMENT,
-  recipe_id INT UNSIGNED NOT NULL,
-  text_content TEXT NOT NULL,
+  sub_recipe_id INT UNSIGNED NOT NULL,
   image_url VARCHAR(255),
   instruction_number TINYINT UNSIGNED NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (sub_recipe_id) REFERENCES sub_recipe(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE `ingredient` (
