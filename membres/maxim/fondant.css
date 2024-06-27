@@ -198,6 +198,7 @@ header {
   background-position: center;
   height: 100vh;
 }
+
 @media screen and (width < 768px) {
   .photoContainer{
     margin-top: 50px;
@@ -207,7 +208,9 @@ header {
     background-size: cover;
     background-position: center;
   }
-  
+  #carousel{
+    display: none;
+  }
 }
 /*end background svg carousel */
 
