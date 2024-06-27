@@ -5,7 +5,10 @@ VALUES("pomme", "pomme123", 1),
 INSERT INTO `recipe`(`name`, `nb_people`, `image_url`, `preparation_time`, `cooking_time`)
 VALUES("pomme au choco", 4, "http://www.pomme.com/image_de_pomme_au_choco", 45, 40);
 
-INSERT INTO `instruction`(`recipe_id`, `text_content`, `image_url`, `instruction_number`)
+INSERT INTO `sub_recipe`(`recipe_id`, `title`, `image_url`, `preparation_time`)
+VALUES("1", "Préparer la pomme", "http://www.pomme.com/image_de_pomme_au_choco", 45);
+
+INSERT INTO `instruction`(`sub_recipe_id`, `text_content`, `image_url`, `instruction_number`)
 VALUES(1, "mettre la pomme sur l'assitte", NULL, 1),
 (1, "mettre le choco sur l'assitte", NULL, 2),
 (1, "manger la pomme au choco", NULL, 3);
@@ -19,7 +22,7 @@ VALUES("g"),
 ("ml"),
 ("kg");
 
-INSERT INTO `ingredient_recipe`(`recipe_id`, `ingredient_id`, `ingredient_unity_id`, `quantity`)
+INSERT INTO `ingredient_has_recipe`(`recipe_id`, `ingredient_id`, `ingredient_unity_id`, `quantity`)
 VALUES(1, 1, NULL, 1),
 (1, 2, 1, 200);
 
@@ -33,7 +36,7 @@ VALUES("pomme"),
 ("vegan"),
 ("fruit");
 
-INSERT INTO `recipe_category`(`recipe_id`, `category_id`)
+INSERT INTO `recipe_has_category`(`recipe_id`, `category_id`)
 VALUES(1, 1),
 (1, 2),
 (1, 3),

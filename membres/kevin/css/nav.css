@@ -5,6 +5,11 @@
     font-style: normal;
 }
 
+:root{
+    --main-color: 90,35,20;
+    --white-color: 253,251,239;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -44,7 +49,7 @@ nav.nav-fixed{
 
 nav a{
     text-decoration: none;
-    color: #fdfbef;
+    color: rgb(var(--white-color));
     transition: color .25s;
 }
 
@@ -63,12 +68,12 @@ nav li{
 #nav-recipes{
     padding-left: 20px;
     padding-bottom: 1px;
-    background-color: rgb(90, 35, 20);
+    background-color: rgb(var(--main-color));
     min-width: 380px;
 }
 
 #nav-recipes a:hover{
-    color: #fdfbef;
+    color: rgb(var(--white-color));
 }
 
 #nav-recipes li:nth-child(1){
@@ -90,7 +95,7 @@ nav li{
     flex-wrap: wrap;
     position: relative;
     z-index: 4;
-    background: linear-gradient(90deg, rgba(90,35,20,1) 0%, rgba(95,30,5,1) 100%);
+    background: linear-gradient(90deg, rgb(var(--main-color)) 0%, rgb(97, 32, 3) 100%);
     display: flex;
     align-items: center;
     height: 100%;
@@ -198,7 +203,7 @@ nav li{
         top: 100px;
         width: 100%;
         flex-direction: column; 
-        background-color: rgb(90, 35, 20);
+        background-color: rgb(var(--main-color));
     }
 
     #links a:nth-child(1){
@@ -225,7 +230,7 @@ nav li{
     #links a:hover{
         background-color: rgb(78, 27, 13);
         padding-left: 25px;
-        color: #fdfbef;
+        color: rgb(var(--white-color));
     }
 
     #previews{

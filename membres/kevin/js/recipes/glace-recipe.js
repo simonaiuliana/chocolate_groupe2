@@ -23,18 +23,63 @@ $(document).ready(function() {
         }
     });
     AOS.init({
+        offset: 100,
         duration: 2000,
-        once: true
+        once: true,
     });
+
+    /** Corner Chocolat */
+    const $cream1 = $('#ice-cream1');
+    const $cream2 = $('#ice-cream2');
+    const $corner = $('#corner');
+
+    function checkCornerIceCream(){
+        let posY = window.scrollY - 500;
+        posY = posY < 0 ? 0 : posY;
+
+        let posYCream = posY <= 600 ? posY : 600;
+        $cream1.css({
+            'top': posYCream
+        })
+
+        const actualTopCream2 = +$cream2.css('top').replace('px', '');
+        if(actualTopCream2 >= 540 && actualTopCream2 <= 640){
+            $cream2.css({
+                'top': posYCream + 40
+            })
+        }else{
+            let pos = 1200 - posYCream + 40;
+            if(posYCream >= 500){
+                pos = pos < 540 ? posYCream + 40 : pos;
+            }
+            
+            $cream2.css({
+                'top': pos + 'px'
+            })
+        }
+        
+        let posYCorner = posY <= 700 ? posY : 700;
+        $corner.css({
+            'top': 1400 - posYCorner + 20 + 'px'
+        })
+    }
+
+    addEventListener('scroll', checkCornerIceCream);
+    checkCornerIceCream();
+
+    /** end Corner Chocolat */
+    
+    /** Comment */
+
     // Fonctionnalité de notation par étoiles
     $('.star-rating .fa-star').on('click', function() {
         var rating = $(this).data('rating');
         $('#rating').val(rating);
-        $('.star-rating .fa-star').each(function() {
+        $('.star-rating.position-relative > .fa-star').each(function() {
             if ($(this).data('rating') <= rating) {
-                $(this).addClass('checked');
+                $(this).removeClass('fa-regular').addClass('fa').addClass('checked');
             } else {
-                $(this).removeClass('checked');
+                $(this).removeClass('fa').addClass('fa-regular').removeClass('checked');
             }
         });
     });
@@ -46,23 +91,34 @@ $(document).ready(function() {
         var name = $('#name').val();
         var email = $('#email').val();
         var subject = $('#subject').val();
-        var comment = $('#comment').val();
+        var comment = $('.ql-editor').html();
+        console.log(comment)
         var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
         
         var date = new Date().toLocaleDateString();
 
-        var commentHtml = '<div class="comment">' +
-                            '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
-                            '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                            '<div>' + escapeHtml(comment) + '</div>' +
-                          '</div>';
+        var commentHtml = `
+            <div class="comment">
+                <div class="d-flex justify-content-between pe-5 pb-3 border-bottom"><strong>${name}</strong> <div>Posté le : <span class="comment-date">${date}</span></div></div>
+                <div class="d-flex my-3 gap-5">
+                    <div class="fw-bold" style="color: rgb(var(--main-color))">
+                        Sujet : ${subject}
+                    </div>
+                    <div class="comment-rating">
+                        <span>Note : </span>
+                        ${getStars(rating)}
+                    </div>
+                </div>
+                <div>${comment}</div>
+            </div>
+        `;
 
         $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
 
         // Réinitialiser le formulaire
         $('#comment-form')[0].reset();
         $('#rating').val(0);
-        $('.star-rating .fa-star').removeClass('checked');
+        $('.star-rating .fa-star').removeClass('fa').addClass('fa-regular').removeClass('checked');
     });
 
     // Fonction pour générer les étoiles
@@ -92,4 +148,30 @@ $(document).ready(function() {
         };
         return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
     }
+    /** end comment */
+
+    /** Quill editor */
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['blockquote', 'code-block'],             // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+             // dropdown with defaults from theme
+        [{ 'align': [] }],
+      
+        ['clean']                                         // remove formatting button
+      ];
+      
+      
+      var options = {
+        modules: {
+          toolbar: toolbarOptions,
+        },
+        theme: 'snow'
+      };
+    new Quill('#comment', options);
+    /** end Quill editor */
+
 });
