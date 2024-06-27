@@ -36,10 +36,14 @@
     body{
         background-color: rgb(205, 180, 151);
     }
+    h1{
+        text-align: center;
+    }
     /*cards*/
     html{
     overflow-y: scroll;
 }
+ 
    
 a{
     text-decoration: none;
@@ -287,7 +291,14 @@ Cards
   .news-block{
      max-width: 380px;
   }
+  .item-title{
+    display: none;
+  }
+  .calculateur{
+    max-width: 550px;
+  }
 }
+
 /*-----------------
 Pixel Grid
 ------------------*/
@@ -503,7 +514,11 @@ h1{
     height: 65vh; 
     overflow: hidden;
 }
-
+ .item-figure img{
+    width: 61.2%;
+    height: 33%;
+    object-fit: cover;
+ }
 .recipe-top img {
     width: 100%;
     height: 100%;
@@ -526,9 +541,11 @@ h1{
             background-color: #ead5be;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
+         
         .ingredient_img {
             height: 47px;
             width: 70px;
@@ -554,10 +571,11 @@ h1{
     margin-bottom: 10px;
 }
 #calculateButton{
-    width: 50%;
-display: inline-block;
+    width: 40%;
+display: flex;
+align-self: center;
 padding: 15px 25px;
-font-size: 20px;
+font-size: 15px;
 cursor: pointer;
 text-align: center;
 text-decoration: none;
@@ -569,28 +587,31 @@ border-radius: 15px;
 box-shadow: 0 9px #999;
 margin-bottom: 20px; 
 }
-#calculateButton:hover {background-color: rgb(115, 77, 50)}
+#calculateButton:hover {
+    background-color: rgb(115, 77, 50)
+}
 
 #calculateButton:active {
+
 background-color:rgb(115, 77, 50);
 box-shadow: 0 3px #666;
 transform: translateY(4px);
 }
-        @media screen and (max-width: 600px) {
-            .container {
-                padding: 10px;
-            }
-            .ingredient_img {
-                height: auto;
-                width: 100%;
-                max-width: 70px;
-                margin-right: 10px;
-            }
-            .ingredient_label, .ingredient_qte {
-                display: block;
-                margin: 5px 0;
-            }
-        }
+ @media screen and (max-width: 600px) {
+ .container {
+    padding: 10px;
+     }
+ .ingredient_img {
+   height: auto;
+   width: 100%;
+   max-width: 70px;
+   margin-right: 10px;
+    }
+ .ingredient_label, .ingredient_qte {
+   display: block;
+   margin: 5px 0;
+    }
+ }
 
 /* Animations et hover effects */
 .recipe-steps li {
@@ -650,6 +671,7 @@ transform: translateY(4px);
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
+ 
 </style>
 </head>
 
@@ -690,8 +712,6 @@ transform: translateY(4px);
             <img src="banner_top.png" alt="">
         </div>
 
-
-
         <!--top section start-->
     <section class="single-recipe-wrap-layout1 padding-top-74 padding-bottom-50">
         <div class="containerC">
@@ -699,7 +719,7 @@ transform: translateY(4px);
             <div class="row header-text" >
                 <div class="col-md-12">
                     <div class="item-figure text-center">
-                        <img src="../../public/assets/nouvelles img/brownieFramboise.jpg" alt="Brownie Framboise" class="img-fluid">
+                        <img src="../../public/assets/nouvelles img/browniesFramboise3.jpeg" alt="Brownie Framboise" class="img-fluid">
                         <h1 class="item-title">Brownie framboise</h2>
                        
                     </div>
@@ -875,19 +895,27 @@ transform: translateY(4px);
                     <li>Sucre roux - 150 g</li>
                 </ul>
             </aside>
+            <div class="video-recip mt-5">
+                <iframe width="350" height="270" src="https://www.youtube.com/embed/wQUTcwUsr6Q" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="container-fluid justify-content-center mt5">
+                <img alt="etape1" class="etape" src="../../public/assets/nouvelles img/etape1.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 100px; height: 100px;">
+                <img alt="etape2" class="etape" src="../../public/assets/nouvelles img/etape2.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 100px; height: 100px;">
+                <img alt="etape3" class="etape" src="../../public/assets/nouvelles img/etape3.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 100px; height: 100px;">
+                <img alt="etape4" class="etape" src="../../public/assets/nouvelles img/etape4.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 100px; height: 100px;">
+                <img alt="etape5" class="etape" src="../../public/assets/nouvelles img/brownieFramboise5.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 100px; height: 100px;">
+                <img alt="etape6" class="etape" src="../../public/assets/nouvelles img/brownieFramboise2.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 100px; height: 100px;">
+            </div>
         </div>
     </div>
 </section>
 
-         
 <!--section preparation end-->
-<!--======Pixel Grid======-->
-<div><img src="https://www.seanet.com/~owenmp/hvd-web/play-aids/grid-lg.gif" class="pixel-grid"/></div>
-<div><i id="toggle-grid" class="fa fa-th"></i></div>
-<!------------------------->
+
 
 <!--========Cards========-->
 <div class="container-fluid main-cont">
+    <h1>Recettes similaires</h1>
     <div class="row news-row">
         <div class="container-fluid col-md-12 col-sm-6 justify-content-center news-block">
             <div class="card-group">
@@ -914,7 +942,7 @@ transform: translateY(4px);
                         <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/cookie.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
                         <div class="card-block">
                             <h5 class="card-title" style="font-family: 'Anton', sans-serif">Cookie<hr></h5>
-                            <p class="card-text">Un dessert pour toute monde<a href="#"><u>Decouvrez la recette</u></a></p>
+                            <p class="card-text">Un dessert pour toute monde<a href="../charly/charl.html"><u>Decouvrez la recette</u></a></p>
                         </div>
                     </div>
                 </div>
@@ -923,52 +951,52 @@ transform: translateY(4px);
                         <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/coulant-chocolat-framboises.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
                         <div class="card-block">
                             <h5 class="card-title" style="font-family: 'Anton', sans-serif">Coulant chocolat<hr></h5>
-                            <p class="card-text"><a href="../maxim/recette.html"><u>Decouvrez la recette</u></a></p>
+                            <p class="card-text"><a href="../maxim/recettes.html"><u>Decouvrez la recette</u></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="underlay">
                     <div class="card">
-                        <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/Gateau-de-fete-au-chocolat.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
+                        <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/glace-chocolat.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
                         <div class="card-block">
-                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Gateau de fete au chocolat<hr></h5>
-                            <p class="card-text"><a href="#"><u>Decouvrez la recette</u></a></p>
+                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Glace au chocolat<hr></h5>
+                            <p class="card-text"><a href="../kevin/glace-au-chocolat.html"><u>Decouvrez la recette</u></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="underlay">
                     <div class="card">
-                        <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/bombons2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
+                        <div class="card-img-top" style="background-image: url('../sebastien/img/recipes/Mousse/cupavci.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
                         <div class="card-block">
-                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Bombons<hr></h5>
-                            <p class="card-text"><a href="#"><u>Decouvrez la recette</u></a></p>
+                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Cupavci<hr></h5>
+                            <p class="card-text"><a href="../enez/enez.html"><u>Decouvrez la recette</u></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="underlay">
                     <div class="card">
-                        <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/choco4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
+                        <div class="card-img-top" style="background-image: url('../sebastien/img/recipes/Mousse/tranche-brownie-au-chocolat-glace-noix-vanille_114579-903\ -\ Copie.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
                         <div class="card-block">
-                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Chocolat<hr></h5>
-                            <p class="card-text"><a href="#"><u>Decouvrez la recette</u></a></p>
+                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Eclat choco amainde<hr></h5>
+                            <p class="card-text"><a href="../laura/laura.html"><u>Decouvrez la recette</u></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="underlay">
                     <div class="card">
-                        <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/bananabread-chocolat.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
+                        <div class="card-img-top" style="background-image: url('../sebastien/img/recipes/Mousse/chocopomme.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
                         <div class="card-block">
-                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Bananabread<hr></h5>
-                            <p class="card-text"><a href="#"><u>Decouvrez la recette</u></a></p>
+                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Pomme choco<hr></h5>
+                            <p class="card-text"><a href="../pomme/chocopomme.jpg"><u>Decouvrez la recette</u></a></p>
                         </div>
                     </div>
                 </div>
                 <div class="underlay">
                     <div class="card">
-                        <div class="card-img-top" style="background-image: url('../../public/assets/nouvelles img/cakeMarblé.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
+                        <div class="card-img-top" style="background-image: url('../sebastien/img/recipes/Mousse/ciasto-murzynek.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 200px;"></div>
                         <div class="card-block">
-                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Cake Marblé<hr></h5>
-                            <p class="card-text"><a href="#"><u>Decouvrez la recette</u></a></p>
+                            <h5 class="card-title" style="font-family: 'Anton', sans-serif">Ciasto-murzynek<hr></h5>
+                            <p class="card-text"><a href="../julian/polishcake.html"><u>Decouvrez la recette</u></a></p>
                         </div>
                     </div>
                 </div>
