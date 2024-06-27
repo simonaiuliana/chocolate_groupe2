@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=">
+    <link rel="icon" type="image/x-icon" href="img/nav-img/logo.png">
+    <title>🍫 Délicieuse recette de mousse au chocolat 🍫</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/recipes/mousse.css">
+    <link rel="stylesheet" href="css/commentaire/stylecommentaire.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/footer/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/footer/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/footer/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/footer/style.css" type="text/css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="css/carousel/carou.css">
+    
+    
+
+</head>
+<body>
+    <!--------------navbar--------------------->
+    <div id="place-holder-nav" style="display: none;">
+    </div>
+    <nav>
+        <div id="nav-links">
+            <a href="mous.html" id="logo"><img src="img/nav-img/logo.png" alt="" width="50"></a>
+            <div id="container-burger">
+                <img src="img/nav-img/chocolat.png" alt="">
+            </div>
+            <div id="links">
+                <a href="#">Accueil</a>
+                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
+                <a href="#coms">Contact</a>
+            </div>
+        </div>
+        <div id="nav-recipes-container">
+            <ul id="nav-recipes" style="display: none;">
+                <a href="#"><li>Mousse au chocolat</li></a>
+                <a href="#"><li>Cake au chocolat</li></a>
+                <a href="#"><li>Fondant au chocolat</li></a>
+                <a href="#"><li>Tarte au chocolat</li></a>
+                <a href="#"><li>Cookies au chocolat</li></a>
+                <a href="../kevin/glace-au-chocolat.html"><li>Glace au chocolat</li></a>
+                <a href="#"><li>Bûche de Noël au chocolat</li></a>
+                <a href="#"><li>Moelleux au chocolat</li></a>
+                <a href="#"><li>Truffes au chocolat</li></a>
+                <a href="#"><li>Macarons au chocolat</li></a>
+            </ul>
+            <div id="previews">
+            </div>
+        </div>
+        <div id="nav-choco-open-menu">
+            <img src="img/nav-img/openmenu.png" alt="">
+        </div>
+    </nav>
+    <div id="nav-choco">
+        <img src="img/nav-img/banner_top.png" alt="">
+    </div>
+   
+    <header class="header-text glace-banner">
+        <h1>Mousse au chocolat</h1>
+    </header>
+<!-----------------contenu--------------------------->
+<main>
+    <header class="general-infos">
+        <h2 class="display-5 mt-5">Mousse au chocolat</h2>
+        <h2 class="mt-5 mb-5">"Plongez dans un Nuage de Douceur : Découvrez Notre Recette Authentique de Mousse au Chocolat, une Harmonie Parfaite de Légèreté et de Fondant qui Transformera Chaque Cuillère en un Instant de Pur Bonheur"</h2>
+        <div class="informations">
+            <div>
+                <h3>Évaluation :</h3>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <p><i class="fa-solid fa-message"></i> <a href="#coms">4 commentaires</a></p>
+                <button class="btn btn-primary" onclick="printDiv('page')" value="print a div!">Imprimer la recette</button>
+            </div>
+            <div>
+                <h3>Informations utiles :</h3>
+                <p>&nbsp;<i class="fa-solid fa-person"></i> Servis pour: 4 personnes</p>
+                <p><i class="fa-solid fa-clock"></i> Préparation: 30min</p>
+                <p><i class="fa-solid fa-clock"></i> Repos: 2 heures</p>
+            </div>
+            <div>
+                <h3>Ingrédients :</h3>
+                <ul>
+                    <li><i class="fa-solid fa-receipt"></i> 400 grammes de chocolat noir (en morceaux)</li>
+                    <li><i class="fa-solid fa-receipt"></i> 100 grammes de beurre  </li>
+                    <li><i class="fa-solid fa-receipt"></i> 4 jaunes d’oeuf </li>
+                    <li><i class="fa-solid fa-receipt"></i> 10 blancs d’œufs </li>
+                    <li><i class="fa-solid fa-receipt"></i> 100 grammes de sucre </li>
+                    <li><i class="fa-solid fa-receipt"></i> 1 décilitre de crème fraîche </li>
+                    <li><i class="fa-solid fa-receipt"></i> 4 noix </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="page">
+        <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+            <img id="img3" src="img/recipes/Mousse/plouf2.png" style="width: 300px;" class="me-5"  data-aos="fade-down"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" alt="Image 1">
+        </div>
+        <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+            <img id="img5" src="img/recipes/Mousse/plouf4.png" style="width: 300px;" class="me-5"  data-aos="fade-down"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" alt="Image 1">
+        </div>
+        <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+            <img id="img4" src="img/recipes/Mousse/plouf1.png" style="width: 300px;" class="me-5"  data-aos="zoom-in">
+        </div>
+        <div class="steps mt-5">
+            <h2 class="text-center"> Desserts
+                Pure chocomousse
+                 : <br>( <i class="fa-solid fa-clock"></i> 30 min )</h2>
+            <div class="step">
+                <p class="number"><span>1</span></p>
+                <p class="step-desc">Faites fondre le chocolat au bain-marie avec le beurre. </p>
+            </div>
+            <div class="step">
+                <p class="number"><span>2</span></p>
+                <p class="step-desc">Incorporez 50 g de sucre aux jaunes d’œufs et battez-les jusqu’à obtenir une texture mousseuse. </p>
+            </div>
+            <div class="step">
+                <p class="number"><span>3</span></p>
+                <p class="step-desc mb-5">Ajoutez le sucre restant aux blancs d’œufs et battez-les en neige.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>4</span></p>
+                <p class="step-desc mb-5">Fouettez également la crème jusqu’à ce qu’elle soit bien ferme.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>5</span></p>
+                <p class="step-desc mb-5">Plongez le bol contenant le chocolat sous l’eau froide et versez-y immédiatement les jaunes d’œufs.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>6</span></p>
+                <p class="step-desc mb-5">Incorporez la crème fraîche, puis ajoutez délicatement les blancs d’œufs.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>7</span></p>
+                <p class="step-desc mb-5">Répartissez la préparation dans 8 verres et laissez-la durcir pendant au moins 2 heures au réfrigérateur.</p>
+            </div>
+            <div class="step">
+                <p class="number"><span>8</span></p>
+                <p class="step-desc mb-5">Servez avec un demi-cerneau de noix et éventuellement un biscuit en guise de garniture.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    
+<!------------------video------------------->
+    <section id="backvid" class="container-fluid text-white mt-5 py-5">
+        <div class="container">
+            <h2 class="text-center text-white">Vidéo de la recette</h2>
+            <div class="row mt-4">
+                <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+                    <img id="img1" src="img/recipes/Mousse/—Pngtree—healthy vegan raw glass dark_15569265.png" style="width: 300px;" class="me-5"  data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" alt="Image 1">
+                </div>
+                <div class="col-md-8">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OqB6joRdmBk?si=Wr6oCgHamDE32z5F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+                    <img id="img2" src="img/recipes/Mousse/—Pngtree—healthy vegan raw glass dark_15569265.png" style="width: 300px;" class="ms-5" data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" alt="Image 2"> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------start commentaire----------------------------->
+    <section id="coms" class="contact-section mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="#" class="contact-form" id="comment-form">
+                        <h3 class="mb-4">Laissez un commentaire</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" id="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="email" id="email" placeholder="Votre email" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input type="text" id="subject" placeholder="Sujet">
+                                <textarea id="comment" placeholder="Commentaire" required></textarea>
+                                <div class="star-rating">
+                                    <i class="fa fa-star" data-rating="1"></i>
+                                    <i class="fa fa-star" data-rating="2"></i>
+                                    <i class="fa fa-star" data-rating="3"></i>
+                                    <i class="fa fa-star" data-rating="4"></i>
+                                    <i class="fa fa-star" data-rating="5"></i>
+                                </div>
+                                <input type="hidden" id="rating" value="0">
+                            </div>
+                        </div>
+                        <button type="submit">Envoyez votre commentaire</button>
+                    </form>
+                    <div class="comments-section">
+                        <h3>Commentaires</h3>
+                        <div class="comments-list" id="comments-list">
+                            <!-- Commentaires a venir ici -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+<!-- carousel-->
+<h2 class="display-5">Autre Recette</h2>
+<section id="sectioncar">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide--one">
+            <a href="../kevin/glace-au-chocolat.html"><span>Glace au chocolat</span></a>
+            <div>
+              <h2>"Fondez de plaisir avec notre glace au chocolat"</h2>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide--two">
+            <a href="mous.html"><span>Éclat Choco-Amande</span></a>
+        <div>
+            <h2>"Éclat Choco-Amande: La Fusion Gourmande de la Douceur et du Croquant"</h2>
+        </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--three">
+          <span>Cookies au chocolat</span>
+          <div>
+            <h2>"Craquez pour nos cookies au chocolat, un plaisir à chaque bouchée."</h2>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--four">
+          <span>murzynek</span>
+          <div>
+            <h2>"Délice Noir au Chocolat"</h2>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--five">
+          <a href="mous.html"><span>Moelleux au chocolat</span></a>
+          <div>
+            <h2>"Moelleux au chocolat : fondant à souhait, bonheur à chaque bouchée."</h2>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--six">
+          <a href="mous.html"><span> Amandina Cake </span></a>
+          <div>
+            <h2>"Amandina Cake: L'Exquise Harmonie de l'Amande et du Gâteau"</h2>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--seven">
+          <a href="mous.html"><span>cupavci</span></a>
+          <div>
+            <h2>"Cupavci: Le Plaisir Enveloppé de Douceur"</h2>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--eight">
+          <a href="mous.html"><span>chocopomme</span></a>
+          <div>
+            <h2>"ChocoPomme: Le Duo Délicieux qui Croque de Plaisir"</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
+      <!-- Page Preloder -->
+      <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg mt-5" data-setbg="img/imgfooter/footer-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__newslatter">
+                       <h6>Recette ...</h6>
+                       <ul class="servi">
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette1</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette2</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette3</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette4</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette5</a></li>
+                       </ul>
+                    </div>
+                 </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/imgfooter/logo 2.png" style="width: 150px;" alt=""></a>
+                        </div>
+                        <p> +32 123 890 <br>
+                            chocomousse@gmail.com <br>
+                            Rue de chocolat 15
+                            1060 Saint Gilles Belgique.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__newslatter">
+                        <h6>Newsletter</h6>
+                        <p>Vous voulez nos derniere recette? </p>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit"><i class="fa fa-send-o"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="copyright__text text-white">
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">sebastien</a>
+                          
+                      </p>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="copyright__widget">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+<script src="js/carousel.js"></script>
+<script src="" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+            AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/commentaire.js"></script>
+    <script src="js/nav.js"></script>
+
+    <script src="js/jsfooter/jquery-3.3.1.min.js"></script>
+    <script src="js/jsfooter/bootstrap.min.js"></script>
+    <script src="js/jsfooter/main.js"></script>
+</body>
+
+</html>

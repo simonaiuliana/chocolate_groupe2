@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
+        <title>Amandina Cake - Blog de Recettes</title>
+        <link rel="stylesheet" href="/public/glace-chocolat/css/nav.css">
+        <link rel="stylesheet" href="amandinaCake.css">
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous">
+
+    <!-- Font Awesome pentru iconițe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-9I72DfU5rG4anYiZL9Vn8trGwm+w5J6SvBjIlh8C2xwrk7p1A2/8Wc8V6qbdC3tx79MsqEo2f2DxLjAeH1V1bQ=="
+        crossorigin="anonymous" />
+      
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="drip.css">
+        <link rel="icon" href="th-r.jpeg" type="image/x-icon">
+
+    <!-- CSS personalizat -->
+    
+</head>
+
+<body>
+    <nav>
+        <div id="nav-links">
+            <a href="#" id="logo"><img src="th-r.jpeg" alt="" width="50"></a>
+            <div id="container-burger">
+                <img src="chocolat.png" alt="">
+            </div>
+            <div id="links">
+                <a href="#">Accueil</a>
+                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div id="nav-recipes-container">
+            <ul id="nav-recipes" style="display: none;">
+                <a href="#"><li>Mousse au chocolat</li></a>
+                <a href="#"><li>Cake au chocolat</li></a>
+                <a href="#"><li>Fondant au chocolat</li></a>
+                <a href="#"><li>Tarte au chocolat</li></a>
+                <a href="#"><li>Cookies au chocolat</li></a>
+                <a href="#"><li>Glace au chocolat</li></a>
+                <a href="#"><li>Bûche de Noël au chocolat</li></a>
+                <a href="#"><li>Moelleux au chocolat</li></a>
+                <a href="#"><li>Truffes au chocolat</li></a>
+                <a href="#"><li>Macarons au chocolat</li></a>
+            </ul>
+            <div id="previews">
+            </div>
+        </div>
+        <div id="nav-choco-open-menu">
+            <img src="openmenu.png" alt="">
+        </div>
+    </nav>
+    <div id="nav-choco">
+        <img src="banner_top.png" alt="">
+    </div>
+    
+  
+
+    <!--top section start-->
+    <section class="single-recipe-wrap-layout1 padding-top-74 padding-bottom-50">
+        <div class="container">
+            <!-- Imagine de top și nume rețetă -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="item-figure text-center">
+                        <img src="../../public/assets/nouvelles img/amandina.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
+                        <h1 class="item-title">Amandina Cake</h2>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informații despre rețetă -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="recipe-info">
+                        <ul class="feature-list text-center">
+                            <li>
+                                <div class="media">
+                                    <div class="feature-icon">
+                                        <i class="far fa-clock"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="feature-title">Temp total de preparation</div>
+                                        <div class="feature-sub-title">90 Min</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="feature-title">Temp de cuison</div>
+                                        <div class="feature-sub-title">45 Mins</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="feature-title">Portions</div>
+                                        <div class="feature-sub-title">10 Personnes</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--top section end-->
+
+    <!-- start section pour calcul des ingredients -->
+    <div class="container center-page">
+        <div class="row mt-5 mb-5">
+            <section class="calculateur col-lg-6 col-md-6 col-sm-8">
+                <h2 class="mb-3 text-center">Calculer les Ingrédients</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nr-personnes">Nombre de Personnes:</label>
+                        <input type="number" class="form-control" id="nr-personnes" placeholder="Entrez le nombre">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Calculer</button>
+                </form>
+            </section>
+            <section class="photo col-lg-6">
+                <img src="../../public/assets/nouvelles img/ingredients3.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
+            </section>
+        </div>
+    </div>
+    <!-- end section pour calcul des ingredients -->
+
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 pb-5">
+                <!-- Articolul cu descriere și instrucțiuni -->
+                <article class="mb-4">
+                    <p>Voici la meilleure recette de l'Amandina Cake, un dessert classique et raffiné. Pas à pas, vous
+                        apprendrez à préparer ce délicieux gâteau, au dessus moelleux au cacao, siropé au rhum et au
+                        chocolat fin et crème au beurre. Parfait pour toutes les occasions et pour tous les goûts !
+                    </p>
+                </article>
+                 
+                <!-- Secțiune pentru ingrediente -->
+                <section class="mb-4 mt-4 pt-5 ingredients-section">
+                    <h2 class="mb-2">Ingredients</h2>
+                    <div class="note-item">
+                        <i class="far fa-sticky-note mr-2"></i>
+                        <ul class="ingredients-list">
+                            <li>6 œufs</li>
+                            <li>180 g de sucre</li>
+                            <li>une pincée de sel</li>
+                            <li>40 ml d'huile</li>
+                            <li>3 cuillères à soupe de cacao</li>
+                            <li>130 g de farine</li>
+                            <li>Crème:</li>
+                            <li>250 g de chocolat noir 60% de cacao</li>
+                            <li>250 ml de crème pour la chantilly</li>
+                            <li>200 g de beurre</li>
+                            <li>1 ampoule d'essence de rhum</li>
+                            <li>Sirop:</li>
+                            <li>350 ml d'eau</li>
+                            <li>150 g de sucre</li>
+                            <li>une fiole d'essence de rhum</li>
+                            <li>Glaçage:</li>
+                            <li>100 g de chocolat ménager</li>
+                            <li>5 cuillères à soupe d'huile</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+    <!-- Secțiune pentru rețete similare -->
+   <section class="col-lg-4">
+    <div class="similar-recipe">
+        <h2 class="mb-4 text-center">Recettes similaires</h2>
+        <div class="card mb-3">
+            <a href="link-catrea-pagina-retetei1">
+                <img src="../../public/assets/nouvelles img/mousse.jpg" class="card-img-top img-fluid" alt="...">
+            </a>
+        </div>
+        <div class="card mb-3">
+            <a href="link-catrea-pagina-retetei2">
+                <img src="../../public/assets/nouvelles img/swissRoll.jpg" class="card-img-top img-fluid" alt="...">
+            </a>
+        </div>
+        <div class="card mb-3">
+            <a href="link-catrea-pagina-retetei3">
+                <img src="../../public/assets/nouvelles img/coulant-chocolat-framboises.jpg" class="card-img-top img-fluid" alt="...">
+            </a>
+        </div>
+    </div>
+    </section>
+
+       
+            
+        </div>
+        <div class="col-lg-11">
+            <section class="article-section-m mb-4">
+                <h2 class="mb-1 mt-3">Méthode de préparation</h2>
+                <div class="note-item">
+                    <i class="far fa-sticky-note "></i> 
+                    <p>
+                        Nous séparons les œufs.
+                        Mélangez les blancs d'œufs avec une pincée de sel et battez la mousse, et vers la fin ajoutez le sucre petit à petit en mélangeant continuellement.<br>
+                        Mélangez les jaunes avec l'huile et ajoutez-les aux blancs en les incorporant délicatement à la spatule.<br>
+                        Ajouter la farine mélangée au cacao tamisée.<br>
+                        Mélangez de bas en haut par de légers mouvements jusqu'à ce que toute la farine soit incorporée.<br>
+                        Nous mettons la composition dans un moule recouvert de papier sulfurisé (22 cm de diamètre) et enfournons pendant 35-40 minutes à 170 degrés C. <br>
+                        Quand c'est prêt, laissez-la refroidir sur une grille et coupez-la en trois morceaux.<br>
+                        La crème est assez simple à réaliser. <br>
+                        C'est une ganache au chocolat au beurre onctueuse et aromatique.<br> 
+                        On chauffe la crème pour la chantilly jusqu'à ce qu'elle atteigne le point d'ébullition, on éteint le feu, on ajoute les morceaux de chocolat cassés et on mélange pour homogénéisation. <br>
+                        Laissez-le refroidir.<br>
+                        Mélangez le beurre pendant 2-3 minutes puis ajoutez la ganache refroidie (à 20-25 degrés C).<br>
+                        Sirop : faites fondre délicatement le sucre pour ne pas trop le brûler, ajoutez de l'eau chaude et faites bouillir jusqu'à ce que le sucre soit fondu. <br>
+                        Quand il fait froid, ajoutez l'essence de rhum.<br>
+                        Le glaçage se prépare très simplement. <br>
+                        Faire fondre le chocolat au bain de vapeur ou au micro-ondes avec l'huile.<br>
+                        On assemble le gâteau : on pose une feuille de dessus sur un disque ou un plateau, on ajoute du sirop et on étale uniformément une partie de la crème. <br>
+                        N'oubliez pas de conserver 4 à 5 cuillères pour la décoration !<br>
+                        Vient ensuite la deuxième partie du dessus, le sirop et la crème. <br>
+                        On recouvre avec le dernier disque du dessus, on ajoute du sirop et, avec le reste de crème, on habille le gâteau.<br>
+                        Laissez-le refroidir une heure, puis glacez-le et décorez-le avec les noisettes de la crème réservée.<br>
+                        On le garde au frais et on le sort du réfrigérateur 30 minutes avant de le couper.<br>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- Section Commentaires -->
+    <section class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="#" class="contact-form" id="comment-form">
+                        <h3>Laissez un commentaire</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" id="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="email" id="email" placeholder="Votre email" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input type="text" id="subject" placeholder="Sujet">
+                                <textarea id="comment" placeholder="Commentaire" required></textarea>
+                                <div class="star-rating">
+                                    <i class="fa fa-star" data-rating="1"></i>
+                                    <i class="fa fa-star" data-rating="2"></i>
+                                    <i class="fa fa-star" data-rating="3"></i>
+                                    <i class="fa fa-star" data-rating="4"></i>
+                                    <i class="fa fa-star" data-rating="5"></i>
+                                </div>
+                                <input type="hidden" id="rating" value="0">
+                            </div>
+                        </div>
+                        <button type="submit">Envoyez votre commentaire</button>
+                    </form>
+                    <div class="comments-section">
+                        <div class="comments-list" id="comments-list">
+                            <!-- Commentaires affichés ici -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 Coeur Fondant. Tous droits réservés.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fonctionnalité de notation par étoiles
+            $('.star-rating .fa-star').on('click', function() {
+                var rating = $(this).data('rating');
+                $('#rating').val(rating);
+                $('.star-rating .fa-star').each(function() {
+                    if ($(this).data('rating') <= rating) {
+                        $(this).addClass('checked');
+                    } else {
+                        $(this).removeClass('checked');
+                    }
+                });
+            });
+        
+            // Soumission du formulaire
+            $('#comment-form').on('submit', function(e) {
+                e.preventDefault();
+                
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var subject = $('#subject').val();
+                var comment = $('#comment').val();
+                var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
+                
+                var date = new Date().toLocaleDateString();
+        
+                var commentHtml = '<div class="comment">' +
+                                    '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
+                                    '<div class="comment-rating">' + getStars(rating) + '</div>' +
+                                    '<div>' + escapeHtml(comment) + '</div>' +
+                                  '</div>';
+        
+                $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
+        
+                // Réinitialiser le formulaire
+                $('#comment-form')[0].reset();
+                $('#rating').val(0);
+                $('.star-rating .fa-star').removeClass('checked');
+            });
+        
+            // Fonction pour générer les étoiles
+            function getStars(rating) {
+                var starsHtml = '';
+                for (var i = 1; i <= rating; i++) {
+                    if (i <= rating) {
+                        starsHtml += '<i class="fa fa-star checked"></i>';
+                    } else {
+                        starsHtml += '<i class="fa fa-star"></i>';
+                    }
+                }
+                return starsHtml;
+            }
+        
+            // Fonction pour échapper les caractères HTML dans les commentaires
+            function escapeHtml(text) {
+                var map = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;',
+                    '/': '&#x2F;',
+                    '`': '&#x60;',
+                    '=': '&#x3D;'
+                };
+                return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
+            }
+        });
+    </script>
+    <!-- Bootstrap JS, Popper.js, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-Mi/YF+wkzezTTP3o29D6Jy/OHJtXot2YyFNVGr+hA89kPwY4oo0Tl/EyJI2D8p36"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+pw+3P05lgXqJ7rJf7kpk1xg8jnikb8xsk6"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>
