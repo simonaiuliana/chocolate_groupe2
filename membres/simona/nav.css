@@ -159,23 +159,8 @@ nav li{
     width: 380px;
 }
 
-<<<<<<< HEAD:public/Chocolat Nav/style.css
 
 
-=======
-#test{
-    margin-left: auto;
-    width: 600px;
-    height: 600px;
-    background-image: url(chocolate-7848086_1280.webp);
-    background-position: center;
-}
-@media screen and (width < 1400px) {
-    #previews{
-        width: 100%;
-    }
-}
->>>>>>> 435452b01847dd3e2854e5b2d8b7fc4d89b5c759:public/Chocolat Nav/nav.css
 @media screen and (width < 1000px) {
     #nav-choco{
         display: none;
