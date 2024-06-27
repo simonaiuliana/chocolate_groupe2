@@ -39,7 +39,7 @@ CREATE TABLE `ingredient_unity` (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE `ingredient_recipe` (
+CREATE TABLE `ingredient_has_recipe` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   recipe_id INT UNSIGNED NOT NULL,
   ingredient_id INT UNSIGNED NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `category` (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE `recipe_category` (
+CREATE TABLE `recipe_has_category` (
   recipe_id INT UNSIGNED NOT NULL,
   category_id INT UNSIGNED NOT NULL,
   FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE ON UPDATE CASCADE,

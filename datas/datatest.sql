@@ -19,7 +19,7 @@ VALUES("g"),
 ("ml"),
 ("kg");
 
-INSERT INTO `ingredient_recipe`(`recipe_id`, `ingredient_id`, `ingredient_unity_id`, `quantity`)
+INSERT INTO `ingredient_has_recipe`(`recipe_id`, `ingredient_id`, `ingredient_unity_id`, `quantity`)
 VALUES(1, 1, NULL, 1),
 (1, 2, 1, 200);
 
@@ -33,7 +33,7 @@ VALUES("pomme"),
 ("vegan"),
 ("fruit");
 
-INSERT INTO `recipe_category`(`recipe_id`, `category_id`)
+INSERT INTO `recipe_has_category`(`recipe_id`, `category_id`)
 VALUES(1, 1),
 (1, 2),
 (1, 3),

@@ -95,7 +95,7 @@ nav li{
     flex-wrap: wrap;
     position: relative;
     z-index: 4;
-    background: linear-gradient(90deg, rgb(var(--main-color)) 0%, rgba(95,30,5,1) 100%);
+    background: linear-gradient(90deg, rgb(var(--main-color)) 0%, rgb(97, 32, 3) 100%);
     display: flex;
     align-items: center;
     height: 100%;
