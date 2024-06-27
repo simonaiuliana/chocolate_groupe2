@@ -96,11 +96,21 @@ $(document).ready(function() {
         
         var date = new Date().toLocaleDateString();
 
-        var commentHtml = '<div class="comment">' +
-                            '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
-                            '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                            '<div>' + escapeHtml(comment) + '</div>' +
-                          '</div>';
+        var commentHtml = `
+            <div class="comment">
+                <div class="d-flex justify-content-between pe-5 pb-3 border-bottom"><strong>${name}</strong> <div>Posté le : <span class="comment-date">${date}</span></div></div>
+                <div class="d-flex my-3 gap-5">
+                    <div class="fw-bold" style="color: rgb(var(--main-color))">
+                        Sujet : ${subject}
+                    </div>
+                    <div class="comment-rating">
+                        <span>Note : </span>
+                        ${getStars(rating)}
+                    </div>
+                </div>
+                <div>${escapeHtml(comment)}</div>
+            </div>
+        `;
 
         $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
 
