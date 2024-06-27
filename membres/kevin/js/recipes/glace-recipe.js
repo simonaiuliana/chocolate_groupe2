@@ -68,7 +68,7 @@ $(document).ready(function() {
     checkCornerIceCream();
 
     /** end Corner Chocolat */
-
+    
     /** Comment */
 
     // Fonctionnalité de notation par étoiles
@@ -91,7 +91,8 @@ $(document).ready(function() {
         var name = $('#name').val();
         var email = $('#email').val();
         var subject = $('#subject').val();
-        var comment = $('#comment').val();
+        var comment = $('.ql-editor').html();
+        console.log(comment)
         var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
         
         var date = new Date().toLocaleDateString();
@@ -108,7 +109,7 @@ $(document).ready(function() {
                         ${getStars(rating)}
                     </div>
                 </div>
-                <div>${escapeHtml(comment)}</div>
+                <div>${comment}</div>
             </div>
         `;
 
@@ -148,4 +149,29 @@ $(document).ready(function() {
         return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
     }
     /** end comment */
+
+    /** Quill editor */
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['blockquote', 'code-block'],             // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+             // dropdown with defaults from theme
+        [{ 'align': [] }],
+      
+        ['clean']                                         // remove formatting button
+      ];
+      
+      
+      var options = {
+        modules: {
+          toolbar: toolbarOptions,
+        },
+        theme: 'snow'
+      };
+    new Quill('#comment', options);
+    /** end Quill editor */
+
 });

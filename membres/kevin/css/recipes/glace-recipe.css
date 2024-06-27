@@ -259,13 +259,20 @@ h3{
 .contact-form h3{
     text-decoration: none;
 }
-.contact-form input, .contact-form textarea, .contact-form button {
+.contact-form input, .contact-form #comment, .contact-form button {
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     color: rgb(var(--main-color));
+}
+.contact-form #comment{
+    height: 200px;
+    background-color: white !important;
+}
+.contact-form .ql-editor{
+    background-color: white !important;
 }
 .contact-form button {
     background-color:rgb(var(--main-color));
@@ -288,6 +295,9 @@ h3{
 }
 .comments-section {
     margin-top: 30px;
+}
+.comment p, .comment ol, .comment ul, .comment dl{
+    margin-bottom: 0;
 }
 .comment {
     border-bottom: 1px solid #ccc;
