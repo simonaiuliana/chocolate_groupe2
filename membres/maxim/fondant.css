@@ -48,7 +48,7 @@ header {
   .textBanner {
     min-width: 120px;
     font-size: 3rem;
-    left: 3%;
+    left: 50%;
   }
 }
 .cardTitreMain {
@@ -84,7 +84,7 @@ header {
   list-style: none;
 }
 .titreColorPrepa {
-  color: #955e42;
+  color: #230903;
   font-family: "Dancing Script", sans-serif;
   font-weight: 600;
   font-size: 45px;
@@ -190,6 +190,7 @@ header {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+/*background svg carousel */
 .photoContainer{
   background-image: url("img/blob-scene-haikei.svg");
   background-repeat: no-repeat;
@@ -197,8 +198,25 @@ header {
   background-position: center;
   height: 100vh;
 }
+
+@media screen and (width < 768px) {
+  .photoContainer{
+    margin-top: 50px;
+    height: 40vh;
+    background-image: url("img/blob-scene-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #carousel{
+    display: none;
+  }
+}
+/*end background svg carousel */
+
 .titreForm{
   font-family: "Dancing Script", sans-serif;
+  color: #230903;
   font-size: 45px;
   text-shadow: 3px 2px 3px #230903;
 }
@@ -207,12 +225,29 @@ header {
   border: 2px solid #230903; 
   font-family: "Nunito", sans-serif;
   font-size: 26px;
+  border-radius: 50px;
 }
 .showForm{
   background-color: #fcd7ad;
   border: 2px solid #230903; 
   font-family: "Nunito", sans-serif;
   font-size: 26px;
-  color: #553739;
-  margin-bottom: 50px;
+  color: #230903;
+  border-radius: 50px;
+  margin-bottom: 5%;
+}
+.form-control{
+  border-radius: 50px;
+  border: 2px solid #230903;
+
+  color: #230903;
+}
+.etoiles {
+  font-family: "Nunito", sans-serif;
+  color: #230903;
+  font-size: 16px;
+}
+
+.rating-color {
+  color: gold;
 }

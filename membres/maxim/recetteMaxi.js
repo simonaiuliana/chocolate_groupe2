@@ -12,6 +12,7 @@ $(document).ready(function(){
     $(".imgFondantRecette").hide().show(6000)
 });
 
+// carousel
 
 var bReady;
 $(document).ready(function(){
@@ -24,7 +25,8 @@ $(".ps-photoset").hover(function(){
   }, 600);  
 });
 });
-/*
+
+
 // 3 images //
 $(".ps-photo").hover(function(){
   if (bReady == true){
@@ -33,12 +35,15 @@ $(".ps-photo").hover(function(){
   } else {
     // condole.log("stacking temporarily disabled")
   }
-});*/
+});
+// end carousel
+
+//hidden form
 
 $(document).ready(function () {
   $("#contactForm").hide();
   $(".showForm").click(function () {
-      $("#contactForm").show(3000);
+      $("#contactForm").show(2000);
   });
 });
 
