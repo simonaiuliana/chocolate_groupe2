@@ -50,7 +50,6 @@ $(document).ready(function() {
         }else{
             let pos = 1200 - posYCream + 40;
             if(posYCream >= 500){
-                console.log("hein")
                 pos = pos < 540 ? posYCream + 40 : pos;
             }
             
