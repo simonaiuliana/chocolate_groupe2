@@ -21,7 +21,7 @@ CREATE TABLE `sub_recipe` (
   recipe_id INT UNSIGNED NOT NULL,
   title VARCHAR(40) NOT NULL,
   image_url VARCHAR(255),
-  duration SMALLINT UNSIGNED NOT NULL,
+  preparation_time SMALLINT UNSIGNED NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
