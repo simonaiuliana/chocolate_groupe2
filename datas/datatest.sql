@@ -5,7 +5,7 @@ VALUES("pomme", "pomme123", 1),
 INSERT INTO `recipe`(`name`, `nb_people`, `image_url`, `preparation_time`, `cooking_time`)
 VALUES("pomme au choco", 4, "http://www.pomme.com/image_de_pomme_au_choco", 45, 40);
 
-INSERT INTO `instruction`(`recipe_id`, `text_content`, `image_url`, `instruction_number`)
+INSERT INTO `instruction`(`sub_recipe_id`, `text_content`, `image_url`, `instruction_number`)
 VALUES(1, "mettre la pomme sur l'assitte", NULL, 1),
 (1, "mettre le choco sur l'assitte", NULL, 2),
 (1, "manger la pomme au choco", NULL, 3);

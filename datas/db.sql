@@ -29,6 +29,7 @@ CREATE TABLE `sub_recipe` (
 CREATE TABLE `instruction` (
   id INT UNSIGNED AUTO_INCREMENT,
   sub_recipe_id INT UNSIGNED NOT NULL,
+  text_content TEXT NOT NULL,
   image_url VARCHAR(255),
   instruction_number TINYINT UNSIGNED NOT NULL,
   PRIMARY KEY (id),
