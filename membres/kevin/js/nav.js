@@ -1,73 +1,72 @@
 // Only God and me know what i'm doing
 $(function(){
     const $nav = $('nav');
+    const $navChocoOpenMenu = $('#nav-choco-open-menu'); // Image opening recipes list
+    const $placeHolderNav = $('#place-holder-nav'); // Debug nav fixed moving all content html
+    const $navRecipes = $('#nav-recipes'); // List of recipes
+    const $previews = $('#previews'); // Show image of the recipe list when hover the <li>
+    const $links = $('#links'); // Only in phone mode. It is the menu of burger mode
     let scrollNav = false;
     let menuNavVisible = false;
     let menuIsOpening = false;
     let linksIsOpening = false;
-    let phoneMode = window.innerWidth < 1000;
+    let phoneMode;
     checkPhoneMode();
-    fixNav(true);
+    fixNav();
     addEventListener('scroll', fixNav);
-    addEventListener('resize', function(){
-        phoneMode = window.innerWidth < 1000;
-        checkPhoneMode();
-    });
-    function fixNav(firstTime){
+    addEventListener('resize', checkPhoneMode);
+    function fixNav(){
         if(!scrollNav && window.scrollY > $('.header-text').height() + 100){
             scrollNav = true;
-            $('#place-holder-nav').show();
+            $placeHolderNav.show();
             $nav.addClass('nav-fixed');
-            if(firstTime !== true) hideMenuNav();
+            hideMenuNav();
         }else if(scrollNav && window.scrollY <= $('.header-text').height() + 100){
             scrollNav = false;
-            $('#place-holder-nav').hide();
+            $placeHolderNav.hide();
             $nav.removeClass('nav-fixed');
         }
     }
     function hideMenuNav(){
         menuNavVisible = false;
-        $('#nav-choco-open-menu').stop().css('top', phoneMode ? '-40px' : '-150px').hide();
-        $('#nav-recipes').hide();
+        $navChocoOpenMenu.stop().css('top', '-150px').hide();
+        $navRecipes.hide();
         if(phoneMode)
-            $('#links').slideUp(function(){
+            $links.slideUp(function(){
                 linksIsOpening = false;
             });
     }
     function checkPhoneMode(){
+        phoneMode = window.innerWidth < 1000;
         if(phoneMode){
             if(menuNavVisible){
-                $('#links').show();
-                $('#nav-choco-open-menu').css('top', '153.64px');
+                $links.show();
+                $navChocoOpenMenu.css('top', '153.64px');
             } 
             else{
-                $('#links').hide();
-                $('#nav-choco-open-menu').hide();
+                $links.hide();
+                $navChocoOpenMenu.hide();
             } 
         }else{
-            if(menuNavVisible) $('#nav-choco-open-menu').css('top', '0px');
-            else $('#nav-choco-open-menu').css('top', '-150px');
-            $('#nav-choco-open-menu').show();
-            $('#links').show();
+            if(menuNavVisible) $navChocoOpenMenu.css('top', '0px');
+            else $navChocoOpenMenu.css('top', '-150px');
+            $links.show();
         }
+        
     }
     function showNavMenu(){
         if(menuIsOpening) return;
-        $('#nav-choco-open-menu').show();
+        $navChocoOpenMenu.show();
         menuIsOpening = true;
         menuNavVisible = !menuNavVisible;
-        if(!menuNavVisible) $('#previews').css('background-image', `url('')`)
-        if(phoneMode && menuNavVisible){
-            $('#nav-choco-open-menu').show();
-        }
-        if(!menuNavVisible && phoneMode) setTimeout(() => {
-            $('#nav-choco-open-menu').hide();
-        }, 1500);
-        $('#nav-recipes').slideToggle(2000, function(){
+        if(!menuNavVisible) $previews.css('background-image', `url('')`)
+        $navRecipes.slideToggle(2000, function(){
             menuIsOpening = false;
+            if(!menuNavVisible)
+                $navChocoOpenMenu.hide();
         });
-        $('#nav-choco-open-menu').animate({
-            'top': !menuNavVisible ? (phoneMode ? '-40px' : '-150px') : (phoneMode ? '153.64px' : '0px')
+        $navChocoOpenMenu.animate({
+            'top': !menuNavVisible ? '-150px' : (phoneMode ? '153.64px' : '0px')
         }, 2000);
     }
     function showLinks(){
@@ -75,18 +74,18 @@ $(function(){
         linksIsOpening = true;
         if(menuNavVisible){
             hideMenuNav();
-        }else $('#links').slideToggle(function(){
+        }else $links.slideToggle(function(){
             linksIsOpening = false;
         });
     }
     $('#nav-recipes-link').click(showNavMenu);
-    $('#nav-recipes').on('mouseleave', ()=>$('#previews').hide());
+    $navRecipes.on('mouseleave', ()=>$previews.hide());
     $('#container-burger img').click(showLinks);
     $('#nav-choco').animate({
         'top': '75px'
     }, 10000);
 
-    $('#nav-recipes').children().each(function(i){
+    $navRecipes.children().each(function(i){
         let url;
         const basePath = "../../public/assets/image\ seb/";
         switch(i){
@@ -123,8 +122,8 @@ $(function(){
         }
         $(this).on('mouseover', ()=>{
             if(!menuNavVisible || phoneMode) return;
-            $('#previews').show()
-            $('#previews').css('background-image', `url('${url}')`)
+            $previews.show()
+            $previews.css('background-image', `url('${url}')`)
         });
     })
 

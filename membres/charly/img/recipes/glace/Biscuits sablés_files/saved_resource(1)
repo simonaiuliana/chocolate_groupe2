@@ -1,0 +1,19 @@
+window.googletag=window.googletag||{cmd:[]};googletag.cmd.push(function(){googletag.pubads().setTargeting('implcit',['3122', '3121', '2222', '1937', '1704', '1452', '1445', '1369', '1367', '1366', '1365', '1364', '1264', '1258', '1238'])});
+            if (!window.implcit) {
+                window.implcit={
+                    permutive:{
+                        c:0,
+                        track:function(){
+                            window.implcit.permutive.c++;
+                            if(!window.permutive?.ready){
+                                if(window.implcit.permutive.c<=100){
+                                    setTimeout(window.implcit.permutive.track,300)
+                                }
+                            }else{
+                                window.permutive.track('Implcit_event',{'implcitSegs':['3122', '3121', '2222', '1937', '1704', '1452', '1445', '1369', '1367', '1366', '1365', '1364', '1264', '1258', '1238']})
+                            }
+                        }
+                    }
+                };
+                window.implcit.permutive.track()
+            }
