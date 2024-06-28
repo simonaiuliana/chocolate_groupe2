@@ -1,3 +1,6 @@
 .step:hover {
     cursor: pointer;
 }
+#comments-form-button:hover {
+    cursor: pointer;
+}
