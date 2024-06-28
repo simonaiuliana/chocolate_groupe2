@@ -22,6 +22,7 @@ CREATE TABLE `sub_recipe` (
   title VARCHAR(40) NOT NULL,
   image_url VARCHAR(255),
   preparation_time SMALLINT UNSIGNED NOT NULL,
+  sub_recipe_number TINYINT UNSIGNED NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -38,14 +39,14 @@ CREATE TABLE `instruction` (
 
 CREATE TABLE `ingredient` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  ingredient TINYTEXT NOT NULL UNIQUE,
+  ingredient TINYTEXT NOT NULL,
   image_url VARCHAR(255),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE `ingredient_unity` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  unit TINYTEXT NOT NULL UNIQUE,
+  unit TINYTEXT NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -76,7 +77,7 @@ CREATE TABLE `comment` (
 
 CREATE TABLE `category` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  category TINYTEXT NOT NULL UNIQUE,
+  category TINYTEXT NOT NULL,
   PRIMARY KEY (id)
 );
 
