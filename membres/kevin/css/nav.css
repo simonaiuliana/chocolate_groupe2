@@ -22,7 +22,13 @@
 
 nav{
     font-family: 'BiteChocolate', sans-serif;
+    font-size: 1rem;
+    line-height: normal;
     height: 100px;
+}
+
+nav ul{
+    margin-bottom: 0;
 }
 
 nav.nav-fixed{
