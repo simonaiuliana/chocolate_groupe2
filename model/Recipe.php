@@ -93,6 +93,7 @@ class Recipe{
       $query->closeCursor();
       /*get returned values*/
       /* recipe */
+      if (!$result["id"])return "recette non trouvée";
       $recipe_id = $result["id"];
       $recipe_name = $result["name"];
       $recipe_nb_people = $result["nb_people"];
@@ -237,19 +238,27 @@ class Recipe{
   public function getImgUrl():?string{
     return $this->img_url;
   }
-  // return an array of Instruction
+  /**
+   * @return array $instructions -> array of Instruction
+   */
   public function getInstructions():array{
     return $this->instructions;
   }
-  // return an array of Ingredient
+  /**
+   * @return array $ingredients -> array of Ingredient
+   */
   public function getIngredients():array{
     return $this->ingredients;
   }
-  // return an array of Category
+  /**
+   * @return array $categories -> array of Category
+   */
   public function getCategories():array{
     return $this->categories;
   }
-  // return an array of Comment
+  /**
+   * @return array $comments -> array of Comment
+   */
   public function getComments():array{
     return $this->comments;
   }
@@ -279,48 +288,68 @@ class Recipe{
     $this->img_url = trim(htmlspecialchars(strip_tags($img_url)),ENT_QUOTES);
     return $this;
   }
-  //instruction is an array of Instruction
+  /**
+   * @return int the average from 1 to 10 instead of 1 to 5: if returns 3(/10) -> 1.5(/5)
+   */
+  public function getStarAverage():int{
+    if (sizeof($this->comments)===0)return 0;
+    $total = 0;
+    foreach($this->comments as $comment){
+      $total += $comment->getStars();
+    }
+    $avg = ceil(($total * 2) / sizeof($this->comments));
+    return $avg;
+  }
+  /**
+   * @param array $instructions must be an array of Instruction
+   */
   public function setInstructions(array $instructions):self{
     //check $instructions validity
     foreach ($instructions as $instruction){
       if (!$instruction instanceof Instruction){
-        throw new Exception("instructions must be an array of Instruction only");
+        throw new Exception("les instructions peuvent uniquement être un array d'Instruction");
       }
     }
 
     $this->instructions = $instructions;
     return $this;
   }
-  //ingredients is an array of Ingredient
+  /**
+   * @param array $ingredients must be an array of Ingredient
+   */
   public function setIngredients(array $ingredients):self{
     //check $ingredients validity
     foreach ($ingredients as $ingredient){
       if (!$ingredient instanceof Ingredient){
-        throw new Exception("ingredients must be an array of Ingredient only");
+        throw new Exception("les ingrédients peuvent uniquement être un array d'Ingredient");
       }
     }
 
     $this->ingredients = $ingredients;
     return $this;
   }
-  //instruction is an array of Category
+  /**
+   * @param array $categories must be an array of Category
+   */
   public function setCategories(array $categories):self{
     //check $categories validity
     foreach ($categories as $category){
       if (!$category instanceof Category){
-        throw new Exception("categories must be an array of Category only");
+        throw new Exception("les catégories peuvent uniquement être un array de Category");
       }
     }
 
     $this->categories = $categories;
     return $this;
   }
-  //comments is an array of Comment
+  /**
+   * @param array $comments must be an array of Comment
+   */
   public function setComments(array $comments):self{
     //check $comments validity
     foreach ($comments as $comment){
       if (!$comment instanceof Comment){
-        throw new Exception("comments must be an array of Comment only");
+        throw new Exception("les commentaires peuvent uniquement être un array de Comment");
       }
     }
 
