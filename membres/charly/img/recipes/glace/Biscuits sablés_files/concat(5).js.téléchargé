@@ -1,0 +1,10 @@
+/********** https://www.marmiton.org/reloaded/static/preconcat_%2Freloaded%2Fstatic%2FFront%2FComponent%2Fflymenu%2Fflymenu.js.202406200958.js **********/
+
+/** https://www.marmiton.org/reloaded/static/Front/Component/flymenu/flymenu.js?v=202406200958 **/
+(function(){var initFlyMenu=function(){if(flyMenuInit===undefined){return;}
+clearTimeout(initFlyMenuTimeout);flyMenuInit({site_token:'5106fa009eb671026002582f335758f7f86f5e9d13eea93ddfba9cb20cd2e5749851ed15c39fdf480a08b4328c286a8c6e9a'});af_addEvent(document.querySelector('.mrtn-flymenu-button'),'click',function(){var flymenuIngredients=[];var ingredientsContainer=document.querySelector('.mrtn-recette_ingredients-items');var ingredientsBlocks=ingredientsContainer.getElementsByClassName('card-ingredient');for(var i=0;i<ingredientsBlocks.length;i++){flymenuIngredients.push({name:ingredientsBlocks[i].querySelector('.ingredient-name').getAttribute('data-ingredientnamesingular'),qty:parseFloat(ingredientsBlocks[i].querySelector('.count').innerText),unit:ingredientsBlocks[i].querySelector('.unit').getAttribute('data-unitsingular')});}
+flymenuClearSession();addRecipes({ingredients:flymenuIngredients}).then(function(){showFlyMenu();});},true);};var initFlyMenuTimeout=setTimeout(initFlyMenu,500);})();
+
+
+
+

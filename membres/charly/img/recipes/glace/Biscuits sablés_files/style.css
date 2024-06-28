@@ -1,0 +1,108 @@
+body{
+	width:320px;
+	height:480px;
+	max-width:320px;
+	max-height:480px;
+}
+#logo-container{
+	width:100%;
+	height:14%;
+	float:left;
+}
+#alloffers-container{
+	width:100%;
+	height:86%;
+	float:left;
+}
+.offer-img-container{
+	height:82%;
+	width:100%;
+}
+.offer-price-container,
+.offer-oldprice-container{
+	position:absolute;
+	font-size:11px;
+	left:0px;
+	top:auto;
+	width:100%;
+	height:18%;
+	bottom:0px;
+}
+.offer-button-wrapper{
+	width:100px;
+	height:29px;
+}
+.offer-oldprice-container span{
+	text-decoration:line-through;
+}
+.offer-name-container{
+	height:64%;
+	font-size:11px;
+}
+#alloffers-container.bottom .offer-container{
+	margin-bottom:0px;
+}
+#alloffers-container.top .offer-container{
+	margin-top:0px;
+}
+#alloffers-container.bottom #alloffers-container-relative{
+	padding-bottom:0;
+}
+#alloffers-container.top #alloffers-container-relative{
+	padding-top:0;
+}
+#offer-enlarger{
+	top:0px;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.offer-enlarger-image{
+	width:100%;
+	height:50%;
+	float:left;
+}
+.offer-enlarger-infobar{
+	height:50%;
+}
+.offer-enlarger-name{
+	height:40%;
+	width:100%;
+}
+.offer-enlarger-price-wrapper{
+	top:10%;
+	width:100%;
+	height:20%;
+}
+.offer-enlarger-button-wrapper{
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	left:0;
+	height:35%;
+}
+.offer-enlarger-button{
+	margin:auto;
+	top:0px;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.offer-enlarger-name > p span{
+	font-size:13px;
+}
+.offer-enlarger-price > p{
+	font-size:14px;
+}
+.offer-enlarger-oldprice > p{
+	font-size:14px;
+	text-decoration:line-through;
+}
+.offer-enlarger-ribbon-container{
+	left:32%;
+}
+.offer-enlarger-ribbon{
+	top:20px;
+	left:9px;
+}
