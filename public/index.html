@@ -53,79 +53,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Hind+Madurai:wght@300;400;500;600;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-<!-- ===================footer============================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/footer/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/footer/flaticon.css" type="text/css">
     <link rel="stylesheet" href="assets/css/footer/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/footer/style.css" type="text/css">
-<!-- ===============================================-->
   </head>
 
   <body>
+    <div id="place-holder-nav" style="display: none;">
+    </div>
+    <nav>
+        <div id="nav-links">
+            <a href="#" id="logo"><img src="assets/img/logo.png" alt="" width="50"></a>
+            <div id="container-burger">
+                <img src="assets/img/nav-img/chocolat.png" alt="">
+            </div>
+            <div id="links">
+                <a href="#">Accueil</a>
+                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div id="nav-recipes-container">
+            <ul id="nav-recipes" style="display: none;">
+                <a href="../sebastien/mous.html"><li>Mousse au chocolat</li></a>
+                <a href="#"><li>Cake au chocolat</li></a>
+                <a href="#"><li>Fondant au chocolat</li></a>
+                <a href="#"><li>Tarte au chocolat</li></a>
+                <a href="#"><li>Cookies au chocolat</li></a>
+                <a href="#"><li>Glace au chocolat</li></a>
+                <a href="#"><li>Bûche de Noël au chocolat</li></a>
+                <a href="#"><li>Moelleux au chocolat</li></a>
+                <a href="#"><li>Truffes au chocolat</li></a>
+                <a href="#"><li>Macarons au chocolat</li></a>
+            </ul>
+            <div id="previews"></div>
+        </div>
+        <div id="nav-choco-open-menu" style="display: none;">
+            <img src="assets/img/nav-img/openmenu.png" alt="">
+        </div>
+    </nav>
+    <div id="nav-choco">
+        <img src="assets/img/nav-img/banner_top.png" alt="">
+    </div>
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
     <main class="main" id="top">
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
-        data-navbar-on-scroll="data-navbar-on-scroll"
-      >
-        <div class="container">
-          <a class="navbar-brand d-inline-flex" href="index.html"
-            ><img
-              class="d-inline-block"
-              src="assets/img/gallery/logo.svg"
-              alt="logo"
-            /><span class="text-1000 fs-3 fw-bold ms-2 text-gradient"
-              >foodwaGon</span
-            ></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"> </span>
-          </button>
-          <div
-            class="collapse navbar-collapse border-top border-lg-0 my-2 mt-lg-0"
-            id="navbarSupportedContent"
-          >
-            <div class="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">
-              <p class="mb-0 fw-bold text-lg-center">
-                Deliver to:
-                <i class="fas fa-map-marker-alt text-warning mx-2"></i
-                ><span class="fw-normal">Current Location </span
-                ><span>Mirpur 1 Bus Stand, Dhaka</span>
-              </p>
-            </div>
-            <form class="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
-              <div class="input-group-icon pe-2">
-                <i class="fas fa-search input-box-icon text-primary"></i>
-                <input
-                  class="form-control border-0 input-box bg-100"
-                  type="search"
-                  placeholder="Search Food"
-                  aria-label="Search"
-                />
-              </div>
-              <button
-                class="btn btn-white shadow-warning text-warning"
-                type="submit"
-              >
-                <i class="fas fa-user me-2"></i>Login
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
+      
 
-      <section class="py-5 overflow-hidden" id="home">
+      <section class="py-5 overflow-hidden header-text" id="home">
         <div class="container">
           <div class="row flex-center">
             <div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0"><a class="ms-5 img-landing-banner" href="#!"><img class="img-fluid" src="assets/nouvelles img/browni2.jpg" alt="hero-header" /></a></div>
@@ -1040,7 +1019,6 @@
             </div>
           </div>
         </div>
-
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="pt-5">
@@ -1084,7 +1062,7 @@
         </div>
         <!-- end of .container-->
       </section>
-
+    </main>
       <!-- Footer Section Begin -->
     <footer class="footer set-bg mt-5" data-setbg="assets/img/imgfooter/footer-bg.jpg">
       <div class="container">
@@ -1130,13 +1108,12 @@
               </div>
           </div>
       </div>
-      <div class="copyright">
+     <div class="copyright">
           <div class="container">
               <div class="row">
                   <div class="col-lg-7">
                       <p class="copyright__text text-white">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">sebastien</a>
-                        
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">sebastien</a>   
                     </p>
                 </div>
                 <div class="col-lg-5">
@@ -1149,10 +1126,9 @@
                   </div>
               </div>
           </div>
-      </div>
-  </div>
+       </div>
+     </div>
 </footer>
-    </main>
     <!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->
@@ -1166,11 +1142,9 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
    
     <script src="assets/js/theme.js"></script>
-<!-- ===================footer============================-->
-    <script src="assets/js/jsfooter/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/jsfooter/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/nav.js"></script>
     <script src="assets/js/jsfooter/main.js"></script>
-<!-- ===============================================-->
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap"
       rel="stylesheet"
