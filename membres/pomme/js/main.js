@@ -2,7 +2,6 @@ $(document).ready(function() {
     let intervals = {}
     let indexes = {}
     $(".step").click(function (){
-        console.log("click");
         if (intervals[$(this)[0].outerText]){
             for (const interval_id of intervals[$(this)[0].outerText]){
                 clearInterval(interval_id);
@@ -45,6 +44,7 @@ function StrikeThrough(index, element) {
 
     let sToStrike = text.substr(0, index + 1);
     let sAfter = (index < (text.length - 1)) ? text.substr(index + 1, text.length - index) : "";
-    element.html("<strike>" + sToStrike + "</strike>" + sAfter);
+    element.children().eq(0).text(sToStrike);
+    element.children().eq(1).text(sAfter);
     return true;
 }
