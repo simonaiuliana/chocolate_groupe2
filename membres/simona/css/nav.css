@@ -1,14 +1,23 @@
 @font-face {
     font-family: 'BiteChocolate';
-    src: url('BiteChocolate-2RGl.ttf') format('truetype');
+    src: url('../fonts/BiteChocolate-2RGl.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+:root{
+    --main-color: 90,35,20;
+    --white-color: 253,251,239;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#place-holder-nav{
+    height: 100px;
 }
 
 nav{
@@ -40,7 +49,7 @@ nav.nav-fixed{
 
 nav a{
     text-decoration: none;
-    color: #fdfbef;
+    color: rgb(var(--white-color));
     transition: color .25s;
 }
 
@@ -59,12 +68,12 @@ nav li{
 #nav-recipes{
     padding-left: 20px;
     padding-bottom: 1px;
-    background-color: rgb(90, 35, 20);
+    background-color: rgb(var(--main-color));
     min-width: 380px;
 }
 
 #nav-recipes a:hover{
-    color: #fdfbef;
+    color: rgb(var(--white-color));
 }
 
 #nav-recipes li:nth-child(1){
@@ -86,7 +95,7 @@ nav li{
     flex-wrap: wrap;
     position: relative;
     z-index: 4;
-    background: linear-gradient(90deg, rgba(90,35,20,1) 0%, rgba(95,30,5,1) 100%);
+    background: linear-gradient(90deg, rgb(var(--main-color)) 0%, rgb(97, 32, 3) 100%);
     display: flex;
     align-items: center;
     height: 100%;
@@ -130,7 +139,7 @@ nav li{
 #nav-choco{
     position: absolute;
     right: 0;
-    z-index: 3;
+    z-index: 1;
     top: -600px;
     overflow: hidden;
 }
@@ -159,14 +168,24 @@ nav li{
     width: 380px;
 }
 
-
-
+#test{
+    margin-left: auto;
+    width: 600px;
+    height: 600px;
+    background-image: url(chocolate-7848086_1280.webp);
+    background-position: center;
+}
+@media screen and (width < 1400px) {
+    #previews{
+        width: 100%;
+    }
+}
 @media screen and (width < 1000px) {
+
     #nav-choco{
         display: none;
     }
-}
-@media screen and (width < 900px) {
+
     #container-burger{
         display: flex;
         flex-basis: 30%;
@@ -184,7 +203,7 @@ nav li{
         top: 100px;
         width: 100%;
         flex-direction: column; 
-        background-color: rgb(90, 35, 20);;
+        background-color: rgb(var(--main-color));
     }
 
     #links a:nth-child(1){
@@ -211,7 +230,7 @@ nav li{
     #links a:hover{
         background-color: rgb(78, 27, 13);
         padding-left: 25px;
-        color: white;
+        color: rgb(var(--white-color));
     }
 
     #previews{
@@ -223,7 +242,7 @@ nav li{
     }
 
     #nav-recipes-container{
-        top: 155px;
+        top: 153.64px;
     }
 
     #nav-choco-open-menu{
@@ -234,10 +253,4 @@ nav li{
         width: 100%;
     }
     
-}
-.colorCard{
-    background-color: rgb(90, 35, 20);
-}
-.card-body{
-    height: 415px;
 }

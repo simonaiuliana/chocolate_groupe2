@@ -4,14 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
         <title>Amandina Cake - Blog de Recettes</title>
-        <link rel="stylesheet" href="/public/glace-chocolat/css/nav.css">
         
-   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
@@ -33,10 +30,10 @@
         integrity="sha512-9I72DfU5rG4anYiZL9Vn8trGwm+w5J6SvBjIlh8C2xwrk7p1A2/8Wc8V6qbdC3tx79MsqEo2f2DxLjAeH1V1bQ=="
         crossorigin="anonymous" />
       
-        <link rel="stylesheet" href="nav.css">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="drip.css">
-        <link rel="icon" href="th-r.jpeg" type="image/x-icon">
+        <link rel="icon" href="img/th-r.jpeg" type="image/x-icon">
 
     <!-- CSS personalizat -->
 <style>
@@ -363,11 +360,13 @@ article p {
 </head>
 
 <body>
+    <div id="place-holder-nav" style="display: none;">
+    </div>
     <nav>
         <div id="nav-links">
-            <a href="#" id="logo"><img src="logo.png" alt="" width="50"></a>
+            <a href="#" id="logo"><img src="img/logo.png" alt="" width="50"></a>
             <div id="container-burger">
-                <img src="chocolat.png" alt="">
+                <img src="img/nav-img/chocolat.png" alt="">
             </div>
             <div id="links">
                 <a href="#">Accueil</a>
@@ -377,7 +376,7 @@ article p {
         </div>
         <div id="nav-recipes-container">
             <ul id="nav-recipes" style="display: none;">
-                <a href="#"><li>Mousse au chocolat</li></a>
+                <a href="../sebastien/mous.html"><li>Mousse au chocolat</li></a>
                 <a href="#"><li>Cake au chocolat</li></a>
                 <a href="#"><li>Fondant au chocolat</li></a>
                 <a href="#"><li>Tarte au chocolat</li></a>
@@ -388,15 +387,14 @@ article p {
                 <a href="#"><li>Truffes au chocolat</li></a>
                 <a href="#"><li>Macarons au chocolat</li></a>
             </ul>
-            <div id="previews">
-            </div>
+            <div id="previews"></div>
         </div>
-        <div id="nav-choco-open-menu">
-            <img src="openmenu.png" alt="">
+        <div id="nav-choco-open-menu" style="display: none;">
+            <img src="img/nav-img/openmenu.png" alt="">
         </div>
     </nav>
     <div id="nav-choco">
-        <img src="banner_top.png" alt="">
+        <img src="img/nav-img/banner_top.png" alt="">
     </div>
     
   
@@ -710,7 +708,7 @@ article p {
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
-<script src="nav.js"></script>
+<script src="js/nav.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/pageSimona.js"></script>
 
