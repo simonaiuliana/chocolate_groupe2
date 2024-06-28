@@ -20,14 +20,15 @@ $(document).ready(function() {
         var email = $('#email').val();
         var subject = $('#subject').val();
         var comment = $('#comment').val();
-        var rating = parseInt($('#rating').val()); // Assurez-vous que le rating est un nombre entier
+        var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
         
         var date = new Date().toLocaleDateString();
 
         var commentHtml = '<div class="comment">' +
-                            '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
+                            '<div class="d-flex justify-content-between"><div><strong>Nom : </strong>' + escapeHtml(name) + '</strong></div> <span class="comment-date">' + date + '</span></div>' +
+                            '<div><strong>sujet : </strong>'+ escapeHtml(subject) + '</div>' +
+                            '<div><strong> Message : </strong>' + escapeHtml(comment) + '</div>' +
                             '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                            '<div>' + escapeHtml(comment) + '</div>' +
                           '</div>';
 
         $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
@@ -41,7 +42,7 @@ $(document).ready(function() {
     // Fonction pour générer les étoiles
     function getStars(rating) {
         var starsHtml = '';
-        for (var i = 1; i <= 5; i++) {
+        for (var i = 1; i <= rating; i++) {
             if (i <= rating) {
                 starsHtml += '<i class="fa fa-star checked"></i>';
             } else {
