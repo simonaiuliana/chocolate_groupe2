@@ -454,30 +454,27 @@ article p {
     <!--top section end-->
 
     <!-- start section pour calcul des ingredients -->
-    <div class="container center-page">
-        <div class="row mt-5 mb-5">
-            <section class="photo col-lg-6 mt-5">
-                <img src="../../public/assets/nouvelles img/ingredients3.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
-            </section>
-            <section class="calculateur col-lg-6 col-md-6 col-sm-8">
-                <h2 class="mb-3 text-center">Calculer les Ingrédients</h2>
-                <form onsubmit="return calculateIngredients()">
-                <!--<form method="post" action="">-->
-                    <div class="form-group">
-                        <label for="nr-personnes">Nombre de Personnes:</label>
-                        <input type="number" class="form-control" id="nr-personnes" placeholder="Entrez le nombre">
-                    </div>
-                    <button type="submit" class="btn ">Calculer</button>
-                    <div id="resultat">
-                            <!-- ici vont etre afiché les ingredients -->
-                    </div>
-                </form>
-            </section>
-            
-            
-        </div>
+  <div class="container center-page">
+    <div class="row mt-5 mb-5">
+        <section class="photo col-lg-6 mt-5">
+            <img src="../../public/assets/nouvelles img/ingredients3.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
+        </section>
+        <section class="calculateur col-lg-6 col-md-6 col-sm-8">
+            <h2 class="mb-3 text-center">Calculer les Ingrédients</h2>
+            <form onsubmit="return calculateIngredients()">
+                <div class="form-group">
+                    <label for="nr-personnes">Nombre de Personnes:</label>
+                    <input type="number" class="form-control" id="nr-personnes" placeholder="Entrez le nombre">
+                </div>
+                <button type="button" class="btn" id="toggle-results">Calculer</button>
+                <div id="resultat" style="display: none;">
+                    <!-- ici vont être affichés les ingrédients -->
+                </div>
+            </form>
+        </section>
     </div>
-    <!-- end section pour calcul des ingredients -->
+  </div>
+  <!-- end section pour calcul des ingredients -->
 
     <section class="container">
         <div class="row">
