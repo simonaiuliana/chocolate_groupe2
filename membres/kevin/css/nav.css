@@ -29,6 +29,7 @@ nav{
 
 nav ul{
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 nav.nav-fixed{
