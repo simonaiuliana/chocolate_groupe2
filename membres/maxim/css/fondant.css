@@ -18,7 +18,7 @@ ul {
 .bannerImg {
   position: relative;
   height: 700px;
-  background-image: url("img/1575898110_fondant-au-chocolat-transformed.png");
+  background-image: url("../img/1575898110_fondant-au-chocolat-transformed.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -192,7 +192,7 @@ header {
 }
 /*background svg carousel */
 .photoContainer{
-  background-image: url("img/blob-scene-haikei.svg");
+  background-image: url("../img/blob-scene-haikei.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -203,7 +203,7 @@ header {
   .photoContainer{
     margin-top: 50px;
     height: 40vh;
-    background-image: url("img/blob-scene-haikei.svg");
+    background-image: url("../img/blob-scene-haikei.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -236,10 +236,10 @@ header {
   border-radius: 50px;
   margin-bottom: 5%;
 }
+
 .form-control{
   border-radius: 50px;
   border: 2px solid #230903;
-
   color: #230903;
 }
 .etoiles {
