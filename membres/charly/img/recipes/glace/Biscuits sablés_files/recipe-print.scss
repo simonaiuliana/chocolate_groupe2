@@ -1,0 +1,73 @@
+html {
+  font-size: 11px;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  background: none !important; }
+
+html > body {
+  -webkit-print-color-adjust: exact !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: white !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-clip: border-box !important;
+  background-origin: padding-box !important;
+  background-position-x: 0% !important;
+  background-position-y: 0% !important;
+  background-size: auto auto !important;
+  max-width: inherit !important;
+  position: inherit !important; }
+
+body {
+  width: 21cm;
+  height: 29.7cm;
+  margin: 15mm 15mm 15mm 15mm;
+  /* change the margins as you want them to be. */
+  padding: 0 !important; }
+
+.alert-show {
+  padding-top: 0 !important; }
+  .alert-show.header-up {
+    padding-top: 0 !important; }
+
+#content {
+  width: 100%;
+  margin: 10px;
+  padding: 0; }
+
+.mrtn-print-only {
+  display : inline-block; }
+
+.icon-mrtn-logo {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ff6f61;
+  font-size: 34px !important; }
+
+#header, #mrtn-footer, div > .af-bread-crumb, .recipe-header .main-title.show-more:after, .recipe-media-viewer, .mrtn-btn, #taboola-below-recipe-thumbnails, .recipe-primary, .recipe-buttons, .recipe__add-to-basket, .recipe-preparation__btn, .ingredient-list__options, .recipe-preparation__time, .mrtn-hide-on-print, .separator {
+  display: none !important; }
+
+#recipe-picture-print {
+  display: block;
+  margin: 10px auto; }
+
+.recipe-preparation__header, .ingredients-utensils__header {
+  box-shadow: none;
+  justify-content: flex-start; }
+
+.ingredients-utensils__header h2:not(.active) {
+  display: none; }
+  .ingredients-utensils__header h2.active {
+    border-bottom: none;
+    padding: 0; }
+
+.recipe-step-list {
+  margin-top: 0;
+  margin-bottom: 0; }
+  .recipe-step-list__head {
+    display: none; }
+  .recipe-step-list__container {
+    margin-bottom: 5px; }

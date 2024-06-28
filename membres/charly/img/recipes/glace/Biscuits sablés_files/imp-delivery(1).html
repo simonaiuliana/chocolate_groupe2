@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!-- saved from url=(0634)https://ams.creativecdn.com/imp-delivery?tk=m2x3WX0aj6ySwthc1KnTkl249gv4genEpK2A21uObHRSocqvNc3nRLiEHBnDsSYfMhg46aCuFx8PgFxFNhYDdr8w2b3cSPyo3knLggavYegcGYmVlGNGOUsbmbn_vrm0JXTJd1bEsxhWF9bRFaooWeUS4dsXqsoc40kiAERtPCLQjphhXytzNKnqbblLX61-vD0cD12OCsC9cWf6sBadXYXXtwzKk7qgOcS25T-CvCAsHGKbhGMWzlm2QsHhC8-r7aBXSnXrRsm5oHc_oHlH1SsKhpAbOHCpLzmMPPR3Tecv60rUqaTaKecGqjJ57970fO-Z7Jkgd_FHxVyXqN0XIL6WwNVVdf7cC12gqE6YlkTClc5npXLYD_KT6U_XrbXSBWNKbQfs2s4zM6AjFTcUKsTPKEGls5XkQW-397JlkNxb9gOxQdNQRGLq5Hj0qOw4T89aBuBO35YHiMHdNhLMGg&curl=https%3A%2F%2Fams.creativecdn.com%2Fclicks%3Fid%3D20240621_ynpesElDl2bXuW3izWaa%26%7BEXTRA_CLICK_PARAMS%7D&tdc=ams -->
+<html class="wf-opensans-n4-active wf-opensans-n6-active wf-opensans-n8-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>VeloBB - {BANNER_VERSION}</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="https://statics.creativecdn.com/img/favicon.png">
+	<link type="text/css" rel="stylesheet" href="./normalizer.min.css">
+	<link type="text/css" rel="stylesheet" href="./common.css">
+	<link type="text/css" rel="stylesheet" href="./style.css">
+	<link type="text/css" rel="stylesheet" href="./color.css">
+	<link type="text/css" rel="stylesheet" href="./extra.css">
+	<style>
+		body:before{
+			background-image:url('https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/baner-320x480/images/bg.png');
+		}
+		.offer-enlarger-button:hover,
+		.offer-button-wrapper:hover{
+			background:#000;
+		}
+		.offer-button-wrapper,
+		.offer-enlarger-button{
+			background:#000;
+		}
+		.offer-button-wrapper .bg-btn:before{
+			background-image:url('https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/baner-320x480/images/button.png');
+		}
+		.offer-button-wrapper .hover-btn:before{
+			background-image:url('https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/baner-320x480/images/button_hover.png');
+		}
+		.offer-enlarger-button .bg-btn:before{
+			background-image:url('https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/baner-320x480/images/enlarger_button.png');
+		}
+		.offer-enlarger-button .hover-btn:before{
+			background-image:url('https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/baner-320x480/images/enlarger_button_hover.png');
+		}
+		.hover-btn{
+			opacity:1 !important;
+			z-index:-2 !important;
+		}
+		.offer-ribbon-container{
+			top:1px !important;
+			left:1px !important;
+		}
+	</style>
+	<script src="./jquery.min.js.téléchargé"></script>
+	<script src="./jquery.transit.min.js.téléchargé"></script>
+	<script>
+		var offersCount=9;
+		var startAfterLoad='false'==='true';
+		var audioEnabled='false'==='true';
+		var touristic=false;
+		var enlargerEnabled=true;
+		var dontUseCanvas='false'==='true';
+		var googleFonts=true;
+		var promologoCoverArray=[];
+	</script>
+	<script src="./images.js.téléchargé"></script>
+	<script src="./tools.js.téléchargé"></script>
+	<script src="./placetext.js.téléchargé"></script>
+	<script src="./common.js.téléchargé"></script>
+	<script src="./common-enlarger.js.téléchargé"></script>
+	<script>
+		var offers = [];
+		var noimg = 'https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/main/images/noimage.png';
+		function run(){
+			setTimeout(begin,100);
+		}
+		function begin(){
+			if(!document.hidden) {
+				start($);
+			}
+			else{
+				setTimeout(begin,100);
+			}
+		}
+		function showBanner(){
+			$('#banner-container').css('display','block');
+			if(!startAfterLoad)fadeInElement($('body'));
+			function placeTextInButtons(){
+				var containers = $('.offer-button-wrapper');
+				for (var i=0; i<containers.length; i++){
+					var con = $(containers[i])
+					var txt = $(con.find($('span')));
+					con.css('display','block');
+					txt.css('transition-property','opacity').css('transition-duration','0.2s');
+					tools.placeTextField(
+						{
+							container:con,
+							txt:txt
+						},
+						{
+							changeFontSize:true,
+							minFontSize:5,
+							html:true
+						}
+					);
+				}
+			}
+			placeTextInButtons();
+			decrease();
+		}
+		var forceLogoMargin = '' ? Number('') : false;
+	</script>
+	<script src="./webfont.js.téléchargé"></script>
+	<script>
+		$(document).ready(function(){
+			WebFontConfig = {
+				active:function(){
+					showBanner()
+				},
+				inactive:function(){
+					$('body').css('font-family','Arial, Helvetica, sans-serif');
+					showBanner();
+				},
+				google:{
+					families:["Open Sans:400,600,800"]
+				}
+			}
+			WebFont.load(WebFontConfig);
+		});
+	</script>
+	<style>
+		body{
+			font-family:"Open Sans";
+		}
+	</style><link rel="stylesheet" href="./css" media="all">
+</head>
+<body id="b320x480" class="b320x480 cbaner-320x480 vertical bb enlarger ob1 enlarger-in" style="opacity: 1; display: block; transition-property: none; transition-duration: 0s;">
+	<a id="optout-container" class="optout bottom left#elsetop left" href="https://optout.rtbhouse.com/?utm_source=optout_icon&amp;oot=3phckSxaRAazckwY-JXHY5YYtorStUjWtYaPOB8JhcHgBEnyyNd4yJ8qEQU-Qts15r75kagd7SLSv93jrSAF3WQT5Oaj05tjiKQ6X_MUxgI&amp;dsa_show=1&amp;dsa_behalf=CIMPRESS%20ESPA%C3%91A%20S.L." target="_blank">
+		<svg class="optout__image optout__image--dark" xmlns="http://www.w3.org/2000/svg" width="52" height="6">
+			<path d="M0 4h8v2H0zm0-4h8v2H0zm14.419 5.85l-1.402-2.239c.692-.111 1.36-.667 1.36-1.675 0-1.06-.744-1.786-1.873-1.786H10v5.7h1V3.722h1l1.256 2.128zm-2.043-3.008H11V1.03h1.376c.564 0 .974.35.974.897 0 .555-.41.915-.974.915zM17.38 5.85V1.03h1.727V.15h-4.453v.88h1.726v4.82zm5.174 0c1.077 0 1.658-.658 1.658-1.546 0-.693-.487-1.3-1.102-1.394.53-.111.991-.598.991-1.308C24.1.8 23.528.15 22.477.15h-2.804v5.7zM22.28 2.5h-1.607V1.03h1.607c.504 0 .795.317.795.735 0 .436-.29.735-.795.735zm.043 2.47h-1.65V3.38h1.65c.564 0 .863.368.863.795 0 .496-.325.795-.863.795zm8.09.876V.145h-.71v2.453H26.37V.145h-.71v5.7h.71V3.23h3.332v2.615zm3.685.103c1.684 0 2.829-1.265 2.829-2.949 0-1.683-1.145-2.948-2.829-2.948-1.693 0-2.83 1.265-2.83 2.948 0 1.684 1.137 2.949 2.83 2.949zm0-.633c-1.282 0-2.094-.991-2.094-2.316 0-1.333.812-2.316 2.094-2.316 1.273 0 2.094.983 2.094 2.316 0 1.325-.82 2.316-2.094 2.316zm6.016.633c1.547 0 2.325-.906 2.325-2.325V.146h-.71v3.47c0 1.042-.564 1.7-1.615 1.7-1.052 0-1.615-.658-1.615-1.7V.145h-.71v3.487c0 1.401.778 2.316 2.325 2.316zm5.243 0c1.538 0 2.103-.846 2.103-1.675 0-2.128-3.376-1.393-3.376-2.675 0-.539.487-.906 1.17-.906.624 0 1.223.213 1.65.683l.427-.521C46.853.35 46.178.06 45.306.06c-1.12 0-1.957.641-1.957 1.581 0 2.034 3.376 1.222 3.376 2.692 0 .436-.325.983-1.342.983a2.41 2.41 0 01-1.795-.812l-.419.538c.47.53 1.197.906 2.188.906zM52 5.846v-.633h-3.026V3.248h2.965v-.633h-2.965V.778H52V.145h-3.735v5.7z"></path>
+		</svg>
+	</a>
+	<div id="banner-container" style="display: block;">
+		<div id="logo-container" class="bottom left">
+			<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=88DexI4Dp9SU-_2uAxMo5tAaMixQppnZnq_vOo-bLTtCmPFKVWc2D0hm-UtujWQapxOSROWGhAlJV0nBbXzkOgi-ggEUIdLsCpDSt49rc2INxASJb4yjLp1gVxJMtLHhzJCtXmqvJPRWl25qBb9m07IhF1yR-ahJJlN4RLTeROqcxifsz_r43hJTstpd2P9z0tKhgh6jmslIOxD116HXjNvYrrnZdNSHq8DAHPF9vrUQGrwrRZlvq7ncFSSt8cB8Y84F2XkD51Im1OPT-pnFUB_4h7WiSDBDGm5Iap0SVG6oFi1YN9LUb0G3gbrTSny5GJGMzBFZr0p2IyJwU_rA7SIBg6x_0D1op3ApN_zmfVUcv-DZL9GQtvkikcdOcVFXjGL-hbRANmJKkv8qdgDb5uQgiAACjn_SkxZWMCjmyrXT7nLFyPClNFQlNtsQmMBhfIBINEcxvroXst6TYvlGdIGN-_AjtsN6y4ka3hhErUoW9eiKukCYXljoRtNdXjtKrJ4NQ2NpNoHsFg4HUFovr2KO5G0NjmxjUN8Klj8gzsC-9TxrZjO8xRtFvb26yW55sTHesPMut7v4oK2S7v6dxmsHdKSOah0fk70DXvLAYSfjFng2jMm_qV2mbZCkEAJ9" class="banner-clickholder" target="_blank">
+				<div class="logo-container-logos-wraper bottom left">
+					<div id="logo-box-0" class="logo-box" style="display: inline-block; opacity: 1; transition-property: none; transition-duration: 0s;">
+						<canvas id="logo-canvas1" width="177" height="38" style="position: absolute; inset: 0px; margin: auto;"></canvas>
+						<script>
+							showImg({
+								img:'https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/main/images/logo.png',
+								id:'logo-canvas1',
+								w:318,
+								h:67,
+								formats:false,
+								forceDiv:''==='true',
+								dontFade:1>1,
+								dontHide:1>1,
+								dontCover:true,
+								isLogo:'https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/main/images/logo.png'.match(/logo[._\d]/),
+								forceCover:promologoCoverArray.length>(1 - 1) ? promologoCoverArray[1 - 1]==='true' : 1>1
+							});
+						</script>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div id="alloffers-container" class="absolut-position top right">
+			<div id="alloffers-container-relative" class="absolut-position" style="height: 545px; top: 0px; transform-origin: 159px 205.5px; opacity: 0; transform: scale(1.15, 1.15) rotate(25deg);">
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_oKj5Jq61yqWpUjDWZb1klgs2gK92gFJDJLbrNE6NWgR" class="banner-clickholder" target="_blank"></a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_oKj5Jq61yqWpUjDWZb1klgs2gK92gFJDJLbrNE6NWgR" id="offer0" data-id="0" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 6px; top: 6px; z-index: 0; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 6px; margin-top: 0px;">
+							<canvas id="canv0" width="80" height="100" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":784,"url":"https:\/\/ams.creativecdn.com\/images?id=61c9763f6afbe9d4f73c74ef4a973ebc8b8c5ec6&w=784&h=985&o=PRD-QMMEYZHF&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":985},{"width":392,"url":"https:\/\/ams.creativecdn.com\/images?id=61c9763f6afbe9d4f73c74ef4a973ebc8b8c5ec6&w=392&h=492&o=PRD-QMMEYZHF&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":492},{"width":196,"url":"https:\/\/ams.creativecdn.com\/images?id=61c9763f6afbe9d4f73c74ef4a973ebc8b8c5ec6&w=196&h=246&o=PRD-QMMEYZHF&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":246}]',
+									id:'canv0',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 1 pour 43,61 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="0" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="0" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_oKj5Jq61yqWpUjDWZb1klgs2gK92gFJDJLbrNE6NWgR',
+							name:'Veste \u00E0 capuche Layback de Printer',
+								price: '1 pour 43,61 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":784,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=61c9763f6afbe9d4f73c74ef4a973ebc8b8c5ec6&w=784&h=985&o=PRD-QMMEYZHF&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":985},{\"width\":392,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=61c9763f6afbe9d4f73c74ef4a973ebc8b8c5ec6&w=392&h=492&o=PRD-QMMEYZHF&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":492},{\"width\":196,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=61c9763f6afbe9d4f73c74ef4a973ebc8b8c5ec6&w=196&h=246&o=PRD-QMMEYZHF&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":246}]',
+							fullName:'Veste \u00E0 capuche Layback de Printer',
+							ribbonText:''
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_vP5v52YTvZmRKTmOifayZ7jnGYwEoQE2K1LgfVU44vF" id="offer1" data-id="1" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 109px; top: 6px; z-index: 1; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 10px; margin-top: 0px;">
+							<canvas id="canv1" width="72" height="100" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":697,"url":"https:\/\/ams.creativecdn.com\/images?id=05be582d323e9651da94c01a4bb71fa2a496860e&w=697&h=968&o=PRD-A9CFD263&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":968},{"width":348,"url":"https:\/\/ams.creativecdn.com\/images?id=05be582d323e9651da94c01a4bb71fa2a496860e&w=348&h=484&o=PRD-A9CFD263&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":484},{"width":174,"url":"https:\/\/ams.creativecdn.com\/images?id=05be582d323e9651da94c01a4bb71fa2a496860e&w=174&h=242&o=PRD-A9CFD263&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":242}]',
+									id:'canv1',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 5 pour 172,79 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="1" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="1" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_vP5v52YTvZmRKTmOifayZ7jnGYwEoQE2K1LgfVU44vF',
+							name:'Veste homme Fastplant de Printer \u00E0 impression monochrome',
+								price: '5 pour 172,79 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":697,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=05be582d323e9651da94c01a4bb71fa2a496860e&w=697&h=968&o=PRD-A9CFD263&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":968},{\"width\":348,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=05be582d323e9651da94c01a4bb71fa2a496860e&w=348&h=484&o=PRD-A9CFD263&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":484},{\"width\":174,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=05be582d323e9651da94c01a4bb71fa2a496860e&w=174&h=242&o=PRD-A9CFD263&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":242}]',
+							fullName:'Veste homme Fastplant de Printer \u00E0 impression monochrome',
+							ribbonText:''
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_uLUbi6EnA2-e3Y4mEu_4SsEH1x0rBnIcQt5sCtQ4hAp" id="offer2" data-id="2" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 212px; top: 6px; z-index: 100; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 8px; margin-top: 0px;">
+							<canvas id="canv2" width="76" height="100" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":712,"url":"https:\/\/ams.creativecdn.com\/images?id=a5aa2b0591027569a9032065846f0fd71bc3a5cd&w=712&h=939&o=PRD-1DBEDDC8&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":939},{"width":356,"url":"https:\/\/ams.creativecdn.com\/images?id=a5aa2b0591027569a9032065846f0fd71bc3a5cd&w=356&h=469&o=PRD-1DBEDDC8&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":469},{"width":178,"url":"https:\/\/ams.creativecdn.com\/images?id=a5aa2b0591027569a9032065846f0fd71bc3a5cd&w=178&h=234&o=PRD-1DBEDDC8&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":234}]',
+									id:'canv2',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 1 pour 85,14 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="2" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="2" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_uLUbi6EnA2-e3Y4mEu_4SsEH1x0rBnIcQt5sCtQ4hAp',
+							name:'Veste Softshell Langley d\u2019Elevate\u2122',
+								price: '1 pour 85,14 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":712,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=a5aa2b0591027569a9032065846f0fd71bc3a5cd&w=712&h=939&o=PRD-1DBEDDC8&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":939},{\"width\":356,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=a5aa2b0591027569a9032065846f0fd71bc3a5cd&w=356&h=469&o=PRD-1DBEDDC8&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":469},{\"width\":178,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=a5aa2b0591027569a9032065846f0fd71bc3a5cd&w=178&h=234&o=PRD-1DBEDDC8&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":234}]',
+							fullName:'Veste Softshell Langley d\u2019Elevate\u2122',
+							ribbonText:''
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_pLCmepPi6lAUpPFjdSVah3ATK_Z48s5q66SeyRz6SOe" id="offer3" data-id="3" class="offer-container absolut-position price-set oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 6px; top: 141.58px; z-index: 3; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 0px; margin-top: 4px;">
+							<canvas id="canv3" width="92" height="92" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":1000,"url":"https:\/\/ams.creativecdn.com\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=1000&h=1000&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":1000},{"width":500,"url":"https:\/\/ams.creativecdn.com\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=500&h=500&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":500},{"width":250,"url":"https:\/\/ams.creativecdn.com\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=250&h=250&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":250},{"width":125,"url":"https:\/\/ams.creativecdn.com\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=125&h=125&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":125}]',
+									id:'canv3',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-ribbon-container normal">
+						<div class="offer-ribbon">
+							<p class="text-table">
+								<span class="text-table-cell">-15%</span>
+							</p>
+						</div>
+					</div>
+					<div class="offer-oldprice-container" style="margin-bottom: 1px; display: inline-block;">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-oldprice-value"> 1 pour   9,99 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-price-container" style="margin-bottom: 1px; display: none;">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 1 pour 8,49 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="3" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="3" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_pLCmepPi6lAUpPFjdSVah3ATK_Z48s5q66SeyRz6SOe',
+							name:'Mugs',
+								price: '1 pour 8,49 \u20AC',
+							oldPrice: '1 pour 9,99 \u20AC',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":1000,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=1000&h=1000&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":1000},{\"width\":500,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=500&h=500&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":500},{\"width\":250,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=250&h=250&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":250},{\"width\":125,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b48622cfde18f093685a061adbe61613718f58c5&w=125&h=125&o=PRD-OPTIMWT6J&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":125}]',
+							fullName:'Mugs',
+							ribbonText:'-15%'
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_uu9Zp1Zu6xJDNTVhnV0RN9cQWh_oVeJ2nwpD1CGJc8N" id="offer4" data-id="4" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 109px; top: 141.58px; z-index: 4; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 10px; margin-top: 0px;">
+							<canvas id="canv4" width="72" height="100" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":687,"url":"https:\/\/ams.creativecdn.com\/images?id=4e8fd68993df57a300232f18d71ce6239613156c&w=687&h=960&o=PRD-BE8F49C9&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":960},{"width":343,"url":"https:\/\/ams.creativecdn.com\/images?id=4e8fd68993df57a300232f18d71ce6239613156c&w=343&h=480&o=PRD-BE8F49C9&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":480},{"width":171,"url":"https:\/\/ams.creativecdn.com\/images?id=4e8fd68993df57a300232f18d71ce6239613156c&w=171&h=240&o=PRD-BE8F49C9&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":240}]',
+									id:'canv4',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 1 pour 38,45 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="4" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="4" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_uu9Zp1Zu6xJDNTVhnV0RN9cQWh_oVeJ2nwpD1CGJc8N',
+							name:'Pull \u00E0 capuche Lightweight Fruit of the Loom\u00AE',
+								price: '1 pour 38,45 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":687,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=4e8fd68993df57a300232f18d71ce6239613156c&w=687&h=960&o=PRD-BE8F49C9&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":960},{\"width\":343,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=4e8fd68993df57a300232f18d71ce6239613156c&w=343&h=480&o=PRD-BE8F49C9&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":480},{\"width\":171,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=4e8fd68993df57a300232f18d71ce6239613156c&w=171&h=240&o=PRD-BE8F49C9&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":240}]',
+							fullName:'Pull \u00E0 capuche Lightweight Fruit of the Loom\u00AE',
+							ribbonText:''
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_ibZ_Ar8uPZ1S7mZk7xQRqADZvj5pJDTNvxMLlsrGtsx" id="offer5" data-id="5" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 212px; top: 141.58px; z-index: 5; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 6px; margin-top: 0px;">
+							<canvas id="canv5" width="80" height="100" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":755,"url":"https:\/\/ams.creativecdn.com\/images?id=b0c9c749f2d9e0351677914850f63dbdd2f97f1a&w=755&h=949&o=PRD-B58E18EE&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":949},{"width":377,"url":"https:\/\/ams.creativecdn.com\/images?id=b0c9c749f2d9e0351677914850f63dbdd2f97f1a&w=377&h=474&o=PRD-B58E18EE&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":474},{"width":188,"url":"https:\/\/ams.creativecdn.com\/images?id=b0c9c749f2d9e0351677914850f63dbdd2f97f1a&w=188&h=237&o=PRD-B58E18EE&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":237}]',
+									id:'canv5',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 1 pour 59,11 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="5" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="5" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_ibZ_Ar8uPZ1S7mZk7xQRqADZvj5pJDTNvxMLlsrGtsx',
+							name:'Veste de surv\u00EAtement Premium Fruit of the Loom\u00AE',
+								price: '1 pour 59,11 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":755,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b0c9c749f2d9e0351677914850f63dbdd2f97f1a&w=755&h=949&o=PRD-B58E18EE&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":949},{\"width\":377,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b0c9c749f2d9e0351677914850f63dbdd2f97f1a&w=377&h=474&o=PRD-B58E18EE&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":474},{\"width\":188,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b0c9c749f2d9e0351677914850f63dbdd2f97f1a&w=188&h=237&o=PRD-B58E18EE&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":237}]',
+							fullName:'Veste de surv\u00EAtement Premium Fruit of the Loom\u00AE',
+							ribbonText:''
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_rWxn2JDraBVc30t9OtdioueFNukrpXB8v_RXbqY6KNj" id="offer6" data-id="6" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 6px; top: 277.17px; z-index: 6; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 7px; margin-top: 0px;">
+							<canvas id="canv6" width="78" height="100" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":731,"url":"https:\/\/ams.creativecdn.com\/images?id=c8b4fd32f410cd1373b0f989dccae2f999f7e947&w=731&h=936&o=PRD-CD32A0B1&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":936},{"width":365,"url":"https:\/\/ams.creativecdn.com\/images?id=c8b4fd32f410cd1373b0f989dccae2f999f7e947&w=365&h=468&o=PRD-CD32A0B1&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":468},{"width":182,"url":"https:\/\/ams.creativecdn.com\/images?id=c8b4fd32f410cd1373b0f989dccae2f999f7e947&w=182&h=234&o=PRD-CD32A0B1&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":234}]',
+									id:'canv6',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 5 pour 201,94 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="6" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="6" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_rWxn2JDraBVc30t9OtdioueFNukrpXB8v_RXbqY6KNj',
+							name:'Sweat \u00E0 capuche RSX Fastpitch de Printer',
+								price: '5 pour 201,94 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":731,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=c8b4fd32f410cd1373b0f989dccae2f999f7e947&w=731&h=936&o=PRD-CD32A0B1&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":936},{\"width\":365,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=c8b4fd32f410cd1373b0f989dccae2f999f7e947&w=365&h=468&o=PRD-CD32A0B1&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":468},{\"width\":182,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=c8b4fd32f410cd1373b0f989dccae2f999f7e947&w=182&h=234&o=PRD-CD32A0B1&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":234}]',
+							fullName:'Sweat \u00E0 capuche RSX Fastpitch de Printer',
+							ribbonText:''
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_lFwHZJ-wK43zelu1T_57e2SOJpRBtxeJRzJJ_JLWpAp" id="offer7" data-id="7" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 109px; top: 277.17px; z-index: 7; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 0px; margin-top: 4px;">
+							<canvas id="canv7" width="92" height="92" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":1000,"url":"https:\/\/ams.creativecdn.com\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=1000&h=1000&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":1000},{"width":500,"url":"https:\/\/ams.creativecdn.com\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=500&h=500&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":500},{"width":250,"url":"https:\/\/ams.creativecdn.com\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=250&h=250&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":250},{"width":125,"url":"https:\/\/ams.creativecdn.com\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=125&h=125&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":125}]',
+									id:'canv7',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 1 pour 17,09 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="7" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="7" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_lFwHZJ-wK43zelu1T_57e2SOJpRBtxeJRzJJ_JLWpAp',
+							name:'Casquette Buffalo de SOL\'s\u00AE',
+								price: '1 pour 17,09 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":1000,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=1000&h=1000&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":1000},{\"width\":500,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=500&h=500&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":500},{\"width\":250,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=250&h=250&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":250},{\"width\":125,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=b3cafd11afa7f169baffb6e5ca7d4acb33c0826f&w=125&h=125&o=PRD-C7E9EBB0&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":125}]',
+							fullName:'Casquette Buffalo de SOL\'s\u00AE',
+							ribbonText:''
+						});
+					</script>
+				</a>
+				<a href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_mQFfPIRVZhG8adfr32Bg3wWSKxfAhKattamtkzjgjct" id="offer8" data-id="8" class="offer-container absolut-position price-set no-oldprice-set" target="_blank" style="width: 100px; height: 132.58px; left: 212px; top: 277.17px; z-index: 8; opacity: 1;">
+					<div class="border-container">
+						<div class="offer-loader" style="display: block; width: 0px;"></div>
+					</div>
+					<div class="shadow-container"></div>
+					<div class="offer-img-container">
+						<div style="padding: 1.94px !important; display: block; opacity: 1; transition-property: none; transition-duration: 0s; margin-left: 0px; margin-top: 4px;">
+							<canvas id="canv8" width="92" height="92" style="image-rendering: auto;"></canvas>
+							<script>
+								showImg({
+									img:'[{"width":1000,"url":"https:\/\/ams.creativecdn.com\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=1000&h=1000&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":1000},{"width":500,"url":"https:\/\/ams.creativecdn.com\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=500&h=500&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":500},{"width":250,"url":"https:\/\/ams.creativecdn.com\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=250&h=250&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":250},{"width":125,"url":"https:\/\/ams.creativecdn.com\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=125&h=125&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3","height":125}]',
+									id:'canv8',
+									w:92.12,
+									h:100.13
+								});
+							</script>
+						</div>
+					</div>
+					<div class="background-container"></div>
+					<div class="offer-price-container" style="margin-bottom:1px">
+						<p class="text-table">
+							<span class="text-table-cell">
+								<span class="offer-price-value"> 25 pour 14,27 <span class="offer-currency">€</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="offer-button-wrapper none" data-id="8" style="margin-bottom: 0px; display: block;">
+						<div class="hover-btn"></div>
+						<div class="bg-btn"></div>
+						<p class="text-table">
+							<span class="text-table-cell" style="transition-property: opacity; transition-duration: 0.2s;">
+								J'en profite
+							</span>
+						</p>
+					</div>
+					<div class="offer-hover-container" data-id="8" style="display: block;">
+					</div>
+					<script>
+						offers.push({
+							url:'https:\/\/ams.creativecdn.com\/clicks?id=20240621_ynpesElDl2bXuW3izWaa&tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_mQFfPIRVZhG8adfr32Bg3wWSKxfAhKattamtkzjgjct',
+							name:'Flyers et tracts',
+								price: '25 pour 14,27 \u20AC',
+							oldPrice: '',
+							offerCurrency:'\u20AC',
+							imgUrl:'[{\"width\":1000,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=1000&h=1000&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":1000},{\"width\":500,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=500&h=500&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":500},{\"width\":250,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=250&h=250&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":250},{\"width\":125,\"url\":\"https:\\\/\\\/ams.creativecdn.com\\\/images?id=e6f08cb8b23b82b66e420d5bf6a978f66c822147&w=125&h=125&o=PRD-4OAR8RCM&fid=qc22WvQ6QoNWVke9hG7P&f=3\",\"height\":125}]',
+							fullName:'Flyers et tracts',
+							ribbonText:''
+						});
+					</script>
+				</a>
+			</div>
+			<div id="offer-enlarger" class="ANIMINFO no-oldprice-set" style="display: block; visibility: visible; opacity: 1; left: 0px;">
+				<div class="offer-enlarger-relative">
+					<div class="offer-enlarger-close enlarger-close">
+						<img src="./btn_x.gif" data-default="https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/main/images/btn_x.gif" data-src="https://statics.creativecdn.com/63dad631df12be9e5fe9a932423a2e30/bc5c853942cd6814b0156d67e724de82pack3284026446020acfcaafff7b51edfc28/main/images/btn_x_anim.gif" alt="">
+					</div>
+					<a class="offer-enlarger-link" href="https://ams.creativecdn.com/clicks?id=20240621_ynpesElDl2bXuW3izWaa&amp;tk=HqRqeDEziT3NaWnQL1H7ubevBflEVUnkw_ntQsfFRObGpNXzY0wlRyAXf55QDDA89k6_xn01OL4-4IPeukuLpLG9zhD02u-13lbowpmeC7g46yW2U5eqOTjXzhqVzb190HHwcqAAG3joK0Wr_rEOKAwx3PmIeV4l3i-zF011DfsvBVijBgdT58zqX_oOSxHBtR9RsdCbeaw_eKTPhbm8sKiPh8P-91qhSWc78mltr-rw86TzOdfPCr2IBJF7kWXbHKG7aWO2GND0c80F9JRwTxa8dcOjBrMhOfWfZc6wYI6U_MHBZKsi2pyXfk-ybxeu2TPm-tbPYg65zVX7bM1kfGPfayzoU0b6cNdhbNBZXYAJ0IkRIToT698fFrU8jPNryEChb_qlpUubcQsBbQumAOzMkL_IwnatOP6IsAINCG_JTrxZCSpjT_3epbFoNMDBQ1qEWEPpVFHswF75WqAVFN4MhTYnTKS9JEK_G0ZDicPendCPO-3PZuEksjFPyT6l8DPAdaXpJSEyTpZPv05OQzoKk5pmj2DjlXIGf62bJiJy2iDLpeMvy-Up26CuMjygCoHtwo07AWy4atrbYObL_uLUbi6EnA2-e3Y4mEu_4SsEH1x0rBnIcQt5sCtQ4hAp" target="_blank">
+						<div class="offer-enlarger-image" style="padding: 8px;">
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						<div id="enlargerImg0" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 74px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv0" width="145" height="182"></canvas></div><div id="enlargerImg1" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 82px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv1" width="131" height="182"></canvas></div><div id="enlargerImg2" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 78px; margin-top: 0px; visibility: visible;"><canvas id="enlargerCanv2" width="138" height="182"></canvas></div><div id="enlargerImg3" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 56px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv3" width="182" height="182"></canvas></div><div id="enlargerImg4" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 82px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv4" width="130" height="182"></canvas></div><div id="enlargerImg5" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 75px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv5" width="145" height="182"></canvas></div><div id="enlargerImg6" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 76px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv6" width="142" height="182"></canvas></div><div id="enlargerImg7" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 56px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv7" width="182" height="182"></canvas></div><div id="enlargerImg8" class="canv-img" style="padding: 4px; display: inline-block; position: absolute; margin-left: 56px; margin-top: 0px; visibility: hidden;"><canvas id="enlargerCanv8" width="182" height="182"></canvas></div></div>
+						<div class="offer-enlarger-ribbon-container normal" style="display: none;">
+							<div class="offer-enlarger-ribbon">
+								<p class="text-table">
+									<span class="text-table-cell">-15%</span>
+								</p>
+							</div>
+						</div>
+						<div class="offer-enlarger-infobar" style="z-index: 200;">
+							<div class="offer-enlarger-name">
+								<p class="text-table">
+									<span class="offer-enlarger-name-value text-table-cell">Veste Softshell Langley d’Elevate™</span>
+								</p>
+							</div>
+							<div class="offer-enlarger-price-wrapper">
+								<div class="offer-enlarger-price" style="margin-top: 0px;">
+									<p class="text-table">
+										<span class="text-table-cell"><span class="offer-enlarger-price-value">1 pour 85,14 €</span></span>
+									</p>
+								</div>
+								<div class="offer-enlarger-oldprice" style="display: none; margin-top: -18.465px;">
+									<p class="text-table">
+										<span class="text-table-cell"></span><span class="offer-enlarger-oldprice-value">1 pour 9,99 €</span>
+									</p>
+								</div>
+							</div>
+							<div class="offer-enlarger-button-wrapper" style="pointer-events: auto;">
+								<div class="offer-enlarger-button">
+									<div class="hover-btn"></div>
+									<div class="bg-btn"></div>
+									<p class="text-table">
+										<span class="text-table-cell offer-button-text-wrapper" style="opacity: 1; display: table-cell;">
+											J'en profite
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var bannerWidth=320;
+		var bannerHeight=480;
+		var logoReady=!false && !false;
+		function start($){
+			if(banner.options.logoAnimInterval===3000){
+				banner.options.logoAnimInterval=3000;
+			}
+			banner.init({
+				offersCount:9,
+				screenOffers:'9',
+				infiniteAnimAllowed:true,
+				offerPriceEnabled:true,
+				logoAnimFadeSpeed:500,
+				initHoverAnim: false ,
+				initFrameAnimColor:'transparent',
+				enlargerAnimEnabled:true,
+				containerHeight:407,
+				sliderScreenWidth:309+15,
+				screensMargin:15,
+				enlargerType:(false || false) ? '' : 'ANIMINFO',
+				animAgain:'false',
+				arrowsEnabled:'false',
+				logoGIFanimation:'false',
+				creativeBannerTrmplateAnimationType: 'ENLARGER' 
+			});
+			var rollTextOptions= {} ;
+			rollTextOptions.horizontal=false;
+			banner=$.extend(true,enlarger,banner);
+			banner.initEnlarger({
+				ribbonType:1,
+				infobarAnim:false,
+				showSpeed:450,
+				hideSpeed:400,
+				hideAnimType:'{BANNER_ENLARGER_HIDE_ANIM_TYPE}',
+				animType:'6',
+				imgMargPix:'0',
+				imgMargPercent:'0.05',
+				rollText:true,
+				showTwoPrices:'true'==='true',
+				rollTextOptions:rollTextOptions,
+				dontChangeAspectRatio: false
+			});
+			startAfterLoad && fadeInElement($('body'));
+			this.extraInit && this.extraInit();
+		}
+	</script>
+	<div id="banner-tracking"><img src="./B28502156(1).376443854" border="0" height="1" width="1" alt="Advertisement"></div>
+
+</body></html>

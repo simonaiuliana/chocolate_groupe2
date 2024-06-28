@@ -27,9 +27,48 @@
     <link rel="stylesheet" href="css/footer/style.css" type="text/css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <link rel="stylesheet" href="css/carousel/carou.css">
-    
-    
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .choco {
+  outline:none;
+  cursor:pointer;
+  display:block;
+  background-color:#54341A;
+  text-shadow:0px 1px 0px rgba(255,255,255,0.1);
+  text-decoration:none;
+  font:normal 20px 'Monotype Corsiva','Book Antiqua',Georgia,Serif;
+  color:#ffffff;
+  width:320px;
+  text-align:center;
+  margin:auto;
+  padding:0px 0px;
+  line-height:40px;
+  border-top:9px solid #6A4021;
+  border-right:10px solid #39210D;
+  border-bottom:10px solid #241505;
+  border-left:10px solid #402712;
+  -webkit-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.15),
+    0px 1px 2px black;
+  -moz-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.15),
+    0px 1px 2px black;
+  box-shadow:inset 0px 1px 0px rgba(255,255,255,0.15),
+    0px 1px 2px black;
+}
+
+.choco:hover {
+  background-color:#4B2E17;
+  border-color:#5F391F #311F0D #170D03 #341F0F;
+}
+
+.choco:active {
+  border-color:#170D03 #341F0F #5F391F #311F0D;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  box-shadow:none;
+}
+
+</style>
 </head>
 <body>
     <!--------------navbar--------------------->
@@ -121,44 +160,73 @@
             <img id="img4" src="img/recipes/Mousse/plouf1.png" style="width: 300px;" class="me-5"  data-aos="zoom-in">
         </div>
         <div class="steps mt-5">
-            <h2 class="text-center"> Desserts
-                Pure chocomousse
-                 : <br>( <i class="fa-solid fa-clock"></i> 30 min )</h2>
-            <div class="step">
-                <p class="number"><span>1</span></p>
-                <p class="step-desc">Faites fondre le chocolat au bain-marie avec le beurre. </p>
-            </div>
-            <div class="step">
-                <p class="number"><span>2</span></p>
-                <p class="step-desc">Incorporez 50 g de sucre aux jaunes d’œufs et battez-les jusqu’à obtenir une texture mousseuse. </p>
-            </div>
-            <div class="step">
-                <p class="number"><span>3</span></p>
-                <p class="step-desc mb-5">Ajoutez le sucre restant aux blancs d’œufs et battez-les en neige.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>4</span></p>
-                <p class="step-desc mb-5">Fouettez également la crème jusqu’à ce qu’elle soit bien ferme.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>5</span></p>
-                <p class="step-desc mb-5">Plongez le bol contenant le chocolat sous l’eau froide et versez-y immédiatement les jaunes d’œufs.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>6</span></p>
-                <p class="step-desc mb-5">Incorporez la crème fraîche, puis ajoutez délicatement les blancs d’œufs.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>7</span></p>
-                <p class="step-desc mb-5">Répartissez la préparation dans 8 verres et laissez-la durcir pendant au moins 2 heures au réfrigérateur.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>8</span></p>
-                <p class="step-desc mb-5">Servez avec un demi-cerneau de noix et éventuellement un biscuit en guise de garniture.</p>
+            <h2 class="text-center mb-4">Desserts Pure Chocomousse<br><i class="fa-solid fa-clock"></i> 30 min</h2>
+            <div class="row border rounded-2 border-5">
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">1: Faites fondre le chocolat au bain-marie avec le beurre.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">2: Incorporez 50 g de sucre aux jaunes d’œufs et battez-les.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">3: Ajoutez le sucre restant aux blancs d’œufs et battez-les en neige.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">4: Fouettez également la crème jusqu’à ce qu’elle soit bien ferme.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">5: Plongez le bol sous l’eau froide et versez-y les jaunes d’œufs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">6 :Incorporez la crème fraîche, puis ajoutez délicatement les blancs d’œufs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">7: Répartissez dans des verres et laissez-la durcir pendant 2 heures au frigo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">8: Servez avec  un biscuit en guise de garniture.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </main>
+<script>
+    $(document).ready(function(){
+        $(".step-checkbox").change(function(){
+            var $stepDesc = $(this).siblings(".step-desc");
+            if($(this).is(":checked")){
+                $stepDesc.html('<del>' + $stepDesc.text() + '</del>');
+            } else {
+                var text = $stepDesc.find("del").text();
+                $stepDesc.html(text);
+            }
+        });
+    });
+    </script>
 
     
 <!------------------video------------------->
@@ -185,12 +253,13 @@
         </div>
     </section>
     <!------------------start commentaire----------------------------->
+    <button class="choco mt-5">laissez nous un commentaire</button>
     <section id="coms" class="contact-section mt-5 mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="#" class="contact-form" id="comment-form">
-                        <h3 class="mb-4">Laissez un commentaire</h3>
+                    <form action="" class="contact-form" id="comment-form" style="display: none;">
+                        <h2 class="mb-4">Laissez un commentaire</h2>
                         <div class="row">
                             <div class="col-lg-6">
                                 <input type="text" id="name" placeholder="Votre nom" required>
@@ -214,7 +283,7 @@
                         <button type="submit">Envoyez votre commentaire</button>
                     </form>
                     <div class="comments-section">
-                        <h3>Commentaires</h3>
+                        <h2>Les Commentaires</h2>
                         <div class="comments-list" id="comments-list">
                             <!-- Commentaires a venir ici -->
                         </div>
@@ -223,10 +292,18 @@
             </div>
         </div>
     </section>
+    <script>
+        $(document).ready(function(){
+            $(".choco").click(function(){
+                $("#comment-form").fadeToggle();
+            });
+        });
+    </script>
+
 
    
 <!-- carousel-->
-<h2 class="display-5">Autre Recette</h2>
+<h2 class="display-5 mb-5">Autre Recette</h2>
 <section id="sectioncar">
     <div class="swiper">
         <div class="swiper-wrapper">

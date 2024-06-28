@@ -16,7 +16,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
         crossorigin="anonymous">
+        <!-- Css Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/footercss/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/footercss/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/footercss/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/footercss/style.css" type="text/css">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
     <!-- Font Awesome pentru iconițe -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-9I72DfU5rG4anYiZL9Vn8trGwm+w5J6SvBjIlh8C2xwrk7p1A2/8Wc8V6qbdC3tx79MsqEo2f2DxLjAeH1V1bQ=="
@@ -28,13 +39,349 @@
         <link rel="icon" href="th-r.jpeg" type="image/x-icon">
 
     <!-- CSS personalizat -->
-    
+<style>
+    body{
+    background-color: #dbc6b6;
+}
+h1{ 
+    font-family: "Brush Script MT", cursive;
+    font-size: 80px;
+    color: #5a2a08;
+    font-weight: bold;
+   
+}
+.recipe-info {
+    background-color: #ead5be; 
+    border-radius: 8px 55px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+}
+#resultat{
+    color: #391b05;
+background-color: #ead5be; 
+border-radius: 8px 55px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+padding-left: 50px;
+columns: 2; 
+}
+article p {
+color: #291002; 
+line-height: 1.2; 
+font-family: Luminari;
+font-size: 30px;
+}
+h2{
+color: #291002; 
+line-height: 1.2; 
+font-family: Luminari;
+font-size: 40px;   
+font-weight: bold;
+}
+#nr-personnes {
+background-color: #eeebe8;
+}  
+.container{
+align-items: center;
+}
+.btn {
+width: 50%;
+display: inline-block;
+padding: 15px 25px;
+font-size: 20px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #dcd1ca;
+background-color:rgb(90, 43, 9);
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+margin-bottom: 20px;
+}
+
+
+.btn:hover {background-color: rgb(115, 77, 50)}
+
+.btn:active {
+background-color:rgb(115, 77, 50);
+box-shadow: 0 3px #666;
+transform: translateY(4px);
+}
+.recipe-title {
+    color: rgb(71, 34, 7);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+.feature-title {
+    font-weight: bold;
+    color: #291002;
+}
+
+.feature-sub-title {
+    color: #5a2a08; 
+}
+
+.recipe-top {
+    position: relative;
+    height: 65vh; 
+    overflow: hidden;
+}
+
+.recipe-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-name {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.rating {
+    display: inline-block;
+    font-size: 24px;
+    color: #f39c12;
+}
+
+
+.similar-recipe .card {
+width: auto; 
+height: auto; 
+border: none;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8); 
+transition: transform 0.3s ease-in-out;
+overflow: hidden;
+margin-left: 30px;
+}
+
+.similar-recipe .card img {
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+}
+
+.similar-recipe .card:hover {
+transform: translateY(-10px);
+}
+.similar-recipe h2{
+text-align: center;
+margin-left: 30px;
+}
+
+.ingredients-section {
+color: #391b05;
+background-color: #ead5be; 
+border-radius: 8px 55px;
+padding: 80px;
+margin-top: 120px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+}
+
+.note-item {
+display: flex; 
+align-items: center; 
+margin-bottom: 10px; 
+}
+
+.note-item i {
+font-size: 24px; 
+color: #5a2a08; 
+}
+
+.ingredients-list {
+columns: 2; 
+list-style-type: none; 
+padding: 20px; 
+column-gap: 20px; 
+font-size: larger;
+}
+
+.ingredients-list li {
+margin-bottom: 8px; 
+}
+
+.article-section-m {
+background-color: #ead5be; 
+border-radius: 8px; 
+padding: 20px; 
+margin-top: 20px; 
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.article-section-m h2 {
+color: #291002; 
+line-height: 1.2; 
+font-family: Luminari;
+font-size: 40px;   
+font-weight: bold; 
+}
+
+.article-section-m .note-item {
+display: flex; 
+align-items: center; 
+margin-bottom: 10px; 
+}
+
+.article-section-m .note-item i {
+font-size: 24px; 
+color: #5a2a08; 
+}
+
+.article-section-m p {
+color: #291002; 
+line-height: 1.6; 
+font-family: Luminari, cursive; 
+font-size: 18px; 
+margin-bottom: 15px; 
+}
+
+
+.article-section-m a {
+color: #5a2a08; 
+text-decoration: none; 
+font-weight: bold; 
+}
+
+.article-section-m a:hover {
+text-decoration: underline; 
+}
+
+@media (min-width: 768px) {
+.plaque-photo {
+flex-direction: row;
+justify-content: space-between;
+}
+
+.plaque-photo .card {
+width: 30%; 
+}
+
+}
+/*formulaire*/
+#show-comment-form{
+
+display: inline-block;
+padding: 15px 25px;
+font-size: 20px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;   
+color: #dcd1ca;
+background-color:rgb(90, 43, 9);
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;  
+}
+.contact-section {
+padding: 50px 0;
+background-color: #dbc6b6;
+}
+
+.contact-form {
+background-color: #ead5be;
+padding: 30px;
+border-radius: 8px 55px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+width: 100%;
+margin-bottom: 15px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+.contact-form button {
+background-color:rgb(88, 34, 21);
+color: #dfc298;
+cursor: pointer;
+border: none;
+}
+.hidden {
+    display: none;
+}
+.star-rating {
+display: flex;
+justify-content: center;
+margin-bottom: 15px;
+}
+.star-rating .fa-star {
+font-size: 24px;
+color: white;
+cursor: pointer;
+}
+.star-rating .fa-star.checked {
+color: #ffc107;
+}
+.comments-section {
+margin-top: 30px;
+}
+.comment {
+border-bottom: 1px solid #ccc;
+padding: 10px 0;
+}
+.comment .comment-date {
+font-size: 0.9em;
+color: #777;
+}
+.comment .comment-rating {
+color: rgb(88, 34, 21);
+}
+.comment .comment-rating i {
+margin-right: 2px;
+}
+@media (max-width: 768px) {
+.contact-form .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-form .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+}
+.contact-form .col-lg-12 {
+    flex: 0 0 95%;
+    max-width: 95%;
+    padding: 0 15px;
+}
+h3{
+    text-align: center;
+}}
+
+
+
+
+
+   </style> 
 </head>
 
 <body>
     <nav>
         <div id="nav-links">
-            <a href="#" id="logo"><img src="th-r.jpeg" alt="" width="50"></a>
+            <a href="#" id="logo"><img src="logo.png" alt="" width="50"></a>
             <div id="container-burger">
                 <img src="chocolat.png" alt="">
             </div>
@@ -74,10 +421,10 @@
     <section class="single-recipe-wrap-layout1 padding-top-74 padding-bottom-50">
         <div class="container">
             <!-- Imagine de top și nume rețetă -->
-            <div class="row">
+            <div class="row header-text" >
                 <div class="col-md-12">
                     <div class="item-figure text-center">
-                        <img src="../../public/assets/nouvelles img/amandina.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
+                        <img src="../../public/assets/nouvelles img/amandina.jpg" alt="Amandina Cake" class="img-fluid">
                         <h1 class="item-title">Amandina Cake</h2>
                        
                     </div>
@@ -95,7 +442,7 @@
                                         <i class="far fa-clock"></i>
                                     </div>
                                     <div class="media-body space-sm">
-                                        <div class="feature-title">Temp total de preparation</div>
+                                        <div class="feature-title">Temps total de preparation</div>
                                         <div class="feature-sub-title">90 Min</div>
                                     </div>
                                 </div>
@@ -106,7 +453,7 @@
                                         <i class="fas fa-utensils"></i>
                                     </div>
                                     <div class="media-body space-sm">
-                                        <div class="feature-title">Temp de cuison</div>
+                                        <div class="feature-title">Temps de cuisons</div>
                                         <div class="feature-sub-title">45 Mins</div>
                                     </div>
                                 </div>
@@ -133,19 +480,25 @@
     <!-- start section pour calcul des ingredients -->
     <div class="container center-page">
         <div class="row mt-5 mb-5">
+            <section class="photo col-lg-6 mt-5">
+                <img src="../../public/assets/nouvelles img/ingredients3.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
+            </section>
             <section class="calculateur col-lg-6 col-md-6 col-sm-8">
                 <h2 class="mb-3 text-center">Calculer les Ingrédients</h2>
-                <form>
+                <form onsubmit="return calculateIngredients()">
+                <!--<form method="post" action="">-->
                     <div class="form-group">
                         <label for="nr-personnes">Nombre de Personnes:</label>
                         <input type="number" class="form-control" id="nr-personnes" placeholder="Entrez le nombre">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Calculer</button>
+                    <button type="submit" class="btn ">Calculer</button>
+                    <div id="resultat">
+                            <!-- ici vont etre afiché les ingredients -->
+                    </div>
                 </form>
             </section>
-            <section class="photo col-lg-6">
-                <img src="../../public/assets/nouvelles img/ingredients3.jpg" alt="Amandina Cake" class="img-fluid rounded mb-3">
-            </section>
+            
+            
         </div>
     </div>
     <!-- end section pour calcul des ingredients -->
@@ -162,7 +515,7 @@
                 </article>
                  
                 <!-- Secțiune pentru ingrediente -->
-                <section class="mb-4 mt-4 pt-5 ingredients-section">
+                <section class=" mt-4 pt-5 ingredients-section">
                     <h2 class="mb-2">Ingredients</h2>
                     <div class="note-item">
                         <i class="far fa-sticky-note mr-2"></i>
@@ -194,30 +547,33 @@
     <div class="similar-recipe">
         <h2 class="mb-4 text-center">Recettes similaires</h2>
         <div class="card mb-3">
-            <a href="link-catrea-pagina-retetei1">
-                <img src="../../public/assets/nouvelles img/mousse.jpg" class="card-img-top img-fluid" alt="...">
+            <a href="../sebastien/mous.html">
+                <img src="../../public/assets/nouvelles img/mousse.jpg" class="card-img-top img-fluid" alt="./sebastien/mous.html">
             </a>
         </div>
         <div class="card mb-3">
-            <a href="link-catrea-pagina-retetei2">
-                <img src="../../public/assets/nouvelles img/swissRoll.jpg" class="card-img-top img-fluid" alt="...">
+            <a href="../kevin/glace-au-chocolat.html">
+                <img src="../../public/assets/nouvelles img/glace-chocolat.jpg" class="card-img-top img-fluid" alt="...">
             </a>
         </div>
-        <div class="card mb-3">
-            <a href="link-catrea-pagina-retetei3">
+        <div class="card mb-5">
+            <a href="../maxim/max.html">
                 <img src="../../public/assets/nouvelles img/coulant-chocolat-framboises.jpg" class="card-img-top img-fluid" alt="...">
             </a>
         </div>
+        
     </div>
+    
     </section>
 
-       
-            
         </div>
         <div class="col-lg-11">
             <section class="article-section-m mb-4">
+              
                 <h2 class="mb-1 mt-3">Méthode de préparation</h2>
+                
                 <div class="note-item">
+                    
                     <i class="far fa-sticky-note "></i> 
                     <p>
                         Nous séparons les œufs.
@@ -251,17 +607,24 @@
     <section class="contact-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <form action="#" class="contact-form" id="comment-form">
+                <div class="col-lg-11">
+                    <!-- Butonul pentru afișarea formularului -->
+                    <button id="show-comment-form">Laissez un commentaire</button>
+    
+                    <!-- Formularul ascuns inițial -->
+                    <form action="#" class="contact-form hidden" id="comment-form">
                         <h3>Laissez un commentaire</h3>
                         <div class="row">
                             <div class="col-lg-6">
+                                <label for="name">Votre nom</label>
                                 <input type="text" id="name" placeholder="Votre nom" required>
                             </div>
                             <div class="col-lg-6">
+                                <label for="email">Votre email</label>
                                 <input type="email" id="email" placeholder="Votre email" required>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-11">
+                                <label for="subject">Le subject</label>
                                 <input type="text" id="subject" placeholder="Sujet">
                                 <textarea id="comment" placeholder="Commentaire" required></textarea>
                                 <div class="star-rating">
@@ -276,6 +639,8 @@
                         </div>
                         <button type="submit">Envoyez votre commentaire</button>
                     </form>
+    
+                    <!-- Secțiunea pentru afișarea comentariilor -->
                     <div class="comments-section">
                         <div class="comments-list" id="comments-list">
                             <!-- Commentaires affichés ici -->
@@ -285,94 +650,229 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Footer -->
-    <footer class="footer bg-dark text-light text-center py-3 mt-5">
-        <p>&copy; 2024 Coeur Fondant. Tous droits réservés.</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Fonctionnalité de notation par étoiles
-            $('.star-rating .fa-star').on('click', function() {
-                var rating = $(this).data('rating');
-                $('#rating').val(rating);
-                $('.star-rating .fa-star').each(function() {
-                    if ($(this).data('rating') <= rating) {
-                        $(this).addClass('checked');
-                    } else {
-                        $(this).removeClass('checked');
-                    }
-                });
-            });
-        
-            // Soumission du formulaire
-            $('#comment-form').on('submit', function(e) {
-                e.preventDefault();
-                
-                var name = $('#name').val();
-                var email = $('#email').val();
-                var subject = $('#subject').val();
-                var comment = $('#comment').val();
-                var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
-                
-                var date = new Date().toLocaleDateString();
-        
-                var commentHtml = '<div class="comment">' +
-                                    '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
-                                    '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                                    '<div>' + escapeHtml(comment) + '</div>' +
-                                  '</div>';
-        
-                $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
-        
-                // Réinitialiser le formulaire
-                $('#comment-form')[0].reset();
-                $('#rating').val(0);
-                $('.star-rating .fa-star').removeClass('checked');
-            });
-        
-            // Fonction pour générer les étoiles
-            function getStars(rating) {
-                var starsHtml = '';
-                for (var i = 1; i <= rating; i++) {
-                    if (i <= rating) {
-                        starsHtml += '<i class="fa fa-star checked"></i>';
-                    } else {
-                        starsHtml += '<i class="fa fa-star"></i>';
-                    }
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg mt-5" data-setbg="imgfooter/footer-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__newslatter">
+                       <h6>Recette ...</h6>
+                       <ul class="servi">
+                          <li><a href="Javascript:void(0)"> recette1</a></li>
+                          <li><a href="Javascript:void(0)"> recette2</a></li>
+                          <li><a href="Javascript:void(0)"> recette3</a></li>
+                          <li><a href="Javascript:void(0)"> recette4</a></li>
+                          <li><a href="Javascript:void(0)"> recette5</a></li>
+                       </ul>
+                    </div>
+                 </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="imgfooter/logo 2.png" style="width: 150px;" alt=""></a>
+                        </div>
+                        <p> +32 123 890 <br>
+                            chocomousse@gmail.com <br>
+                            Rue de chocolat 15
+                            1060 Saint Gilles Belgique.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__newslatter">
+                        <h6>Newsletter</h6>
+                        <p>Vous voulez nos derniere recette? </p>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit"><i class="fa fa-send-o"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">chocomouse</a>
+                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      </p>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="copyright__widget">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+ 
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="nav.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Fonctionnalité de notation par étoiles
+        $('.star-rating .fa-star').on('click', function() {
+            var rating = $(this).data('rating');
+            $('#rating').val(rating);
+            $('.star-rating .fa-star').each(function() {
+                if ($(this).data('rating') <= rating) {
+                    $(this).addClass('checked');
+                } else {
+                    $(this).removeClass('checked');
                 }
-                return starsHtml;
-            }
-        
-            // Fonction pour échapper les caractères HTML dans les commentaires
-            function escapeHtml(text) {
-                var map = {
-                    '&': '&amp;',
-                    '<': '&lt;',
-                    '>': '&gt;',
-                    '"': '&quot;',
-                    "'": '&#039;',
-                    '/': '&#x2F;',
-                    '`': '&#x60;',
-                    '=': '&#x3D;'
-                };
-                return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
-            }
+            });
         });
-    </script>
-    <!-- Bootstrap JS, Popper.js, jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-Mi/YF+wkzezTTP3o29D6Jy/OHJtXot2YyFNVGr+hA89kPwY4oo0Tl/EyJI2D8p36"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+pw+3P05lgXqJ7rJf7kpk1xg8jnikb8xsk6"
-        crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="main.js"></script>
+    
+        // Soumission du formulaire
+        $('#comment-form').on('submit', function(e) {
+            e.preventDefault();
+            
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var subject = $('#subject').val();
+            var comment = $('#comment').val();
+            var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
+            
+            var date = new Date().toLocaleDateString();
+    
+            var commentHtml = '<div class="comment">' +
+                                '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
+                                '<div class="comment-rating">' + getStars(rating) + '</div>' +
+                                '<div>' + escapeHtml(comment) + '</div>' +
+                              '</div>';
+    
+            $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
+    
+            // Réinitialiser le formulaire
+            $('#comment-form')[0].reset();
+            $('#rating').val(0);
+            $('.star-rating .fa-star').removeClass('checked');
+        });
+    
+        // Fonction pour générer les étoiles
+        function getStars(rating) {
+            var starsHtml = '';
+            for (var i = 1; i <= rating; i++) {
+                if (i <= rating) {
+                    starsHtml += '<i class="fa fa-star checked"></i>';
+                } else {
+                    starsHtml += '<i class="fa fa-star"></i>';
+                }
+            }
+            return starsHtml;
+        }
+    
+        // Fonction pour échapper les caractères HTML dans les commentaires
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;',
+                '/': '&#x2F;',
+                '`': '&#x60;',
+                '=': '&#x3D;'
+            };
+            return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
+        }
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+    var commentForm = document.getElementById('comment-form');
+    var showCommentBtn = document.getElementById('show-comment-form');
+
+    
+    showCommentBtn.addEventListener('click', function() {
+    
+        commentForm.classList.remove('hidden');
+    });
+
+    
+    commentForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        commentForm.classList.add('hidden'); 
+       
+    });
+});
+//calculateur
+// Fonction pour calculer les ingrédients en fonction du nombre de personnes
+function calculateIngredients() {
+    // On obtient le nombre de personnes
+    var nrPersonnes = document.getElementById('nr-personnes').value;
+
+    // On définit la liste des ingrédients et les quantités associées
+    var ingredients = {
+        "pate": [
+            { ingredient: "œufs (g)", quantite: 36 },
+            { ingredient: "sucre (g)", quantite: 18 },
+            { ingredient: "une pincée de sel", quantite: 1 },
+            { ingredient: "huile (ml)", quantite: 4 },
+            { ingredient: "cacao (g)", quantite: 10 },
+            { ingredient: "farine (g)", quantite: 13 }
+        ],
+        "creme": [
+            { ingredient: "chocolat noir 60% de cacao (g)", quantite: 25 },
+            { ingredient: "crème pour la chantilly (ml)", quantite: 25 },
+            { ingredient: "beurre (g)", quantite: 20 },
+            { ingredient: "ampoule d'essence de rhum", quantite: 1/10 }
+        ],
+        "sirop": [
+            { ingredient: "eau (ml)", quantite: 35 },
+            { ingredient: "sucre (g)", quantite: 15 },
+            { ingredient: "fiole d'essence de rhum", quantite: 1/10 }
+        ],
+        "glacage": [
+            { ingredient: "chocolat ménager (g)", quantite: 10 },
+            { ingredient: "huile (ml)", quantite: 8 }
+        ]
+    };
+
+    // Fonction pour générer la liste des ingrédients calculés
+    function genereListe(ingredients) {
+        var output = "<ul>";
+        ingredients.forEach(function(item) {
+            var quantiteCalculee = item.quantite * nrPersonnes;
+            output += "<li>" + quantiteCalculee + " " + item.ingredient + "</li>";
+        });
+        output += "</ul>";
+        return output;
+    }
+
+    // On calcule les quantités pour chaque catégorie d'ingrédients
+    var resultat = "<h3>Pâte :</h3>" + genereListe(ingredients.pate);
+    resultat += "<h3>Crème :</h3>" + genereListe(ingredients.creme);
+    resultat += "<h3>Sirop :</h3>" + genereListe(ingredients.sirop);
+    resultat += "<h3>Glaçage :</h3>" + genereListe(ingredients.glacage);
+
+    // On affiche le résultat dans le div avec l'id "resultat"
+    document.getElementById('resultat').innerHTML = resultat;
+    document.getElementById('resultat').style.display = 'block';
+
+    // On retourne false pour arrêter la soumission du formulaire
+    return false;
+}
+
+    </script> 
 </body>
 
 </html>

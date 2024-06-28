@@ -1,0 +1,27 @@
+(function () {
+    const opsTemplates = document.querySelectorAll(
+        'meta[name="pbstck_context:ops_template"]'
+    );
+    if (opsTemplates.length === 0) {
+        const adContentType = document.querySelectorAll(
+            'meta[name="ad:contenttype"]'
+        );
+        if (
+            Array.from(adContentType).some(
+                (e) =>
+                    e.content == "home" ||
+                    e.content == "various" ||
+                    e.content == "bigmoment" ||
+                    e.content == "BigMoment"
+            )
+        ) {
+            console.log(`x`);
+            return;
+        }
+        const s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https://t.seedtag.com/t/1106-7048-01.js';
+        s.async = true;
+        (document.head || document.documentElement).appendChild(s);
+    }
+})();

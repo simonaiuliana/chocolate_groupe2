@@ -1,0 +1,43 @@
+var Mrtn = Mrtn || {};
+
+Mrtn.Footer = (function() {
+
+	var footer = function() {
+		this.init();
+	};
+
+	footer.prototype = {
+		constructor: footer,
+		init: function init() {
+			var footer = document.getElementById('mrtn-footer');
+
+			// Init scroll to top button
+			var gotoTopBtn = footer.getElementsByClassName('go-to-top')[0];
+			gotoTopBtn.addEventListener('click', this.scrollTop, false);
+
+			// Init switch button for homepage
+			var switchBtns = footer.getElementsByClassName('links')[0];
+			if (switchBtns) {
+				switchBtns = switchBtns.getElementsByClassName('switchState');
+				for (var i in switchBtns) {
+					if (typeof switchBtns[i] === 'object') {
+						switchBtns[i].addEventListener('click', this.switchState, false);
+					}
+				}
+			}
+		},
+		scrollTop: function scrollTop() {
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+		},
+		switchState: function switchState() {
+			this.getElementsByClassName('toSwitch')[0].classList.toggle('closed');
+			this.getElementsByClassName('icon')[0].classList.toggle('icon-icon_minus');
+			this.getElementsByClassName('icon')[0].classList.toggle('icon-icon_plus');
+		}
+	}
+	return footer;
+})();
+
+addEventListener('DOMContentLoaded', () => {
+	new Mrtn.Footer();
+});
