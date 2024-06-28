@@ -18,7 +18,7 @@ ul {
 .bannerImg {
   position: relative;
   height: 700px;
-  background-image: url("/public/assets/1575898110_fondant-au-chocolat-transformed.png");
+  background-image: url("img/1575898110_fondant-au-chocolat-transformed.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
