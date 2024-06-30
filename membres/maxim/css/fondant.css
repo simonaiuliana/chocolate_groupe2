@@ -126,8 +126,29 @@ header {
 .rating-color {
   color: rgba(255, 255, 0, 0.669);
 }
+/*background svg carousel */
+.photoContainer{
+  background-image: url("../img/blob-scene-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
 
-
+@media screen and (width < 768px) {
+  .photoContainer{
+    margin-top: 50px;
+    height: 40vh;
+    background-image: url("../img/blob-scene-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #carousel{
+    display: none;
+  }
+}
+/*end background svg carousel */
 
 .ps-container {
     display: flex;
@@ -190,29 +211,6 @@ header {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-/*background svg carousel */
-.photoContainer{
-  background-image: url("../img/blob-scene-haikei.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
-
-@media screen and (width < 768px) {
-  .photoContainer{
-    margin-top: 50px;
-    height: 40vh;
-    background-image: url("../img/blob-scene-haikei.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  #carousel{
-    display: none;
-  }
-}
-/*end background svg carousel */
 
 .titreForm{
   font-family: "Dancing Script", sans-serif;
