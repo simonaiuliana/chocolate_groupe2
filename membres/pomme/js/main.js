@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // click recipe instructions
     let intervals = {}
     let indexes = {}
     $(".step").click(function (){
@@ -35,6 +36,13 @@ $(document).ready(function() {
             interval_ids.push(interval_id);
             intervals[$(this)[0].outerText] = interval_ids.map((el)=>el);
         }
+    });
+    // comments slide down
+    $("#comments-form-button").click(function (){
+        // toggle downside <-> upside arrow
+        $(this).children("img").toggleClass("rotated-animation");
+        // toggle comment form section
+        $("#comment-form").slideToggle(1000);
     });
 });
 
