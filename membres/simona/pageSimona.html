@@ -578,54 +578,61 @@ article p {
             </section>
         </div>
     </section>
+    
     <!-- Section Commentaires -->
-    <section class="contact-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-11">
-                    <!-- Bnt pour aficher la section -->
-                    <button id="show-comment-form">Laissez un commentaire</button>
-    
-                    <!-- Formulaire -->
-                    <form action="#" class="contact-form hidden" id="comment-form">
-                        <h3>Laissez un commentaire</h3>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <label for="name">Votre nom</label>
-                                <input type="text" id="name" placeholder="Votre nom" required>
-                            </div>
-                            <div class="col-lg-6">
-                                <label for="email">Votre email</label>
-                                <input type="email" id="email" placeholder="Votre email" required>
-                            </div>
-                            <div class="col-lg-11">
-                                <label for="subject">Le subject</label>
-                                <input type="text" id="subject" placeholder="Sujet">
-                                <textarea id="comment" placeholder="Commentaire" required></textarea>
-                                <div class="star-rating">
-                                    <i class="fa fa-star" data-rating="1"></i>
-                                    <i class="fa fa-star" data-rating="2"></i>
-                                    <i class="fa fa-star" data-rating="3"></i>
-                                    <i class="fa fa-star" data-rating="4"></i>
-                                    <i class="fa fa-star" data-rating="5"></i>
-                                </div>
-                                <input type="hidden" id="rating" value="0">
-                            </div>
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11">
+                
+                <!-- Button to display the section -->
+                <button id="show-comment-form">Laissez un commentaire</button>
+
+                <!-- Form -->
+                <form action="#" class="contact-form hidden" id="comment-form">
+                    <h3>Laissez un commentaire</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="name">Votre nom</label>
+                            <input type="text" id="name" placeholder="Votre nom" required>
                         </div>
-                        <button type="submit">Envoyez votre commentaire</button>
-                    </form>
-    
-                    <!-- commentaires -->
-                    <div class="comments-section">
-                        <div class="comments-list" id="comments-list">
-                            <!-- Commentaires affichés ici -->
+                        <div class="col-lg-6">
+                            <label for="email">Votre email</label>
+                            <input type="email" id="email" placeholder="Votre email" required>
                         </div>
+                        <div class="col-lg-11">
+                            <label for="subject">Le subject</label>
+                            <input type="text" id="subject" placeholder="Sujet">
+                            <textarea id="comment" placeholder="Commentaire" required></textarea>
+                            <div class="star-rating">
+                                <i class="fa fa-star" data-rating="1"></i>
+                                <i class="fa fa-star" data-rating="2"></i>
+                                <i class="fa fa-star" data-rating="3"></i>
+                                <i class="fa fa-star" data-rating="4"></i>
+                                <i class="fa fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" value="0">
+                        </div>
+                    </div>
+                    <button type="submit">Envoyez votre commentaire</button>
+                </form>
+
+                <!-- Comments -->
+                <div class="comments-section">
+                    <!-- Average rating and number of comments -->
+                <div id="rating-summary">
+                    <span id="average-rating">Moyenne des étoiles : 0</span> |
+                    <span id="comments-count">Nombre de commentaires : 0</span>
+                </div>
+                    <div class="comments-list" id="comments-list">
+                        <!-- Comments displayed here -->
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
+
 
     <!-- Footer -->
     <!-- Footer Section Begin -->

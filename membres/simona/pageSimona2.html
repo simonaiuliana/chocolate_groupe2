@@ -1088,15 +1088,16 @@ opacity: 1 !important;
 
 
 
-<!-- Section Commentaires -->
+ <!-- Section Commentaires -->
 <section class="contact-section spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-11">
-                <!-- Butonul pentru afișarea formularului -->
+                
+                <!-- Button to display the section -->
                 <button id="show-comment-form">Laissez un commentaire</button>
 
-                <!-- Formularul ascuns inițial -->
+                <!-- Form -->
                 <form action="#" class="contact-form hidden" id="comment-form">
                     <h3>Laissez un commentaire</h3>
                     <div class="row">
@@ -1125,10 +1126,15 @@ opacity: 1 !important;
                     <button type="submit">Envoyez votre commentaire</button>
                 </form>
 
-                <!-- Secțiunea pentru afișarea comentariilor -->
+                <!-- Comments -->
                 <div class="comments-section">
+                    <!-- Average rating and number of comments -->
+                <div id="rating-summary">
+                    <span id="average-rating">Moyenne des étoiles : 0</span> |
+                    <span id="comments-count">Nombre de commentaires : 0</span>
+                </div>
                     <div class="comments-list" id="comments-list">
-                        <!-- Commentaires affichés ici -->
+                        <!-- Comments displayed here -->
                     </div>
                 </div>
             </div>

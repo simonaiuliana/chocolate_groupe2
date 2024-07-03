@@ -1,5 +1,28 @@
-$(document).ready(function() {
-    // Fonctionnalité de notation par étoiles
+document.addEventListener('DOMContentLoaded', function() {
+    var comments = [];
+
+    var commentForm = document.getElementById('comment-form');
+    var showCommentBtn = document.getElementById('show-comment-form');
+
+    showCommentBtn.addEventListener('click', function() {
+        // Toggle 'hidden' class for the comment form
+        commentForm.classList.toggle('hidden');
+        
+        // Change button text based on form state
+        if (commentForm.classList.contains('hidden')) {
+            showCommentBtn.textContent = 'Laissez un commentaire';
+        } else {
+            showCommentBtn.textContent = 'Masquer le formulaire';
+        }
+    });
+
+    commentForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Stop the default form submission behavior
+        commentForm.classList.add('hidden'); // Hide the form after submission
+        showCommentBtn.textContent = 'Laissez un commentaire'; // Reset button text to the initial state
+    });
+
+    // Functionality for star rating
     $('.star-rating .fa-star').on('click', function() {
         var rating = $(this).data('rating');
         $('#rating').val(rating);
@@ -12,7 +35,7 @@ $(document).ready(function() {
         });
     });
 
-    // Soumission du formulaire
+    // Form submission
     $('#comment-form').on('submit', function(e) {
         e.preventDefault();
         
@@ -20,9 +43,17 @@ $(document).ready(function() {
         var email = $('#email').val();
         var subject = $('#subject').val();
         var comment = $('#comment').val();
-        var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
-        
+        var rating = parseFloat($('#rating').val()); // Ensure rating is a float
         var date = new Date().toLocaleDateString();
+
+        var commentData = {
+            name: name,
+            comment: comment,
+            rating: rating,
+            date: date
+        };
+
+        comments.push(commentData);
 
         var commentHtml = '<div class="comment">' +
                             '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
@@ -32,16 +63,18 @@ $(document).ready(function() {
 
         $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
 
-        // Réinitialiser le formulaire
+        updateSummary();
+
+        // Reset the form
         $('#comment-form')[0].reset();
         $('#rating').val(0);
         $('.star-rating .fa-star').removeClass('checked');
     });
 
-    // Fonction pour générer les étoiles
+    // Function to generate stars
     function getStars(rating) {
         var starsHtml = '';
-        for (var i = 1; i <= rating; i++) {
+        for (var i = 1; i <= rating; i += 1) {
             if (i <= rating) {
                 starsHtml += '<i class="fa fa-star checked"></i>';
             } else {
@@ -51,7 +84,7 @@ $(document).ready(function() {
         return starsHtml;
     }
 
-    // Fonction pour échapper les caractères HTML dans les commentaires
+    // Function to escape HTML characters in comments
     function escapeHtml(text) {
         var map = {
             '&': '&amp;',
@@ -65,28 +98,17 @@ $(document).ready(function() {
         };
         return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
     }
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var commentForm = document.getElementById('comment-form');
-    var showCommentBtn = document.getElementById('show-comment-form');
 
-    showCommentBtn.addEventListener('click', function() {
-        // Toggle class 'hidden' pentru formularul de comentarii
-        commentForm.classList.toggle('hidden');
-        
-        // Schimbă textul butonului în funcție de starea formularului
-        if (commentForm.classList.contains('hidden')) {
-            showCommentBtn.textContent = 'Laissez un commentaire';
-        } else {
-            showCommentBtn.textContent = 'Masquer le formulaire';
-        }
-    });
+    // Function to update the average rating and number of comments
+    function updateSummary() {
+        var totalRating = comments.reduce(function(sum, comment) {
+            return sum + comment.rating;
+        }, 0);
 
-    commentForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Oprire comportamentul implicit de trimitere a formularului
-        commentForm.classList.add('hidden'); // Ascunde formularul după trimitere
-        showCommentBtn.textContent = 'Laissez un commentaire'; // Resetare text buton la starea inițială
-    });
+        var averageRating = (totalRating / comments.length).toFixed(1);
+        $('#average-rating').text('Moyenne des étoiles : ' + averageRating);
+        $('#comments-count').text('Nombre de commentaires : ' + comments.length);
+    }
 });
 
 
