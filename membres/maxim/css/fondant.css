@@ -100,16 +100,17 @@ header {
   background-color: rgb(90, 35, 20);
   border-radius: 50px;
   margin-left: 50px;
+  margin-top: 15px;
 }
 .listeIngredients{
-  padding: 0 35px;
+  padding: 10px 80px;
 }
 .card-body {
   height: fit-content;
 }
 
 .imgFondantRecette {
-  max-width: 110%;
+  max-width: 125%;
   opacity: 80%;
   border-radius: 50px 10px;
   box-shadow: 10px 10px 15px 7px #230903;
