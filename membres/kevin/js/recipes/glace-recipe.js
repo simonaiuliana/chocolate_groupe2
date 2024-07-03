@@ -70,6 +70,17 @@ $(document).ready(function() {
     /** end Corner Chocolat */
     
     /** Comment */
+    let commentBtnIsVisible = false;
+    $('#comment-btn').click(function(){
+        const $commentBtn = $(this);
+        const $commentForm = $('#comment-form');
+        commentBtnIsVisible = !commentBtnIsVisible;
+        $commentForm.slideToggle(function(){
+            if(!commentBtnIsVisible) $commentBtn.css('margin-bottom', '0px');
+        });
+        if(commentBtnIsVisible)
+            $commentBtn.css('margin-bottom', '50px');
+    });
 
     // Fonctionnalité de notation par étoiles
     $('.star-rating .fa-star').on('click', function() {

@@ -186,7 +186,7 @@ h3{
 
 .img-steps.chantilly{
     height: 70%;
-    --_url-img-step: url('../../img/recipes/glace/chan.jpeg');
+    --_url-img-step: url('../../img/recipes/glace/chan.webp');
 }
 
 .img-steps.cream{
@@ -237,6 +237,23 @@ h3{
 }
 
 /** Comment */
+#comment-btn{
+    width: 350px;
+    font-size: 1.50rem;
+    background-color: rgb(var(--main-color));
+    text-shadow: 2px 2px 2px white;
+    color: rgb(var(--main-color));
+    padding: 1rem;
+    outline: 1px solid rgb(var(--main-color));
+    outline-offset: 2px;
+    border: none;
+    transition: transform 250ms;
+}
+
+#comment-btn:focus{
+
+}
+
 
 .contact-section {
     padding: 50px 0;

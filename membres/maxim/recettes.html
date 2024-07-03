@@ -18,13 +18,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Hind+Madurai:wght@300;400;500;600;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
+    
     <link rel="stylesheet" href="css/fondant.css">
     <link rel="stylesheet" href="css/nav.css">
 
     <link rel="stylesheet" href="css/cssFooter/flaticon.css">
-    <link rel="stylesheet" href="css/cssFooter/font-awesome.min.css">
+    <link rel="stylesheet" href="css/cssFooter/font-awesome.min.css"
     <link rel="stylesheet" href="css/cssFooter/style.css">
     <link rel="shortcut icon" href="img/nav-img/chocolat.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.css">
+
+
     <title>Recettte || Fondant au Chocolat </title>
 </head>
 <body>
@@ -69,6 +75,7 @@
     <header class="bannerImg header-text">
         <h1 class="textBanner">Fondant au Chocolat</h1>
     </header>
+    
 
     <section class="pb-5 pt-6">
         <div class="container">
@@ -94,14 +101,13 @@
           </div>
         </div>
     </section>
-
     <section class="cardPreparation">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div >
-                        <div class="card-body border border-dark rounded colorCard">
+                        <div class="card-body border border-dark colorCard">
                             <h4 class="card-text mb-5 text-center titreIngredients">Ingredients</h4>
-                                <ul>
+                                <ul class="listeIngredients">
                                     <li class="text-light">Farine 4 cuillères à soupe</li>
                                     <li class="text-light">Sucre 100g</li>
                                     <li class="text-light">Beurre Doux 100g</li>
@@ -127,7 +133,7 @@
                 </div>
             </div>
 
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class="card-body mb-5">
                     <h4 class="card-title text-center titreColorPrepa">Préparation</h4>
                         <ul>
@@ -155,7 +161,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="card-body">
                     <img src="img/11968609-Fondant-au-chocolat-dusted-with-cocoa-powder.jpg" alt="fondant" class="imgFondantRecette">
                 </div>
@@ -193,13 +199,7 @@
           <label for="message">Message</label>
           <div class="invalid-feedback" data-sb-feedback="message:required">Vueillez introuduiter votre message.</div>
       </div>
-      <div class="d-none" id="submitSuccessMessage">
-          <div class="text-center mb-3">
-              <div class="fw-bolder">Form submission successful!</div>
-              <p>To activate this form, sign up at</p>
-              <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-          </div>
-      </div>
+      
       
       <div class="ratings mt-5 mb-2">
         <i class="fa fa-star rating-color"></i>
@@ -287,13 +287,10 @@
 </footer>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
-<script src="/"></script>
-<script src="" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-        AOS.init();
-</script>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="js/nav.js"></script>
 <script src="js/recetteMaxi.js"></script>
@@ -301,6 +298,7 @@
 <script src="js/jsFooter/bootstrap.min.js"></script>
 <script src="js/jsFooter/main.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
 
 
 </body>
