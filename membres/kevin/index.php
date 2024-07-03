@@ -7,4 +7,5 @@ DB_LOGIN,
 DB_PWD);
 
 
-var_dump(Recipe::getRecipeById($pdo, 1));
+$recipe = Recipe::getRecipeById($pdo, ID_RECIPE_GLACE_AU_CHOCOLAT);
+
