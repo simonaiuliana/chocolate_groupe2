@@ -1,3 +1,5 @@
+/** Comment */
+
 $(document).ready(function() {
     // Fonctionnalité de notation par étoiles
     $('.star-rating .fa-star').on('click', function() {
