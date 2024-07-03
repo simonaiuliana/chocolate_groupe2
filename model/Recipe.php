@@ -10,6 +10,7 @@ class Recipe{
   const SEPARATOR_DB = '|||';
   private int $id;
   private string $name;
+  private string $description;
   private int $nb_people;
   private int $preparation_time;
   private int $cooking_time;
@@ -23,9 +24,10 @@ class Recipe{
   // array of type Comments
   private array $comments;
 
-  public function __construct(int $id, string $name, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url, array $sub_recipes, array $ingredients, array $categories, array $comments) {
+  public function __construct(int $id, string $name, string $description, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url, array $sub_recipes, array $ingredients, array $categories, array $comments) {
     $this->setId($id);
     $this->setName($name);
+    $this->setDescription($description);
     $this->setNbPeople($nb_people);
     $this->setPreparationTime($preparation_time);
     $this->setCookingTime($cooking_time);
@@ -45,7 +47,7 @@ class Recipe{
           GROUP_CONCAT(ing.id SEPARATOR '|||') AS ingredients_ids,
           GROUP_CONCAT(IFNULL(inu.unit, 'null') SEPARATOR '|||') AS ingredients_units,
           GROUP_CONCAT(ing.ingredient SEPARATOR '|||') AS ingredients,
-          GROUP_CONCAT(ing.image_url SEPARATOR '|||') AS ingredients_images,
+          GROUP_CONCAT(IFNULL(ing.image_url, 'null') SEPARATOR '|||') AS ingredients_images,
           GROUP_CONCAT(inr.quantity SEPARATOR '|||') AS ingredients_quantities,
           inr.recipe_id AS inr_recipe_id
         FROM `ingredient_has_recipe` inr
@@ -68,6 +70,7 @@ class Recipe{
         SELECT
           GROUP_CONCAT(com.id SEPARATOR '|||') AS comments_ids,
           GROUP_CONCAT(com.comment SEPARATOR '|||') AS comments,
+          GROUP_CONCAT(com.subject SEPARATOR '|||') AS subjects,
           GROUP_CONCAT(com.created_date SEPARATOR '|||') AS comments_created_dates,
           GROUP_CONCAT(com.stars SEPARATOR '|||') AS comments_stars,
           GROUP_CONCAT(u.name SEPARATOR '|||') AS comments_username,
@@ -90,6 +93,7 @@ class Recipe{
     /* recipe */
     $recipe_id = $recipe["id"];
     $recipe_name = $recipe["name"];
+    $recipe_description = $recipe["description"];
     $recipe_nb_people = $recipe["nb_people"];
     $recipe_img_url = $recipe["image_url"];
     $recipe_preparation_time = $recipe["preparation_time"];
@@ -106,6 +110,7 @@ class Recipe{
     /* comments */
     $comments_ids = $recipe["comments_ids"] ? explode(self::SEPARATOR_DB, $recipe["comments_ids"]) : [];
     $comments_texts = $recipe["comments"] ? explode(self::SEPARATOR_DB, $recipe["comments"]) : [];
+    $comments_subjects = $recipe["subjects"] ? explode(self::SEPARATOR_DB, $recipe["subjects"]) : [];
     $comments_created_dates = $recipe["comments_created_dates"] ? explode(self::SEPARATOR_DB, $recipe["comments_created_dates"]) : [];
     $comments_stars = $recipe["comments_stars"] ? explode(self::SEPARATOR_DB, $recipe["comments_stars"]) : [];
     $comments_usernames = $recipe["comments_username"] ? explode(self::SEPARATOR_DB, $recipe["comments_username"]) : [];
@@ -124,7 +129,7 @@ class Recipe{
     /*comments*/
     $recipe_comments = [];
     for ($i=0;$i<sizeof($comments_ids);$i++){
-      array_push($recipe_comments, new Comment($comments_ids[$i], $comments_texts[$i], $comments_created_dates[$i], $comments_stars[$i], $comments_usernames[$i]));
+      array_push($recipe_comments, new Comment($comments_ids[$i], $comments_texts[$i], $comments_subjects[$i], $comments_created_dates[$i], $comments_stars[$i], $comments_usernames[$i]));
     }
 
     /* sub_recipe */
@@ -166,7 +171,7 @@ class Recipe{
       array_push($sub_recipes, new SubRecipe($sub_recipe["id"], $sub_recipe["title"], $sub_recipe["image_url"], $sub_recipe["preparation_time"], $sub_recipe_instructions));
     }
 
-    return new Recipe($recipe_id, $recipe_name, $recipe_nb_people, $recipe_preparation_time, $recipe_cooking_time, $recipe_img_url, $sub_recipes, $recipe_ingredients, $recipe_categories, $recipe_comments);
+    return new Recipe($recipe_id, $recipe_name, $recipe_description, $recipe_nb_people, $recipe_preparation_time, $recipe_cooking_time, $recipe_img_url, $sub_recipes, $recipe_ingredients, $recipe_categories, $recipe_comments);
   }
   public static function getRecipeByName(PDO $db, string $name):self|string{
     try {
@@ -185,17 +190,17 @@ class Recipe{
   /**
    * @return true if success , string if error
    */
-  public static function create(PDO $db, string $name, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url):string|bool{
+  public static function create(PDO $db, string $name, string $description, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url):string|bool{
     $name = trim(htmlspecialchars(strip_tags($name)),ENT_QUOTES);
     if ($img_url)$img_url = trim(htmlspecialchars(strip_tags($img_url)),ENT_QUOTES);
 
     try {
       $sql = "
-        INSRT INTO `recipe`(`name`, `nb_people`, `preparation_time`, `cooking_time`, `img_url`)
-        VALUES(?,?,?,?,?);
+        INSRT INTO `recipe`(`name`, `description`, `nb_people`, `preparation_time`, `cooking_time`, `img_url`)
+        VALUES(?,?,?,?,?,?);
       ";
       $prepare = $db->prepare($sql);
-      $prepare->execute([$name, $nb_people, $preparation_time, $cooking_time, $img_url]);
+      $prepare->execute([$name, $description, $nb_people, $preparation_time, $cooking_time, $img_url]);
       $prepare->closeCursor();
       return true;
     }catch (Exception $e){
@@ -249,6 +254,9 @@ class Recipe{
   public function getName():string{
     return $this->name;
   }
+  public function getDescription():string{
+    return $this->description;
+  }
   public function getNbPeople():int{
     return $this->nb_people;
   }
@@ -293,6 +301,10 @@ class Recipe{
   }
   public function setName(string $name):self{
     $this->name = trim(htmlspecialchars(strip_tags($name)),ENT_QUOTES);
+    return $this;
+  }
+  public function setDescription(string $description):self{
+    $this->description = trim(htmlspecialchars(strip_tags($description)),ENT_QUOTES);
     return $this;
   }
   public function setNbPeople(int $nb_people):self{

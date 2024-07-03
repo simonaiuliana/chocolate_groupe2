@@ -3,13 +3,15 @@ class Comment{
   const MAX_COMMENT_BY_PAGE_AND_USER = 1;
   private int $id;
   private string $comment;
+  private string $subject;
   private string $created_date;
   private int $stars;
   private string $username;
 
-  public function __construct(int $id, string $comment, string $created_date, int $stars, string $username) {
+  public function __construct(int $id, string $comment, string $subject, string $created_date, int $stars, string $username) {
     $this->id = $id;
     $this->setComment($comment);
+    $this->setSubject($subject);
     $this->setCreatedDate($created_date);
     $this->setStars($stars);
     $this->setUsername($username);
@@ -37,7 +39,7 @@ class Comment{
       $results = $prepare->fetchAll();
       $comments = [];
       foreach($results as $result){
-        array_push($comments, new Comment($result["id"], $result["comment"], $result["created_date"], $result["stars"], $result["username"]));
+        array_push($comments, new Comment($result["id"], $result["comment"], $result['subject'], $result["created_date"], $result["stars"], $result["username"]));
       }
       $prepare->closeCursor();
       return $comments;
@@ -47,14 +49,14 @@ class Comment{
   }
 
   /** stars must be from 1 -> 10 */
-  public static function insertComment(PDO $db, int $recipe_id, int $user_id, string $comment, int $stars){
+  public static function insertComment(PDO $db, int $recipe_id, int $user_id, string $comment, string $subject, int $stars){
     if (sizeof(self::getCommentsByUserAndRecipe($db, $recipe_id, $user_id))>=self::MAX_COMMENT_BY_PAGE_AND_USER){
       return "trop de commentaires insérés par vous sur cette page";
     }
     try {
-      $sql = "INSERT INTO `comment`(`recipe_id`, `user_id`, `comment`, `stars`) VALUES(?,?,?,?);";
+      $sql = "INSERT INTO `comment`(`recipe_id`, `user_id`, `comment`, `subject`, `stars`) VALUES(?,?,?,?,?);";
       $prepare = $db->prepare($sql);
-      $prepare->execute([$recipe_id, $user_id, $comment, $stars]);
+      $prepare->execute([$recipe_id, $user_id, $comment, $subject, $stars]);
       $prepare->closeCursor();
       return self::getCommentsByUserAndRecipe($db, $recipe_id, $user_id);
     }catch (Exception $e){
@@ -71,6 +73,9 @@ class Comment{
   public function getComment():string{
     return $this->comment;
   }
+  public function getSubject():string{
+    return $this->subject;
+  }
   public function getCreatedDate():string{
     return $this->created_date;
   }
@@ -83,7 +88,11 @@ class Comment{
 
   // setters
   public function setComment(string $comment):self{
-    $this->comment = $comment;
+    $this->comment = trim(htmlspecialchars(strip_tags($comment)),ENT_QUOTES);
+    return $this;
+  }
+  public function setSubject(string $subject):self{
+    $this->subject = trim(htmlspecialchars(strip_tags($subject)),ENT_QUOTES);
     return $this;
   }
   public function setCreatedDate(string $created_date):self{
