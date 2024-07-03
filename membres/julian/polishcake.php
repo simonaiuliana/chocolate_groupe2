@@ -38,47 +38,26 @@
             </div>
             <div id="links">
                 <a href="#">Accueil</a>
-                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down"
-                        style="margin-left: 10px;"></i></a>
+                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
                 <a href="#">Contact</a>
             </div>
         </div>
         <div id="nav-recipes-container">
             <ul id="nav-recipes" style="display: none;">
-                <a href="../sebastien/mous.html">
-                    <li>Mousse au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Cake au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Fondant au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Tarte au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Cookies au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Glace au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Bûche de Noël au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Moelleux au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Truffes au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Macarons au chocolat</li>
-                </a>
+                <a href="../sebastien/mous.html"><li>Mousse au chocolat</li></a>
+                <a href="#"><li>Cake au chocolat</li></a>
+                <a href="#"><li>Fondant au chocolat</li></a>
+                <a href="#"><li>Tarte au chocolat</li></a>
+                <a href="#"><li>Cookies au chocolat</li></a>
+                <a href="#"><li>Glace au chocolat</li></a>
+                <a href="#"><li>Bûche de Noël au chocolat</li></a>
+                <a href="#"><li>Moelleux au chocolat</li></a>
+                <a href="#"><li>Truffes au chocolat</li></a>
+                <a href="#"><li>Macarons au chocolat</li></a>
             </ul>
             <div id="previews"></div>
         </div>
-        <div id="nav-choco-open-menu">
+        <div id="nav-choco-open-menu" style="display: none;">
             <img src="img/nav-img/openmenu.png" alt="">
         </div>
     </nav>
@@ -113,19 +92,20 @@
                                 <span class="far fa-star" data-aos="zoom-in-right" data-aos-duration="200" data-aos-delay="1000"></span> <!-- This is the empty star -->
                             </div>
     
-                            <p><i class="fas fa-clock"></i> <strong>Time to make:</strong> 1 hour</p>
-                            <p><i class="fas fa-users"></i> <strong>Serves:</strong> 4 people</p>
+                            <p><i class="fas fa-clock"></i> <strong>Temps de faire:</strong> 1 heure</p>
+                            <p><i class="fas fa-users"></i> <strong>Portions:</strong> 4 personnes</p>
     
                             <!-- Special Equipment Section -->
-                            <h2 data-aos="fade-up" data-aos-duration="300"><i class="fas fa-blender" style="font-size: 30px;"></i> Special Equipment</h2>
+                            <h2 data-aos="fade-up" data-aos-duration="300"><i class="fas fa-blender" style="font-size: 30px;"></i> Ustensiles Importants</h2>
                             <ul class="list-group">
-                                <li class="list-group-item" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100"><i class="fas fa-check"></i> Equipment 1</li>
-                                <li class="list-group-item" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200"><i class="fas fa-check"></i> Equipment 2</li>
+                                <li class="list-group-item" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100"><i class="fas fa-check"></i> Casserole</li>
+                                <li class="list-group-item" data-aos="fade-up" data-aos-duration="300" data-aos-delay="100"><i class="fas fa-check"></i> Batteur électrique ou fouet</li>
+                                <li class="list-group-item" data-aos="fade-up" data-aos-duration="300" data-aos-delay="300"><i class="fas fa-check"></i> Moule à gâteau</li>
                                 <!-- Add more equipment as needed with AOS -->
                             </ul>
     
                             <!-- Ingredients Section -->
-                            <h2 data-aos="fade-up" data-aos-duration="300"><i class="fa-duotone fa-pie" style="font-size: 30px;"></i> Ingredients</h2>
+                            <h2 data-aos="fade-up" data-aos-duration="300"><i class="fa-duotone fa-pie" style="font-size: 30px;"></i> Ingrédients</h2>
                             <ul class="list-group" data-aos="zoom-in-right">
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">200 g</span> de sucre</li>
                                 <li class="list-group-item"><input type="checkbox"> <span style="font-weight: 900;">200 g</span> de beurre</li>
@@ -175,7 +155,7 @@
 
 
     <div class="d-flex justify-content-center mt-5">
-        <button id="show-form-btn" class="btn btn-info" style="background-color: #8D6E63; border: none; color: white;">Show Form</button>
+        <button id="show-form-btn" class="btn btn-info" style="background-color: #8D6E63; border: none; color: white;">Envoyer un commentaire</button>
     </div>
     
     <div class="container mt-4" style="position: relative;">
@@ -188,23 +168,23 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            <input type="text" class="form-control" id="name" required placeholder="Enter your name">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <input type="email" class="form-control" id="email" required placeholder="Enter your email">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="subject" style="margin-top: 20px;">Title</label>
-                    <input type="text" class="form-control" id="subject" placeholder="Enter the title">
+                    <input type="text" class="form-control" id="subject" required placeholder="Enter the title">
                 </div>
                 <div class="form-group" style="margin-top:20px">
                     <label for="comment">Comment</label>
-                    <textarea class="form-control" id="comment" rows="3" placeholder="Enter your comment"></textarea>
+                    <textarea class="form-control" id="comment" rows="3" required placeholder="Enter your comment"></textarea>
                 </div>
                 <div class="star-rating">
                     <i class="fa fa-star" data-rating="1"></i>
@@ -232,16 +212,16 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__newslatter">
-                        <h6>Recette ...</h6>
-                        <ul class="servi">
-                            <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette1</a></li>
-                            <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette2</a></li>
-                            <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette3</a></li>
-                            <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette4</a></li>
-                            <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette5</a></li>
-                        </ul>
+                       <h6>Recette ...</h6>
+                       <ul class="servi">
+                          <li><a class="text-white" href="Javascript:void(0)"> recette1</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette2</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette3</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette4</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette5</a></li>
+                       </ul>
                     </div>
-                </div>
+                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
@@ -252,10 +232,10 @@
                             Rue de chocolat 15
                             1060 Saint Gilles Belgique.</p>
                         <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -265,7 +245,7 @@
                         <p>Vous voulez nos derniere recette? </p>
                         <form action="#">
                             <input type="text" placeholder="Email">
-                            <button type="submit"><i class="fa fa-send-o"></i></button>
+                            <button type="submit"><i class="fa-regular fa-paper-plane"></i></button>
                         </form>
                     </div>
                 </div>
@@ -275,27 +255,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 d-flex align-items-center">
-                        <p class="copyright__text text-white">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved <i
-                                class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Kevin</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="copyright__widget">
-                            <ul class="mb-0">
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Home</a></li>
-                            </ul>
-                        </div>
+                        <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Kevin</a>
+                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      </p>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="copyright__widget">
+                        <ul class="mb-0">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/nav.js"></script>
