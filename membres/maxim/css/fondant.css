@@ -44,13 +44,7 @@ header {
   padding: 1rem;
   z-index: 1;
 }
-@media screen and (width < 768px) {
-  .textBanner {
-    min-width: 120px;
-    font-size: 3rem;
-    left: 50%;
-  }
-}
+
 .cardTitreMain {
   color: #955e42;
   font-size: 2rem;
@@ -68,6 +62,7 @@ header {
 .cardTitre {
   background-color: #fcd7ad82;
   padding-bottom: 0;
+  padding-left: 0;
 }
 
 .titreIngredients {
@@ -85,6 +80,7 @@ header {
 }
 .titreColorPrepa {
   color: #230903;
+  margin-bottom: 50px;
   font-family: "Dancing Script", sans-serif;
   font-weight: 600;
   font-size: 45px;
@@ -102,22 +98,23 @@ header {
 }
 .colorCard {
   background-color: rgb(90, 35, 20);
+  border-radius: 50px;
+  margin-left: 50px;
+}
+.listeIngredients{
+  padding: 0 35px;
 }
 .card-body {
   height: fit-content;
 }
+
 .imgFondantRecette {
-  max-width: 65%;
+  max-width: 110%;
   opacity: 80%;
   border-radius: 50px 10px;
   box-shadow: 10px 10px 15px 7px #230903;
 }
-@media screen and (width < 768px) {
-  .imgFondantRecette {
-    max-width: 100%;
-    left: 3%;
-  }
-}
+
 .review-count {
   font-family: "Nunito", sans-serif;
   color: #f6c28b;
@@ -135,19 +132,6 @@ header {
   height: 100vh;
 }
 
-@media screen and (width < 768px) {
-  .photoContainer{
-    margin-top: 50px;
-    height: 40vh;
-    background-image: url("../img/blob-scene-haikei.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  #carousel{
-    display: none;
-  }
-}
 /*end background svg carousel */
 
 .ps-container {
@@ -248,4 +232,44 @@ header {
 
 .rating-color {
   color: gold;
+}
+
+@media screen and (width < 768px) {
+  .textBanner {
+    min-width: 120px;
+    font-size: 3rem;
+    left: 50%;
+  }
+  .titreColorPrepa{
+    padding: 30px 0;
+    text-align: center;
+  }
+  .colorCard {
+    width: fit-content;
+    margin: 1px;
+  }
+  .listeIngredients{
+    padding: 0 100px;
+  }
+  .card-body{
+    padding-bottom: 100px;
+    margin-left: 0;
+  }
+  .imgFondantRecette {
+    max-width: 100%;
+    left: 3%;
+  }
+  .photoContainer{
+    max-height: 50vh;
+    background-image: url("../img/blob-scene-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #carousel{
+    display: none;
+  }
+  .titreForm{
+    font-size: 2rem;
+  }
 }
