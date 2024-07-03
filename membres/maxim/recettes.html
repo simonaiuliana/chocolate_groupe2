@@ -185,18 +185,15 @@
         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
         <div class="form-floating mb-3 ">
           <input class="form-control" id="nom" type="text" placeholder="Nom" data-sb-validations="required" />
-          <label for="nom">Nom</label>
           <div class="invalid-feedback" data-sb-feedback="nom:required">Vueillez introuduir votre nom.</div>
       </div>
       <div class="form-floating mb-3">
           <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
-          <label for="email">Email</label>
           <div class="invalid-feedback" data-sb-feedback="email:required">Veuillez introuduir votre email.</div>
           <div class="invalid-feedback" data-sb-feedback="email:email">L'email n'est pas valide.</div>
       </div>
       <div class="form-floating mb-3">
           <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-          <label for="message">Message</label>
           <div class="invalid-feedback" data-sb-feedback="message:required">Vueillez introuduiter votre message.</div>
       </div>
       

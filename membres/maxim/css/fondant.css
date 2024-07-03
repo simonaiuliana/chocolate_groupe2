@@ -206,6 +206,7 @@ header {
 .submitButton{
   background-color: #553739;
   border: 2px solid #230903; 
+  color: #fcd7ad;
   font-family: "Nunito", sans-serif;
   font-size: 26px;
   border-radius: 50px;
@@ -221,7 +222,7 @@ header {
 }
 
 .form-control{
-  border-radius: 50px;
+  border-radius: 30px;
   border: 2px solid #230903;
   color: #230903;
 }
