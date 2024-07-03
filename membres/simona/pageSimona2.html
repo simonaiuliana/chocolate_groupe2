@@ -5,713 +5,793 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
+    <link rel="icon" type="image/x-icon" href="img/th-r.jpeg">
     <title>Brownie framboise - Blog de Recettes</title>
-    <link rel="stylesheet" href="/public/glace-chocolat/css/nav.css">
-
-    <!-- Bootstrap CSS -->
+    <!-- nav -->
+    <link rel="stylesheet" href="../../public/assets/css/nav.css">
+    <link rel="stylesheet" href="../../public/assets/css/index.css">
+    <link rel="stylesheet" href="drip.css">
+    <link rel="icon" href="img/th-r.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+     <!-- Bootstrap CSS -->
+      <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/footercss/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/footercss/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/footercss/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/footercss/style.css" type="text/css">
-
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/footer0/css/footercss/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../../public/footer0/css/footercss/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="../../public/footer0/css/footercss/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../../public/footer0/css/footercss/style.css" type="text/css">
+    
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
     <!-- Font Awesome pentru iconițe -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-       
         crossorigin="anonymous">
     
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="drip.css">
-    <link rel="icon" href="th-r.jpeg" type="image/x-icon">
-
-   
-<style>
-    body{
-        background-color: rgb(205, 180, 151);
-    }
-    h1{
-        text-align: center;
-    }
-    /*cards*/
-    html{
-    overflow-y: scroll;
+ <style>
+      body{
+    background-color: rgb(205, 180, 151);
 }
- 
-   
+h1{
+    text-align: center;
+}
+/*cards*/
+html{
+overflow-y: scroll;
+}
+
+
 a{
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    opacity: 0.95;
+text-decoration: none;
+color: inherit;
+cursor: pointer;
+opacity: 0.95;
 }
 
 a:hover{
-  opacity: 1;
-  color: black;
+opacity: 1;
+color: black;
 }
 
 /*-----------------
 Cards
 ------------------*/
 .main-cont{
-    padding: 0;
-    margin: 0;
-    top: -215px;
+padding: 0;
+margin: 0;
+top: -215px;
 }
 
 .news-row {
-	margin: 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
+margin: 0;
+margin-top: 50px;
+margin-bottom: 50px;
 }
 
 .news-block{
-    margin: auto;
-    padding: 0;
-    background-color: transparent;
-    max-width: 1060px;
-    min-width: 100px;
-    border: 20px solid transparent;
-    -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
-       border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
-       border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
-    border-image-slice: 1 !important;
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-    -webkit-animation: blockAppear .6s ease-in-out;
-            animation: blockAppear .6s ease-in-out;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+margin: auto;
+padding: 0;
+background-color: transparent;
+max-width: 1060px;
+min-width: 100px;
+border: 20px solid transparent;
+-o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+   border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+   border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+border-image-slice: 1 !important;
+-webkit-transition: all 0.6s ease;
+transition: all 0.6s ease;
+-webkit-animation: blockAppear .6s ease-in-out;
+        animation: blockAppear .6s ease-in-out;
+-webkit-animation-duration: 1s;
+        animation-duration: 1s;
 }
 
 .underlay{
-  /*display: none;*/
-  margin: 0;
-  padding: 0;
-  max-height: 350px;
-  max-width: 340px;
+/*display: none;*/
+margin: 0;
+padding: 0;
+max-height: 350px;
+max-width: 340px;
 }
 
 .card{
-    margin: 0;
-    width: 340px;
-    max-height: 350px;
-    max-width: 340px;
-    background-color: transparent;
-    border: 20px solid transparent !important;
-    -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
-       border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
-       border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
-    border-image-slice: 1 !important;
-    -webkit-transition: -webkit-transform 0.6s ease;
-    transition: -webkit-transform 0.6s ease;
-    transition: transform 0.6s ease;
-    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-    -webkit-animation: blockAppear .6s ease-in-out;
-            animation: blockAppear .6s ease-in-out;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
+margin: 0;
+width: 340px;
+max-height: 350px;
+max-width: 340px;
+background-color: transparent;
+border: 20px solid transparent !important;
+-o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+   border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
+   border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
+border-image-slice: 1 !important;
+-webkit-transition: -webkit-transform 0.6s ease;
+transition: -webkit-transform 0.6s ease;
+transition: transform 0.6s ease;
+transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+-webkit-animation: blockAppear .6s ease-in-out;
+        animation: blockAppear .6s ease-in-out;
+-webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
 }
 
 @-webkit-keyframes blockAppear {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px) ;
-            transform: translateY(20px) ;
-  }
-  ready.css:1
-  40% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    -webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
-            box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
-  }
-  ready.css:1
-  80% {
-    opacity: 1;
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-  ready.css:1
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
+0% {
+opacity: 0;
+-webkit-transform: translateY(20px) ;
+        transform: translateY(20px) ;
+}
+ready.css:1
+40% {
+opacity: 0;
+-webkit-transform: translateY(20px);
+        transform: translateY(20px);
+-webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+        box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+}
+ready.css:1
+80% {
+opacity: 1;
+-webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+}
+ready.css:1
+100% {
+opacity: 1;
+-webkit-transform: translateY(0);
+        transform: translateY(0);
+-webkit-box-shadow: none;
+        box-shadow: none;
+}
 }
 
 @keyframes blockAppear {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px) ;
-            transform: translateY(20px) ;
-  }
-  ready.css:1
-  40% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    -webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
-            box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
-  }
-  ready.css:1
-  80% {
-    opacity: 1;
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-  ready.css:1
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
+0% {
+opacity: 0;
+-webkit-transform: translateY(20px) ;
+        transform: translateY(20px) ;
+}
+ready.css:1
+40% {
+opacity: 0;
+-webkit-transform: translateY(20px);
+        transform: translateY(20px);
+-webkit-box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+        box-shadow: 0 10px 35px rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.15);
+}
+ready.css:1
+80% {
+opacity: 1;
+-webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+}
+ready.css:1
+100% {
+opacity: 1;
+-webkit-transform: translateY(0);
+        transform: translateY(0);
+-webkit-box-shadow: none;
+        box-shadow: none;
+}
 }
 
 .card:hover{
-    z-index: 999;
-    max-height: 800px;
-    width: 400px;
-    max-width: 400px;
-    border: none !important;
-    border-right: 60px solid transparent !important;
-    border-bottom: 20px solid transparent !important;
-    margin-right: -20px;
-	  -webkit-transform:  translate(-30px, -50px);
-	          transform:  translate(-30px, -50px);
+z-index: 999;
+max-height: 800px;
+width: 400px;
+max-width: 400px;
+border: none !important;
+border-right: 60px solid transparent !important;
+border-bottom: 20px solid transparent !important;
+margin-right: -20px;
+  -webkit-transform:  translate(-30px, -50px);
+          transform:  translate(-30px, -50px);
 }
 
 .card:before{
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  display: block;
-  content: '';
-  position: absolute;
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
-  -webkit-transition: -webkit-box-shadow 0.6s ease;
-  transition: -webkit-box-shadow 0.6s ease;
-  transition: box-shadow 0.6s ease;
-  transition: box-shadow 0.6s ease, -webkit-box-shadow 0.6s ease;
+-webkit-box-shadow: none;
+      box-shadow: none;
+display: block;
+content: '';
+position: absolute;
+width: 100%;
+max-width: 400px;
+height: 100%;
+-webkit-transition: -webkit-box-shadow 0.6s ease;
+transition: -webkit-box-shadow 0.6s ease;
+transition: box-shadow 0.6s ease;
+transition: box-shadow 0.6s ease, -webkit-box-shadow 0.6s ease;
 }
 
 .card:hover:before
 {
-  max-width: 300px;
-  -webkit-box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
-          box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
+max-width: 300px;
+-webkit-box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
+      box-shadow: 60px 60px 20px RGBA(142, 142, 142, .6);
 }
 
 .card:hover .card-img-top{
-	height: 300px;
+height: 300px;
 }
 
 .card:hover .card-block {
-  width: 300px;
-	background-image: -webkit-gradient(linear,right bottom, left top,from(rgb(72, 85, 108)),color-stop(50%, rgb(27, 33, 43)),color-stop(51%, rgb(20, 25, 34)),to(rgb(53, 59, 69)));
-	background-image: linear-gradient(to top left,rgb(72, 85, 108) 0%,rgb(27, 33, 43) 50%,rgb(20, 25, 34) 51%,rgb(53, 59, 69) 100%);
+width: 300px;
+background-image: -webkit-gradient(linear,right bottom, left top,from(rgb(72, 85, 108)),color-stop(50%, rgb(27, 33, 43)),color-stop(51%, rgb(20, 25, 34)),to(rgb(53, 59, 69)));
+background-image: linear-gradient(to top left,rgb(72, 85, 108) 0%,rgb(27, 33, 43) 50%,rgb(20, 25, 34) 51%,rgb(53, 59, 69) 100%);
 }
 
 .card:hover .card-title{
-    color: white;
+color: white;
 }
 
 .card:hover .card-text{
-	  /*display: block !important;*/
-    color: white;
+  /*display: block !important;*/
+color: white;
 }
 
 .card-block{
-    background-color: transparent;
-    background-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75)));
-    background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%);
-    background-repeat: no-repeat;
+background-color: transparent;
+background-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75)));
+background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%);
+background-repeat: no-repeat;
 }
 
 .card-text {
-	display: none;
+display: none;
 }
 
 .card-img-top{
-    width: 300px;
-    height: 250px;
-    background-color: #fff;
-    -webkit-transition: height 0.8s ease;
-    transition: height 0.8s ease;
+width: 300px;
+height: 250px;
+background-color: #fff;
+-webkit-transition: height 0.8s ease;
+transition: height 0.8s ease;
 }
 
 @media (max-width: 1120px){
-    .bar-cont{
-        width: 100%;
-    }
-    .news-block{
-       max-width: 720px;
-    }
-    .card:hover{
-      margin-right: -20px;
-    }
-    .card:hover .card-block{
-      width: 300px;
-    }
+.bar-cont{
+    width: 100%;
+}
+.news-block{
+   max-width: 720px;
+}
+.card:hover{
+  margin-right: -20px;
+}
+.card:hover .card-block{
+  width: 300px;
+}
 }
 
 @media (max-width: 800px){
-    .news-block{
-       min-width: 380px;
-    }
-    .card:hover{
-      border-left: 20px solid transparent !important;
-      margin-right: -40px;
-      -webkit-transform:  translate(0, -50px);
-              transform:  translate(0, -50px);
-    }
-    .card:hover:before{
-      -webkit-box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
-              box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
-    }
-    .card:hover .card-block{
-      width: 300px;
-    }
+.news-block{
+   min-width: 380px;
+}
+.card:hover{
+  border-left: 20px solid transparent !important;
+  margin-right: -40px;
+  -webkit-transform:  translate(0, -50px);
+          transform:  translate(0, -50px);
+}
+.card:hover:before{
+  -webkit-box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
+          box-shadow: 0px 60px 40px RGBA(142, 142, 142, .5);
+}
+.card:hover .card-block{
+  width: 300px;
+}
 }
 
 @media (max-width: 580px){
-  .news-block{
-     max-width: 380px;
-  }
-  .item-title{
-    display: none;
-  }
-  .calculateur{
-    max-width: 550px;
-  }
+.news-block{
+ max-width: 380px;
+}
+.item-title{
+display: none;
+}
+.calculateur{
+max-width: 550px;
+}
 }
 
 /*-----------------
 Pixel Grid
 ------------------*/
 .pixel-grid{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  z-index: 15;
-  opacity: .2;
-  display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+z-index: 15;
+opacity: .2;
+display: none;
 }
 
 #toggle-grid{
-  position: fixed;
-  top: 150px;
-  right: 2px;
-  z-index: 16;
-  color: white;
-  display: inline-block;
-  /*border: 2px ridge white;*/
-  font-size: 1.8em;
-  width: 1.8em;
-  text-align: center;
-  line-height: 1.85em;
-  background: #666;
-  border-radius: 50%; /* or 50% width & line-height */
-  opacity: .3;
-  -webkit-transition: background 1s ease-out;
-  transition: background 1s ease-out;
-  display: none;
+position: fixed;
+top: 150px;
+right: 2px;
+z-index: 16;
+color: white;
+display: inline-block;
+/*border: 2px ridge white;*/
+font-size: 1.8em;
+width: 1.8em;
+text-align: center;
+line-height: 1.85em;
+background: #666;
+border-radius: 50%; /* or 50% width & line-height */
+opacity: .3;
+-webkit-transition: background 1s ease-out;
+transition: background 1s ease-out;
+display: none;
 }
 
 #toggle-grid:hover{
-  cursor: pointer;
-  background: repeating-linear-gradient(to bottom right,rgb(0, 0, 0) 0%,rgb(226, 226, 226) 61.4%,rgb(226, 226, 226) 66.9%,rgb(226, 226, 226) 76.6%,rgb(226, 226, 226) 88.7%,rgb(255, 255, 255) 100%);
+cursor: pointer;
+background: repeating-linear-gradient(to bottom right,rgb(0, 0, 0) 0%,rgb(226, 226, 226) 61.4%,rgb(226, 226, 226) 66.9%,rgb(226, 226, 226) 76.6%,rgb(226, 226, 226) 88.7%,rgb(255, 255, 255) 100%);
 }
 
 .orange{
-  color: orange !important;
-  -webkit-box-shadow: 2px 2px 3px #888;
-          box-shadow: 2px 2px 3px #888;
-  opacity: 1 !important;
+color: orange !important;
+-webkit-box-shadow: 2px 2px 3px #888;
+      box-shadow: 2px 2px 3px #888;
+opacity: 1 !important;
 }
 /*------------------*/
-    /*main image*/
-    .header-text {
-            padding: 0;
-            margin: 0;
-        }
+/*main image*/
+.header-text {
+        padding: 0;
+        margin: 0;
+    }
 
-        .item-figure {
-            position: relative;
-            width: 100%;
-        }
+    .item-figure {
+        position: relative;
+        width: 100%;
+    }
 
-        .item-figure img {
-            width: 1000px;
-            height: 800px;
-        }
+    .item-figure img {
+        width: 1000px;
+        height: 800px;
+    }
 
-        .item-title {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgb(205, 189, 158);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-       
-/*formulaire*/
-#show-comment-form{
-
-display: inline-block;
-padding: 15px 25px;
-font-size: 20px;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-outline: none;   
-color: #dcd1ca;
-background-color:rgb(90, 43, 9);
-border: none;
-border-radius: 15px;
-box-shadow: 0 9px #999;  
-}
-.contact-section {
-padding: 50px 0;
-background-color: rgb(205, 180, 151);
-}
-
-.contact-form {
-background-color: #ead5be;
-padding: 30px;
-border-radius: 8px 55px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
-}
-.contact-form input, .contact-form textarea, .contact-form button {
-width: 100%;
-margin-bottom: 15px;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 4px;
-}
-.contact-form button {
-background-color:rgb(88, 34, 21);
-color: #dfc298;
-cursor: pointer;
-border: none;
-}
-.hidden {
-    display: none;
-}
-.star-rating {
-display: flex;
-justify-content: center;
-margin-bottom: 15px;
-}
-.star-rating .fa-star {
-font-size: 24px;
-color: white;
-cursor: pointer;
-}
-.star-rating .fa-star.checked {
-color: #ffc107;
-}
-.comments-section {
-margin-top: 30px;
-}
-.comment {
-border-bottom: 1px solid #ccc;
-padding: 10px 0;
-}
-.comment .comment-date {
-font-size: 0.9em;
-color: #777;
-}
-.comment .comment-rating {
-color: rgb(88, 34, 21);
-}
-.comment .comment-rating i {
-margin-right: 2px;
-}
-@media (max-width: 768px) {
-.contact-form .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-.contact-form .col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 15px;
-}
-.contact-form .col-lg-12 {
-    flex: 0 0 95%;
-    max-width: 95%;
-    padding: 0 15px;
-}
-h3{
-    text-align: center;
-}}
-
-
-/*title*/
-h1{ 
-    font-family: "Brush Script MT", cursive;
-    font-size: 80px;
-    color: #5a2a08;
-    font-weight: bold;
+    .item-title {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgb(205, 189, 158);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+    }
    
-}
-/*recip info*/
-.recipe-title {
-    color: rgb(71, 34, 7);
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.recipe-info {
-    background-color: #ead5be; 
-    border-radius: 8px 55px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
-}
-.feature-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+      /*formulaire*/
+  #show-comment-form{
 
-.feature-list li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-
-
-.feature-title {
-    font-weight: bold;
-    color: #291002;
-}
-
-.feature-sub-title {
-    color: #5a2a08; 
-}
-.recipe-top {
-    position: relative;
-    height: 65vh; 
-    overflow: hidden;
-}
- .item-figure img{
-    width: 61.2%;
-    height: 33%;
-    object-fit: cover;
+ display: inline-block;
+ padding: 15px 25px;
+ font-size: 20px;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ outline: none;   
+ color: #dcd1ca;
+ background-color:rgb(90, 43, 9);
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 9px #999;  
  }
-.recipe-top img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+ .contact-section {
+ padding: 50px 0;
+ background-color: rgb(205, 180, 151);
+ }
 
-.recipe-name {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 36px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-/*calculatrice ingredients*/
-.calculateur {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ead5be;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-         
-        .ingredient_img {
-            height: 47px;
-            width: 70px;
-            margin-right: 10px;
-        }
-        .ingredient_label, .ingredient_qte {
-            margin-right: 10px;
-        }
-        .price-indicator {
-            margin-top: 10px;
-        }
-        .hidden {
-            display: none;
-        }
-        #ingredient-list {
-    list-style-type: none;
-    padding: 0;
-    columns: 2;
-}
-#ingredient-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-#calculateButton{
-    width: 40%;
-display: flex;
-align-self: center;
-padding: 15px 25px;
-font-size: 15px;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-outline: none;
-color: #dcd1ca;
-background-color:rgb(90, 43, 9);
-border: none;
-border-radius: 15px;
-box-shadow: 0 9px #999;
-margin-bottom: 20px; 
-}
-#calculateButton:hover {
-    background-color: rgb(115, 77, 50)
-}
+ .contact-form {
+ background-color: #ead5be;
+ padding: 30px;
+ border-radius: 8px 55px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+ }
+ .contact-form input, .contact-form textarea, .contact-form button {
+ width: 100%;
+ margin-bottom: 15px;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ }
+ .contact-form button {
+ background-color:rgb(88, 34, 21);
+ color: #dfc298;
+ cursor: pointer;
+ border: none;
+ }
+ .hidden {
+ display: none;
+ }
+ .star-rating {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 15px;
+ }
+ .star-rating .fa-star {
+ font-size: 24px;
+ color: white;
+ cursor: pointer;
+ }
+ .star-rating .fa-star.checked {
+ color: #ffc107;
+ }
+ .comments-section {
+ margin-top: 30px;
+ }
+ .comment {
+ border-bottom: 1px solid #ccc;
+ padding: 10px 0;
+ }
+ .comment .comment-date {
+ font-size: 0.9em;
+ color: #777;
+ }
+ .comment .comment-rating {
+ color: rgb(88, 34, 21);
+ }
+ .comment .comment-rating i {
+ margin-right: 2px;
+ }
+ @media (max-width: 768px) {
+ .contact-form .row {
+ display: flex;
+ flex-wrap: wrap;
+ }
+ .contact-form .col-lg-6 {
+ flex: 0 0 50%;
+ max-width: 50%;
+ padding: 0 15px;
+ }
+ .contact-form .col-lg-12 {
+ flex: 0 0 95%;
+ max-width: 95%;
+ padding: 0 15px;
+ }
+ h3{
+ text-align: center;
+ }}
 
-#calculateButton:active {
 
-background-color:rgb(115, 77, 50);
-box-shadow: 0 3px #666;
-transform: translateY(4px);
-}
+ /*title*/
+ h1{ 
+ font-family: "Brush Script MT", cursive;
+ font-size: 80px;
+ color: #5a2a08;
+ font-weight: bold;  
+
+ }
+ /*recip info*/
+ .recipe-title {
+ color: rgb(71, 34, 7);
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 10px;
+ }
+ .recipe-info {
+ background-color: #ead5be; 
+ border-radius: 8px 55px;
+ padding: 20px;
+ margin-top: 20px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+ }
+ .feature-list {
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+ }
+
+ .feature-list li {
+ display: inline-block;
+ margin-right: 20px;
+ } 
+
+
+
+ .feature-title {
+ font-weight: bold;
+ color: #291002;
+ }
+
+ .feature-sub-title {
+ color: #5a2a08; 
+ }
+ .recipe-top {
+ position: relative;
+ height: 65vh; 
+ overflow: hidden;
+ }
+ .item-figure img{
+ width: 61.2%;
+ height: 33%;
+ object-fit: cover;
+ }
+ .recipe-top img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ }
+
+ .recipe-name {
+ position: absolute;
+ bottom: 20px;
+ left: 20px;
+ color: white;
+ font-size: 36px;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+ }
+ /*calculatrice ingredients*/
+ .calculateur {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ead5be;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     
+    .ingredient_img {
+        height: 47px;
+        width: 70px;
+        margin-right: 10px;
+    }
+    .ingredient_label, .ingredient_qte {
+        margin-right: 10px;
+    }
+    .price-indicator {
+        margin-top: 10px;
+    }
+    .hidden {
+        display: none;
+    }
+    #ingredient-list {
+ list-style-type: none;
+ padding: 0;
+ columns: 2;
+ }
+ #ingredient-list li {
+ display: flex;
+ align-items: center;
+ margin-bottom: 10px;
+ }
+ #calculateButton{
+ width: 40%;
+ display: flex;
+ align-self: center;
+ padding: 15px 25px;
+ font-size: 15px;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ outline: none;
+ color: #dcd1ca;
+ background-color:rgb(90, 43, 9);
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 9px #999;
+ margin-bottom: 20px; 
+ }
+ #calculateButton:hover {
+ background-color: rgb(115, 77, 50)
+ }
+
+ #calculateButton:active {
+
+ background-color:rgb(115, 77, 50);
+ box-shadow: 0 3px #666;
+ transform: translateY(4px);
+ }
  @media screen and (max-width: 600px) {
  .container {
-    padding: 10px;
-     }
+ padding: 10px;
+ }
  .ingredient_img {
-   height: auto;
-   width: 100%;
-   max-width: 70px;
-   margin-right: 10px;
-    }
+ height: auto;
+ width: 100%;
+ max-width: 70px;
+ margin-right: 10px;
+ }
  .ingredient_label, .ingredient_qte {
-   display: block;
-   margin: 5px 0;
+ display: block;
+ margin: 5px 0;
+ }
+ }
+ @media (max-width: 375px) {
+    .calculateur {
+        padding: 10px;
     }
+
+    #ingredientSection {
+        margin-top: 10px;
+    }
+
+    #ingredientSection .borderSection_header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    #ingredientSection .borderSection_header h2 {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #ingredientSection .borderSection_header label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #ingredientSection .borderSection_header input[type="number"] {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #ingredientSection .price-indicator {
+        margin-top: 5px;
+    }
+
+    #ingredient-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 0;
+    }
+
+    #ingredient-list li .ingredient_img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    #ingredient-list li .ingredient_label {
+        margin-left: 0;
+    }
+
+    #ingredient-list li .ingredient_qte {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .calculateur button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 375px) {
+    
+    .etape {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="subject"],
+    .contact-form textarea {
+        width: 100%; 
+    }
+
+    
+    nav #logo img {
+        width: 40px; 
+    }
+}
+
+ 
+ .recipe-steps li {
+ position: relative;
+ padding-left: 20px;
+ margin-bottom: 20px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ list-style-type: none; 
  }
 
-/* Animations et hover effects */
-.recipe-steps li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    list-style-type: none; 
-}
+ .recipe-steps li:hover {
+ transform: translateX(5px);
+ }
 
-.recipe-steps li:hover {
-    transform: translateX(5px);
-}
+ .recipe-steps p {
+ margin-left: 20px;
+ font-size: 1rem;
+ color: rgb(35, 35, 35);
+ transition: all 0.3s ease;
+ }
 
-.recipe-steps p {
-    margin-left: 20px;
-    font-size: 1rem;
-    color: rgb(35, 35, 35);
-    transition: all 0.3s ease;
-}
+ .recipe-steps li:hover p {
+ color: black;
+ }
 
-.recipe-steps li:hover p {
-    color: black;
-}
+ .ingredients-list {
+ background-color:  #ead5be;
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ transition: all 0.3s ease;
+ }
 
-.ingredients-list {
-    background-color:  #ead5be;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
+ .ingredients-list h2 {
+ font-size: 1.5rem;
+ margin-bottom: 10px;
+ text-align: center;
+ }
 
-.ingredients-list h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
+ .ingredients-list ul {
+ list-style: none;
+ padding: 0;
+ }
 
-.ingredients-list ul {
-    list-style: none;
-    padding: 0;
-}
+ .ingredients-list li {
+ margin-bottom: 10px;
+ font-size: 1.1rem;
+ color: black;
+ }
 
-.ingredients-list li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: black;
-}
+ .ingredients-list li:last-child {
+ margin-bottom: 0;
+ }
 
-.ingredients-list li:last-child {
-    margin-bottom: 0;
-}
-
-.ingredients-list:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-}
+ .ingredients-list:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+ }
  
-</style>
-</head>
+ </style>
+ </head>
 
-<body>
-        <nav>
-            <div id="nav-links">
-                <a href="#" id="logo"><img src="logo.png" alt="" width="50"></a>
-                <div id="container-burger">
-                    <img src="chocolat.png" alt="">
-                </div>
-                <div id="links">
-                    <a href="#">Accueil</a>
-                    <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
-                    <a href="#">Contact</a>
-                </div>
+ <body>
+    <div id="place-holder-nav" style="display: none;">
+    </div>
+    <nav>
+        <div id="nav-links">
+            <a href="#" id="logo"><img src="img/logo.png" alt="" width="50"></a>
+            <div id="container-burger">
+                <img src="img/chocolat.png" alt="">
             </div>
-            <div id="nav-recipes-container">
-                <ul id="nav-recipes" style="display: none;">
-                    <a href="#"><li>Mousse au chocolat</li></a>
-                    <a href="#"><li>Cake au chocolat</li></a>
-                    <a href="#"><li>Fondant au chocolat</li></a>
-                    <a href="#"><li>Tarte au chocolat</li></a>
-                    <a href="#"><li>Cookies au chocolat</li></a>
-                    <a href="#"><li>Glace au chocolat</li></a>
-                    <a href="#"><li>Bûche de Noël au chocolat</li></a>
-                    <a href="#"><li>Moelleux au chocolat</li></a>
-                    <a href="#"><li>Truffes au chocolat</li></a>
-                    <a href="#"><li>Macarons au chocolat</li></a>
-                </ul>
-                <div id="previews">
-                </div>
+            <div id="links">
+                <a href="#">Accueil</a>
+                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
+                <a href="#">Contact</a>
             </div>
-            <div id="nav-choco-open-menu">
-                <img src="openmenu.png" alt="">
-            </div>
-        </nav>
-        <div id="nav-choco">
-            <img src="banner_top.png" alt="">
         </div>
-
+        <div id="nav-recipes-container">
+            <ul id="nav-recipes" style="display: none;">
+                <a href="../sebastien/mous.html"><li>Mousse au chocolat</li></a>
+                <a href="#"><li>Cake au chocolat</li></a>
+                <a href="#"><li>Fondant au chocolat</li></a>
+                <a href="#"><li>Tarte au chocolat</li></a>
+                <a href="#"><li>Cookies au chocolat</li></a>
+                <a href="#"><li>Glace au chocolat</li></a>
+                <a href="#"><li>Bûche de Noël au chocolat</li></a>
+                <a href="#"><li>Moelleux au chocolat</li></a>
+                <a href="#"><li>Truffes au chocolat</li></a>
+                <a href="#"><li>Macarons au chocolat</li></a>
+            </ul>
+            <div id="previews"></div>
+        </div>
+        <div id="nav-choco-open-menu" style="display: none;">
+            <img src="img/openmenu.png" alt="">
+        </div>
+    </nav>
+    <div id="nav-choco">
+        <img src="img/banner_top.png" alt="">
+    </div>
         <!--top section start-->
     <section class="single-recipe-wrap-layout1 padding-top-74 padding-bottom-50">
         <div class="containerC">
@@ -1057,18 +1137,18 @@ transform: translateY(4px);
 </section>
 
  <!-- Footer Section Begin -->
- <footer class="footer set-bg mt-5" data-setbg="imgfooter/footer-bg.jpg">
+ <footer class="footer set-bg mt-5" data-setbg="imgfooter/footer-bg.jpg"style="background-repeat: no-repeat;background-size: cover;">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="footer__newslatter">
                    <h6>Recette ...</h6>
                    <ul class="servi">
-                      <li><a href="Javascript:void(0)"> recette1</a></li>
-                      <li><a href="Javascript:void(0)"> recette2</a></li>
-                      <li><a href="Javascript:void(0)"> recette3</a></li>
-                      <li><a href="Javascript:void(0)"> recette4</a></li>
-                      <li><a href="Javascript:void(0)"> recette5</a></li>
+                    <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette1</a></li>
+                    <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette2</a></li>
+                    <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette3</a></li>
+                    <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette4</a></li>
+                    <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette5</a></li>
                    </ul>
                 </div>
              </div>
@@ -1127,216 +1207,13 @@ transform: translateY(4px);
 
 <!-- Js Plugins -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-<script src="nav.js"></script>
-<script>
-    $(document).ready(function() {
-        // Fonctionnalité de notation par étoiles
-        $('.star-rating .fa-star').on('click', function() {
-            var rating = $(this).data('rating');
-            $('#rating').val(rating);
-            $('.star-rating .fa-star').each(function() {
-                if ($(this).data('rating') <= rating) {
-                    $(this).addClass('checked');
-                } else {
-                    $(this).removeClass('checked');
-                }
-            });
-        });
-    
-        // Soumission du formulaire
-        $('#comment-form').on('submit', function(e) {
-            e.preventDefault();
-            
-            var name = $('#name').val();
-            var email = $('#email').val();
-            var subject = $('#subject').val();
-            var comment = $('#comment').val();
-            var rating = parseInt($('#rating').val()); // Asigurăm că rating-ul este un număr întreg
-            
-            var date = new Date().toLocaleDateString();
-    
-            var commentHtml = '<div class="comment">' +
-                                '<div><strong>' + escapeHtml(name) + '</strong> <span class="comment-date">' + date + '</span></div>' +
-                                '<div class="comment-rating">' + getStars(rating) + '</div>' +
-                                '<div>' + escapeHtml(comment) + '</div>' +
-                              '</div>';
-    
-            $(commentHtml).hide().appendTo('#comments-list').fadeIn(1000);
-    
-            // Réinitialiser le formulaire
-            $('#comment-form')[0].reset();
-            $('#rating').val(0);
-            $('.star-rating .fa-star').removeClass('checked');
-        });
-    
-        // Fonction pour générer les étoiles
-        function getStars(rating) {
-            var starsHtml = '';
-            for (var i = 1; i <= rating; i++) {
-                if (i <= rating) {
-                    starsHtml += '<i class="fa fa-star checked"></i>';
-                } else {
-                    starsHtml += '<i class="fa fa-star"></i>';
-                }
-            }
-            return starsHtml;
-        }
-    
-        // Fonction pour échapper les caractères HTML dans les commentaires
-        function escapeHtml(text) {
-            var map = {
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;',
-                '/': '&#x2F;',
-                '`': '&#x60;',
-                '=': '&#x3D;'
-            };
-            return text.replace(/[&<>"'`=\/]/g, function(m) { return map[m]; });
-        }
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-    var commentForm = document.getElementById('comment-form');
-    var showCommentBtn = document.getElementById('show-comment-form');
-
-    
-    showCommentBtn.addEventListener('click', function() {
-    
-        commentForm.classList.remove('hidden');
-    });
-
-    
-    commentForm.addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        commentForm.classList.add('hidden'); 
-       
-    });
-});
-
-//calculateur ingredients
-document.getElementById('calculateButton').addEventListener('click', function() {
-            const numPersons = parseInt(document.getElementById('numPersons').value, 10);
-            const basePersons = 8; // Numărul de persoane pentru rețeta de bază
-            const pricePerPerson = 1.80;
-            const ingredientSection = document.getElementById('ingredientSection');
-            const ingredientList = document.getElementById('ingredient-list').getElementsByTagName('li');
-
-            Array.from(ingredientList).forEach(function(ingredient) {
-                if (ingredient.hasAttribute('data-base-quantity')) {
-                    const baseQuantity = parseFloat(ingredient.getAttribute('data-base-quantity'));
-                    const newQuantity = (baseQuantity / basePersons) * numPersons;
-                    ingredient.querySelector('.ingredient_qte').textContent = newQuantity.toFixed(2) + (ingredient.querySelector('.ingredient_label').textContent === 'Oeuf(s)' ? '' : ' g');
-                }
-            });
-
-            const totalPrice = (pricePerPerson * numPersons).toFixed(2);
-            document.getElementById('js-price-value').textContent = totalPrice;
-
-            // Afișează secțiunea cu ingrediente și preț
-            ingredientSection.classList.remove('hidden');
-        });
-
-        //cards
-        $(document).ready(function(){
-  $(document).on("keypress", function(event) {
-    // If 'alt + g' keys are pressed:
-    if (event.which === 169){
-        $('#toggle-grid').toggle();
-     }
-  });
-
-  $('#toggle-grid').on("click"
-  , function() {
-      $('.pixel-grid').toggle();
-      $('#toggle-grid').toggleClass('orange');
-    });
-});
-var main = function () {
-    $('.push-bar').on('click', function(event){
-      if (!isClicked){
-        event.preventDefault();
-        $('.arrow').trigger('click');
-        isClicked = true;
-      }
-    });
-  
-    $('.arrow').css({
-      'animation': 'bounce 2s infinite'
-    });
-    $('.arrow').on("mouseenter", function(){
-        $('.arrow').css({
-                'animation': '',
-                'transform': 'rotate(180deg)',
-                'background-color': 'black'
-           });
-    });
-     $('.arrow').on("mouseleave", function(){
-        if (!isClicked){
-            $('.arrow').css({
-                    'transform': 'rotate(0deg)',
-                    'background-color': 'black'
-               });
-        }
-    });
-
-    var isClicked = false;
-
-    $('.arrow').on("click", function(){
-        if (!isClicked){
-            isClicked = true;
-            $('.arrow').css({
-                'transform': 'rotate(180deg)',
-                'background-color': 'black',
-           });
-
-            $('.bar-cont').animate({
-                top: "-15px"
-            }, 300);
-            $('.main-cont').animate({
-                top: "0px"
-            }, 300);
-            // $('.news-block').css({'border': '0'});
-            // $('.underlay').slideDown(1000);
-
-        }
-        else if (isClicked){
-            isClicked = false;
-            $('.arrow').css({
-                'transform': 'rotate(0deg)',       'background-color': 'black'
-           });
-
-            $('.bar-cont').animate({
-                top: "-215px"
-            }, 300);
-            $('.main-cont').animate({
-                top: "-215px"
-            }, 300);
-        }
-    console.log('isClicked= '+isClicked);
-    });
-  
-    $('.card').on('mouseenter', function() {
-      $(this).find('.card-text').slideDown(300);
-    });
-  
-    $('.card').on('mouseleave', function(event) {
-       $(this).find('.card-text').css({
-         'display': 'none'
-       });
-     });
-};
-
-$(document).ready(main);
-
-    </script>
-
-
+<script src="../../public/assets/js/nav.js"></script>
+<script src="../../public/assets/js/jsfooter/main.js"></script>
+<script src="../../public/assets/js/jsfooter/bootstrap.min.js"></script>
+<script src="../../public/assets/js/jsfooter/jquery-3.3.1.min.js"></script>
+<script src="js/pageSimona2.js"></script>
 
 </body>
 </html>
