@@ -38,47 +38,26 @@
             </div>
             <div id="links">
                 <a href="#">Accueil</a>
-                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down"
-                        style="margin-left: 10px;"></i></a>
+                <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
                 <a href="#">Contact</a>
             </div>
         </div>
         <div id="nav-recipes-container">
             <ul id="nav-recipes" style="display: none;">
-                <a href="../sebastien/mous.html">
-                    <li>Mousse au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Cake au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Fondant au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Tarte au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Cookies au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Glace au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Bûche de Noël au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Moelleux au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Truffes au chocolat</li>
-                </a>
-                <a href="#">
-                    <li>Macarons au chocolat</li>
-                </a>
+                <a href="../sebastien/mous.html"><li>Mousse au chocolat</li></a>
+                <a href="#"><li>Cake au chocolat</li></a>
+                <a href="#"><li>Fondant au chocolat</li></a>
+                <a href="#"><li>Tarte au chocolat</li></a>
+                <a href="#"><li>Cookies au chocolat</li></a>
+                <a href="#"><li>Glace au chocolat</li></a>
+                <a href="#"><li>Bûche de Noël au chocolat</li></a>
+                <a href="#"><li>Moelleux au chocolat</li></a>
+                <a href="#"><li>Truffes au chocolat</li></a>
+                <a href="#"><li>Macarons au chocolat</li></a>
             </ul>
             <div id="previews"></div>
         </div>
-        <div id="nav-choco-open-menu">
+        <div id="nav-choco-open-menu" style="display: none;">
             <img src="img/nav-img/openmenu.png" alt="">
         </div>
     </nav>
@@ -228,18 +207,18 @@
 
     
 
-    <footer class="footer set-bg mt-5" data-setbg="img/imgfooter/footer-bg.jpg">
+    <footer class="footer set-bg mt-5" data-setbg="img/imgfooter/footer-bg.jpg"style="background-repeat: no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__newslatter">
                        <h6>Recette ...</h6>
                        <ul class="servi">
-                          <li><a href="Javascript:void(0)"> recette1</a></li>
-                          <li><a href="Javascript:void(0)"> recette2</a></li>
-                          <li><a href="Javascript:void(0)"> recette3</a></li>
-                          <li><a href="Javascript:void(0)"> recette4</a></li>
-                          <li><a href="Javascript:void(0)"> recette5</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette1</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette2</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette3</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette4</a></li>
+                          <li><a class="text-white" href="Javascript:void(0)"> recette5</a></li>
                        </ul>
                     </div>
                  </div>
@@ -253,10 +232,10 @@
                             Rue de chocolat 15
                             1060 Saint Gilles Belgique.</p>
                         <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -266,7 +245,7 @@
                         <p>Vous voulez nos derniere recette? </p>
                         <form action="#">
                             <input type="text" placeholder="Email">
-                            <button type="submit"><i class="fa fa-send-o"></i></button>
+                            <button type="submit"><i class="fa-regular fa-paper-plane"></i></button>
                         </form>
                     </div>
                 </div>
@@ -277,7 +256,7 @@
                 <div class="row">
                     <div class="col-lg-7 d-flex align-items-center">
                         <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Julian</a>
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Kevin</a>
                           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                       </p>
                   </div>
