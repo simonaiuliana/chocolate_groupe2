@@ -27,7 +27,7 @@ VALUES
 (@sub_recipe_id1, "Versez la crème en 3 fois sur le chocolat fondu afin de bien l’incorporer", NULL, 6),
 (@sub_recipe_id1, "Couvrez la préparation au contact avec un film alimentaire et placez-la au frais pendant 12 heures <i data-aos=\"flip-right\" data-aos-delay=\"500\" class=\"fa-solid fa-clock\"></i>.", NULL, 7),
 (@sub_recipe_id2, "Montez la crème liquide entière en chantilly puis incorporez-la délicatement avec une maryse à la crème anglaise.", NULL, 1),
-(@sub_recipe_id2, "Replacez la préparation au réfrigérateur quelques heures avant de mettre à turbiner en sorbetière pendant 40 à 45 minutes <i data-aos="flip-right" data-aos-delay="500" class="fa-solid fa-clock"></i>.", NULL, 2),
+(@sub_recipe_id2, "Replacez la préparation au réfrigérateur quelques heures avant de mettre à turbiner en sorbetière pendant 40 à 45 minutes <i data-aos=\"flip-right\" data-aos-delay=\"500\" class=\"fa-solid fa-clock\"></i>.", NULL, 2),
 (@sub_recipe_id2, "Réservez la glace au congélateur avant de servir.", NULL, 3);
 
 INSERT INTO `ingredient_has_recipe`(`recipe_id`, `ingredient_id`, `ingredient_unity_id`, `quantity`)
