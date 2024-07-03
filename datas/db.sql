@@ -16,30 +16,41 @@ CREATE TABLE `recipe` (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE `instruction` (
-  id INT UNSIGNED AUTO_INCREMENT,
+CREATE TABLE `sub_recipe` (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   recipe_id INT UNSIGNED NOT NULL,
-  text_content TEXT NOT NULL,
+  title VARCHAR(40) NOT NULL,
   image_url VARCHAR(255),
-  instruction_number TINYINT UNSIGNED NOT NULL,
+  preparation_time SMALLINT UNSIGNED NOT NULL,
+  sub_recipe_number TINYINT UNSIGNED NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE `instruction` (
+  id INT UNSIGNED AUTO_INCREMENT,
+  sub_recipe_id INT UNSIGNED NOT NULL,
+  text_content TEXT NOT NULL,
+  image_url VARCHAR(255),
+  instruction_number TINYINT UNSIGNED NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (sub_recipe_id) REFERENCES sub_recipe(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 CREATE TABLE `ingredient` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  ingredient TINYTEXT NOT NULL UNIQUE,
+  ingredient TINYTEXT NOT NULL,
   image_url VARCHAR(255),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE `ingredient_unity` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  unit TINYTEXT NOT NULL UNIQUE,
+  unit TINYTEXT NOT NULL,
   PRIMARY KEY (id)
 );
 
-CREATE TABLE `ingredient_recipe` (
+CREATE TABLE `ingredient_has_recipe` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   recipe_id INT UNSIGNED NOT NULL,
   ingredient_id INT UNSIGNED NOT NULL,
@@ -66,11 +77,11 @@ CREATE TABLE `comment` (
 
 CREATE TABLE `category` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  category TINYTEXT NOT NULL UNIQUE,
+  category TINYTEXT NOT NULL,
   PRIMARY KEY (id)
 );
 
-CREATE TABLE `recipe_category` (
+CREATE TABLE `recipe_has_category` (
   recipe_id INT UNSIGNED NOT NULL,
   category_id INT UNSIGNED NOT NULL,
   FOREIGN KEY (recipe_id) REFERENCES recipe(id) ON DELETE CASCADE ON UPDATE CASCADE,

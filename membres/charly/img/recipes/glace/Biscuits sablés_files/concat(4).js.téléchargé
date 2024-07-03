@@ -1,0 +1,9 @@
+/********** https://www.marmiton.org/reloaded/static/preconcat_%2Freloaded%2Fstatic%2FFront%2FComponent%2FrecipeNewsletter%2FrecipeNewsletter.js.202406200958.js **********/
+
+/** https://www.marmiton.org/reloaded/static/Front/Component/recipeNewsletter/recipeNewsletter.js?v=202406200958 **/
+document.addEventListener("DOMContentLoaded",function(){var btnDisplayMl=document.getElementById("display-ml");var btnHideMl=document.getElementById("hide-ml");var blockMl=document.getElementById("description-ml");var btnSubscribe=document.getElementById("btn-subscribe");var inputEmail=document.getElementById("email-form");af_addEvent(btnDisplayMl,'click',function(e){btnDisplayMl.style.display='none';blockMl.style.display='block';});af_addEvent(btnHideMl,'click',function(e){btnDisplayMl.style.display='inline-block';blockMl.style.display='none';});af_addEvent(btnSubscribe,'click',function(e){if(inputEmail.value==''){inputEmail.classList.add('empty-email');}
+else{inputEmail.classList.remove('empty-email');af_ua_trackEvent('CRM','touchpoint',window.location.href,'encart fiche recette');document.location.href='/reloaded/newsletter/subscribe?email='+window.btoa(inputEmail.value);}})});
+
+
+
+

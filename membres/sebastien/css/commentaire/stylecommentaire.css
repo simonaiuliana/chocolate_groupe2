@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5efe6;
-    color: #5a4a42;
+    color: #fafafa;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .contact-form {
-    background: #d4a373;
+    background: #5c4935;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -30,10 +30,10 @@ body {
 }
 .contact-form input, .contact-form textarea {
     background-color: #e5c1a8;
-    color: #5a4a42;
+    color: #54341A;
 }
 .contact-form button {
-    background-color: #8b4513;
+    background-color: #54341A;
     color: #fff;
     cursor: pointer;
     border: none;
@@ -80,7 +80,7 @@ body {
 }
 h3 {
     text-align: center;
-    color: #8b4513;
+    color: #ffffff;
     font-family: 'Pacifico', cursive;
 }
 @media (max-width: 768px) {

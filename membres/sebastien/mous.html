@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=">
-    <link rel="icon" type="image/x-icon" href="img/nav-img/th-r.jpeg">
+    <link rel="icon" type="image/x-icon" href="img/nav-img/logo.png">
     <title>🍫 Délicieuse recette de mousse au chocolat 🍫</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -27,9 +27,48 @@
     <link rel="stylesheet" href="css/footer/style.css" type="text/css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <link rel="stylesheet" href="css/carousel/carou.css">
-    
-    
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .choco {
+  outline:none;
+  cursor:pointer;
+  display:block;
+  background-color:#54341A;
+  text-shadow:0px 1px 0px rgba(255,255,255,0.1);
+  text-decoration:none;
+  font:normal 20px 'Monotype Corsiva','Book Antiqua',Georgia,Serif;
+  color:#ffffff;
+  width:320px;
+  text-align:center;
+  margin:auto;
+  padding:0px 0px;
+  line-height:40px;
+  border-top:9px solid #6A4021;
+  border-right:10px solid #39210D;
+  border-bottom:10px solid #241505;
+  border-left:10px solid #402712;
+  -webkit-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.15),
+    0px 1px 2px black;
+  -moz-box-shadow:inset 0px 1px 0px rgba(255,255,255,0.15),
+    0px 1px 2px black;
+  box-shadow:inset 0px 1px 0px rgba(255,255,255,0.15),
+    0px 1px 2px black;
+}
+
+.choco:hover {
+  background-color:#4B2E17;
+  border-color:#5F391F #311F0D #170D03 #341F0F;
+}
+
+.choco:active {
+  border-color:#170D03 #341F0F #5F391F #311F0D;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  box-shadow:none;
+}
+
+</style>
 </head>
 <body>
     <!--------------navbar--------------------->
@@ -37,14 +76,14 @@
     </div>
     <nav>
         <div id="nav-links">
-            <a href="#" id="logo"><img src="img/nav-img/th-r.jpeg" alt="" width="50"></a>
+            <a href="mous.html" id="logo"><img src="img/nav-img/logo.png" alt="" width="50"></a>
             <div id="container-burger">
                 <img src="img/nav-img/chocolat.png" alt="">
             </div>
             <div id="links">
                 <a href="#">Accueil</a>
                 <a href="javascript:void(0)" id="nav-recipes-link">Recettes<i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
-                <a href="#">Contact</a>
+                <a href="#coms">Contact</a>
             </div>
         </div>
         <div id="nav-recipes-container">
@@ -79,12 +118,12 @@
     <header class="general-infos">
         <h2 class="display-5 mt-5">Mousse au chocolat</h2>
         <h2 class="mt-5 mb-5">"Plongez dans un Nuage de Douceur : Découvrez Notre Recette Authentique de Mousse au Chocolat, une Harmonie Parfaite de Légèreté et de Fondant qui Transformera Chaque Cuillère en un Instant de Pur Bonheur"</h2>
-        <div class="informations">
+        <div class="informations border rounded-2 border-5 border-dark">
             <div>
                 <h3>Évaluation :</h3>
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <p><i class="fa-solid fa-message"></i> <a href="#comments">4 commentaires</a></p>
-                <button class="btn btn-primary" onclick="window.print()">Imprimer la recette</button>
+                <p><i class="fa-solid fa-message"></i> <a href="#coms">4 commentaires</a></p>
+                <button class="btn" style="background-color: #4B2E17;color: white;" onclick="printDiv('page')" value="print a div!">Imprimer la recette</button>
             </div>
             <div>
                 <h3>Informations utiles :</h3>
@@ -108,52 +147,86 @@
     </header>
     <section id="page">
         <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
-            <img id="img3" src="img/recipes/Mousse/plouf4.png" style="width: 400px;" class="me-5"  data-aos="fade-down"
+            <img id="img3" src="img/recipes/Mousse/plouf2.png" style="width: 300px;" class="me-5"  data-aos="fade-down"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine" alt="Image 1">
         </div>
         <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
-            <img id="img4" src="img/recipes/Mousse/plouf1.png" style="width: 400px;" class="me-5"  data-aos="zoom-in">
+            <img id="img5" src="img/recipes/Mousse/plouf4.png" style="width: 300px;" class="me-5"  data-aos="fade-down"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" alt="Image 1">
+        </div>
+        <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+            <img id="img4" src="img/recipes/Mousse/plouf1.png" style="width: 300px;" class="me-5"  data-aos="zoom-in">
         </div>
         <div class="steps mt-5">
-            <h2> Desserts
-                Pure chocomousse
-                 : <br>( <i class="fa-solid fa-clock"></i> 30 min )</h2>
-            <div class="step">
-                <p class="number"><span>1</span></p>
-                <p class="step-desc">Faites fondre le chocolat au bain-marie avec le beurre. </p>
-            </div>
-            <div class="step">
-                <p class="number"><span>2</span></p>
-                <p class="step-desc">Incorporez 50 g de sucre aux jaunes d’œufs et battez-les jusqu’à obtenir une texture mousseuse. </p>
-            </div>
-            <div class="step">
-                <p class="number"><span>3</span></p>
-                <p class="step-desc mb-5">Ajoutez le sucre restant aux blancs d’œufs et battez-les en neige.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>4</span></p>
-                <p class="step-desc mb-5">Fouettez également la crème jusqu’à ce qu’elle soit bien ferme.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>5</span></p>
-                <p class="step-desc mb-5">Plongez le bol contenant le chocolat sous l’eau froide et versez-y immédiatement les jaunes d’œufs.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>6</span></p>
-                <p class="step-desc mb-5">Incorporez la crème fraîche, puis ajoutez délicatement les blancs d’œufs.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>7</span></p>
-                <p class="step-desc mb-5">Répartissez la préparation dans 8 verres et laissez-la durcir pendant au moins 2 heures au réfrigérateur.</p>
-            </div>
-            <div class="step">
-                <p class="number"><span>8</span></p>
-                <p class="step-desc mb-5">Servez avec un demi-cerneau de noix et éventuellement un biscuit en guise de garniture.</p>
+            <h2 class="text-center mb-4">Desserts Pure Chocomousse<br><i class="fa-solid fa-clock"></i> 30 min</h2>
+            <div class="row border rounded-2 border-5 border-dark">
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">1: Faites fondre le chocolat au bain-marie avec le beurre.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">2: Incorporez 50 g de sucre aux jaunes d’œufs et battez-les.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">3: Ajoutez le sucre restant aux blancs d’œufs et battez-les en neige.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">4: Fouettez également la crème jusqu’à ce qu’elle soit bien ferme.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">5: Plongez le bol sous l’eau froide et versez-y les jaunes d’œufs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">6 :Incorporez la crème fraîche, puis ajoutez délicatement les blancs d’œufs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">7: Répartissez dans des verres et laissez-la durcir pendant 2 heures au frigo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="step">
+                        <input type="checkbox" class="step-checkbox me-3">
+                        <p class="step-desc">8: Servez avec  un biscuit en guise de garniture.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </main>
+<script>
+    $(document).ready(function(){
+        $(".step-checkbox").change(function(){
+            var $stepDesc = $(this).siblings(".step-desc");
+            if($(this).is(":checked")){
+                $stepDesc.html('<del>' + $stepDesc.text() + '</del>');
+            } else {
+                var text = $stepDesc.find("del").text();
+                $stepDesc.html(text);
+            }
+        });
+    });
+    </script>
 
     
 <!------------------video------------------->
@@ -162,7 +235,7 @@
             <h2 class="text-center text-white">Vidéo de la recette</h2>
             <div class="row mt-4">
                 <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
-                    <img id="img1" src="img/recipes/Mousse/—Pngtree—healthy vegan raw glass dark_15569265.png" style="width: 400px;" class="me-5"  data-aos="fade-right"
+                    <img id="img1" src="img/recipes/Mousse/—Pngtree—healthy vegan raw glass dark_15569265.png" style="width: 300px;" class="me-5"  data-aos="fade-right"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine" alt="Image 1">
                 </div>
@@ -172,7 +245,7 @@
                     </div>
                 </div>
                 <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
-                    <img id="img2" src="img/recipes/Mousse/—Pngtree—healthy vegan raw glass dark_15569265.png" style="width: 400px;" class="ms-5" data-aos="fade-left"
+                    <img id="img2" src="img/recipes/Mousse/—Pngtree—healthy vegan raw glass dark_15569265.png" style="width: 300px;" class="ms-5" data-aos="fade-left"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine" alt="Image 2"> 
                 </div>
@@ -180,12 +253,13 @@
         </div>
     </section>
     <!------------------start commentaire----------------------------->
-    <section class="contact-section mt-5 mb-5">
+    <button class="choco mt-5">laissez nous un commentaire</button>
+    <section id="coms" class="contact-section mt-5 mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="#" class="contact-form" id="comment-form">
-                        <h3 class="mb-4">Laissez un commentaire</h3>
+                    <form action="" class="contact-form" id="comment-form" style="display: none;">
+                        <h2 class="mb-4" style="color: white;">Laissez un commentaire</h2>
                         <div class="row">
                             <div class="col-lg-6">
                                 <input type="text" id="name" placeholder="Votre nom" required>
@@ -209,7 +283,7 @@
                         <button type="submit">Envoyez votre commentaire</button>
                     </form>
                     <div class="comments-section">
-                        <h3>Commentaires</h3>
+                        <h2>Les Commentaires</h2>
                         <div class="comments-list" id="comments-list">
                             <!-- Commentaires a venir ici -->
                         </div>
@@ -218,44 +292,70 @@
             </div>
         </div>
     </section>
+    <script>
+        $(document).ready(function(){
+            $(".choco").click(function(){
+                $("#comment-form").fadeToggle();
+            });
+        });
+    </script>
+
 
    
 <!-- carousel-->
-<h2 class="display-5">Autre Recette</h2>
+<h2 class="display-5 mb-5">Autre Recette</h2>
 <section id="sectioncar">
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide--one">
-          <span>Cake au chocolat</span>
-          <div>
-            <h2>Délice irrésistible, chocolat incomparablement fondant.</h2>
-          </div>
+        <div class="swiper-slide swiper-slide--one">
+            <a href="../kevin/glace-au-chocolat.html"><span>Glace au chocolat</span></a>
+            <div>
+              <h2>"Fondez de plaisir avec notre glace au chocolat"</h2>
+            </div>
         </div>
         <div class="swiper-slide swiper-slide--two">
-          <span>Glace au chocolat</span>
-          <div>
-            <h2>Fondez de plaisir avec notre glace au chocolat</h2>
-          </div>
+            <a href="mous.html"><span>Éclat Choco-Amande</span></a>
+        <div>
+            <h2>"Éclat Choco-Amande: La Fusion Gourmande de la Douceur et du Croquant"</h2>
+        </div>
         </div>
   
         <div class="swiper-slide swiper-slide--three">
           <span>Cookies au chocolat</span>
           <div>
-            <h2>Craquez pour nos cookies au chocolat, un plaisir à chaque bouchée.</h2>
+            <h2>"Craquez pour nos cookies au chocolat, un plaisir à chaque bouchée."</h2>
           </div>
         </div>
   
         <div class="swiper-slide swiper-slide--four">
-          <span>Truffes au chocolat</span>
+          <span>murzynek</span>
           <div>
-            <h2>Truffes au chocolat : un cœur fondant, un plaisir intense.</h2>
+            <h2>"Délice Noir au Chocolat"</h2>
           </div>
         </div>
   
         <div class="swiper-slide swiper-slide--five">
           <a href="mous.html"><span>Moelleux au chocolat</span></a>
           <div>
-            <h2>Moelleux au chocolat : fondant à souhait, bonheur à chaque bouchée.</h2>
+            <h2>"Moelleux au chocolat : fondant à souhait, bonheur à chaque bouchée."</h2>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--six">
+          <a href="mous.html"><span> Amandina Cake </span></a>
+          <div>
+            <h2>"Amandina Cake: L'Exquise Harmonie de l'Amande et du Gâteau"</h2>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--seven">
+          <a href="mous.html"><span>cupavci</span></a>
+          <div>
+            <h2>"Cupavci: Le Plaisir Enveloppé de Douceur"</h2>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--eight">
+          <a href="mous.html"><span>chocopomme</span></a>
+          <div>
+            <h2>"ChocoPomme: Le Duo Délicieux qui Croque de Plaisir"</h2>
           </div>
         </div>
       </div>
@@ -270,18 +370,18 @@
         <div class="loader"></div>
     </div>
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg mt-5" data-setbg="img/imgfooter/footer-bg.jpg">
+    <footer class="footer set-bg mt-5" data-setbg="img/imgfooter/footer-bg.jpg" style="background-repeat: no-repeat;background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__newslatter">
                        <h6>Recette ...</h6>
                        <ul class="servi">
-                          <li><a href="Javascript:void(0)"> recette1</a></li>
-                          <li><a href="Javascript:void(0)"> recette2</a></li>
-                          <li><a href="Javascript:void(0)"> recette3</a></li>
-                          <li><a href="Javascript:void(0)"> recette4</a></li>
-                          <li><a href="Javascript:void(0)"> recette5</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette1</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette2</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette3</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette4</a></li>
+                          <li class="text-white"><a class="text-white" href="Javascript:void(0)"> recette5</a></li>
                        </ul>
                     </div>
                  </div>
@@ -320,7 +420,6 @@
                     <div class="col-lg-7">
                         <p class="copyright__text text-white">
                           Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">sebastien</a>
-                          
                       </p>
                   </div>
                   <div class="col-lg-5">
@@ -355,5 +454,4 @@
     <script src="js/jsfooter/bootstrap.min.js"></script>
     <script src="js/jsfooter/main.js"></script>
 </body>
-
 </html>

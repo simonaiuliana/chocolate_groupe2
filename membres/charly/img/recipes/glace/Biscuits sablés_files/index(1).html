@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://s0.2mdn.net/sadbundle/6351247080181190229/index.html?ev=01_251 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1"><meta name="ad.size" content="width=120,height=600"><title>CAPE - Template</title><link rel="stylesheet" href="./main(1).css"><script type="text/javascript">var clickTag = "https://www.google.com";</script><script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    var isNewtonTokenSet = false;
+    var isTurtleXAdClick = false;
+    var reportingIds = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+
+            if (clkTag.eTldPlusOne) {
+              eTldPlusOnes[clkTag.url] = clkTag.eTldPlusOne;
+            }
+            if (clkTag.reportingId) {
+              reportingIds[clkTag.url] = clkTag.reportingId;
+            }
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+      if (isNewtonEnabled(eventData) && !isNewtonTokenSet) {
+        var newtonOt2Token = eventData.newtonOt2Token;
+        enableAttributionReportingApi(newtonOt2Token);
+      }
+      if (eventData.isTurtleXAdClick) {
+        isTurtleXAdClick = true;
+      }
+    };
+
+    var isNewtonEnabled = function(eventData) {
+      return 'newtonOt2Token' in eventData;
+    }
+
+    var enableAttributionReportingApi = function(originTrialToken) {
+      if (/Chrome/.test(window.navigator.userAgent)) {
+        var meta = document.createElement('meta');
+        meta.httpEquiv = 'origin-trial';
+        meta.content = String(originTrialToken);
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        isNewtonTokenSet = true;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          if (isTurtleXAdClick && !!reportingIds[url]) {
+            var message = {
+              'reportingId': reportingIds[url],
+              'clickX': urlParamMap[CLICK_X_URL_KEY],
+              'clickY': urlParamMap[CLICK_Y_URL_KEY],
+              'creativeDims': getCreativeDimensions()
+              };
+            parent.postMessage(JSON.stringify(message), '*');
+          }
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            var windowFeatures = '';
+
+            if (features) {
+              windowFeatures = windowFeatures.concat(features);
+            }
+            if (isNewtonTokenSet &&
+                !!document.featurePolicy?.allowedFeatures().includes(
+                  'attribution-reporting')) {
+              if (features) {
+                if (!features.includes('attributionsrc')) {
+                  windowFeatures = windowFeatures.concat(features, ', attributionsrc');
+                }
+              } else {
+                windowFeatures = windowFeatures.concat('attributionsrc');
+              }
+            }
+
+            if (windowFeatures) {
+              args.push(windowFeatures);
+            }
+            open.apply(window,args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head><body><!-- Replaced data --><script>var injectedCampaignData = {"pricePatchBackgroundColor":"#E41C26","pricePatchOrientation":"bottomLeft","pricePatchTextAlign":"left","showLogo":true,"gradientColorStart":"#5C2D91","gradientColorEnd":"#00BCEE","gradientDirection":"top","logoColor":"white","logoType":"res","logoPosition":"bottomRight","headlineIntroFadein":true,"ctaFadein":true,"productTitleFadein":true,"dealTitleFadein":true,"ctaAnimate":true,"loops":"No loop","frames":{"frame1":{"ctaAnimate":true,"type":"contentFrame","frameDuration":4000,"backgroundStyle":"gradient","gradientColorStart":"#5C2D91","gradientColorEnd":"#ee2e5d","gradientDirection":"rightBottom","gradientMid":70,"productImageAnimate":"SlideIn","dealTitle":{"multilanguage":true,"NL":{"value":"*Snel internet*","requiresTranslation":false,"updated":true,"maxLength":60},"FR":{"value":"*Un internet rapide*","requiresTranslation":false,"updated":true,"maxLength":60},"transforms":{"scale":null,"left":9.94106,"top":15.588,"width":70}},"dealTitleColor":"#ffffff","dealTitleFontSize":65,"showPatch":true,"patchType":"textPatch","pricePatchBackgroundColor":"#ee2e5d","pricePatchOrientation":"bottomLeft","pricePatchTextAlign":"left","priceAnimate":"Rotate","textPatchBackgroundColor":"#ee2e5d","textPatchOrientation":"bottomRight","textPatchTextAlign":"left","textAnimate":"RotateAndBounce","textPatchProductName":{"multilanguage":true,"FR":{"value":"Pack Flex","requiresTranslation":false,"updated":true,"maxLength":60},"NL":{"value":"Flex pack","requiresTranslation":false,"updated":true,"maxLength":60}},"textPatchProductNameColor":"#ffffff","textPatchProductNameSize":150,"ctaText":{"multilanguage":true,"FR":{"value":"Plus d'infos","requiresTranslation":false,"updated":true,"maxLength":25},"NL":{"value":"Meer info","requiresTranslation":false,"updated":true,"maxLength":25}},"ctaTextColor":"#ffffff","ctaOpacity":true,"productTitle":{"multilanguage":true,"FR":{"value":"","requiresTranslation":false,"updated":true,"maxLength":60},"NL":{"value":"","requiresTranslation":false,"updated":true,"maxLength":60},"transforms":{"left":19.3528,"top":227.704,"width":70}},"productTitleColor":"#ffffff","productTitleFontSize":122,"subline":{"multilanguage":true,"FR":{"value":"Aussi pour une utilisation simultan\u00e9e","requiresTranslation":false,"updated":true,"maxLength":60},"NL":{"value":"Ook wannneer iedereen tegelijk online is","requiresTranslation":false,"updated":true,"maxLength":60},"transforms":{"left":9.94108,"top":70.762,"width":70}},"sublineColor":"#ffffff","sublineFontSize":87,"showPatch2":true,"textPatch2BackgroundColor":"#00BCEF","textPatch2Orientation":"topRight","textPatch2TextAlign":"left","text2Animate":"Rotate","showExtraPatch":false,"extraPatchText":{"multilanguage":true,"FR":{"value":"*Promo*","requiresTranslation":false,"updated":true,"maxLength":30},"NL":{"value":"*Promo*","requiresTranslation":false,"updated":true,"maxLength":30}},"extraPatchTextColor":"#ffffff","extraPatchColor":"#00bcef","extraPatchOrientation":"bottom","textPatchHeadline":{"multilanguage":true,"FR":{"value":"*2 mois gratuits*","requiresTranslation":false,"updated":true,"maxLength":60},"NL":{"value":"*2 maanden gratis*","requiresTranslation":false,"updated":true,"maxLength":60}},"textPatchHeadlineColor":"#ffffff","textPatchHeadlineSize":70,"textDisclaimer":{"multilanguage":true,"FR":{"value":"","requiresTranslation":false,"updated":true},"NL":{"value":"","requiresTranslation":false,"updated":true,"maxLength":60}},"textDisclaimerColor":"#ffffff","textDisclaimerSize":290,"product":{"NL":{"link":"https:\/\/www.proximus.be\/nl\/id_cr_flex_xs_pack\/particulieren\/packs\/cr-all-flex-packs\/flex-xs-configurateur.html\/"},"FR":{"link":"https:\/\/www.proximus.be\/fr\/id_cr_flex_xs_pack\/particuliers\/packs\/cr-all-flex-packs\/flex-xs-configurateur.html"}},"textPatch2ProductName":{"multilanguage":true,"NL":{"value":"Internet\nMobiel\nTV","requiresTranslation":false,"updated":true,"maxLength":35},"FR":{"value":"Internet\nMobile\nTV","requiresTranslation":false,"updated":true,"maxLength":35}},"textPatch2ProductNameColor":"#ffffff","textPatch2ProductNameSize":190,"textPatch":{"transforms":{"scale":"0.86","left":-1.64718,"top":191.305}},"extraPatch":{"transforms":{"scale":"1.42","left":7.47071,"top":222.111}},"cta":{"transforms":{"scale":0.63,"left":10,"bottom":120}},"textPatch2":{"transforms":{"scale":"0.62","left":11.5295,"top":288.107}}}},"general":{"feedmulti":[null,{"targetingName":"Aff - Entertainment","phase":"think","audienceIDs":"91600,91800,91900","excludedAudienceIds":"1058720974,6567787814","targetingType":"3DV360","_id":"63c154573035777ad564f2df"},{"targetingName":"Inm - Movers","phase":"think","audienceIDs":"80403","excludedAudienceIds":"1058720974,6567787814","targetingType":"3DV360","_id":"63c154783035777ad564f2f2"},{"targetingName":"Aff - Home & Garden","phase":"think","audienceIDs":"80237","excludedAudienceIds":"1058720974,6567787814","targetingType":"3DV360","_id":"63c154e73035777ad564f309"},{"targetingName":"Aff - Technology","phase":"think","audienceIDs":"92948,80193","excludedAudienceIds":"1058720974,6567787814","targetingType":"3DV360","_id":"63c154fd3035777ad564f31e"},{"targetingName":"Inm - Telco & ISP","phase":"think","audienceIDs":"80303","excludedAudienceIds":"1058720974,6567787814","targetingType":"3DV360","_id":"63c155123035777ad564f333"},{"targetingName":"Blog","phase":"think","audienceIDs":"912142631,7895677704,942817291,6508435106,955691412,7895711682,7895066533,7895712201","excludedAudienceIds":"1058720974,6567787814","targetingType":"fpp","_id":"65aa807cd550625fd04d6aff"}]},"language":"FR","market":"","brand":"proximus","format":"skyscraper","frameNr":0,"editmode":0};;</script><div id="clickTagLayer" style="z-index: 999; cursor: pointer;"></div><!-- Banner --><div template-banner="" class="banner skyscraper vertical animation frame1 animation-in" style="cursor: pointer; width: 120px; height: 600px; font-size: 8px;"><div class="frames"><div class="frame contentFrame frame1 undefined active animation-in" frame-type="contentFrame" frame-index="1" frame-key="frame1" frame-duration="4000" frame-animation-duration="300" frame-loop="1" frame-overlap="400" style="z-index: 11;"><div class="backgroundGradient" template="backgroundgradient" style="background-image: linear-gradient(133deg, rgb(92, 45, 145) 20%, rgb(238, 46, 93));"></div><div class="backgroundColor__position" original-display="block" style="display: none;"><div class="backgroundColor__holder"><div class="backgroundColor__animation"><div class="backgroundColor" template="backgroundColor" path="{&quot;backgroundColor&quot;:&quot;model.backgroundColor&quot;}"></div></div></div></div><div class="backgroundShape__position" original-display="block" style="display: none;"><div class="backgroundShape__holder"><div class="backgroundShape__animation"><div class="backgroundShape" template="backgroundShape" path="{&quot;backgroundColor&quot;:&quot;model.shapeColor&quot;}"></div></div></div></div><div class="backgroundImage__position" original-display="block" style="display: none;"><div class="backgroundImage__holder"><div class="backgroundImage__animation"><div class="backgroundImage" template="backgroundImage" path="{&quot;backgroundImage&quot;:&quot;model.backgroundImage&quot;}" style="background-image: none;"></div></div></div></div><div class="backgroundImageLocalized__position" original-display="block" style="display: none;"><div class="backgroundImageLocalized__holder"><div class="backgroundImageLocalized__animation"><div class="backgroundImageLocalized" template="backgroundImageLocalized" path="{&quot;backgroundImage&quot;:&quot;model.backgroundImageLocalized.FR.url&quot;}" style="background-image: url(&quot;undefined&quot;);"></div></div></div></div><div class="productImageHolder__position" style="width: 110px; height: 110px; top: 200px; left: 5px;"><div class="productImageHolder__holder"><div class="productImageHolder__animation"><div class="productImageHolder" template="productImageHolder"><div class="productImageBack__position"><div class="productImageBack__holder"><div class="productImageBack__animation"><div class="productImageBack" template="productImageBack" path="{&quot;backgroundImage&quot;:&quot;model.productImage2&quot;}" style="background-image: none;"></div></div></div></div><div class="productImage__position productImageAnimateSlideIn" original-classes="[&quot;productImage__position&quot;]"><div class="productImage__holder"><div class="productImage__animation"><div class="productImage" template="productImage" path="{&quot;backgroundImage&quot;:&quot;model.product.FR.productImage&quot;}" style="background-image: url(&quot;undefined&quot;);"></div></div></div></div></div></div></div></div><div class="extraImage" template="extraImage"></div><div class="productTitle__position fadeIntrue" original-classes="[&quot;productTitle__position&quot;]" style="top: 227.704px; width: 70px; left: 19.3528px;"><div class="productTitle__holder"><div class="productTitle__animation"><div class="productTitle" template="productTitle" path="{&quot;color&quot;:&quot;model.frames.frame1.productTitleColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.productTitleFontSize&quot;,&quot;textAlign&quot;:&quot;model.productTitleAlign&quot;}" style="display: none; color: rgb(255, 255, 255); font-size: 2em;"><span class="text-container" style="font-size: 1.22em;"></span></div></div></div></div><div class="subline__position" style="width: 70px; left: 9.94108px; top: 70.762px;"><div class="subline__holder"><div class="subline__animation"><div class="subline" template="subline" path="{&quot;color&quot;:&quot;model.frames.frame1.sublineColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.sublineFontSize&quot;}" style="display: block; color: rgb(255, 255, 255); font-size: 2em;"><span class="text-container" style="display: inline-block; font-size: 0.87em;">Aussi pour une utilisation simultanée</span></div></div></div></div><div class="dealTitle__position fadeIntrue" original-classes="[&quot;dealTitle__position&quot;]" scale="null" style="width: 70px; left: 9.94106px; top: 15.588px;"><div class="dealTitle__holder"><div class="dealTitle__animation"><div class="dealTitle" template="dealTitle" path="{&quot;color&quot;:&quot;model.frames.frame1.dealTitleColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.dealTitleFontSize&quot;}" style="display: block; color: rgb(255, 255, 255); font-size: 3em;"><span class="text-container" style="display: inline-block; font-size: 0.65em;"><span class="highlight">Un internet rapide</span></span></div></div></div></div><div class="pricePatch__position pricePatchbottomLeftalignleft priceAnimateRotate pricePatchColorWhite" original-display="block" original-classes="[&quot;pricePatch__position&quot;]" scale="0.6" style="display: none; left: 20px; top: 100px; transform: scale(0.6);"><div class="pricePatch__holder"><div class="pricePatch__animation"><div class="pricePatch" template="pricePatch" path="{&quot;backgroundColor&quot;:&quot;model.frames.frame1.pricePatchBackgroundColor&quot;,&quot;color&quot;:&quot;model.frames.frame1.pricePatchBackgroundColor&quot;,&quot;textAlign&quot;:&quot;model.frames.frame1.pricePatchTextAlign&quot;}" style="background: rgb(238, 46, 93); color: white; text-align: left;"><div class="priceHolder"><div class="pricePatchProductName" template="pricePatchProductName" path="{&quot;color&quot;:&quot;model.pricePatchProductNameColor&quot;,&quot;fontScale&quot;:&quot;model.pricePatchProductNameFontSize&quot;}" style="display: none;"><span class="text-container"></span></div><div class="oldPrice__position oldPriceColorundefined" original-classes="[&quot;oldPrice__position&quot;]" style="display: none;"><div class="oldPrice__holder"><div class="oldPrice__animation"><div class="oldPrice" template="oldPrice" path="{&quot;color&quot;:&quot;model.pricePatchOldPriceColor&quot;}" style="display: block;"><span class="text-container" style="display: inline-block;">€undefined</span></div></div></div></div><div class="newPrice__position"><div class="newPrice__holder"><div class="newPrice__animation"><div class="newPrice" template="newPrice" path="{&quot;color&quot;:&quot;model.pricePatchNewPriceColor&quot;}" style="display: none;"></div></div></div></div><div class="priceDisclaimer__position" style="margin-top: -3px;"><div class="priceDisclaimer__holder"><div class="priceDisclaimer__animation"><div class="priceDisclaimer" template="priceDisclaimer" path="{&quot;color&quot;:&quot;model.priceDisclaimerColor&quot;,&quot;fontScale&quot;:&quot;model.priceDisclaimerFontSize&quot;}" style="display: none;"><span class="text-container"></span></div></div></div></div></div></div></div></div></div><div class="textPatch__position textPatchbottomRightalignleft textAnimateRotateAndBounce textPatchColorWhite" original-display="block" original-classes="[&quot;textPatch__position&quot;]" scale="0.86" style="display: block; left: -1.64718px; top: 191.305px; transform: scale(0.86);"><div class="textPatch__holder"><div class="textPatch__animation"><div class="textPatch" template="textPatch" path="{&quot;backgroundColor&quot;:&quot;model.frames.frame1.textPatchBackgroundColor&quot;,&quot;color&quot;:&quot;model.frames.frame1.textPatchBackgroundColor&quot;,&quot;textAlign&quot;:&quot;model.frames.frame1.textPatchTextAlign&quot;}" style="background: rgb(238, 46, 93); color: white; text-align: left;"><div class="textHolder"><div class="textPatchProductName" template="textPatchProductName" path="{&quot;color&quot;:&quot;model.frames.frame1.textPatchProductNameColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.textPatchProductNameSize&quot;}" style="color: rgb(255, 255, 255); display: block;"><span class="text-container" style="font-size: 1.5em;">Pack Flex</span></div><div class="textPatchHeadline" template="textPatchHeadline" path="{&quot;color&quot;:&quot;model.frames.frame1.textPatchHeadlineColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.textPatchHeadlineSize&quot;}" style="color: rgb(255, 255, 255); padding-top: 5px; display: block;"><span class="text-container" style="font-size: 0.7em;"><span class="highlight">2 mois gratuits</span></span></div><div class="textDisclaimer" template="textDisclaimer" path="{&quot;color&quot;:&quot;model.frames.frame1.textDisclaimerColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.textDisclaimerSize&quot;}" style="color: rgb(255, 255, 255); display: none;"><span class="text-container" style="font-size: 2.9em;"></span></div></div></div></div></div></div><div class="textPatch2__position textPatchtopRightalignleft textAnimateRotate" original-display="block" original-classes="[&quot;textPatch2__position&quot;]" scale="0.62" style="display: block; transform: scale(0.62); left: 11.5295px; top: 288.107px;"><div class="textPatch2__holder"><div class="textPatch2__animation"><div class="textPatch2" template="textPatch2" path="{&quot;backgroundColor&quot;:&quot;model.frames.frame1.textPatch2BackgroundColor&quot;,&quot;color&quot;:&quot;model.frames.frame1.textPatch2BackgroundColor&quot;,&quot;textAlign&quot;:&quot;model.frames.frame1.textPatch2TextAlign&quot;}" style="background: rgb(0, 188, 239); color: white; text-align: left;"><div class="text2Holder"><div class="textPatch2ProductName" template="textPatch2ProductName" path="{&quot;color&quot;:&quot;model.frames.frame1.textPatch2ProductNameColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.textPatch2ProductNameSize&quot;}" style="color: rgb(255, 255, 255); display: block;"><span class="text-container" style="font-size: 1.9em;">Internet<br>Mobile<br>TV</span></div><div class="textPatch2Headline" template="textPatch2Headline" path="{&quot;color&quot;:&quot;model.textPatch2HeadlineColor&quot;,&quot;fontScale&quot;:&quot;model.textPatch2HeadlineSize&quot;}" style="padding-top: 5px; display: none;"><span class="text-container"></span></div><div class="text2Disclaimer" template="text2Disclaimer" path="{&quot;color&quot;:&quot;model.text2DisclaimerColor&quot;,&quot;fontScale&quot;:&quot;model.text2DisclaimerSize&quot;}" style="display: none;"><span class="text-container"></span></div></div></div></div></div></div><div class="extraPatch__position bottom" original-display="block" original-classes="[&quot;extraPatch__position&quot;]" scale="1.42" style="display: none; left: 7.47071px; top: 222.111px; transform: scale(1.42);"><div class="extraPatch__holder"><div class="extraPatch__animation"><div class="extraPatch" template="extraPatch" path="{&quot;backgroundColor&quot;:&quot;model.frames.frame1.extraPatchColor&quot;,&quot;color&quot;:&quot;model.frames.frame1.extraPatchTextColor&quot;}" style="display: block; padding: 0.5em 0.85em; text-align: center; background: rgb(0, 188, 239); color: rgb(255, 255, 255);"><span class="text-container" style="display: inline-block;"><span class="highlight">Promo</span></span></div></div></div></div><div class="headlineHolder__position" style="top: 25px; left: 25px; width: 70px;"><div class="headlineHolder__holder"><div class="headlineHolder__animation"><div class="headlineHolder" template="headlineHolder" path="{&quot;color&quot;:&quot;model.frames.frame1.dealTitleColor&quot;,&quot;fontScale&quot;:&quot;model.frames.frame1.dealTitleFontSize&quot;}" style="color: rgb(255, 255, 255); font-size: 3em;"><span class="text-container" style="font-size: 0.65em;"><div class="headline1__position"><div class="headline1__holder"><div class="headline1__animation"><div class="headline1" template="headline1" style="display: none;"></div></div></div></div><div class="headline2__position"><div class="headline2__holder"><div class="headline2__animation"><div class="headline2" template="headline2" style="display: none;"></div></div></div></div><div class="headline3__position"><div class="headline3__holder"><div class="headline3__animation"><div class="headline3" template="headline3" style="display: none;"></div></div></div></div></span></div></div></div></div><div class="text1__position" style="left: 11px; top: 257px;"><div class="text1__holder"><div class="text1__animation"><div class="text1" template="text1" path="{&quot;fontScale&quot;:&quot;model.text1FontSize&quot;,&quot;color&quot;:&quot;model.text1Color&quot;}" style="display: none; line-height: 1.1;"><span class="text-container"></span></div></div></div></div><div class="cta__position transparent ctaColorffffff ctaAnimatetrue fadeIntrue" original-classes="[&quot;cta__position&quot;]" scale="0.63" style="left: 10px; bottom: 120px; transform: scale(0.63);"><div class="cta__holder"><div class="cta__animation"><div class="cta" template="cta" path="{&quot;backgroundColor&quot;:&quot;model.frames.frame1.ctaTextColor&quot;,&quot;borderColor&quot;:&quot;model.frames.frame1.ctaTextColor&quot;,&quot;color&quot;:&quot;model.frames.frame1.ctaTextColor&quot;}" style="display: block; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255);"><span class="text-container" style="display: inline-block;">Plus d'infos</span></div></div></div></div><div class="floatingImage__position" original-display="block" style="display: none; top: 211px; width: 40px; height: 40px; left: 66px;"><div class="floatingImage__holder"><div class="floatingImage__animation"><div class="floatingImage" template="floatingImage" path="{&quot;backgroundImage&quot;:&quot;model.floatingImage&quot;}" style="background-image: none;"></div></div></div></div><div class="floatingImage2__position" original-display="block" style="display: none; top: 375px; width: 70px; height: 70px; left: 24px;"><div class="floatingImage2__holder"><div class="floatingImage2__animation"><div class="floatingImage2" template="floatingImage2" path="{&quot;backgroundImage&quot;:&quot;model.floatingImage2&quot;}" style="background-image: none;"></div></div></div></div><div class="logo__position logoPositionbottomRight res" original-display="block" original-classes="[&quot;logo__position&quot;]" style="display: block;"><div class="logo__holder"><div class="logo__animation"><div class="logo" template="logo" path="{&quot;backgroundImage&quot;:&quot;model.logoColor&quot;}" style="background-image: url(&quot;proximus_logo_white.png&quot;);"></div></div></div></div></div></div><div class="mask"></div></div><script type="text/javascript">(function () {
+            var layer = document.getElementById("clickTagLayer");
+            if (layer) {
+                var listen = function (obj, e, fn) {
+                    if (obj.addEventListener) {
+                        obj.addEventListener(e, fn, false);
+                    } else {
+                        obj.attachEvent("on" + e, fn);
+                    }
+                };
+                listen(layer, 'click', function (evt) {
+                    evt.stopPropagation();
+                    try {
+                        evt.cancelBubble();
+                    } catch (e) { /* ignore */
+                    }
+                    window.open(window.clickTag, '_blank');
+                });
+            }
+        })();</script><script src="./main(1).js.téléchargé"></script></body></html>

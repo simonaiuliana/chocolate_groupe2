@@ -1,0 +1,16 @@
+.step:hover {
+    cursor: pointer;
+}
+#comments-form-button:hover {
+    cursor: pointer;
+}
+.rotated-animation {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -moz-transform: rotate(180deg); /* Firefox */
+    -webkit-transform: rotate(180deg); /* Safari and Chrome */
+    -o-transform: rotate(180deg); /* Opera */
+}
+#comments-form-button img {
+    transition: transform 1400ms ease;
+}
