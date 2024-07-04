@@ -1,4 +1,5 @@
 START TRANSACTION;
+use choco;
 INSERT INTO `user`(`name`, `password`, `is_admin`)
 VALUES('Kevin', 'Kevin123', 1);
 
@@ -40,9 +41,9 @@ VALUES(@recipe_id , 7, 1, 75),
 (@recipe_id , 40, NULL, 1),
 (@recipe_id , 41, 3, 15);
 
-INSERT INTO `comment`(`recipe_id`, `user_id`, `subject`, `comment`, `created_date`, `stars`)
-VALUES(@recipe_id, @user_id, "Délicieux !!!", "Cette glace était tellement onctueuse ! Je dirais même savoureuse !! L'image de la crème anglaise au chocolat est vraiment fidèle a la réalité, j'ai eu exactement la même chose ! Continuez comme ça je vous aime 😊", NULL, 1),
-(@recipe_id, @user_id, "Sublime !!!", "Je n'y croyais pas lorsque j'ai commencé la recette, mais une fois terminé et goûté je suis en extase... Je ne sais plus quoi faire, j'ai envie de tout manger TOUT MANGER JE BEGAILLE ACTUELLEMENT AAIIIDDEZZZ MOOIII J AI FAIIIMMM JJJJJ AAAIIII FFAIIIIMMMM !!!", NULL, 5);
+INSERT INTO `comment`(`recipe_id`, `user_id`, `subject`, `comment`, `stars`)
+VALUES(@recipe_id, @user_id, "Délicieux !!!", "Cette glace était tellement onctueuse ! Je dirais même savoureuse !! L'image de la crème anglaise au chocolat est vraiment fidèle a la réalité, j'ai eu exactement la même chose ! Continuez comme ça je vous aime 😊", 1),
+(@recipe_id, @user_id, "Sublime !!!", "Je n'y croyais pas lorsque j'ai commencé la recette, mais une fois terminé et goûté je suis en extase... Je ne sais plus quoi faire, j'ai envie de tout manger TOUT MANGER JE BEGAILLE ACTUELLEMENT AAIIIDDEZZZ MOOIII J AI FAIIIMMM JJJJJ AAAIIII FFAIIIIMMMM !!!", 5);
 
 INSERT INTO `recipe_has_category`(`recipe_id`, `category_id`)
 VALUES(@recipe_id, 3);
