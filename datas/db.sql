@@ -9,6 +9,7 @@ CREATE TABLE `user` (
 CREATE TABLE `recipe` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(40) NOT NULL,
+  description TEXT NOT NULL,
   nb_people INT UNSIGNED NOT NULL,
   image_url VARCHAR(255),
   preparation_time INT UNSIGNED NOT NULL,
@@ -67,6 +68,7 @@ CREATE TABLE `comment` (
   recipe_id INT UNSIGNED NOT NULL,
   user_id INT UNSIGNED NOT NULL,
   comment TEXT NOT NULL,
+  subject VARCHAR(50) NOT NULL,
   created_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   stars TINYINT NOT NULL,
   PRIMARY KEY (id),

@@ -2,8 +2,10 @@ START TRANSACTION;
 INSERT INTO `user`(`name`, `password`, `is_admin`)
 VALUES('Kevin', 'Kevin123', 1);
 
-INSERT INTO `recipe`(`name`, `nb_people`, `image_url`, `preparation_time`, `cooking_time`)
-VALUES("Glace au Chocolat", 4, "img/recipes/glace/glace-chocolat.jpeg", 60, 720);
+SET @user_id = LAST_INSERT_ID();
+
+INSERT INTO `recipe`(`name`, `description`, `nb_people`, `image_url`, `preparation_time`, `cooking_time`)
+VALUES("Glace au Chocolat", "Découvrez le plaisir d’une glace au chocolat riche et onctueuse, où la douceur de la crème anglaise se mêle à l’intensité du chocolat noir. Chaque bouchée est une célébration des saveurs, un équilibre parfait entre la fraîcheur de la glace vanille et la profondeur du chocolat.", 4, "img/recipes/glace/glace-chocolat.jpeg", 60, 720);
 
 SET @recipe_id = LAST_INSERT_ID();
 
@@ -31,12 +33,16 @@ VALUES
 (@sub_recipe_id2, "Réservez la glace au congélateur avant de servir.", NULL, 3);
 
 INSERT INTO `ingredient_has_recipe`(`recipe_id`, `ingredient_id`, `ingredient_unity_id`, `quantity`)
-VALUES(@recipe_id , 1, NULL, 1),
-(@recipe_id , 2, 1, 200);
+VALUES(@recipe_id , 7, 1, 75),
+(@recipe_id , 14, NULL, 4),
+(@recipe_id , 37, 3, 40),
+(@recipe_id , 28, 1, 120),
+(@recipe_id , 40, NULL, 1),
+(@recipe_id , 41, 3, 15);
 
-INSERT INTO `comment`(`recipe_id`, `user_id`, `comment`, `created_date`, `stars`)
-VALUES(1, 1, "cannibalisme!!!", NULL, 1),
-(1, 2, "délicieux!!!", NULL, 5);
+INSERT INTO `comment`(`recipe_id`, `user_id`, `comment`, `subject`, `created_date`, `stars`)
+VALUES(@recipe_id, @user_id, "cannibalisme!!!", "test", NULL, 1),
+(@recipe_id, @user_id, "délicieux!!!", "test", NULL, 5);
 
 INSERT INTO `recipe_has_category`(`recipe_id`, `category_id`)
 VALUES(@recipe_id, 3);

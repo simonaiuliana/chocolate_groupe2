@@ -38,7 +38,7 @@ ul{
     top: 50%;
     left: 50%;
     translate: -50% calc(-50% - 1.750rem);
-    font-size: 3.75rem;
+    font-size: 2.75rem;
     background-color: rgba(0,0,0,0.25);
     border-radius: 15px;
     padding: 1rem;
@@ -256,9 +256,9 @@ h3{
 
 #close-form-btn {
     color: #a28376; /* Matching the hover color of the show button */
-    font-size: 20px;
+    font-size: 30px;
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
     background: none;
     border: none;

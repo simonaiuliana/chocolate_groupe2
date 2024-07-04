@@ -1,22 +1,40 @@
-"use strict";
-
 (function ($) {
-  $(".set-bg").each(function () {
-    var bg = $(this).data("setbg");
-    $(this).css("background-image", "url(" + bg + ")");
-  });
+
+    /*------------------
+        Preloader
+    --------------------*/
+    $(window).on('load', function () {
+        $(".loader").fadeOut();
+        $("#preloder").delay(200).fadeOut("slow");
+    });
+
+    /*------------------
+        Background Set
+    --------------------*/
+    $('.set-bg').each(function () {
+        var bg = $(this).data('setbg');
+        $(this).css('background-image', 'url(' + bg + ')');
+    });
+
+    //Search Switch
+    $('.search-switch').on('click', function () {
+        $('.search-model').fadeIn(400);
+    });
+
+    $('.search-close-switch').on('click', function () {
+        $('.search-model').fadeOut(400, function () {
+            $('#search-input').val('');
+        });
+    });
+
+    //Canvas Menu
+    $(".canvas__open").on('click', function () {
+        $(".offcanvas-menu-wrapper").addClass("active");
+        $(".offcanvas-menu-overlay").addClass("active");
+    });
+
+    $(".offcanvas-menu-overlay").on('click', function () {
+        $(".offcanvas-menu-wrapper").removeClass("active");
+        $(".offcanvas-menu-overlay").removeClass("active");
+    });
 })(jQuery);
-
-window.printDiv = function (page) {
-  $("#" + page + " img").hide();
-  var printContents = document.getElementById(page);
-  var originalContents = document.body.innerHTML;
-  printContents = printContents.innerHTML;
-
-  document.body.innerHTML = printContents;
-
-  window.print();
-
-  document.body.innerHTML = originalContents;
-  $("#" + page + " img").show();
-};
