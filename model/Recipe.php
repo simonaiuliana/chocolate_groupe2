@@ -14,6 +14,7 @@ class Recipe{
   private int $nb_people;
   private int $preparation_time;
   private int $cooking_time;
+  private int $rest_time;
   private ?string $img_url;
   // array of type Instruction
   private array $sub_recipes;
@@ -24,13 +25,14 @@ class Recipe{
   // array of type Comments
   private array $comments;
 
-  public function __construct(int $id, string $name, string $description, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url, array $sub_recipes, array $ingredients, array $categories, array $comments) {
+  public function __construct(int $id, string $name, string $description, int $nb_people, int $preparation_time, int $cooking_time, int $rest_time, ?string $img_url, array $sub_recipes, array $ingredients, array $categories, array $comments) {
     $this->setId($id);
     $this->setName($name);
     $this->setDescription($description);
     $this->setNbPeople($nb_people);
     $this->setPreparationTime($preparation_time);
     $this->setCookingTime($cooking_time);
+    $this->setRestTime($rest_time);
     if ($img_url)$this->setImgUrl($img_url);
     $this->setSubRecipes($sub_recipes);
     $this->setIngredients($ingredients);
@@ -98,6 +100,7 @@ class Recipe{
     $recipe_img_url = $recipe["image_url"];
     $recipe_preparation_time = $recipe["preparation_time"];
     $recipe_cooking_time = $recipe["cooking_time"];
+    $recipe_rest_time = $recipe["rest_time"];
     /* ingredients */
     $ingredients_ids = $recipe["ingredients_ids"] ? explode(self::SEPARATOR_DB, $recipe["ingredients_ids"]) : [];
     $ingredients_units = $recipe["ingredients_units"] ? explode(self::SEPARATOR_DB, $recipe["ingredients_units"]) : [];
@@ -171,7 +174,7 @@ class Recipe{
       array_push($sub_recipes, new SubRecipe($sub_recipe["id"], $sub_recipe["title"], $sub_recipe["image_url"], $sub_recipe["preparation_time"], $sub_recipe_instructions));
     }
 
-    return new Recipe($recipe_id, $recipe_name, $recipe_description, $recipe_nb_people, $recipe_preparation_time, $recipe_cooking_time, $recipe_img_url, $sub_recipes, $recipe_ingredients, $recipe_categories, $recipe_comments);
+    return new Recipe($recipe_id, $recipe_name, $recipe_description, $recipe_nb_people, $recipe_preparation_time, $recipe_cooking_time, $recipe_rest_time, $recipe_img_url, $sub_recipes, $recipe_ingredients, $recipe_categories, $recipe_comments);
   }
   public static function getRecipeByName(PDO $db, string $name):self|string{
     try {
@@ -190,17 +193,17 @@ class Recipe{
   /**
    * @return true if success , string if error
    */
-  public static function create(PDO $db, string $name, string $description, int $nb_people, int $preparation_time, int $cooking_time, ?string $img_url):string|bool{
+  public static function create(PDO $db, string $name, string $description, int $nb_people, int $preparation_time, int $cooking_time, int $rest_time, ?string $img_url):string|bool{
     $name = trim(htmlspecialchars(strip_tags($name)),ENT_QUOTES);
     if ($img_url)$img_url = trim(htmlspecialchars(strip_tags($img_url)),ENT_QUOTES);
 
     try {
       $sql = "
-        INSRT INTO `recipe`(`name`, `description`, `nb_people`, `preparation_time`, `cooking_time`, `img_url`)
-        VALUES(?,?,?,?,?,?);
+        INSRT INTO `recipe`(`name`, `description`, `nb_people`, `preparation_time`, `cooking_time`, `rest_time`, `img_url`)
+        VALUES(?,?,?,?,?,?,?);
       ";
       $prepare = $db->prepare($sql);
-      $prepare->execute([$name, $description, $nb_people, $preparation_time, $cooking_time, $img_url]);
+      $prepare->execute([$name, $description, $nb_people, $preparation_time, $cooking_time, $rest_time, $img_url]);
       $prepare->closeCursor();
       return true;
     }catch (Exception $e){
@@ -217,15 +220,17 @@ class Recipe{
         UPDATE `recipe`
         SET
           `name`=?,
+          `description`=?,
           `nb_people`=?,
           `preparation_time`=?,
           `cooking_time`=?,
+          `rest_time`=?,
           `img_url`=?
         WHERE
           `id`=?
       ";
       $prepare = $db->prepare($sql);
-      $prepare->execute([$this->name, $this->nb_people, $this->preparation_time, $this->cooking_time, $this->img_url, $this->id]);
+      $prepare->execute([$this->name, $this->description, $this->nb_people, $this->preparation_time, $this->cooking_time, $this->rest_time, $this->img_url, $this->id]);
       $prepare->closeCursor();
       return true;
     }catch (Exception $e){
@@ -265,6 +270,9 @@ class Recipe{
   }
   public function getCookingTime():int{
     return $this->cooking_time;
+  }
+  public function getRestTime():int{
+    return $this->rest_time;
   }
   public function getImgUrl():?string{
     return $this->img_url;
@@ -317,6 +325,10 @@ class Recipe{
   }
   public function setCookingTime(int $cooking_time):self{
     $this->cooking_time = $cooking_time;
+    return $this;
+  }
+  public function setRestTime(int $rest_time):self{
+    $this->rest_time = $rest_time;
     return $this;
   }
   public function setImgUrl(string $img_url):self{
