@@ -14,6 +14,7 @@ CREATE TABLE `recipe` (
   image_url VARCHAR(255),
   preparation_time INT UNSIGNED NOT NULL,
   cooking_time INT UNSIGNED NOT NULL,
+  rest_time INT UNSIGNED NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -67,8 +68,8 @@ CREATE TABLE `comment` (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   recipe_id INT UNSIGNED NOT NULL,
   user_id INT UNSIGNED NOT NULL,
-  comment TEXT NOT NULL,
   subject VARCHAR(50) NOT NULL,
+  comment TEXT NOT NULL,
   created_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   stars TINYINT NOT NULL,
   PRIMARY KEY (id),
