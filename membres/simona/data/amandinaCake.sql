@@ -4,8 +4,8 @@ VALUES('simona', 'simona123', 1);
 
 SET @user_id = LAST_INSERT_ID();
 
-INSERT INTO `recipe`(`name`, `description`, `nb_people`, `image_url`, `preparation_time`, `cooking_time`, `rest_time`)
-VALUES("Amandina Cake", "Voici la meilleure recette de l'Amandina Cake, un dessert classique et raffiné. Pas à pas, vous apprendrez à préparer ce délicieux gâteau, au dessus moelleux au cacao, siropé au rhum et au chocolat fin et crème au beurre. Parfait pour toutes les occasions et pour tous les goûts !", 10, "\..\public\assets\nouvelles img\amandina.jpg", 90, 45, 0);
+INSERT INTO `recipe`(`name`, `description`, `nb_people`, `image_url`, `preparation_time`, `cooking_time`)
+VALUES("Amandina Cake", "Voici la meilleure recette de l'Amandina Cake, un dessert classique et raffiné. Pas à pas, vous apprendrez à préparer ce délicieux gâteau, au dessus moelleux au cacao, siropé au rhum et au chocolat fin et crème au beurre. Parfait pour toutes les occasions et pour tous les goûts !", 10, "\..\public\assets\nouvelles img\amandina.jpg", 90, 45);
 
 SET @recipe_id = LAST_INSERT_ID();
 
@@ -42,17 +42,16 @@ VALUES
 (@sub_recipe_id4, "Faire fondre le chocolat au bain de vapeur ou au micro-ondes avec l'huile.");
 
 INSERT INTO `ingredient_has_recipe`(`recipe_id`, `ingredient_id`, `ingredient_unity_id`, `quantity`)
-VALUES(@recipe_id , 15, NULL, 6),  -- Replace with actual ingredient_id, unity_id, and quantity for flour
-(@recipe_id , 7, 1, 330),  -- Replace with actual ingredient_id, unity_id, and quantity for sugar
-(@recipe_id , 31, 2, 120),    -- Replace with actual ingredient_id, unity_id, and quantity for eggs
-(@recipe_id , 6, 1, 2),   -- Replace with actual ingredient_id, unity_id, and quantity for cocoa powder
-(@recipe_id , 11, 1, 100),  -- Replace with actual ingredient_id, unity_id, and quantity for butter
-(@recipe_id , 17, 1, 130);  -- Replace with actual ingredient_id, unity_id, and quantity for chocolate
-(@recipe_id , 27, 1, 250),  -- Replace with actual ingredient_id, unity_id, and quantity for sugar
-(@recipe_id , 29, 1, 100),    -- Replace with actual ingredient_id, unity_id, and quantity for eggs
-(@recipe_id , 36, 1, 200),   -- Replace with actual ingredient_id, unity_id, and quantity for cocoa powder
-(@recipe_id , 12, 2, 350),  -- Replace with actual ingredient_id, unity_id, and quantity for butter
-(@recipe_id , 26, 5, 2); 
+VALUES(@recipe_id , 15, NULL, 6),  
+(@recipe_id , 7, 1, 330),  
+(@recipe_id , 31, 2, 120),    
+(@recipe_id , 6, 1, 2),   
+(@recipe_id , 11, 1, 100),  
+(@recipe_id , 17, 1, 130);  
+(@recipe_id , 27, 1, 250),  
+(@recipe_id , 29, 1, 100),   
+(@recipe_id , 36, 1, 200),  
+(@recipe_id , 12, 2, 350),  
 
 INSERT INTO `comment`(`recipe_id`, `user_id`, `subject`, `comment`, `created_date`, `stars`)
 VALUES(@recipe_id, @user_id, "Délicieux !!!", "Ce gâteau est absolument délicieux ! La recette est facile à suivre et le résultat est parfait. Merci !", NULL, 5),

@@ -1,4 +1,5 @@
 START TRANSACTION;
+use choco;
 INSERT INTO `category`(`category`)
 VALUES("Cake"),
 ("Gâteau"),

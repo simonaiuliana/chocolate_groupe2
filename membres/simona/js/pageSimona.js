@@ -112,76 +112,83 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//calculateur ingredients
 
-// Fonction pour calculer les ingrédients en fonction du nombre de personnes
-function calculateIngredients() {
-    // On obtient le nombre de personnes
-    var nrPersonnes = document.getElementById('nr-personnes').value;
+        // Fonction pour calculer les ingrédients en fonction du nombre de personnes
+        function calculateIngredients() {
+            // On obtient le nombre de personnes
+            var nrPersonnes = parseInt(document.getElementById('nr-personnes').value);
 
-    // On définit la liste des ingrédients et les quantités associées
-    var ingredients = {
-        "pate": [
-            { ingredient: "œufs (g)", quantite: 36 },
-            { ingredient: "sucre (g)", quantite: 18 },
-            { ingredient: "une pincée de sel", quantite: 1 },
-            { ingredient: "huile (ml)", quantite: 4 },
-            { ingredient: "cacao (g)", quantite: 10 },
-            { ingredient: "farine (g)", quantite: 13 }
-        ],
-        "creme": [
-            { ingredient: "chocolat noir 60% de cacao (g)", quantite: 25 },
-            { ingredient: "crème pour la chantilly (ml)", quantite: 25 },
-            { ingredient: "beurre (g)", quantite: 20 },
-            { ingredient: "ampoule d'essence de rhum", quantite: 1/10 }
-        ],
-        "sirop": [
-            { ingredient: "eau (ml)", quantite: 35 },
-            { ingredient: "sucre (g)", quantite: 15 },
-            { ingredient: "fiole d'essence de rhum", quantite: 1/10 }
-        ],
-        "glacage": [
-            { ingredient: "chocolat ménager (g)", quantite: 10 },
-            { ingredient: "huile (ml)", quantite: 8 }
-        ]
-    };
+            // On définit la liste des ingrédients et les quantités associées
+            var ingredients = {
+                "pate": [
+                    { ingredient: "œufs", quantite: 0.36, round: true },
+                    { ingredient: "sucre (g)", quantite: 18 },
+                    { ingredient: "une pincée de sel", quantite: 1 },
+                    { ingredient: "huile (ml)", quantite: 4 },
+                    { ingredient: "cacao (g)", quantite: 10 },
+                    { ingredient: "farine (g)", quantite: 13 }
+                ],
+                "creme": [
+                    { ingredient: "chocolat noir 60% de cacao (g)", quantite: 25 },
+                    { ingredient: "crème pour la chantilly (ml)", quantite: 25 },
+                    { ingredient: "beurre (g)", quantite: 20 },
+                    { ingredient: "ampoule d'essence de rhum", quantite: 1/10 }
+                ],
+                "sirop": [
+                    { ingredient: "eau (ml)", quantite: 35 },
+                    { ingredient: "sucre (g)", quantite: 15 },
+                    { ingredient: "fiole d'essence de rhum", quantite: 1/10 }
+                ],
+                "glacage": [
+                    { ingredient: "chocolat ménager (g)", quantite: 10 },
+                    { ingredient: "huile (ml)", quantite: 8 }
+                ]
+            };
 
-    // Fonction pour générer la liste des ingrédients calculés
-    function genereListe(ingredients) {
-        var output = "<ul>";
-        ingredients.forEach(function(item) {
-            var quantiteCalculee = item.quantite * nrPersonnes;
-            output += "<li>" + quantiteCalculee + " " + item.ingredient + "</li>";
+            // Fonction pour générer la liste des ingrédients calculés
+            function genereListe(ingredients) {
+                var output = "<ul>";
+                ingredients.forEach(function(item) {
+                    var quantiteCalculee = item.quantite * nrPersonnes;
+                    if (item.round && item.ingredient === "œufs") {
+                        quantiteCalculee = Math.ceil(quantiteCalculee);
+                    } else {
+                        quantiteCalculee = quantiteCalculee.toFixed(2); // Fixe à 2 décimales pour les autres ingrédients
+                    }
+                    output += "<li>" + quantiteCalculee + " " + item.ingredient + "</li>";
+                });
+                output += "</ul>";
+                return output;
+            }
+
+            // On calcule les quantités pour chaque catégorie d'ingrédients
+            var resultat = "<h3>Pâte :</h3>" + genereListe(ingredients.pate);
+            resultat += "<h3>Crème :</h3>" + genereListe(ingredients.creme);
+            resultat += "<h3>Sirop :</h3>" + genereListe(ingredients.sirop);
+            resultat += "<h3>Glaçage :</h3>" + genereListe(ingredients.glacage);
+
+            // On affiche le résultat dans le div avec l'id "resultat"
+            var resultatDiv = document.getElementById('resultat');
+            resultatDiv.innerHTML = resultat;
+            resultatDiv.style.display = 'block';
+        }
+
+        // Evenement pentru butonul de calcul
+        var calculateButton = document.getElementById('calculate-button');
+        calculateButton.addEventListener('click', calculateIngredients);
+
+        // Evenement pentru afișarea/ascunderea rezultatelor
+        var toggleButton = document.getElementById('toggle-results');
+        toggleButton.addEventListener('click', function() {
+            var resultatDiv = document.getElementById('resultat');
+            if (resultatDiv.style.display === 'none') {
+                // Dacă rezultatele sunt ascunse, le afișăm
+                calculateIngredients(); // Apelăm funcția de calcul pentru a afișa rezultatele
+                toggleButton.textContent = 'Masquer les résultats'; // Schimbăm textul butonului
+            } else {
+                // Dacă rezultatele sunt deja afișate, le ascundem
+                resultatDiv.style.display = 'none';
+                toggleButton.textContent = 'Afficher les résultats'; // Resetăm textul butonului
+            }
         });
-        output += "</ul>";
-        return output;
-    }
-
-    // On calcule les quantités pour chaque catégorie d'ingrédients
-    var resultat = "<h3>Pâte :</h3>" + genereListe(ingredients.pate);
-    resultat += "<h3>Crème :</h3>" + genereListe(ingredients.creme);
-    resultat += "<h3>Sirop :</h3>" + genereListe(ingredients.sirop);
-    resultat += "<h3>Glaçage :</h3>" + genereListe(ingredients.glacage);
-
-    // On affiche le résultat dans le div avec l'id "resultat"
-    var resultatDiv = document.getElementById('resultat');
-    resultatDiv.innerHTML = resultat;
-    resultatDiv.style.display = 'block';
-
-    // On retourne false pour arrêter la soumission du formulaire
-    return false;
-}
-
-// Toggle pentru afișarea/ascunderea rezultatelor
-var toggleButton = document.getElementById('toggle-results');
-toggleButton.addEventListener('click', function() {
-    var resultatDiv = document.getElementById('resultat');
-    if (resultatDiv.style.display === 'none') {
-        // Dacă rezultatele sunt ascunse, le afișăm
-        calculateIngredients(); // Apelăm funcția de calcul pentru a afișa rezultatele
-        toggleButton.textContent = 'Masquer les résultats'; // Schimbăm textul butonului
-    } else {
-        // Dacă rezultatele sunt deja afișate, le ascundem
-        resultatDiv.style.display = 'none';
-        toggleButton.textContent = 'Calculer'; // Resetăm textul butonului
-    }
-});

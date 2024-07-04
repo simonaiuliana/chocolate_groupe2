@@ -158,7 +158,6 @@ class Recipe{
     }catch (Exception $e){
       return $e->getMessage();
     }
-    
     // $result contains the sub_recipes SQL
     $sub_recipes = [];
     for ($i=0;$i<sizeof($result);$i++){
@@ -168,8 +167,8 @@ class Recipe{
       $instructions_texts = $sub_recipe["instructions"] ? explode(self::SEPARATOR_DB, $sub_recipe["instructions"]) : [];
       $instructions_imgs = $sub_recipe["instructions_image_url"] ? explode(self::SEPARATOR_DB, $sub_recipe["instructions_image_url"]) : [];
       $sub_recipe_instructions = [];
-      for ($i=0;$i<sizeof($instructions_ids);$i++){
-        array_push($sub_recipe_instructions, new Instruction($instructions_ids[$i], $instructions_texts[$i], $instructions_imgs[$i]));
+      for ($j=0;$j<sizeof($instructions_ids);$j++){
+        array_push($sub_recipe_instructions, new Instruction($instructions_ids[$j], $instructions_texts[$j], $instructions_imgs[$j]));
       }
       array_push($sub_recipes, new SubRecipe($sub_recipe["id"], $sub_recipe["title"], $sub_recipe["image_url"], $sub_recipe["preparation_time"], $sub_recipe_instructions));
     }
